@@ -10,6 +10,7 @@ notes.txt
 *.svg
 *.wav
 *.mp3
+*.ico
 
 # Styles produced from scss files
 *.css
