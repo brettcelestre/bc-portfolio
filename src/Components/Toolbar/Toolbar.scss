@@ -1,0 +1,240 @@
+@font-face {
+  font-family: 'chapaza';
+  src: url('../../assets/fonts/Chapaza.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'old style';
+  src: url('../../assets/fonts/OLDSH___.TTF') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.toolbar-desktop {
+  display: block;
+}
+
+.toolbar-mobile {
+  display: none;
+}
+
+.toolbar {
+  z-index: 40;
+  background-color: #fcfcfc; // MAIN BG
+  // background-color: #404047;// Dark Blue
+  // background-color: #919191;
+  
+  margin: 0;
+  padding: 0;
+  left: 155px;
+  width: 100%;
+  height: 43px;
+  position: fixed !important;
+  bottom: 0;
+  color: #161616;
+  // color: white;
+  // // background-image: url("../../assets/img/tests/toolbar-bg.jpg");
+  // background-image: url("paper.gif");
+  // background-repeat: repeat-y;
+
+  &:hover {
+    box-shadow: 0px -1px 2.3px rgba(20, 20, 20, 0.10);
+    // background-color: #f5f1ed; 
+  }
+}
+.toolbar-zoom {
+  height: 67px;
+  padding-left: 155px;
+  position: unset  !important;
+}
+
+.title-box {
+  height: 43px;
+  padding-left: 25px;
+  padding-top: 8px;
+  text-align: left;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+.title-box-wide-zoom {
+  height: 85px;
+  padding-left: 25px;
+  padding-top: 8px;
+  text-align: left;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */ 
+}
+// .title-box-tall-zoom {
+//  width:  
+// }
+
+.title {
+  @include font-setup('chapaza', 1.35rem, 500, rgb(20, 20, 20), none, -.75px);
+  margin-top: 3px;
+  display: inline-table;
+  margin-bottom: -5px;
+}
+.title-zoom {
+  font-size: 2rem;
+}
+.year {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  font-size: .6rem;
+  letter-spacing: 5px;
+}
+
+.year-bottom {
+  display: inline-block;
+}
+
+.info {
+  text-align: left;
+  margin-top: -12px;
+  padding-left: 14px;
+  position: fixed;
+}
+
+.image-details {
+  @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
+  padding-left: 14px;
+  padding-top: 8px;
+  position: absolute;
+  // font-family: 'Playfair Display', serif;
+  // font-weight: 400;
+  // font-size: .75rem;
+  // letter-spacing: 5px;
+}
+.image-details-zoom {
+  font-size: 15px;
+  padding-top: 13px;
+  padding-left: 21px;
+  position: unset  !important;
+}
+
+.gallery-index-box {
+  display: inline-block;
+  z-index: 41;
+  // background-color: red;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 43px;
+  width: 100px;
+}
+.gallery-index-box-wide-zoom {
+  position: relative;
+  margin-top: -84px;
+  float: right;
+  right: -563px;
+}
+.gallery-index-box-tall-zoom {
+  position: relative;
+  margin-top: -84px;
+  float: right;
+  right: 100px;
+}
+
+.zoom-button {
+  display: none;
+  // width: 70px;
+  // height: 75px;
+  // -webkit-mask-size: cover;
+  // text-align: center;
+  // color: white;
+  // padding-top: 16px;
+  // float: right;
+  // &:hover {
+  //   background-color: #1f1f1f;
+  //   cursor: pointer;
+  // }
+}
+
+.zoom-icon {
+  margin: 3px;
+}
+
+.gallery-index {
+  width: 70px;
+  height: 43px;
+  @include font-setup('chapaza', 1.1rem, 500, rgb(20, 20, 20), none, -.75px);
+  // text-align: center;
+  letter-spacing: 5px;
+  padding-top: 12px;
+  float: right;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.hide-index {
+  display: none;
+}
+
+// iPhone size plus
+@media (max-width: 414px) and (max-height: 736px) {
+
+  .details {
+    padding-top: 8px;
+    margin: -5px 10px 40px 0px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .title-year {
+    width: -webkit-calc(100% - 80px);
+    width:    -moz-calc(100% - 80px);
+    width:         calc(100% - 80px);
+  }
+
+  .tools {
+    display: inline-block;
+    position: fixed;
+    right: 0;
+  }
+
+  .gallery-index {
+    display: none;
+  }
+
+  .zoom-button {
+    display: block;
+    float: right;
+    padding: 20px;
+    // padding-right: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .zoom-icon path {
+    fill: #ffffff;
+  }  
+  
+  .year-bottom {
+    display: inline-block;
+  }
+}

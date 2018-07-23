@@ -26,8 +26,9 @@ notes.txt
 # testing
 /coverage
 
-# production
+# production builds
 /build
+build.sh
 
 # misc
 .DS_Store

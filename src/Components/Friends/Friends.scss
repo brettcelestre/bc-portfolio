@@ -1,0 +1,118 @@
+
+@font-face {
+  font-family: 'Lucky Typewriter';
+  src: url('../../assets/fonts/LUCKY-TYPEWRITER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SplendidN';
+  src: url('../../assets/fonts/SplendidN.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SplendidB';
+  src: url('../../assets/fonts/SplendidB.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: '1952 RHEINMETALL';
+  src: url('../../assets/fonts/1952 RHEINMETALL.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Remington-Noiseless';
+  src: url('../../assets/fonts/Remington-Noiseless.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'oceanside';
+  src: url('../../assets/fonts/Oceanside Typewriter.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'mermaid';
+  src: url('../../assets/fonts/Mermaid1001.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'orwell';
+  src: url('../../assets/fonts/Orwell.ttf') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.friends {
+  // margin-top: 15px;
+  padding-top: 15px;
+  // width: 100%;
+  width: -webkit-calc(100% - 180px);
+  // height: 100vh;
+  // height: 100%;
+  margin-left: 180px;
+  padding-left: 20px;
+  padding-bottom: 75px;
+  // background-image: url("../../assets/img/tests/paper-bg.jpg");
+  // background-repeat: repeat;
+  // background-color: rgba(20,20,20,.9);
+  // background-image: url("paper.gif");
+}
+
+.friends-columns {
+  -webkit-column-count: auto; /* Chrome, Safari, Opera */
+  -moz-column-count: auto; /* Firefox */
+  column-count: auto;
+  column-fill: auto;
+  height: -webkit-calc(100% - 10px);
+  -webkit-column-width: 253px;
+     -moz-column-width: 253px;
+          column-width: 253px;
+}
+
+.friends-section {
+  display: inline-table;
+  width: 250px;
+  padding: 5px 0;
+  h4 {
+    // @include font-setup('Lucky Typewriter', 1.1rem, 550, rgb(20, 20, 20), none, -1.5px);
+    @include font-setup('orwell', 1.4rem, 300, rgb(20, 20, 20), none, -1.5px);
+    margin: 0;
+    padding: 0;
+    margin-bottom: -2px;
+  }
+  // &:hover {
+  //   h4 {
+  //     font-weight: 650;
+  //   }
+  // }
+}
+
+.type {
+  @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
+  // Remington-Noiseless
+  // @include font-setup('1952 RHEINMETALL', .85rem, 400, rgb(20, 20, 20), none, -1px);
+  margin: 0px 6px 0 0;
+  padding: 0px 2px 0 1px;
+  &:hover {
+    @include font-setup('SplendidN', 1.1rem, 600, rgb(20, 20, 20), none, -1px);
+    background-color: rgb(20, 20, 20);
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.tags {
+  // @include font-setup('Remington-Noiseless', .85rem, 400, rgb(20, 20, 20), none, -1px);
+  @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
+}
+
+// iPhone size plus
+@media (max-width: 414px) and (max-height: 736px) {
+
+}

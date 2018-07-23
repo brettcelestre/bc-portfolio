@@ -1,0 +1,69 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+
+import registerServiceWorker from './registerServiceWorker';
+import './assets/css/skeleton.css';
+import './assets/css/normalize.css';
+import './index.css';
+
+import App from './Components/App/App.js';
+import Home from './Components/Home/Home.js';
+import ImageThumbs from './Components/ImageThumbs/ImageThumbs.js';
+import ImageSections from './Components/ImageSections/ImageSections.js';
+import ShortFilms from './Components/ShortFilms/ShortFilms.js';
+import Applications from './Components/Applications/Applications.js';
+import Friends from './Components/Friends/Friends.js';
+import Resources from './Components/Resources/Resources.js';
+import About from './Components/About/About.js';
+import Resume from './Components/Resume/Resume.js';
+import ImageViewer from './Components/ImageViewer/ImageViewer.js';
+
+// const galleryData = {
+//   collage: require('./assets/data/collage.js')
+// };
+
+// const buildImageRouteName = (name) => {
+//   let theName = [];
+//   const x = name.split(' ');
+//   x.forEach((word) => {
+//     let y = word.split('')[0];
+//     let update = y;
+//     if (isNaN(y) && typeof y === 'string') {
+//       update = word.length > 1 ? y.toUpperCase() + word.substr(1) : y.toUpperCase();;
+//     };
+//     theName.push(update);
+//   });
+//   return theName.join('-').toLowerCase();
+// }
+
+ReactDOM.render(
+  <BrowserRouter>
+    <div>
+      <Route path="/" component={App} zoom="false">
+      </Route>
+      <Switch>
+
+        {/* <Route name="photography" path="/photography/:section/:piece" component={ImageViewer} /> */}
+        {/* <Route name="photography" path="/photography/film" component={ImageSeries} /> */}
+        <Route name="images" path="/:section/:category/:piece" component={ImageViewer} />
+        <Route name="images" path="/:section/:category/:piece/zoom" component={ImageViewer} />
+        
+        {/* <Route name="spatial" path="/spatial/:section/:piece" component={ImageViewer} /> */}
+        <Route name="short-films" path="/short-films" component={ShortFilms} />
+
+        {/* <Route name="short-films" path="/short-films/:film" component={ShortFilms} /> */}
+        
+        <Route name="applications" path="/applications" component={Applications} />
+        <Route name="friends" path="/friends" component={Friends} />
+        <Route name="resources" path="/resources" component={Resources} />
+        <Route name="about" path="/about" component={About} />
+        <Route name="resume" path="/resume" component={Resume} />
+        <Route name="gallery-sections" path="/:section" component={ImageSections} />
+        <Route name="home" path="/" component={Home} />
+        <Redirect to={{ pathname: `/` }}/>
+      </Switch>
+    </div>
+  </BrowserRouter>
+, document.getElementById('root'));
+registerServiceWorker();
