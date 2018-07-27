@@ -27,11 +27,20 @@ class Resume extends Component {
           </div>
 
           <div className="resume-font description-padding-15">
-            <strong>Strong:</strong><br />
+            <strong>Backend:</strong><br />
+            JavaScript, Node.js, React, RESTful API, Microservices, AWS SDK, Lambda, API Gateway, 
+            SNS, DynamoDB, Docker, Express, Hapi, HTML5, CSS3, SCSS/SASS, Mocha, Chai, Git, NPM, TDD/BDD, JSON, UI/UX, Agile<br />
+            <strong>Frontend:</strong><br />
+            <strong>Dev Ops:</strong><br />
+            <strong>Experienced:</strong><br />
+            Angular, AWS, SQS, CloudFront, S3, Cucumber, MongoDB, Socket.IO, Sinon, Jenkins, Bootstrap, jQuery, Protractor, Webpack, Gulp, MySQL, OAuth2.0
+
+
+            {/* <strong>Strong:</strong><br />
             JavaScript, Node.js, React, RESTful API, Microservices, AWS SDK, Lambda, API Gateway, 
             SNS, DynamoDB, Docker, Express, Hapi, HTML5, CSS3, SCSS/SASS, Mocha, Chai, Git, NPM, TDD/BDD, JSON, UI/UX, Agile<br />
             <strong>Experienced:</strong><br />
-            Angular, AWS, SQS, CloudFront, S3, Cucumber, MongoDB, Socket.IO, Sinon, Jenkins, Bootstrap, jQuery, Protractor, Webpack, Gulp, MySQL, OAuth2.0
+            Angular, AWS, SQS, CloudFront, S3, Cucumber, MongoDB, Socket.IO, Sinon, Jenkins, Bootstrap, jQuery, Protractor, Webpack, Gulp, MySQL, OAuth2.0 */}
           </div>
 
           <div className="resume-section-title">
