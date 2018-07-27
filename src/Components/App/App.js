@@ -5,6 +5,9 @@ import ReactSVG from 'react-svg';
 
 import './App.css';
 import logo from '../../assets/img/logo-smaller-large.png';
+import linkedinLogo from '../../assets/svg/social-linkedin.svg';
+import githubLogo from '../../assets/svg/social-github.svg';
+import instagramLogo from '../../assets/svg/social-instagram.svg';
 
 const menuIcon = require('../../assets/svg/random-menu-lines.svg');
 
@@ -105,13 +108,13 @@ class App extends Component {
         <div className="app-menu">
           <img src={logo} className="logo" width="124px" height="133px" />
           <div className="mainTitleBox">
-            <Link to="/" onClick={this.scrollToTop} title="Brett Celestre">
+            <Link to="/" onClick={this.scrollToTop}>
               <h2 className="mainTitle">Brett<span className="main-title-spacing"> </span>Celestre</h2>
             </Link>
           </div>
 
           <div className="navigation">
-            <Link to="/photography" title="Photography">
+            <Link to="/photography">
               <div className="section-title">
                 Photography
               </div>
@@ -134,7 +137,7 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/artwork" title="Artwork">
+            <Link to="/artwork">
               <div className="section-title">
                 Artwork
               </div>
@@ -150,18 +153,18 @@ class App extends Component {
                 Collage
               </div>
             </Link>
-            <Link to="/artwork/drawings" title="Drawings">
+            <Link to="/artwork/drawings">
               <div className="option">
                 Drawings
               </div>
             </Link>
-            <Link to="/artwork/sketches" title="Sketches">
+            <Link to="/artwork/sketches">
               <div className="option">
                 Sketches
               </div>
             </Link>
             
-            <Link to="/short-films" title="Short Films">
+            <Link to="/short-films">
               <div className="section-title">
                 Short Films
               </div>
@@ -201,53 +204,84 @@ class App extends Component {
                 Real Life
               </div>
             </Link> */}
-            <Link to="/spatial" title="Spatial">
+            <Link to="/spatial">
               <div className="section-title">
                 Spatial
               </div>
             </Link>
 
-            <Link to="/spacial/woodworking" title="Woodworking">
+            <Link to="/spacial/woodworking">
               <div className="option">
                 Woodworking
               </div>
             </Link>
-            <Link to="/spacial/wire" title="Wire">
+            <Link to="/spacial/wire">
               <div className="option">
                 Wire
               </div>
             </Link>
-            <Link to="/spacial/sculpture" title="Sculpture">
+            <Link to="/spacial/sculpture">
               <div className="option">
                 Sculpture
               </div>
             </Link>
-            <Link to="/applications" title="Applications">
+            <Link to="/applications">
               <div className="section-title">
                 Applications
               </div>
             </Link>
-            <Link to="/resources" title="Resources">
+            <Link to="/resources">
               <div className="section-title">
                 Resources
               </div>
             </Link>
-            <Link to="/friends" title="Friends">
+            <Link to="/friends">
               <div className="section-title">
                 Friends
               </div>
             </Link>
-            <Link to="/about" title="About">
+            <Link to="/about">
               <div className="section-title">
                 About
               </div>
             </Link>
-            <Link to="/resume" title="Resume">
+            <Link to="/resume">
               <div className="section-title">
                 Resume
               </div>
             </Link>
           </div>
+
+          <div className="social-links">
+            <a href="https://www.linkedin.com/in/brettcelestre/" target="blank">
+              <ReactSVG
+                path={linkedinLogo}
+                style={{width: 27, height: 27}}
+                className="social-icon"
+                wrapperClassName="social-icon"
+              />
+            </a>
+
+            <a href="https://github.com/brettcelestre" target="blank">
+              <ReactSVG
+                path={githubLogo}
+                style={{width: 27, height: 27}}
+                className="social-icon"
+                wrapperClassName="social-icon"
+              />
+            </a>
+
+            <a href="https://www.instagram.com/brettcelestre/" target="blank">
+              <ReactSVG
+                path={instagramLogo}
+                style={{width: 27, height: 27}}
+                className="social-icon"
+                wrapperClassName="social-icon"
+              />
+            </a>
+
+          </div>
+
         </div>
       </div>
     );
