@@ -9,7 +9,81 @@ class Resume extends Component {
   constructor(props){
     super(props)
     this.state = {
+      skills: {
+        Backend: [
+          'Node.js',
+          'Microservices',
+          'RESTful API',
+          'Lambda',
+          'API Gateway',
+          'SNS',
+          'SQS',
+          'CloudFront',
+          'S3',
+          'Express',
+          'Hapi',
+          'JSON',
+          'NoSQL'
+        ],
+        Frontend: [
+          'React',
+          'Angular',
+          'JavaScript',
+          'HTML5',
+          'CSS3',
+          'SCSS/SASS',
+          'UI/UX',
+          'Bootstrap',
+          'jQuery'
+        ],
+        'Dev Ops': [
+          'Jenkins',
+          'git',
+          'Docker',
+          'Unix',
+          'NPM',
+          'Swagger',
+          'Cucumber',
+          'Mocha',
+          'Chai',
+          'Sinon',
+          'TDD/BDD',
+          'Agile'
+        ],
+        Experienced: [
+          'Socket.IO',
+          'Protractor',
+          'Webpack',
+          'Gulp',
+          'MySQL',
+          'OAuth2.0'
+        ]
+      }
     }
+    this.buildTechSkills = this.buildTechSkills.bind(this);
+    this.buildSkillTags = this.buildSkillTags.bind(this);
+  }
+  
+  buildSkillTags(skillList) {
+    return skillList.map((skill) => {
+      return (
+        <span className="code">{skill}</span>
+      )
+    });
+  };
+
+  buildTechSkills(skills) {
+    return Object.keys(skills).map((skill) => {
+      return (
+        <div className="resume-font description-padding-15">
+          <div className="tech-skill-section">
+            <strong>{skill}:</strong>
+          </div>
+          {this.buildSkillTags(skills[skill])}
+          <br />
+        </div>
+      )
+    });
   }
 
   render() {
@@ -26,22 +100,7 @@ class Resume extends Component {
             Technical Skills
           </div>
 
-          <div className="resume-font description-padding-15">
-            <strong>Backend:</strong><br />
-            JavaScript, Node.js, React, RESTful API, Microservices, AWS SDK, Lambda, API Gateway, 
-            SNS, DynamoDB, Docker, Express, Hapi, HTML5, CSS3, SCSS/SASS, Mocha, Chai, Git, NPM, TDD/BDD, JSON, UI/UX, Agile<br />
-            <strong>Frontend:</strong><br />
-            <strong>Dev Ops:</strong><br />
-            <strong>Experienced:</strong><br />
-            Angular, AWS, SQS, CloudFront, S3, Cucumber, MongoDB, Socket.IO, Sinon, Jenkins, Bootstrap, jQuery, Protractor, Webpack, Gulp, MySQL, OAuth2.0
-
-
-            {/* <strong>Strong:</strong><br />
-            JavaScript, Node.js, React, RESTful API, Microservices, AWS SDK, Lambda, API Gateway, 
-            SNS, DynamoDB, Docker, Express, Hapi, HTML5, CSS3, SCSS/SASS, Mocha, Chai, Git, NPM, TDD/BDD, JSON, UI/UX, Agile<br />
-            <strong>Experienced:</strong><br />
-            Angular, AWS, SQS, CloudFront, S3, Cucumber, MongoDB, Socket.IO, Sinon, Jenkins, Bootstrap, jQuery, Protractor, Webpack, Gulp, MySQL, OAuth2.0 */}
-          </div>
+          {this.buildTechSkills(this.state.skills)}
 
           <div className="resume-section-title">
             Professional Experience

@@ -151,6 +151,32 @@
   padding-left: 30px;
 }
 
+.tech-skill-section {
+  margin-top: 5px;
+}
+
+.code-tags {
+  display: inline-block;
+}
+
+.code {
+  display: inline-table;
+  margin-bottom: 4px;
+  margin-right: 4px;
+  padding: 0px 7px;
+  border-radius: 2px;
+  font-family: monospace, Monaco;
+  font-size: 14.15px;
+  line-height: 1.45rem;
+  letter-spacing: -.25px;
+  font-weight: 100;
+  color: #0c5176 !important;
+  background-color: rgb(237, 241, 243);
+  &:hover {
+    background-color: rgba(12,81,118,0.12);
+  }
+}
+
 // iPhone size plus
 @media (max-width: 414px) and (max-height: 736px) {
 
