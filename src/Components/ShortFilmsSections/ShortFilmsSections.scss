@@ -1,0 +1,75 @@
+
+@font-face {
+  font-family: 'chapaza';
+  src: url('../../assets/fonts/Chapaza.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'old style';
+  src: url('../../assets/fonts/OLDSH___.TTF') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.short-films-sections {
+  position: relative;
+  width: 100%;
+  max-width: 1500px !important;
+  margin: 0 auto;
+  padding: 20px 0 20px 155px;
+  box-sizing: border-box;
+}
+
+.short-film-box {
+  width: auto;
+  max-width: 1500px;
+  max-height: 900px;
+  padding: 10px 27px 21px 27px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.short-film-cover-box {
+  width: auto;
+}
+
+.short-film-cover-image {
+  display:block;
+  margin: auto;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  max-width: -webkit-fill-available;
+  image-rendering: crisp-edges;
+}
+
+.short-film-details {
+  text-align: right;
+  padding: 2px 27px 2px 27px;
+  background-image: url('../../assets/img/short-film-toolbar-background.jpg');
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+
+  h3 {
+    margin-top: 0px;
+    padding-top: 12px;
+    margin-bottom: -22px;
+    @include font-setup('chapaza', 1.52rem, 500, #1d1d1d, none, -.25px);
+  }
+
+  h4 {
+    @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+  }
+}
+
+// iPhone size plus
+@media (max-width: 414px) and (max-height: 736px) {
+
+}
