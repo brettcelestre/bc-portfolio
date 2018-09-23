@@ -16,6 +16,23 @@ const data = ymlLoader.load(`
       Small:
         width: 800
         height: 533
+  
+  - title: Three Year
+    date: 2012 SEPTEMBER
+    size: ''
+    description: MIXED MEDIA COLLAGE
+    arrows: dark
+    info: ''
+    sizes:
+      Large:
+        width: 1500
+        height: 1002
+      Medium:
+        width: 1100
+        height: 735
+      Small:
+        width: 800
+        height: 534
 
   - title: For Reverend Green
     date: 2010 FEBRUARY
