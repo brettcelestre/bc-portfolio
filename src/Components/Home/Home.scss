@@ -1,12 +1,6 @@
-.content {
-    // background-color: #fcfcfc;
-    // background-color: transparent;
-    background-image: url('../../assets/img/bio/January-B&W.jpg');
-    // background-size: min($numbers: 300px);
-    // background-size: max($numbers: 2000px);
-    background-size: 100%;
-    width: 100%;
-    // height: -webkit-calc(100vh - 75px);;
+.home-content {
+    width: calc(100% - 155px);
+    left: 155px;
     height: 100vh;
     position: absolute;
     top: 0px;
