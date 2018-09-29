@@ -10,15 +10,18 @@ class Friends extends Component {
   constructor(props){
     super(props)
     this.state = {
+      filteredMediums: []
     }
 
     this.buildLinks = this.buildLinks.bind(this);
     this.buildTags = this.buildTags.bind(this);
+    this.filterByMedium = this.filterByMedium.bind(this);
     this.buildFriends = this.buildFriends.bind(this);
-    this.test = this.test.bind(this);
+    this.hoverAnimation = this.hoverAnimation.bind(this);
   }
 
   buildLinks(links) {
+    // TODO: Finish building this function
     return links.map((data) => {
       const type = data.type.toUpperCase();
       return(
@@ -38,21 +41,22 @@ class Friends extends Component {
     )
   }
 
-  test(val) {
-    console.log('hover');
+  hoverAnimation(data) {
+    // TODO: Create fast typewriter animation of persons name
+  }
+
+  filterByMedium() {
+    // TODO: Create filter by Medium
+    //    Utilize tags object & this.state.filteredMediums
   }
 
   buildFriends() {
-    const genUrlString = (string) => {
-      return string.toLowerCase().split(' ').join('-');
-    };
-    const gallery = this.props.location.pathname.split('/')[1];
     return data.map((data, i) => {
-
       const primaryLink = data.links.find((val) => val.type === 'Portfolio') || data.links[0];
-
+      // TODO: Support multiple links for multiple platforms
+      // TODO: Support filter by medium
       return (
-        <a href={primaryLink.url} target="blank" onMouseEnter={this.test}>
+        <a href={primaryLink.url} target="blank"> {/* onMouseEnter={this.hoverAnimation} */}
           <div className="friends-section" id={data.title}>
             <h4>{data.title}</h4>
             {this.buildTags(data.tags)}
@@ -64,9 +68,9 @@ class Friends extends Component {
   }
 
   render() {
+    // TODO: Sort By Medium
     return (
       <div className="friends">
-        {/* Sort By */}
         <div className="friends-columns">
           {this.buildFriends()}
         </div>
