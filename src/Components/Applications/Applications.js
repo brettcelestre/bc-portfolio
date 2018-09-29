@@ -3,16 +3,14 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import './Applications.css';
 
-// import { data, tags } from '../../assets/data/links.js';
-
 class Applications extends Component {
+
+  // TODO: Complete this whole component
 
   constructor(props){
     super(props)
     this.state = {
     }
-
-    // this.buildLinks = this.buildLinks.bind(this);
   }
 
   render() {
