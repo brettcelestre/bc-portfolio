@@ -12,55 +12,38 @@ import instagramLogo from '../../assets/svg/social-instagram.svg';
 const menuIcon = require('../../assets/svg/random-menu-lines.svg');
 
 const galleryData = {
-  artwork: {
-    collage: require('../../assets/data/collage.js'),
-    digital: require('../../assets/data/digital-art.js')
-  }
+  spatial: require('../../assets/data/spatial.js')
 };
 
 class App extends Component {
 
   constructor(props) {
     super(props)
-
-    // console.log('this.props.route.zoom', this.props.route.zoom);
     
     this.state = {
-      artmenu: false,
-      // drawingsUrl: this.createUrlPathForPiece('drawings', true),
       medium: '',
       mobileMenu: false,
-      fade: false
+      fade: false,
+      year: new Date().getFullYear()
     };
+    
     this.createUrlPathForPiece = this.createUrlPathForPiece.bind(this);
-    this.artworkMenuEnter = this.artworkMenuEnter.bind(this);
-    this.artworkMenuLeave = this.artworkMenuLeave.bind(this);
     this.menuToggle = this.menuToggle.bind(this);
     this.scrollToTop = this.scrollToTop.bind(this);
-  }
-
-  componentDidUpdate() {
-    // console.log('App > update = ', this.props);
   }
 
   // Creates the Link URL for each section with whatever the latest piece of artwork is called
   createUrlPathForPiece(section, category) {
     let pieceName;
-    if (galleryData[section][category].data[0].title.includes(' ')) {
+    if (category === null) {
+      pieceName = galleryData[section].data[0].title.toLowerCase().split(' ').join('-');
+      return `/${section}/${pieceName}`;
+    } else if (galleryData[section][category].data[0].title.includes(' ')) {
       pieceName = galleryData[section][category].data[0].title.toLowerCase().split(' ').join('-');
     } else {
       pieceName = galleryData[section][category].data[0].title.toLowerCase();
     }
     return `/${section}/${category}/${pieceName}`;
-  }
-
-  // Displays Dropdown
-  artworkMenuEnter() {
-    this.setState({artmenu: true});
-  }
-  // Hides dropdown
-  artworkMenuLeave() {
-    this.setState({artmenu: false});
   }
 
   menuToggle() {
@@ -97,9 +80,6 @@ class App extends Component {
         <div className={this.state.mobileMenu ? "navigation-mobile menu-show" : "navigation-mobile"}>
           <ul>
             <Link to="/paints" onClick={this.menuToggle} title="Paints"><li>Paints</li></Link>
-            <Link to="/snaps" onClick={this.menuToggle} title="Snaps"><li>Snaps</li></Link>
-            <Link to="/scraps" onClick={this.menuToggle} title="Scraps"><li>Scraps</li></Link>
-            <Link to="/me" onClick={this.menuToggle} title="Me"><li>Me</li></Link>
           </ul>
         </div>
 
@@ -114,172 +94,91 @@ class App extends Component {
           </div>
 
           <div className="navigation">
-            <Link to="/photography">
+
+            <Link to="/photography" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Photography
               </div>
             </Link>
 
-            <Link to="/photography/film" title="Film">
-              <div className="option">
-                Film
-              </div>
-            </Link>
-            <Link to="/photography/digital" title="Digital">
-            {/* <Link to={this.createUrlPathForPiece('digital-art', true)} title="Digital"> */}
-              <div className="option">
-                Digital
-              </div>
-            </Link>
-            <Link to="/photography/client" title="Client">
-              <div className="option">
-                Client
-              </div>
-            </Link>
-
-            <Link to="/artwork">
+            <Link to="/artwork" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Artwork
               </div>
             </Link>
-            {/* <Link to="/artwork/digital" title="Digital Art"> */}
-            <Link to={this.createUrlPathForPiece('artwork', 'digital')} title="Digital Art">
-              <div className="option">
-                Digital
-              </div>
-            </Link>
-            <Link to={this.createUrlPathForPiece('artwork', 'collage')} title="Collage">
-              <div className="option">
-                Collage
-              </div>
-            </Link>
-            <Link to="/artwork/drawings">
-              <div className="option">
-                Drawings
-              </div>
-            </Link>
-            <Link to="/artwork/sketches">
-              <div className="option">
-                Sketches
-              </div>
-            </Link>
-            
-            <Link to="/short-films">
+
+            <Link to="/short-films" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Short Films
               </div>
             </Link>
-            <Link to="/short-films/del-rio" title="Del Rio">
-              <div className="option">
-                Del Rio
-              </div>
-            </Link>
-            <Link to="/short-films/ballroom-dance-floor" title="Ballroom Dance Floor">
-              <div className="option">
-                Ballroom Dance Floor
-              </div>
-            </Link>
-            <Link to="/short-films/all" title="View All Short Films">
-              <div className="option">
-                View All
-              </div>
-            </Link>
-            {/* <Link to="/short-films/frisbee" title="Frisbee">
-              <div className="option">
-                Frisbee
-              </div>
-            </Link>
-            <Link to="/short-films/justin-felix-vs-gavin-drago" title="Justin Felix vs Gavin Drago">
-              <div className="option">
-                Felix vs Drago
-              </div>
-            </Link>
-            <Link to="/short-films/real-life-2" title="Real Life 2">
-              <div className="option">
-                Real Life 2
-              </div>
-            </Link>
-            <Link to="/short-films/real-life" title="Real Life">
-              <div className="option">
-                Real Life
-              </div>
-            </Link> */}
-            <Link to="/spatial">
+            
+            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Spatial
               </div>
             </Link>
 
-            <Link to="/spacial/woodworking">
-              <div className="option">
-                Woodworking
-              </div>
-            </Link>
-            <Link to="/spacial/wire">
-              <div className="option">
-                Wire
-              </div>
-            </Link>
-            <Link to="/spacial/sculpture">
-              <div className="option">
-                Sculpture
-              </div>
-            </Link>
-            <Link to="/applications">
+            <Link to="/applications" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Applications
               </div>
             </Link>
-            <Link to="/resources">
+            <Link to="/resources" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Resources
               </div>
             </Link>
-            <Link to="/friends">
+            <Link to="/friends" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Friends
               </div>
             </Link>
-            <Link to="/about">
+            <Link to="/about" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 About
               </div>
             </Link>
-            <Link to="/resume">
+            <Link to="/resume" replace onClick={this.scrollToTop}>
               <div className="section-title">
                 Resume
               </div>
             </Link>
           </div>
 
-          <div className="social-links">
-            <a href="https://www.linkedin.com/in/brettcelestre/" target="blank">
-              <ReactSVG
-                path={linkedinLogo}
-                style={{width: 27, height: 27}}
-                className="social-icon"
-                wrapperClassName="social-icon"
-              />
-            </a>
+          <div className="social-links-box">
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/brettcelestre/" target="blank">
+                <ReactSVG
+                  path={linkedinLogo}
+                  style={{width: 27, height: 27}}
+                  className="social-icon"
+                  wrapperClassName="social-icon"
+                />
+              </a>
 
-            <a href="https://github.com/brettcelestre" target="blank">
-              <ReactSVG
-                path={githubLogo}
-                style={{width: 27, height: 27}}
-                className="social-icon"
-                wrapperClassName="social-icon"
-              />
-            </a>
+              <a href="https://github.com/brettcelestre" target="blank">
+                <ReactSVG
+                  path={githubLogo}
+                  style={{width: 27, height: 27}}
+                  className="social-icon"
+                  wrapperClassName="social-icon"
+                />
+              </a>
 
-            <a href="https://www.instagram.com/brettcelestre/" target="blank">
-              <ReactSVG
-                path={instagramLogo}
-                style={{width: 27, height: 27}}
-                className="social-icon"
-                wrapperClassName="social-icon"
-              />
-            </a>
-
+              <a href="https://www.instagram.com/brettcelestre/" target="blank">
+                <ReactSVG
+                  path={instagramLogo}
+                  style={{width: 27, height: 27}}
+                  className="social-icon"
+                  wrapperClassName="social-icon"
+                />
+              </a>
+            </div>
+          
+            <div className="copyright-box">
+              <h5 className="copyright">© {this.state.year} Brett Celestre</h5>
+            </div>
           </div>
 
         </div>
