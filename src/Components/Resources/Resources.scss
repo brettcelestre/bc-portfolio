@@ -1,44 +1,4 @@
 
-@font-face {
-  font-family: 'Lucky Typewriter';
-  src: url('../../assets/fonts/LUCKY-TYPEWRITER.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'SplendidN';
-  src: url('../../assets/fonts/SplendidN.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'SplendidB';
-  src: url('../../assets/fonts/SplendidB.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: '1952 RHEINMETALL';
-  src: url('../../assets/fonts/1952 RHEINMETALL.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Remington-Noiseless';
-  src: url('../../assets/fonts/Remington-Noiseless.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'oceanside';
-  src: url('../../assets/fonts/Oceanside Typewriter.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'mermaid';
-  src: url('../../assets/fonts/Mermaid1001.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'orwell';
-  src: url('../../assets/fonts/Orwell.ttf') format('truetype');
-}
-
 @mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
   font-family: $family;
   font-weight: $weight;
@@ -51,7 +11,8 @@
 .resources {
   padding-left: 155px;
 }
-// iPhone size plus
+
+// Mobile size
 @media (max-width: 414px) and (max-height: 736px) {
 
 }
