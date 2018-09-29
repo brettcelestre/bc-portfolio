@@ -13,23 +13,33 @@ npm run watch-css
 
 ```
 my-app/
-  README.md
-  node_modules/
-  package.json
   public/
     index.html
     favicon.ico
   src/
     assets/
-      /css
-      /gallery
+      css/
+      data/
+      fonts/
+      gallery/
+      img/
+      svg/
     Components/
+      About/
       App/
-      Content/
-      Gallery/
-      imageViewer/
+      Applications/
+      Friends/
+      Home/
+      ImageSections/
+      ImageViewer/
+      Resources/
+      Resume/
+      ShortFilms
+      ShortFilmSections/
       Toolbar/
-  utils/
-  index.css
-  index.js
+    utils/
+    index.css
+    index.js
+  package.json
+  README.md
 ```
