@@ -12,43 +12,44 @@ class Resume extends Component {
       skills: {
         Backend: [
           'Node.js',
+          'AWS',
           'Microservices',
           'RESTful API',
-          'Lambda',
-          'API Gateway',
-          'SNS',
-          'SQS',
-          'CloudFront',
-          'S3',
+          'MongoDB',
+          // 'Lambda',
+          // 'API Gateway',
+          // 'SNS',
+          // 'SQS',
+          // 'CloudFront',
+          // 'S3',
           'Express',
-          'Hapi',
-          'JSON',
-          'NoSQL'
+          'Hapi'
+          // 'JSON',
         ],
         Frontend: [
           'React',
           'Angular',
           'JavaScript',
-          'HTML5',
-          'CSS3',
+          'HTML',
+          'CSS',
           'SCSS/SASS',
           'UI/UX',
           'Bootstrap',
           'jQuery'
         ],
         'Dev Ops': [
-          'Jenkins',
           'git',
+          'Jenkins',
           'Docker',
           'Unix',
-          'NPM',
+          // 'NPM',
           'Swagger',
-          'Cucumber',
-          'Mocha',
-          'Chai',
-          'Sinon',
-          'TDD/BDD',
-          'Agile'
+          // 'Cucumber',
+          // 'Mocha',
+          // 'Chai',
+          // 'Sinon',
+          'TDD/BDD'
+          // 'Agile'
         ],
         Experienced: [
           'Socket.IO',
@@ -62,6 +63,8 @@ class Resume extends Component {
     }
     this.buildTechSkills = this.buildTechSkills.bind(this);
     this.buildSkillTags = this.buildSkillTags.bind(this);
+    this.buildJobsSection = this.buildJobsSection.bind(this);
+    this.buildPersonalAppSection = this.buildPersonalAppSection.bind(this);
   }
   
   buildSkillTags(skillList) {
@@ -71,6 +74,14 @@ class Resume extends Component {
       )
     });
   };
+
+  buildJobsSection(){
+    // TODO: Dynamically build personal apps section
+  }
+
+  buildPersonalAppSection(){
+    // TODO: Dynamically build personal apps section
+  }
 
   buildTechSkills(skills) {
     return Object.keys(skills).map((skill) => {
@@ -102,12 +113,16 @@ class Resume extends Component {
 
           {this.buildTechSkills(this.state.skills)}
 
+          <div className="resume-divider">
+            <div className="resume-line"></div>
+          </div>
+
           <div className="resume-section-title">
             Professional Experience
           </div>
 
           <div className="resume-job-title">
-            <strong>Full Stack Software Engineer</strong> - <span className="company"><a href="https://www.accenture.com/us-en/capability-rapid-application-development-studio" target="blank">Accenture Liquid Stuidos</a></span>
+            <a href="https://www.accenture.com/us-en/capability-rapid-application-development-studio" target="blank"><strong>Accenture Liquid Stuidos</strong></a> - <span className="position">Node.js Engineer (Senior Analyst)</span>
           </div>
           <div className="job-date">May <span className="job-date-number">2017</span> - Present</div>
           <div className="resume-font job-description">
@@ -116,7 +131,7 @@ class Resume extends Component {
           </div>
 
           <div className="resume-job-title">
-            <strong>Full Stack Software Engineer</strong> - <span className="company">Freelance</span>
+            <strong>Freelance</strong> - <span className="position">Full Stack Software Engineer</span>
           </div>
           <div className="job-date">October <span className="job-date-number">2016</span> - December <span className="job-date-number">2016</span></div>
           <div className="resume-font job-description">
@@ -127,7 +142,7 @@ class Resume extends Component {
           </div>
 
           <div className="resume-job-title">
-            <strong>QA Specialist</strong> - <span className="company"><a href="http://bookvolume.com/" target="blank">Wobo, Inc.</a></span>
+            <a href="http://bookvolume.com/" target="blank"><strong>Wobo, Inc.</strong></a> - <span className="position">QA Specialist</span>
           </div>
           <div className="job-date">July <span className="job-date-number">2015</span> - April <span className="job-date-number">2016</span></div>
           <div className="resume-font job-description">
@@ -137,7 +152,7 @@ class Resume extends Component {
           </div>
 
           <div className="resume-job-title">
-            <strong>Web and Graphic Designer</strong> - <span className="company"><a href="http://stonegroupinc.com/" target="blank">The Stone Group</a></span>
+            <a href="http://stonegroupinc.com/" target="blank"><strong>The Stone Group</strong></a> - <span className="position">Web and Graphic Designer</span>
           </div>
           <div className="job-date">June <span className="job-date-number">2014</span> - July <span className="job-date-number">2015</span></div>
           <div className="resume-font job-description">
@@ -145,12 +160,16 @@ class Resume extends Component {
             • Created and maintained websites and social media accounts executing online campaigns<br />
           </div>
 
+          <div className="resume-divider">
+            <div className="resume-line"></div>
+          </div>
+
           <div className="resume-section-title">
-            Personal Software Applications
+            Personal Applications
           </div>
 
           <div className="resume-job-title">
-            <strong>Front-End Software Engineer</strong> - <span className="company"><a href="http://www.matthewcelestre.com" target="blank">MatthewCelestre.com</a></span>
+            <a href="http://www.matthewcelestre.com" target="blank"><strong>MatthewCelestre.com</strong></a> - <span className="position">Front-End Software Engineer</span>
           </div>
           <div className="job-date">March <span className="job-date-number">2018</span></div>
           <div className="resume-font resume-one-liner">
@@ -158,10 +177,11 @@ class Resume extends Component {
           </div>
           <div className="resume-font job-description">
             • Designed and built a single-page app with React using React Router Dom and SASS with responsive design<br />
-            • Deployed using AWS Quickstart which utlizes Cloudfront, forwarded traffic from a personal domain<br />
+            • Deployed using AWS S3 and CloudFront<br />
           </div>
+
           <div className="resume-job-title">
-            <strong>Full Stack Software Engineer</strong> - <span className="company">Qurvey</span>
+            <strong>Qurvey</strong> - <span className="position">Full Stack Software Engineer</span>
           </div>
           <div className="job-date">July <span className="job-date-number">2016</span></div>
           <div className="resume-font resume-one-liner">
@@ -171,8 +191,9 @@ class Resume extends Component {
             • Designed and architected a single-page app with AngularJS using UI Router and Angular Materials for intuitive UI<br />
             • Created and maintained tests using Mocha, Chai, and Protractor.js and utilized Gulp, Travis.CI, and Webpack<br />
           </div>
+
           <div className="resume-job-title">
-            <strong>Full Stack Software Engineer</strong> - <span className="company">SprintPal</span>
+            <strong>SprintPal</strong> - <span className="position">Full Stack Software Engineer</span>
           </div>
           <div className="job-date">June <span className="job-date-number">2016</span></div>
           <div className="resume-font resume-one-liner">
@@ -183,13 +204,21 @@ class Resume extends Component {
             • Utilized Highcharts.js with responsive design for users to visualize voting data in real-time via Websockets<br />
           </div>
 
+          <div className="resume-divider">
+            <div className="resume-line"></div>
+          </div>
+
           <div className="resume-section-title">
             Education
           </div>
 
           <div className="resume-font description-padding-15">
             <strong>Hack Reactor</strong> - Advanced Software Engineering Immersive - <span className="job-date date-inline">May <span className="job-date-number">2016</span> - July <span className="job-date-number">2016</span></span><br />
-            <strong>San Jose State University</strong> - BFA Digital Media - <span className="job-date date-inline">December <span className="job-date-number">2013</span></span><br />
+            <strong>San Jose State University</strong> - Bachelor of Fine Arts - Digital Media - <span className="job-date date-inline">December <span className="job-date-number">2013</span></span><br />
+          </div>
+
+          <div className="resume-divider">
+            <div className="resume-line"></div>
           </div>
 
           <div className="resume-section-title">
