@@ -8,6 +8,11 @@ const films = require('../../assets/data/short-films.js');
 
 class ShortFilms extends Component {
 
+  componentWillUnmount() {
+    // Stores current time of film locally
+    localStorage.setItem(`BC.Portfolio.${this.state.filmData.title}`, this.state.youTubeTarget.getCurrentTime());
+  }
+
   constructor(props){
     super(props)
     this.state = {
@@ -42,8 +47,6 @@ class ShortFilms extends Component {
   }
 
   closeTheatre(film){
-    // Stores current time of film locally. 
-    localStorage.setItem(`BC.Portfolio.${this.state.filmData.title}`, this.state.youTubeTarget.getCurrentTime());
     // Sends site back to film sections
     this.props.history.push('/short-films');
   }
