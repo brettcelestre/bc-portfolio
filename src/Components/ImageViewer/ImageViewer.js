@@ -133,7 +133,6 @@ class ImageViewer extends Component {
   }
 
   componentDidMount() {
-    alert(this.state.currentSize);
     // Puts focus on image-viewer so arrow keys will change image
     document.getElementsByClassName('image-viewer')[0].focus();
   }
