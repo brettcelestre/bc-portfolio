@@ -5,7 +5,7 @@ const ymlLoader = require('js-yaml');
 // - title: Wings - (Find better name)
 //   date: 2018
 //   size: 20"X16"
-//   description:
+//   description: PAPER & GLUE
 //   arrows: dark
 //   info: 
 //   sizes:
@@ -22,7 +22,7 @@ const ymlLoader = require('js-yaml');
 // - title: Flower - (Find a good name)
 //   date: 2014
 //   size: 8"X20"??????
-//   description:
+//   description: PAPER & GLUE
 //   arrows: dark
 //   info: 
 //   sizes:
@@ -39,7 +39,7 @@ const ymlLoader = require('js-yaml');
 // - title: Electric Ladyland
 //   date: 2009
 //   size: 14"X17"
-//   description:
+//   description: PAPER & GLUE
 //   arrows: dark
 //   info: 
 //   sizes:
@@ -56,9 +56,9 @@ const ymlLoader = require('js-yaml');
 // - title: LCD
 //   date: 2007
 //   size: 13"X16"
-//   description:
+//   description: PAPER, GLUE & INK
 //   arrows: dark
-//   info: My first collage. Created to get away from the computer screen. This launched my passion for creating collages.
+//   info: My first collage. Created to get away from the computer screen. This launched my passion for creating collages and collecting collage material.
 //   sizes:
 //     Large:
 //       width: 899
@@ -73,7 +73,7 @@ const ymlLoader = require('js-yaml');
 // - title: Owl -  from SEVI - Find better name. "Decisions"?
 //   date: 201????
 //   size: 8"X20"??????
-//   description:
+//   description: PAPER & GLUE
 //   arrows: dark
 //   info: 
 //   sizes:
@@ -87,11 +87,13 @@ const ymlLoader = require('js-yaml');
 //       width: 499
 //       height: 600
 
+
+//Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley.
 const data = ymlLoader.load(`
   - title: McCauley At War
     date: 2015 FEBRUARY
     size: 16"X20"
-    description:
+    description: PAPER & GLUE
     arrows: dark
     info: Collage started in 2010 and completed in 2015.
     sizes:
