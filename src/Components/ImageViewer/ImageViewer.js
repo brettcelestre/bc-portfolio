@@ -14,25 +14,20 @@ const galleryData ={
   artwork: {
     collage: require('../../assets/data/artwork_collage.js'),
     digital: require('../../assets/data/artwork_digital.js'),
-    // drawings: require('../../assets/data/artwork_drawings.js'),
     sketches: require('../../assets/data/artwork_sketches.js')
   },
   photography: {
     film: {
-      desk: require('../../assets/data/photography_film_desk.js'),
       'black-&-white': require('../../assets/data/photography_film_black-&-white.js'),
       nature: require('../../assets/data/photography_film_nature.js'),
       places: require('../../assets/data/photography_film_places.js'),
-      things: require('../../assets/data/photography_film_things.js'),
       people: require('../../assets/data/photography_film_people.js')
     },
     client: require('../../assets/data/photography_client.js'),
     digital: {
-      // 'everyday-life': require('../../assets/data/photography_digital_everyday-life.js'),
       nature: require('../../assets/data/photography_digital_nature.js'),
       people: require('../../assets/data/photography_digital_people.js'),
       places: require('../../assets/data/photography_digital_places.js')
-      // things: require('../../assets/data/photography_digital_things.js')
     }
   },
   spatial: require('../../assets/data/spatial.js')
@@ -47,13 +42,11 @@ let images = {
   },
   photography: {
     film: {
-      desk: {},
       'black-&-white': {},
       'everyday-life': {},
       nature: {},
       people: {},
-      places: {},
-      things: {}
+      places: {}
     },
     client: {},
     digital: {

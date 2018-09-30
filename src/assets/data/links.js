@@ -240,29 +240,3 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data, tags };
-
-
-// Scott Celestre
-// jaymercury
-// Farhankhan Daya
-// Andrew Dawkin
-// Brittany Budge
-// Ricky Garcia
-// Grant Selland
-// Danielle Luz Belanger
-// Alec Moore
-// Catherine Garcia
-
-// website broken
-//   {
-//     'title': 'Jason Abad',
-//     'tags': [graphicDesigner],
-//     'links': [
-//       {
-//         'type': 'Portfolio',
-//         'url': 'https://jayabad.carbonmade.com/'
-//       }
-//     ]
-//   },
-
-module.exports = { data, tags };
