@@ -25,8 +25,8 @@ ReactDOM.render(
       <Route path="/" component={App} zoom="false">
       </Route>
       <Switch>
-        <Route name="short-films" path="/short-films/:film" component={ShortFilms} lastViewed=""/>
-        <Route name="short-films" path="/short-films" component={ShortFilmsSections} lastViewed=""/>
+        <Route name="short-films" path="/short-films/:film" component={ShortFilms}/>
+        <Route name="short-films" path="/short-films" component={ShortFilmsSections}/>
         <Route name="images" path="/:section/:category/:subCategory/:piece" component={ImageViewer} />
         <Route name="images" path="/:section/:category/sections" component={ImageSections} />
         <Route name="images" path="/:section/:category/:piece" component={ImageViewer} />
