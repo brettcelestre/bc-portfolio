@@ -6,6 +6,7 @@ const deskStart = require('../../assets/data/photography_film_desk.js').data[0];
 const placesStart = require('../../assets/data/photography_film_places.js').data[0];
 const natureStart = require('../../assets/data/photography_film_nature.js').data[0];
 const peopleStart = require('../../assets/data/photography_film_people.js').data[0];
+const thingsStart = require('../../assets/data/photography_film_things.js').data[0];
 
 const data = ymlLoader.load(`
 - title: People
@@ -64,6 +65,20 @@ const data = ymlLoader.load(`
       width: 800
       height: 532
 
+- title: Things
+  href: /photography/film/things/${thingsStart.title.split(' ').join('-').toLowerCase()}
+  fontStyles:
+  sizes:
+    Large:
+      width: 1500
+      height: 998
+    Medium:
+      width: 1100
+      height: 732
+    Small:
+      width: 800
+      height: 532
+
 - title: Desk
   href: /photography/film/desk/${deskStart.title.split(' ').join('-').toLowerCase()}
   fontStyles:
@@ -80,17 +95,3 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
-
-// - title: Everyday Life
-//   href: /photography/film/everyday-life/${everydayLifeStart.title.split(' ').join('-').toLowerCase()}
-//   fontStyles:
-//   sizes:
-//     Large:
-//       width: 1500
-//       height: 998
-//     Medium:
-//       width: 1100
-//       height: 732
-//     Small:
-//       width: 800
-//       height: 532

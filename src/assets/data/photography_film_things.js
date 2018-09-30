@@ -1,7 +1,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
-    - title: Something
-      date: 2010 DECEMBER
+    - title: Bedroom 11 01 2015
+      date: 2015 NOVEMBER
       size: ''
       description: Mixed Media
       arrows: dark
@@ -9,13 +9,13 @@ const data = ymlLoader.load(`
       sizes:
         Large:
           width: 1500
-          height: 998
+          height: 957
         Medium:
           width: 1100
-          height: 732
+          height: 702
         Small:
           width: 800
-          height: 532
+          height: 510
 `);
 
 module.exports = { data };
