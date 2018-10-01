@@ -86,7 +86,6 @@ class App extends Component {
         <div className={this.state.fade ? "fade-show" : "fade-no-show"} onClick={this.menuToggle}></div>
 
         <div className="app-menu">
-          <img src={logo} className="logo" width="124px" height="133px" />
           <div className="mainTitleBox">
             <Link to="/" onClick={this.scrollToTop}>
               <h2 className="mainTitle">Brett<span className="main-title-spacing"> </span>Celestre</h2>
@@ -95,51 +94,51 @@ class App extends Component {
 
           <div className="navigation">
 
-            <Link to="/photography" replace onClick={this.scrollToTop}>
+            <Link to="/photography" onClick={this.scrollToTop}>
               <div className="section-title">
                 Photography
               </div>
             </Link>
 
-            <Link to="/artwork" replace onClick={this.scrollToTop}>
+            <Link to="/artwork" onClick={this.scrollToTop}>
               <div className="section-title">
                 Artwork
               </div>
             </Link>
 
-            <Link to="/short-films" replace onClick={this.scrollToTop}>
+            <Link to="/short-films" onClick={this.scrollToTop}>
               <div className="section-title">
                 Short Films
               </div>
             </Link>
             
-            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.scrollToTop}>
+            <Link to={this.createUrlPathForPiece('spatial', null)} onClick={this.scrollToTop}>
               <div className="section-title">
                 Spatial
               </div>
             </Link>
 
-            <Link to="/applications" replace onClick={this.scrollToTop}>
+            <Link to="/applications" onClick={this.scrollToTop}>
               <div className="section-title">
                 Applications
               </div>
             </Link>
-            <Link to="/resources" replace onClick={this.scrollToTop}>
+            <Link to="/resources" onClick={this.scrollToTop}>
               <div className="section-title">
                 Resources
               </div>
             </Link>
-            <Link to="/friends" replace onClick={this.scrollToTop}>
+            <Link to="/friends" onClick={this.scrollToTop}>
               <div className="section-title">
                 Friends
               </div>
             </Link>
-            <Link to="/about" replace onClick={this.scrollToTop}>
+            <Link to="/about" onClick={this.scrollToTop}>
               <div className="section-title">
                 About
               </div>
             </Link>
-            <Link to="/resume" replace onClick={this.scrollToTop}>
+            <Link to="/resume" onClick={this.scrollToTop}>
               <div className="section-title">
                 Resume
               </div>
