@@ -25,20 +25,19 @@ ReactDOM.render(
       <Route path="/" component={App} zoom="false">
       </Route>
       <Switch>
-        <Route name="short-films" path="/short-films/:film" component={ShortFilms}/>
-        <Route name="short-films" path="/short-films" component={ShortFilmsSections}/>
-        <Route name="images" path="/:section/:category/:subCategory/:piece" component={ImageViewer} />
-        <Route name="images" path="/:section/:category/sections" component={ImageSections} />
-        <Route name="images" path="/:section/:category/:piece" component={ImageViewer} />
-        <Route name="images" path="/:section/:category/:piece/zoom" component={ImageViewer} />
-        <Route name="images" path="/:section/:piece" component={ImageViewer} />
-        <Route name="applications" path="/applications" component={Applications} />
-        <Route name="friends" path="/friends" component={Friends} />
-        <Route name="resources" path="/resources" component={Resources} />
-        <Route name="about" path="/about" component={About} />
-        <Route name="resume" path="/resume" component={Resume} />
-        <Route name="gallery-sections" path="/:section" component={ImageSections} />
-        <Route name="home" path="/" component={Home} />
+        <Route path="/short-films/:film" key="player" component={ShortFilms}/>
+        <Route path="/short-films" key="short-films" component={ShortFilmsSections}/>
+        <Route path="/:section/:category/:subCategory/:piece" key="subcategory-piece" component={ImageViewer} />
+        <Route path="/:section/:category/sections" key="category-sections" component={ImageSections} />
+        <Route path="/:section/:category/:piece" key="category-piece" component={ImageViewer} />
+        <Route path="/:section/:piece" key="section-piece" component={ImageViewer} />
+        <Route path="/applications" key="applications" component={Applications} />
+        <Route path="/friends" key="friends" component={Friends} />
+        <Route path="/resources" key="resources" component={Resources} />
+        <Route path="/about" key="about" component={About} />
+        <Route path="/resume" key="resume" component={Resume} />
+        <Route path="/:section" key="sections" component={ImageSections} />
+        <Route path="/" key="home-page" component={Home} />
         <Redirect to={{ pathname: `/` }}/>
       </Switch>
     </div>
