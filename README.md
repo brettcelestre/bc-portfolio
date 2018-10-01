@@ -1,6 +1,6 @@
 ## Brett Celestre's Portfolio
 
-- [Run Locally](#to-run-locally)
+- [Run Locally](#run-locally)
 - [Folder Structure](#folder-structure)
 
 ## Run Locally
