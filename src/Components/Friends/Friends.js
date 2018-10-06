@@ -56,7 +56,7 @@ class Friends extends Component {
       // TODO: Support multiple links for multiple platforms
       // TODO: Support filter by medium
       return (
-        <a href={primaryLink.url} target="blank"> {/* onMouseEnter={this.hoverAnimation} */}
+        <a href={primaryLink.url} target="blank" key={data.title}> {/* onMouseEnter={this.hoverAnimation} */}
           <div className="friends-section" id={data.title}>
             <h4>{data.title}</h4>
             {this.buildTags(data.tags)}

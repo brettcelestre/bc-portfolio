@@ -236,7 +236,7 @@ const data = ymlLoader.load(`
     - type: Portfolio
       url: http://erikbender.net/
   tags:
-    - sculptor, painter
+    - painter, sculptor
 `);
 
 module.exports = { data, tags };
