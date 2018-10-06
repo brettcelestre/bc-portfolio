@@ -80,7 +80,8 @@ class ShortFilms extends Component {
       // width: '640',
       playerVars: {
         autoplay: 0,
-        modestbranding: 1
+        modestbranding: 1,
+        suggestedQuality: 'hd720'
       }
     };
     
