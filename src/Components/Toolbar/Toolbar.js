@@ -6,67 +6,73 @@ class Toolbar extends Component {
   constructor(props){
     super(props)
     this.state = {
-      zoomWidth: { width: 'auto' }
+      zoomWidth: { width: 'auto' },
+      descriptionHeight: 0
     }
 
     this.toolbarInfoToggle = this.toolbarInfoToggle.bind(this);
-  }
-
-  componentWillUpdate(){
-    // TODO: Figure out what I was doing here and complete it
-
-    // if (this.props.imageZoomState) {
-    //   this.setState({
-    //     zoomWidth: { width: this.props.imageData.width}
-    //   });
-    // } else {
-    //   this.setState({
-    //     zoomWidth: { width: 'auto'}
-    //   });
-    // }
+    this.resetToolbarHeight = this.resetToolbarHeight.bind(this);
   }
 
   toolbarInfoToggle() {
-    // TODO: Attach description to title-box underneath name
-    //    have the toolbar height extend to make room, animate quickly
+    const desc = document.getElementsByClassName('description');
+    this.setState({
+      descriptionHeight: desc[0].scrollHeight
+    })
+  }
+
+  resetToolbarHeight(){
+    this.setState({
+      descriptionHeight: 0
+    })
   }
 
   render() {
-    const galleryPosition = this.props.imageData.index + 1;
 
-    if (this.props.imageZoomState) {
-      return(<span></span>)
-    }
+    let toolbarHeight = 50 + this.state.descriptionHeight;
+    let indexHeight = 43 + (this.state.descriptionHeight / 2);
+
+    let toolbarStyles = {
+      height: `${toolbarHeight}px`,
+    };
+
+    let indexStyles = {
+      height: `${indexHeight}px`,
+    };
 
     return (
       <div 
-        className="toolbar" 
-        onMouseEnter={this.props.imageData.description ? this.toolbarInfoToggle : null}
-        // TODO: onMouseLeave={this.someOtherHandler}
-        >
+        className="toolbar"
+        style={toolbarStyles}
+        onMouseEnter={this.toolbarInfoToggle}
+        onMouseLeave={this.resetToolbarHeight}>
 
         <div className="toolbar-desktop">
           <div className="title-box">
+
             <span className="title">
-              {this.props.imageData.name}
+              {this.props.imageData.title}
             </span>
+
             <span className="image-details">
               {this.props.imageData.date}
-              {/* 
-                // TODO: Add image description only during mouse hover
-                <span className="description">{this.props.imageData.description} 
-              */}
             </span>
+
+            <div className="description">
+              {this.props.imageData.info} - {this.props.imageData.size}<br />
+              <div className="description-details-spacer"></div>
+              {this.props.imageData.description}
+            </div>
           
-            <div className="gallery-index-box">
+            <div className="gallery-index-box" style={indexStyles}>
               <div className="gallery-index">
-                {galleryPosition}/{this.props.imageData.galleryLength}
+                {this.props.currentIndex}/{this.props.galleryLength}
               </div>
             </div>
           
           </div>
-
         </div>
+        
       </div>
     );
   }

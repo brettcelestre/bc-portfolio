@@ -36,12 +36,27 @@
   position: fixed !important;
   bottom: 0;
   color: #161616;
-  transition-duration: 300ms;
-
+  transition-duration: 400ms;
   &:hover {
-    cursor: pointer;
     transition-duration: 200ms;
-    box-shadow: 0px 4px 14.3px rgba(20, 20, 20, 5.1);
+    box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .45);
+    .title {
+      font-size: 1.55rem;
+      letter-spacing: 0px;
+      transition-duration: 225ms;
+    }
+    .image-details {
+      font-size: .85rem;
+      letter-spacing: 2.2px;
+      transition-duration: 225ms;
+    }
+    .description {
+      height: auto;
+      transition-duration: 200ms;
+      opacity: 100;
+      transition: opacity 200ms;
+      -webkit-transition: opacity 200ms;
+    }
   }
 }
 
@@ -63,6 +78,7 @@
   margin-top: 3px;
   display: inline-table;
   margin-bottom: -5px;
+  transition-duration: 225ms;
 }
 .title-zoom {
   font-size: 2rem;
@@ -78,6 +94,23 @@
   display: inline-block;
 }
 
+.description {
+  height: 0px;
+  width: calc(100% - 275px);
+  opacity: 0;
+  transition: opacity 200ms;
+  transition-duration: 200ms;
+  -webkit-transition: opacity 200ms;
+  @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
+  position: relative;
+  padding-top: 5px;
+  line-height: 1.2rem;
+}
+
+.description-details-spacer {
+  height: 2.6px;
+}
+
 .info {
   text-align: left;
   margin-top: -12px;
@@ -90,9 +123,11 @@
   padding-left: 14px;
   padding-top: 8px;
   position: absolute;
+  transition-duration: 225ms;
 }
 
 .gallery-index-box {
+  transition-duration: 200ms;
   display: inline-block;
   z-index: 41;
   position: fixed;
