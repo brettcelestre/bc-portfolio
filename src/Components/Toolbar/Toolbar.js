@@ -12,6 +12,7 @@ class Toolbar extends Component {
 
     this.toolbarInfoToggle = this.toolbarInfoToggle.bind(this);
     this.resetToolbarHeight = this.resetToolbarHeight.bind(this);
+    this.includeSize = this.includeSize.bind(this);
   }
 
   toolbarInfoToggle() {
@@ -27,7 +28,15 @@ class Toolbar extends Component {
     })
   }
 
+  includeSize(){
+    if (this.props.imageData.size) {
+      return ` - ${this.props.imageData.size}`;
+    }
+    return '';
+  }
+
   render() {
+    if ( this.props.imageZoomState) return null;
 
     let toolbarHeight = 50 + this.state.descriptionHeight;
     let indexHeight = 43 + (this.state.descriptionHeight / 2);
@@ -59,7 +68,8 @@ class Toolbar extends Component {
             </span>
 
             <div className="description">
-              {this.props.imageData.info} - {this.props.imageData.size}<br />
+              {/* {this.props.imageData.info} - {this.props.imageData.size}<br /> */}
+              {this.props.imageData.info}{this.includeSize()}<br />
               <div className="description-details-spacer"></div>
               {this.props.imageData.description}
             </div>
@@ -72,7 +82,7 @@ class Toolbar extends Component {
           
           </div>
         </div>
-        
+
       </div>
     );
   }
