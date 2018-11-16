@@ -1,10 +1,10 @@
-// 
+
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import ReactSVG from 'react-svg';
 
 import './App.css';
-import logo from '../../assets/img/logo-smaller-large.png';
+import logo from '../../assets/img/logo-smaller-large-2.png';
 import linkedinLogo from '../../assets/svg/social-linkedin.svg';
 import githubLogo from '../../assets/svg/social-github.svg';
 import instagramLogo from '../../assets/svg/social-instagram.svg';
@@ -29,7 +29,7 @@ class App extends Component {
     
     this.createUrlPathForPiece = this.createUrlPathForPiece.bind(this);
     this.menuToggle = this.menuToggle.bind(this);
-    this.scrollToTop = this.scrollToTop.bind(this);
+    this.cleanUp = this.cleanUp.bind(this);
   }
 
   // Creates the Link URL for each section with whatever the latest piece of artwork is called
@@ -60,9 +60,12 @@ class App extends Component {
     }
   }
 
-  scrollToTop() {
+  cleanUp() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;
+    if (window.innerWidth < 1024) {
+      this.menuToggle();
+    }
   }
 
   render() {
@@ -71,79 +74,78 @@ class App extends Component {
         <div className="menu-button" onClick={this.menuToggle}>
           <ReactSVG
             path={menuIcon}
-            style={{width: 27, height: 27}}
+            style={{width: 32, height: 32}}
             className="menu-icon"
             wrapperClassName="menu-icon"
           />
-        </div>
-
-        <div className={this.state.mobileMenu ? "navigation-mobile menu-show" : "navigation-mobile"}>
-          <ul>
-            <Link to="/paints" onClick={this.menuToggle} title="Paints"><li>Paints</li></Link>
-          </ul>
         </div>
 
         <div className={this.state.fade ? "fade-show" : "fade-no-show"} onClick={this.menuToggle}></div>
 
         <div className="app-menu">
           <img src={logo} className="logo" width="124px" height="133px" />
-          <div className="mainTitleBox">
-            <Link to="/" onClick={this.scrollToTop}>
-              <h2 className="mainTitle">Brett<span className="main-title-spacing"> </span>Celestre</h2>
+          <div className="main-title-box">
+            <Link to="/" onClick={this.cleanUp}>
+              <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
             </Link>
           </div>
 
-          <div className="navigation">
+          <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
 
-            <Link to="/photography" replace onClick={this.scrollToTop}>
+            <Link to="/photography" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Photography
               </div>
             </Link>
 
-            <Link to="/artwork" replace onClick={this.scrollToTop}>
+            <Link to="/artwork" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Artwork
               </div>
             </Link>
 
-            <Link to="/short-films" replace onClick={this.scrollToTop}>
+            <Link to="/short-films" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Short Films
               </div>
             </Link>
             
-            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.scrollToTop}>
+            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
               <div className="section-title">
                 Spatial
               </div>
             </Link>
 
-            <Link to="/applications" replace onClick={this.scrollToTop}>
+            <Link to="/applications" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Applications
               </div>
             </Link>
-            <Link to="/resources" replace onClick={this.scrollToTop}>
+
+            <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resources
               </div>
             </Link>
-            <Link to="/friends" replace onClick={this.scrollToTop}>
+
+            <Link to="/friends" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Friends
               </div>
             </Link>
-            <Link to="/about" replace onClick={this.scrollToTop}>
+
+            <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title">
                 About
               </div>
             </Link>
-            <Link to="/resume" replace onClick={this.scrollToTop}>
+
+            <Link to="/resume" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resume
               </div>
             </Link>
+            
           </div>
 
           <div className="social-links-box">
