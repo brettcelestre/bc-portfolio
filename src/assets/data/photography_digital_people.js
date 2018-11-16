@@ -1,11 +1,12 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Grant
+  urlTitle: grant
   date: 2017 MARCH
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Taken in Oakland, CA.
   sizes:
     Large:
       width: 1500
@@ -18,11 +19,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Brett 0
+  urlTitle: brett-0
   date: 2013
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: dark
-  info: Nikon D800 - 50MM
+  description: Taken in Saratoga, CA.
   sizes:
     Large:
       width: 1500
@@ -35,11 +37,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Brett 1
+  urlTitle: brett-1
   date: 2013
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Taken in Saratoga, CA.
   sizes:
     Large:
       width: 1500
@@ -52,11 +55,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Danielle
+  urlTitle: danielle
   date: 2011
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Taken in Walnut Creek, CA.
   sizes:
     Large:
       width: 1500
@@ -69,11 +73,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Devon & Matt
+  urlTitle: devon-&-matt
   date: 
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Taken in Oakland, CA.
   sizes:
     Large:
       width: 1500
@@ -86,11 +91,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Jeanne-Marie 0
+  urlTitle: jeanne-marie-0
   date: 
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Taken in Martinez, CA.
   sizes:
     Large:
       width: 801
@@ -103,11 +109,12 @@ const data = ymlLoader.load(`
       height: 600
 
 - title: Jeanne-Marie 1
+  urlTitle: jeanne-marie-1
   date: 
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Walnut Creek, CA.
   sizes:
     Large:
       width: 1500
@@ -120,11 +127,12 @@ const data = ymlLoader.load(`
       height: 534
 
 - title: Justin
+  urlTitle: justin
   date: 
   size: ''
-  description: 
+  info: Nikon D800 - 50mm
   arrows: light
-  info: Nikon D800 - 50MM
+  description: Walnut Creek Skatepark.
   sizes:
     Large:
       width: 1500

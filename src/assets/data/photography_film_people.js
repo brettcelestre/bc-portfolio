@@ -1,6 +1,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: AJ
+  urlTitle: aj
   date: 
   size: ''
   description: 
@@ -18,6 +19,7 @@ const data = ymlLoader.load(`
       height: 574
 
 - title: Allen
+  urlTitle: allen
   date: 
   size: ''
   description: 
@@ -35,6 +37,7 @@ const data = ymlLoader.load(`
       height: 558
 
 - title: Brendon
+  urlTitle: brendon
   date: 
   size: ''
   description: 
@@ -52,6 +55,7 @@ const data = ymlLoader.load(`
       height: 573
 
 - title: Eugene & Dale
+  urlTitle: eugene-&-dale
   date: 
   size: ''
   description: 
@@ -69,6 +73,7 @@ const data = ymlLoader.load(`
       height: 573
 
 - title: Geoff
+  urlTitle: geoff
   date: 
   size: ''
   description: 
@@ -86,6 +91,7 @@ const data = ymlLoader.load(`
       height: 531
 
 - title: Jeff
+  urlTitle: jeff
   date: 
   size: ''
   description: 
@@ -104,6 +110,7 @@ const data = ymlLoader.load(`
       TODO: update small file size so height is 600 instead of width
 
 - title: Jenny & Scott
+  urlTitle: jenny-&-scott
   date: 
   size: ''
   description: 
@@ -121,6 +128,7 @@ const data = ymlLoader.load(`
       height: 574
 
 - title: Jeanne-Marie
+  urlTitle: jeanne-marie
   date: 
   size: ''
   description: 
@@ -138,6 +146,7 @@ const data = ymlLoader.load(`
       height: 510
 
 - title: Jeanne-Marie 1
+  urlTitle: jeanne-marie-1
   date: 
   size: ''
   description: 
@@ -155,6 +164,7 @@ const data = ymlLoader.load(`
       height: 573
 
 - title: Jeanne-Marie 2
+  urlTitle: jeanne-marie-2
   date: 
   size: ''
   description: 
@@ -171,8 +181,8 @@ const data = ymlLoader.load(`
       width: 427
       height: 600
 
-
 - title: Jeanne-Marie 3
+  urlTitle: jeanne-marie-3
   date: 
   size: ''
   description: 
@@ -190,6 +200,7 @@ const data = ymlLoader.load(`
       height: 541
 
 - title: Matt
+  urlTitle: matt
   date: 
   size: ''
   description: 
@@ -207,6 +218,7 @@ const data = ymlLoader.load(`
       height: 600
 
 - title: Matt 2
+  urlTitle: matt-2
   date: 
   size: ''
   description: 
@@ -224,6 +236,7 @@ const data = ymlLoader.load(`
       height: 600
 
 - title: Matt 3
+  urlTitle: matt-3
   date: 
   size: ''
   description: 
@@ -241,6 +254,7 @@ const data = ymlLoader.load(`
       height: 574
 
 - title: Matt 4
+  urlTitle: matt-4
   date: 
   size: ''
   description: 
@@ -258,6 +272,7 @@ const data = ymlLoader.load(`
       height: 573
 
 - title: Ryan
+  urlTitle: ryan
   date: 
   size: ''
   description: 
@@ -275,6 +290,7 @@ const data = ymlLoader.load(`
       height: 575
 
 - title: Scott
+  urlTitle: scott
   date: 
   size: ''
   description: 

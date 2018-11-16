@@ -101,7 +101,7 @@ const data = ymlLoader.load(`
       url: http://andrewtsao.io/
   tags:
     - software engineer
-- title: Maria Gabriela Sanchez Mallona
+- title: Gabbi Mallona
   links:
     - type: Portfolio
       url: https://magasama.com/
@@ -229,6 +229,8 @@ const data = ymlLoader.load(`
   links:
     - type: Portfolio
       url: https://www.kshinnphotography.com/products
+    - type: Instagram
+      url: https://www.instagram.com/kristophershinn/
   tags:
     - photographer
 - title: Erik Bender

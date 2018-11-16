@@ -3,9 +3,9 @@ const data = ymlLoader.load(`
     - title: Something
       date: 2010 DECEMBER
       size: ''
-      description: Mixed Media
+      info: Mixed Media
       arrows: dark
-      info: ''
+      description: ''
       sizes:
         Large:
           width: 1500

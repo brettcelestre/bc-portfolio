@@ -1,11 +1,12 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
   - title: Noah Lennox
-    date: 2012 MAY
-    size: ''
-    description: MIXED MEDIA COLLAGE
+    urlTitle: noah-lennox
+    date: MAY 2012
+    size: 
+    info: Mixed media collage
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500
@@ -18,11 +19,12 @@ const data = ymlLoader.load(`
         height: 533
   
   - title: Three Year
-    date: 2012 SEPTEMBER
-    size: ''
-    description: MIXED MEDIA COLLAGE
+    urlTitle: three-year
+    date: SEPTEMBER 2012
+    size: 
+    info: Mixed media collage
     arrows: dark
-    info: ''
+    description: The photos used were taken somewhere in Washington.
     sizes:
       Large:
         width: 1500
@@ -35,11 +37,12 @@ const data = ymlLoader.load(`
         height: 534
 
   - title: For Reverend Green
-    date: 2010 FEBRUARY
-    size: ''
-    description: PHOTOMANIPULATION - D50
+    urlTitle: for-reverend-green
+    date: FEBRUARY 2010
+    size: 
+    info: 'Photomanipulation - Nikon D50'
     arrows: dark
-    info: ''
+    description: 'Photos taken in Pleasant Hill, CA.'
     sizes:
       Large:
         width: 1500
@@ -52,11 +55,12 @@ const data = ymlLoader.load(`
         height: 531
   
   - title: Progress
-    date: 2010 DECEMBER
-    size: ''
-    description: MIXED MEDIA COLLAGE
+    urlTitle: progress
+    date: DECEMBER 2010
+    size: 
+    info: Digital collage
     arrows: dark
-    info: ''
+    description: Created with scanned images from various books and magazines.
     sizes:
       Large:
         width: 1500
@@ -69,11 +73,12 @@ const data = ymlLoader.load(`
         height: 572
 
   - title: Sleep
-    date: 2010 JUNE
-    size: ''
-    description: PHOTOMANIPULATION - D50
+    urlTitle: sleep
+    date: JUNE 2010
+    size: 
+    info: 'Photomanipulation - Nikon D50'
     arrows: dark
-    info: ''
+    description: 
     sizes:
       Large:
         width: 1500
@@ -86,11 +91,12 @@ const data = ymlLoader.load(`
         height: 462
   
   - title: Jeanne-Marie
-    date: 2010 DECEMBER
-    size: ''
-    description: MIXED MEDIA COLLAGE
+    urlTitle: jeanne-marie
+    date: DECEMBER 2010
+    size: 
+    info: 'Mixed media collage'
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500
@@ -103,11 +109,12 @@ const data = ymlLoader.load(`
         height: 532
 
   - title: AJ
-    date: 2010 DECEMBER
-    size: ''
-    description: Mixed Media
+    urlTitle: aj
+    date: DECEMBER 2010
+    size: 
+    info: 'Mixed media collage'
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500
@@ -120,11 +127,12 @@ const data = ymlLoader.load(`
         height: 532
 
   - title: Dufrense
-    date: 2009 JANUARY
-    size: ''
-    description: PHOTOMANIPULATION - D50
+    urlTitle: dufrense
+    date: JANUARY 2009
+    size: 
+    info: 'Photomanipulation - Nikon D50'
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500
@@ -137,11 +145,12 @@ const data = ymlLoader.load(`
         height: 532
 
   - title: For The Last Fucking Time
-    date: 2007 JULY
-    size: ''
-    description: MIXED MEDIA COLLAGE
+    urlTitle: for-the-last-fucking-time
+    date: JULY 2007
+    size: 
+    info: Mixed media collage
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500

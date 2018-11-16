@@ -8,7 +8,10 @@ const ymlLoader = require('js-yaml');
 
 const data = ymlLoader.load(`
 - title: Driftwood
+  urlTitle: driftwood
   date: 2015
+  info: Driftwood, Walnut, Glue
+  description: I found this piece of driftwood and held onto it for a few years before mounting it.
   href:
   fontStyles:
   sizes:

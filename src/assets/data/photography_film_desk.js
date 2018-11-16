@@ -1,6 +1,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: "2016"
+  urlTitle: "2016"
   date: 
   size: ''
   description: 
@@ -18,6 +19,7 @@ const data = ymlLoader.load(`
       height: 503
 
 - title: "2015"
+  urlTitle: "2015"
   date: 
   size: ''
   description: 
@@ -35,6 +37,7 @@ const data = ymlLoader.load(`
       height: 500
 
 - title: "2013"
+  urlTitle: "2013"
   date: 
   size: ''
   description: 
@@ -52,6 +55,7 @@ const data = ymlLoader.load(`
       height: 572
 
 - title: "2012"
+  urlTitle: "2012"
   date: 
   size: ''
   description: 
@@ -69,6 +73,7 @@ const data = ymlLoader.load(`
       height: 530
 
 - title: "2011"
+  urlTitle: "2011"
   date: 
   size: ''
   description: San Jose State University - CVB

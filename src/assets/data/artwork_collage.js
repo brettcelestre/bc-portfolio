@@ -88,14 +88,14 @@ const ymlLoader = require('js-yaml');
 //       height: 600
 
 
-//Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley.
 const data = ymlLoader.load(`
   - title: McCauley At War
+    urlTitle: mccauley-at-war
     date: 2015 FEBRUARY
-    size: 16"X20"
-    description: PAPER & GLUE
+    size: 16" x 20"
+    info: Paper, Glue
     arrows: dark
-    info: Collage started in 2010 and completed in 2015.
+    description: "Collage started in 2010 and completed in 2015. Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley."
     sizes:
       Large:
         width: 899
@@ -108,11 +108,12 @@ const data = ymlLoader.load(`
         height: 600
   
   - title: Valley
+    urlTitle: valley
     date: '2011'
-    size: 16"X10.75"
-    description: PAPER, GLUE & INK
+    size: 16" X 10.75"
+    info: Paper, Glue, & Ink
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500
@@ -125,11 +126,12 @@ const data = ymlLoader.load(`
         height: 550
         
   - title: American Indian
+    urlTitle: american-indian
     date: '2011'
-    size: 16"X10.75"
-    description: PAPER & GLUE
+    size: 16" X 10.75"
+    info: Paper & Glue
     arrows: dark
-    info: ''
+    description: ''
     sizes:
       Large:
         width: 1500

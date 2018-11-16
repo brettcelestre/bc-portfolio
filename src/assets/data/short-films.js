@@ -2,6 +2,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Del Rio
+  urlTitle: del-rio
   date: 2014 DECEMBER
   year: 2014
   length: "8:24"
@@ -55,6 +56,7 @@ const data = ymlLoader.load(`
       height: 341
 
 - title: Ballroom Dance Floor
+  urlTitle: ballroom-dance-floor
   date: 2011 MAY
   year: 2011
   length: "3:15"
@@ -83,8 +85,9 @@ const data = ymlLoader.load(`
       height: 341
 
 - title: The Flying Disc
+  urlTitle: the-flying-disc
   date: 2012 MAY
-  year: 2011
+  year: 2012
   length: "1:18"
   href: /short-films/the-flying-disc
   description:
@@ -105,6 +108,7 @@ const data = ymlLoader.load(`
       height: 341
 
 - title: Dan Pool
+  urlTitle: dan-pool
   date: 2011 September
   year: 2011
   length: "1:43"
@@ -124,6 +128,7 @@ const data = ymlLoader.load(`
       height: 341
 
 - title: Justin Felix Vs Gavin Drago
+  urlTitle: justin-felix-vs-gavin-drago
   date: 2010 JANUARY
   year: 2010
   length: "1:37"

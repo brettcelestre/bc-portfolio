@@ -3,11 +3,12 @@ const ymlLoader = require('js-yaml');
 
 const data = ymlLoader.load(`
 - title: Sketch 0
+  urlTitle: sketch-0
   date: 
   size: 
-  description:
+  info: Ink
   arrows: dark
-  info: 
+  description: 
   sizes:
     Large:
       width: 1500
@@ -20,11 +21,12 @@ const data = ymlLoader.load(`
       height: 512
 
 - title: Sketch 1
+  urlTitle: sketch-1
   date:
   size: 
-  description: 
+  info:  Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -37,11 +39,12 @@ const data = ymlLoader.load(`
       height: 526
       
 - title: Sketch 2
+  urlTitle: sketch-2
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -54,11 +57,12 @@ const data = ymlLoader.load(`
       height: 472
 
 - title: Sketch 3
+  urlTitle: sketch-3
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -71,11 +75,12 @@ const data = ymlLoader.load(`
       height: 469
 
 - title: Sketch 4
+  urlTitle: sketch-4
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -88,11 +93,12 @@ const data = ymlLoader.load(`
       height: 472
 
 - title: Sketch 5
+  urlTitle: sketch-5
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -105,11 +111,12 @@ const data = ymlLoader.load(`
       height: 507
 
 - title: Sketch 6
+  urlTitle: sketch-6
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -122,11 +129,12 @@ const data = ymlLoader.load(`
       height: 522
 
 - title: Sketch 7
+  urlTitle: sketch-7
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -139,11 +147,12 @@ const data = ymlLoader.load(`
       height: 528
 
 - title: Sketch 8
+  urlTitle: sketch-8
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -156,11 +165,12 @@ const data = ymlLoader.load(`
       height: 524
 
 - title: Sketch 9
+  urlTitle: sketch-9
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -173,11 +183,12 @@ const data = ymlLoader.load(`
       height: 540
 
 - title: Sketch 10
+  urlTitle: sketch-10
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -190,11 +201,12 @@ const data = ymlLoader.load(`
       height: 475
 
 - title: Sketch 11
+  urlTitle: sketch-11
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -207,11 +219,12 @@ const data = ymlLoader.load(`
       height: 523
 
 - title: Sketch 12
+  urlTitle: sketch-12
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -224,11 +237,12 @@ const data = ymlLoader.load(`
       height: 535
 
 - title: Sketch 13
+  urlTitle: sketch-13
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500
@@ -241,11 +255,12 @@ const data = ymlLoader.load(`
       height: 500
 
 - title: Sketch 14
+  urlTitle: sketch-14
   date:
   size:
-  description:
+  info: Ink
   arrows: dark
-  info: ''
+  description: ''
   sizes:
     Large:
       width: 1500

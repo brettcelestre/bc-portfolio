@@ -1,6 +1,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Fall
+  urlTitle: fall
   date: 
   size: ''
   description: Pleasant Hill, CA
@@ -18,6 +19,7 @@ const data = ymlLoader.load(`
       height: 575
 
 - title: Mexico
+  urlTitle: mexico
   date: 
   size: ''
   description: 
@@ -35,6 +37,7 @@ const data = ymlLoader.load(`
       height: 572
 
 - title: Tree
+  urlTitle: tree
   date: 
   size: ''
   description: 
@@ -52,6 +55,7 @@ const data = ymlLoader.load(`
       height: 574
 
 - title: Yosemite
+  urlTitle: yosemite
   date: 
   size: ''
   description: 

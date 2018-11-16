@@ -1,6 +1,7 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Me
+  urlTitle: me
   date: 
   size: 
   description: 
@@ -18,6 +19,7 @@ const data = ymlLoader.load(`
       height: 533
 
 - title: Jeanne-Marie
+  urlTitle: jeanne-marie
   date: 
   size: 
   description: Nikon ??? - 50MM
@@ -35,6 +37,7 @@ const data = ymlLoader.load(`
       height: 535
 
 - title: Matt
+  urlTitle: matt
   date: 2012?
   size: 
   description: Brother Matt painting the train interiors for our short film Del Rio.
@@ -52,6 +55,7 @@ const data = ymlLoader.load(`
       height: 600
 
 - title: Santa Cruz
+  urlTitle: santa-cruz
   date: 2012
   size: 
   description: 
@@ -69,6 +73,7 @@ const data = ymlLoader.load(`
       height: 535
 
 - title: SJSU 0
+  urlTitle: sjsu-0
   date: 2012
   size: 
   description: 
@@ -86,6 +91,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: SJSU 1
+  urlTitle: sjsu-1
   date: 2012
   size: 
   description: 
