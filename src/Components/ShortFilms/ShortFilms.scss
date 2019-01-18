@@ -14,7 +14,7 @@
 }
 
 .short-films {
-  padding-left: 155px;
+  padding-left: 137px;
   height: 100vh;
   background-color: black;
 }
@@ -32,9 +32,9 @@
   color: white;
   background-color: rgb(0, 0, 0);
   // Adjusts for navigation
-  width: -webkit-calc(100% - 155px);
-  width:    -moz-calc(100% - 155px);
-  width:         calc(100% - 155px);
+  width: -webkit-calc(100% - 137px);
+  width:    -moz-calc(100% - 137px);
+  width:         calc(100% - 137px);
 
   // Adjusts for the exit button at the top
   height: -webkit-calc(100vh - 70px);
@@ -83,6 +83,18 @@
   padding-left: 20px;
   
   background-color: #131313;
+}
+
+// Tablet Size -  and (max-height: 736px) 
+@media (max-width: 1024px) {
+  .short-films {
+    padding-left: 0px;
+  }
+  .theatre {
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 60px;
+  }
 }
 
 // Mobile size

@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import YouTube from 'react-youtube';
 import './ShortFilms.css';
 
@@ -35,19 +34,16 @@ class ShortFilms extends Component {
     this.nextFilm = this.nextFilm.bind(this);
   }
 
-  // Finds targeted film data
   fildFilmData(targetTitle) {
     return films.data.find(film => targetTitle === film.title);
   }
 
-  // Formats film name from url to match format in film.data
   buildFileName(title) {
     const x = title.split('-').reduce((acc, x) => acc + x.charAt(0).toUpperCase() + x.substr(1) + ' ', '');
     return x.substr(0, x.length - 1);
   }
 
   closeTheatre(film){
-    // Sends site back to film sections
     this.props.history.push('/short-films');
   }
 
