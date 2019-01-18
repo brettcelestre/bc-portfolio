@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
+import Img from 'react-image';
+
+import spinner from '../../assets/img/spinner.gif';
 import './ShortFilmsSections.css';
 
 const films = require('../../assets/data/short-films.js');
@@ -61,20 +64,17 @@ class ShortFilmsSections extends Component {
   windowSize(width, height, set) {
     // Adjusts for navigation
     width += 155;
-    // Large Width
-    if (width >= 1500 && (this.state.currentSize !== 'Large' || set)) {
+    if (width >= 1500 && (this.state.currentSize !== 'Large' || set)) {   // Large
       if (set) return 'Large';
       this.setState({currentSize: 'Large'});
       return;
     }
-    // Medium Width
-    if (width >= 1100 && (this.state.currentSize !== 'Medium' || set)) {
+    if (width >= 1100 && (this.state.currentSize !== 'Medium' || set)) {  // Medium
       if (set) return 'Medium';
       this.setState({currentSize: 'Medium'});
       return;
     }
-    // Small Width
-    if (width <= 800 && (this.state.currentSize !== 'Small' || set)) {
+    if (width <= 800 && (this.state.currentSize !== 'Small' || set)) {    // Small
       if (set) return 'Small';
       this.setState({currentSize: 'Small'});
       return;
@@ -82,18 +82,49 @@ class ShortFilmsSections extends Component {
   }
 
   buildFilmsPreviews(){
+
+    let loaderHeight, windowWidth = window.innerWidth;
+    if ( windowWidth > 1024 ) {                                // Desktop
+      loaderHeight = "540px";
+    } else if ( 1099 >= windowWidth && windowWidth >= 800 ) {  // Tablet
+      loaderHeight = "350px";
+    } else if ( 799 >= windowWidth ) {                         // Modbile
+      loaderHeight = "146px";
+    }
+
+    const loaderStyles = {
+      height: loaderHeight,
+      width: "100%",
+      textAlign: "center"
+    }
+
+    const loadingSpinnerStyles = {
+      verticalAlign: "middle"
+    }
+
+    const loaderHelper = {
+      display: "inline-block",
+      height: "100%",
+      verticalAlign: "middle"
+    }
+
     return this.state.films.data.map((film) => {
       return (
         <div className="short-film-box" id={film.title} key={film.title}>
 
           <Link to={film.href} key={film.title} onClick={this.saveScrollSpot}>
             <div className="short-film-cover-box">
-              <img
+              <Img
                 src={filmCoverImages[buildFolderName(film.title)][this.state.currentSize]}
-                // width={film.sizes[this.state.currentSize].width}
-                // height={film.sizes[this.state.currentSize].height}
                 alt={film.title}
-                className="short-film-cover-image"/>
+                className="short-film-cover-image"
+                loader={(
+                  <div style={loaderStyles}>
+                    <span style={loaderHelper}></span>
+                    <img src={spinner} style={loadingSpinnerStyles} />
+                  </div>
+                )}
+              />  
             </div>
 
             <div className="short-film-details">
