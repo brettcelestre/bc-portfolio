@@ -1,8 +1,10 @@
 
 import React, { Component } from 'react';
+import Img from 'react-image';
 import { Link, Redirect } from 'react-router-dom';
 import './Applications.css';
 
+import spinner from '../../assets/img/spinner.gif';
 import applications from '../../assets/data/applications.js';
 
 const appImages = {
@@ -35,12 +37,47 @@ class Applications extends Component {
   }
 
   buildApplications() {
+
+    let loaderHeight, windowWidth = window.innerWidth;
+    if ( windowWidth > 1024 ) {                                // Desktop
+      loaderHeight = "300px";
+    } else if ( 1099 >= windowWidth && windowWidth >= 800 ) {  // Tablet
+      loaderHeight = "265px";
+    } else if ( 799 >= windowWidth ) {                         // Modbile
+      loaderHeight = "230px";
+    }
+
+    const loaderStyles = {
+      height: loaderHeight,
+      width: "100%",
+      textAlign: "center"
+    }
+
+    const loadingSpinnerStyles = {
+      verticalAlign: "middle"
+    }
+
+    const loaderHelper = {
+      display: "inline-block",
+      height: "100%",
+      verticalAlign: "middle"
+    }
+
     return applications.data.map((app) => {
       return (
         <div className="application-box" key={`Application-${app.title}`}>
 
           <div className="application-image-box">
-            <img src={appImages[app.title]} className="application-image" />
+            <Img
+              src={appImages[app.title]}
+              className="application-image"
+              loader={(
+                <div style={loaderStyles}>
+                  <span style={loaderHelper}></span>
+                  <img src={spinner} style={loadingSpinnerStyles} />
+                </div>
+              )}
+            />
           </div>
 
           <div className="application-description-box">
@@ -49,12 +86,12 @@ class Applications extends Component {
               <h2>{app.title}</h2>
             </div>
 
-            <div className="application-date">
-              {app.date}
-            </div>
-
             <div className="application-header">
               {app.header}
+            </div>
+
+            <div className="application-date">
+              {app.date}
             </div>
 
             <div className="application-options">
