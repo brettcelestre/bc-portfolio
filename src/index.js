@@ -13,7 +13,7 @@ import ImageSections from './Components/ImageSections/ImageSections.js';
 import ShortFilmsSections from './Components/ShortFilmsSections/ShortFilmsSections.js';
 import ShortFilms from './Components/ShortFilms/ShortFilms.js';
 import Applications from './Components/Applications/Applications.js';
-import Friends from './Components/Friends/Friends.js';
+import Creatives from './Components/Creatives/Creatives.js';
 import Resources from './Components/Resources/Resources.js';
 import About from './Components/About/About.js';
 import Resume from './Components/Resume/Resume.js';
@@ -33,13 +33,13 @@ ReactDOM.render(
         <Route name="images" path="/:section/:category/:piece/zoom" component={ImageViewer} />
         <Route name="images" path="/:section/:piece" component={ImageViewer} />
         <Route name="applications" path="/applications" component={Applications} />
-        <Route name="friends" path="/friends" component={Friends} />
+        <Route name="creatives" path="/creatives" component={Creatives} />
         <Route name="resources" path="/resources" component={Resources} />
         <Route name="about" path="/about" component={About} />
         <Route name="resume" path="/resume" component={Resume} />
         <Route name="gallery-sections" path="/:section" component={ImageSections} />
-        <Route name="home" path="/" component={Home} />
-        <Redirect to={{ pathname: `/` }}/>
+        {/* <Route name="home" path="/" component={Home} /> */}
+        <Redirect to={{ pathname: `/resume` }}/>
       </Switch>
     </div>
   </BrowserRouter>
