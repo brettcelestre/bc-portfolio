@@ -8,7 +8,7 @@ import spinner from '../../assets/img/spinner.gif';
 import './ShortFilmsSections.css';
 
 const films = require('../../assets/data/short-films.js');
-
+const navigationWidth = 137;
 const filmCoverImages = {
   "ballroom-dance-floor": {},
   "del-rio": {},
@@ -42,47 +42,52 @@ class ShortFilmsSections extends Component {
     super(props)
     this.state = {
       films: films,
-      currentSize: 'Large'
+      currentSize: this.setWindowSize(window.innerHeight)
     }
 
     this.buildFilmsPreviews = this.buildFilmsPreviews.bind(this);
     this.windowSize = this.windowSize.bind(this);
+    this.setWindowSize = this.setWindowSize.bind(this);
     this.saveScrollSpot = this.saveScrollSpot.bind(this);
   }
 
   componentWillMount() {
-    // Finds window size and sets currentSize
-    this.windowSize(window.innerWidth, window.innerHeight)
-    // TODO: Check localStorage - BC.Portfolio.FilmScrollSpot and scroll to that spot
+    // TODO: Check localStorage - BC.Portfolio.FilmScrollSpot
+    //   Then scroll to that spot
   }
 
   saveScrollSpot() {
     // TODO: Store film section scrolling spot
-    //    localStorage.setItem(`BC.Portfolio.FilmScrollSpot`, currentScrollSpot);
+    //  localStorage.setItem(`BC.Portfolio.FilmScrollSpot`, currentScrollSpot);
   }
 
-  windowSize(width, height, set) {
-    // Adjusts for navigation
-    width += 155;
-    if (width >= 1500 && (this.state.currentSize !== 'Large' || set)) {   // Large
-      if (set) return 'Large';
+  setWindowSize(width){
+    width -= navigationWidth; // Adjusts for navigation 
+    if ( width >= 1100 ) {
+      return 'Large';
+    } else if ( width <= 1099 && width >= 800) {
+      return 'Medium';
+    } else if ( width <= 799) {
+      return 'Small';
+    }
+  }
+
+  windowSize(width) {
+    width -= navigationWidth; // Adjusts for navigation
+    if (width >= 1100 && (this.state.currentSize !== 'Large')) {        // Large
       this.setState({currentSize: 'Large'});
       return;
-    }
-    if (width >= 1100 && (this.state.currentSize !== 'Medium' || set)) {  // Medium
-      if (set) return 'Medium';
+    } else if (1099 >= width && width >= 800 
+        && (this.state.currentSize !== 'Medium')) {                     // Medium
       this.setState({currentSize: 'Medium'});
       return;
-    }
-    if (width <= 800 && (this.state.currentSize !== 'Small' || set)) {    // Small
-      if (set) return 'Small';
+    } else if (width <= 799 && (this.state.currentSize !== 'Small')) {  // Small
       this.setState({currentSize: 'Small'});
       return;
     }
   }
 
   buildFilmsPreviews(){
-
     let loaderHeight, windowWidth = window.innerWidth;
     if ( windowWidth > 1024 ) {                                // Desktop
       loaderHeight = "540px";
@@ -139,6 +144,7 @@ class ShortFilmsSections extends Component {
   }
 
   render() {
+    console.log('this.currentSize', this.state.currentSize);
     return (
       <div className="short-films-sections">
         <WindowResizeListener
