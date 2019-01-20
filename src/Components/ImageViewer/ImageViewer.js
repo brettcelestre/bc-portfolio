@@ -2,13 +2,19 @@
 import React, { Component } from 'react';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import PropTypes from 'prop-types';
-import { Link, Redirect } from 'react-router-dom';
+import Img from 'react-image';
 import ReactSVG from 'react-svg';
-import { withRouter } from 'react-router';
+// import { Link, Redirect } from 'react-router-dom';
+// import { withRouter } from 'react-router';
+// import { keyHandler, KEYPRESS } from 'react-key-handler';
 
+import spinner from '../../assets/img/spinner.gif';
 import './ImageViewer.css';
 import Toolbar from '../Toolbar/Toolbar.js';
-const arrow = require('../../assets/svg/ios-arrow-left.svg');
+const arrowLeft = require('../../assets/svg/ios-arrow-left.svg');
+const arrowRight = require('../../assets/svg/ios-arrow-right.svg');
+
+const navigationWidth = 137;
 
 const galleryData ={
   artwork: {
@@ -68,9 +74,7 @@ let images = {
   'short-films': {}
 }
 
-// Stores basic sections
-const sectionObject = Object.keys(galleryData);
-
+// Formats piece name as JPG file name
 const buildFileName = (title) => {
   if (title.toString().includes(' ')) {
     return title.split(' ').join('_');
@@ -84,7 +88,7 @@ const requireAllImages = (data) => {
     if ( section === 'spatial' || section === 'short-films') {
       galleryData[section].data.forEach((piece) => {
         const name = buildFileName(piece.title);
-        images[section][piece.title] = {
+        images[section][piece.urlTitle] = {
           Small: require(`../../assets/gallery/${section}/${name}_Small.jpg`),
           Medium: require(`../../assets/gallery/${section}/${name}_Medium.jpg`),
           Large: require(`../../assets/gallery/${section}/${name}_Large.jpg`)
@@ -97,7 +101,7 @@ const requireAllImages = (data) => {
         if ( galleryData[section][category].data) {
           galleryData[section][category].data.forEach((piece) => {
             const name = buildFileName(piece.title);
-            images[section][category][piece.title] = {
+            images[section][category][piece.urlTitle] = {
               Small: require(`../../assets/gallery/${section}/${category}/${name}_Small.jpg`),
               Medium: require(`../../assets/gallery/${section}/${category}/${name}_Medium.jpg`),
               Large: require(`../../assets/gallery/${section}/${category}/${name}_Large.jpg`)
@@ -109,7 +113,7 @@ const requireAllImages = (data) => {
           Object.keys(galleryData[section][category]).forEach((subCategory) => {
             galleryData[section][category][subCategory].data.forEach((piece) => {
               const name = buildFileName(piece.title);
-              images[section][category][subCategory][piece.title] = {
+              images[section][category][subCategory][piece.urlTitle] = {
                 Small: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Small.jpg`),
                 Medium: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Medium.jpg`),
                 Large: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Large.jpg`)
@@ -123,7 +127,6 @@ const requireAllImages = (data) => {
 }
 
 requireAllImages(galleryData);
-
 class ImageViewer extends Component {
 
   static propTypes = {
@@ -132,52 +135,10 @@ class ImageViewer extends Component {
     history: PropTypes.object.isRequired
   }
 
-  componentDidMount() {
-    // Puts focus on image-viewer so arrow keys will change image
-    document.getElementsByClassName('image-viewer')[0].focus();
-  }
-
-  componentDidUpdate() {
-    const { section, category, subCategory, piece } = this.props.match.params;
- 
-    // Updates gallery data if selected section is different that current
-    if ( section !== this.state.section){
-      // Finds current image data from URL
-      const currentImageData = this.findImageData(section, category, subCategory, piece);
-      // Finds gallery index fom current image
-      const startIndex = this.findGalleryIndex(section, category, subCategory, currentImageData.title);
-      // Figures out if this is a portrait or landscape ratio
-      const height = window.innerHeight - 50; // Adjusts for Toolbar
-      const width = window.innerWidth - 155; // Adjusts for navigation
-      const newWidth = currentImageData.sizes[this.state.currentSize].width;
-      const newHeight = currentImageData.sizes[this.state.currentSize].height;
-      // Updates state with current data
-      this.setState({
-        imageData: currentImageData,
-        index: 0,
-        section: section,
-        category: category,
-        subCategory: subCategory,
-        galleryLength: this.findGalleryLength(section, category, subCategory),
-        name: currentImageData.title,
-        date: currentImageData.date,
-        description: currentImageData.description,
-        size: currentImageData.size,
-        imageOrientation: height/width >= newHeight/newWidth ? 'portrait' : 'landscape',
-        zoom: false,
-        width: newWidth,
-        height: newHeight,
-      });
-    }
-    // Puts focus on image-viewer so arrow keys will change image
-    document.getElementsByClassName('image-viewer')[0].focus();
-  }
-
   constructor(props){
     super(props)
 
     const { section, category, subCategory, piece } = props.match.params;
-    // Finds current image data from URL
     const currentImageData = this.findImageData(section, category, subCategory, piece);
     // Finds gallery index fom current image
     const startIndex = this.findGalleryIndex(section, category, subCategory, currentImageData.title);
@@ -194,29 +155,81 @@ class ImageViewer extends Component {
       description: currentImageData.description,
       size: currentImageData.size,
       currentSize: this.setWindowSize(window.innerWidth),
-      // TODO: Update this load dynamically
-      imageOrientation: 'landscape',
       loading: '"../../assets/svg/load-c.svg"',
-      zoom: false,
+      zoom: false
     }
         
     this.setWindowSize = this.setWindowSize.bind(this);
+    this.loading = this.loading.bind(this);
     this.windowSize = this.windowSize.bind(this);
     this.galleryWheel = this.galleryWheel.bind(this);
     this.zoomImageState = this.zoomImageState.bind(this);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
+    this.nextImg = this.nextImg.bind(this);
+    this.previousImg = this.previousImg.bind(this);
     this.onKeyPressed = this.onKeyPressed.bind(this);
     this.findImageData = this.findImageData.bind(this);
-    this.buildNextArrowClassName = this.buildNextArrowClassName.bind(this);
     this.buildZoomImage = this.buildZoomImage.bind(this);
     this.findGalleryIndex = this.findGalleryIndex.bind(this);
     this.findGalleryLength = this.findGalleryLength.bind(this);
     this.getCurrentGalleryData = this.getCurrentGalleryData.bind(this);
+    // this.dragImage = this.dragImage.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.onKeyPressed, true);
+    // Puts focus on image-viewer so arrow keys will change image
+    document.getElementsByClassName('image-viewer')[0].focus();
+  }
+
+  componentWillUnmount(){
+    window.removeEventListener('keydown', this.onKeyPressed, true);
+  }
+
+  componentDidUpdate() {
+    // Scrolls to to center of zoomed image
+    if (this.state.zoom) {
+      const imageViewerBox = document.getElementById('image-viewer-box');
+      const zoomImage = document.getElementById('zoom-image');
+      imageViewerBox.scrollLeft = (zoomImage.offsetWidth - imageViewerBox.offsetWidth) / 2;
+      imageViewerBox.scrollTop = (zoomImage.offsetHeight - imageViewerBox.offsetHeight) / 2;
+    }
+
+    // Puts focus on image-viewer so arrow keys will change image
+    document.getElementsByClassName('image-viewer')[0].focus();
+    return true;
+  }
+
+  loading() {
+    const loaderStyles = {
+      height: "100%",
+      width: "100%",
+      textAlign: "center",
+      position: "fixed",
+      top: "0",
+      opacity: ".44"
+    }
+
+    const loadingSpinnerStyles = {
+      width: "44px",
+      height: "44px",
+      verticalAlign: "middle"
+    }
+
+    const loaderHelper = {
+      display: "inline-block",
+      height: "100%",
+      verticalAlign: "middle"
+    }
+    return (
+      <div style={loaderStyles}>
+        <span style={loaderHelper}></span>
+        <img src={spinner} style={loadingSpinnerStyles} />
+      </div>
+    )
   }
 
   setWindowSize(width){
-    width -= 155; // Adjusts for navigation 
+    width -= navigationWidth; // Adjusts for navigation 
     if ( width >= 1100 ) {
       return 'Large';
     } else if ( width <= 1099 && width >= 800) {
@@ -244,41 +257,37 @@ class ImageViewer extends Component {
   findImageData(section, category = null, subCategory = null, name) {
     if (subCategory) {
       return galleryData[section][category][subCategory].data.find((piece) => {
-        return name === piece.title.split(' ').join('-').toLowerCase()
+        return name === piece.urlTitle;
       });
     } else if ( category ) {
-      return galleryData[section][category].data.find((piece) => name === piece.title.split(' ').join('-').toLowerCase());
+      return galleryData[section][category].data.find((piece) => name === piece.urlTitle);
     } else {
-      return galleryData[section].data.find((piece) => name === piece.title.split('-').join(' ').toLowerCase());
+      return galleryData[section].data.find((piece) => name === piece.urlTitle);
     }
   }
 
   findGalleryIndex(section, category = null, subCategory = null, targetTitle) {
     if (subCategory) {
-      return galleryData[section][category][subCategory].data.findIndex(piece => piece.title === targetTitle);
+      return galleryData[section][category][subCategory].data.findIndex(piece => piece.urlTitle === targetTitle);
     } else if ( category ) {
-      return galleryData[section][category].data.findIndex(piece => piece.title === targetTitle);
+      return galleryData[section][category].data.findIndex(piece => piece.urlTitle === targetTitle);
     } else {
-      return galleryData[section].data.findIndex(piece => piece.title === targetTitle);
+      return galleryData[section].data.findIndex(piece => piece.urlTitle === targetTitle);
     }
   }
 
   windowSize(width, height) {
-    const { section, category, subCategory, piece } = this.props.match.params;
-
-    // Check if you're setting the image size / Makes sure you're not zoomed in
-    if (!this.state.zoom) {
-
-      height -= 50; // Adjusts for Toolbar
-      width -= 155; // Adjusts for navigation 
-      
-      // Finds current image data from URL
+    if (!this.state.zoom) {                   //  Makes sure you're not zoomed in
+      if ( window.innerWidth > 1024) {        // Adjusts for desktop styles
+        width -= navigationWidth;             // Navigation
+        height -= 50                          // Toolbar
+      } else if (window.innerWidth <= 1023) { // Adjusts for tablet styles
+        height -= 110;                        // Navigation + Toolbar
+      }
+    
+      const { section, category, subCategory, piece } = this.props.match.params;
       const currentImageData = this.findImageData(section, category, subCategory, piece);
-      const imgWidth = currentImageData.sizes[this.state.currentSize].width;
-      const imgHeight = currentImageData.sizes[this.state.currentSize].height;
-
-      // Stores orientation so windowSize only runs setState once
-      let currentOrientation = (height/width >= imgHeight/imgWidth) ? 'portrait' : 'landscape';
+      const currentWindowSize = this.state.currentSize;
 
       // We need to check width first, then inside each on check the height
       // TODO: I should also check the size of the artwork, it could be really wide or tall
@@ -286,46 +295,44 @@ class ImageViewer extends Component {
       //    I could fit a large size image inside that frame.
 
       // Large Width  | Large -
-      if ( width >= 1100 && this.state.currentSize !== 'large' ) {
+      if ( width >= 1100 && currentWindowSize !== 'large' ) {
 
-        // Large Height
-        if (height >= 900 && this.state.currentSize !== 'large') {
-          this.setState({currentSize: 'Large', imageOrientation: currentOrientation});
+        if (height >= 900 && currentWindowSize !== 'large') {
+          this.setState({currentSize: 'Large', imageOrientation: currentImageData.orientation});
           return;
-        } else if (height >= 600 && this.state.currentSize !== 'medium') {
-          this.setState({currentSize: 'Medium', imageOrientation: currentOrientation});
+        } else if (height >= 600 && currentWindowSize !== 'medium') {
+          this.setState({currentSize: 'Medium', imageOrientation: currentImageData.orientation});
           return;
-        } else if (height <= 599 && this.state.currentSize !== 'small') {
-          this.setState({currentSize: 'Small', imageOrientation: currentOrientation});
+        } else if (height <= 599 && currentWindowSize !== 'small') {
+          this.setState({currentSize: 'Small', imageOrientation: currentImageData.orientation});
           return;
         }
 
       // Medium Width  | Medium - Small
-      } else if ( width >= 800 && this.state.currentSize !== 'medium' ) {
+      } else if ( width >= 800 && currentWindowSize !== 'medium' ) {
 
-        // Large Height
-        if (height >= 900 && this.state.currentSize !== 'large') {
-          this.setState({currentSize: 'Large',imageOrientation: currentOrientation});
+        if (height >= 900 && currentWindowSize !== 'large') {
+          this.setState({currentSize: 'Large',imageOrientation: currentImageData.orientation});
           return;
-        } else if (height >= 600 && this.state.currentSize !== 'medium') {
-          this.setState({currentSize: 'Medium',imageOrientation: currentOrientation});
+        } else if (height >= 600 && currentWindowSize !== 'medium') {
+          this.setState({currentSize: 'Medium',imageOrientation: currentImageData.orientation});
           return;
-        } else if (height <= 599 && this.state.currentSize !== 'small') {
-          this.setState({currentSize: 'Small',imageOrientation: currentOrientation});
+        } else if (height <= 599 && currentWindowSize !== 'small') {
+          this.setState({currentSize: 'Small',imageOrientation: currentImageData.orientation});
           return;
         }
 
       // Small Width  | Small - 
-      } else if ( width <= 799 && this.state.currentSize !== 'small' ) {
+      } else if ( width <= 799 && currentWindowSize !== 'small' ) {
 
-        if (height >= 900 && this.state.currentSize !== 'large') {
-          this.setState({currentSize: 'Large',imageOrientation: currentOrientation});
+        if (height >= 900 && currentWindowSize !== 'large') {
+          this.setState({currentSize: 'Large',imageOrientation: currentImageData.orientation});
           return;
-        } else if (height >= 600 && this.state.currentSize !== 'medium') {
-          this.setState({currentSize: 'Medium',imageOrientation: currentOrientation});
+        } else if (height >= 600 && currentWindowSize !== 'medium') {
+          this.setState({currentSize: 'Medium',imageOrientation: currentImageData.orientation});
           return;
-        } else if (height <= 599 && this.state.currentSize !== 'small') {
-          this.setState({currentSize: 'Small',imageOrientation: currentOrientation});
+        } else if (height <= 599 && currentWindowSize !== 'small') {
+          this.setState({currentSize: 'Small',imageOrientation: currentImageData.orientation});
           return;
         }
       }
@@ -333,85 +340,55 @@ class ImageViewer extends Component {
   }
 
   galleryWheel(direction) {
-    // TODO: Fade image out or hide or something
+      const path = this.props.history.location.pathname.split('/');
+      let section, category, subCategory, piece;
+      // Deconstructs current path from props
+      if (path.length === 5) {
+        section = path[1];
+        category = path[2];
+        subCategory = path[3];
+        piece = path[4];
+      } else if ( path.length === 4) {
+        section = path[1];
+        category = path[2];
+        piece = path[3];
+      } else if ( path.length === 3) {
+        section = path[1];
+        piece = path[2];
+      }
 
-    // Prevents Gallery Wheel from working when on another component
-    const insideGallery = sectionObject.some((val) => {
-      return val === this.props.history.location.pathname.split('/')[1];
-    });
-    if (!insideGallery) { 
-      return;
-    }
+    const currentGalleryData = this.getCurrentGalleryData(section, category, subCategory).data;
+    const currentGalleryLength = currentGalleryData.length - 1;
+    let currentIndex =  this.findGalleryIndex(section, category, subCategory, piece);
 
-    const height = window.innerHeight - 50; // Adjusts for Toolbar
-    const width = window.innerWidth - 155; // Adjusts for navigation
-
-    // Updates gallery data depending on the direction
-    switch(direction) {
-      case 'previous':
-        // As long as its not the first image in the gallery
-        if ( this.state.index > 0 ) {
-          // Finds and sets new image data
-          const previousIndex = (this.state.index - 1);
-          const newPreviousData = this.getCurrentGalleryData().data[previousIndex];
-          const newWidth = newPreviousData.sizes[this.state.currentSize].width;
-          const newHeight = newPreviousData.sizes[this.state.currentSize].height;
-          this.setState({
-            index: previousIndex,
-            name: newPreviousData.title,
-            description: newPreviousData.description,
-            size: newPreviousData.size,
-            date: newPreviousData.date,
-            width: newWidth,
-            height: newHeight,
-            imageOrientation: height/width >= newHeight/newWidth ? 'portrait' : 'landscape'
-          });
-          // Creates a new path out of gallery data and then redirects
-          let imageUrl = newPreviousData.title.toLowerCase().split(' ').join('-');
-          this.props.history.push(imageUrl);
-        }
-        break;
-
+    switch (direction) {
       case 'next':
-        // As long as its not the last image in the gallery
-        if ( this.state.index < (this.getCurrentGalleryData().data.length-1) ) {
-          // Finds and sets new image data
-          const nextIndex = (this.state.index + 1);
-          const newNextData = this.getCurrentGalleryData().data[nextIndex];
-          const newWidth2 = newNextData.sizes[this.state.currentSize].width;
-          const newHeight2 = newNextData.sizes[this.state.currentSize].height;
-          this.setState({
-            index: nextIndex,
-            name: newNextData.title,
-            description: newNextData.description,
-            size: newNextData.size,
-            date: newNextData.date,
-            width: newWidth2,
-            height: newHeight2,
-            imageOrientation: height/width >= newHeight2/newWidth2 ? 'portrait' : 'landscape'
-          });
-          // Creates a new path out of gallery data and then redirects
-          let imageUrl = newNextData.title.toLowerCase().split(' ').join('-');
-          this.props.history.push(imageUrl);
+        if ( currentIndex < currentGalleryLength ) {
+          const { urlTitle } = currentGalleryData[++currentIndex];
+          this.props.history.push(urlTitle);
+        }
+        break;
+      case 'previous':
+        if ( currentIndex > 0 ) {
+          const { urlTitle } = currentGalleryData[--currentIndex];
+          this.props.history.push(urlTitle);
         }
         break;
     }
   }
 
-  getCurrentGalleryData() {
-    if (this.state.subCategory) {
-      return galleryData[this.state.section][this.state.category][this.state.subCategory];
-    } else if (this.state.category) {
-      return galleryData[this.state.section][this.state.category];
+  getCurrentGalleryData(section, category, subCategory) {
+    if (subCategory) {
+      return galleryData[section][category][subCategory];
+    } else if (category) {
+      return galleryData[section][category];
     } else {
-      return galleryData[this.state.section];
+      return galleryData[section];
     }
   }
 
-  zoomImageState = () => {
-    const imageData = this.getCurrentGalleryData().data[this.state.index];
+  zoomImageState = (imageData) => {
     if (this.state.zoom) {
-      // Finds current size of window
       let windowSize;
       const currentSize = window.innerHeight - 43;
       if (currentSize >= 900) {
@@ -423,74 +400,100 @@ class ImageViewer extends Component {
       }
       this.setState({
         zoom: false,
-        currentSize: windowSize,
-        width: imageData.sizes[windowSize].width,
-        height: imageData.sizes[windowSize].height
       });
+
     } else {
       this.setState({
         zoom: true,
-        width: imageData.sizes['Large'].width,
-        height: imageData.sizes['Large'].height
       });
     }
   }
 
-  buildImageSRC() {
-    if (this.state.subCategory) {
-      return images[this.state.section][this.state.category][this.state.subCategory][this.state.name];
-    } else if (this.state.category) {
-      return images[this.state.section][this.state.category][this.state.name];
+  buildImageSRC(section, category = null, subCategory = null, piece) {
+    if (subCategory) {
+      return images[section][category][subCategory][piece];
+    } else if (category) {
+      return images[section][category][piece];
     } else {
-      return images[this.state.section][this.state.name];
+      return images[section][piece];
     }
   }
 
-  buildZoomImage() {
+  buildZoomImage(section, category, subCategory, piece, index) {
     if (this.state.zoom) {
+      const newHeight = this.getCurrentGalleryData(section, category, subCategory).data[index].sizes['Large'].height;
+      let zoomDimensions = 'Large';
+      if ( window.innerWidth <= 799) {   // Mobile - Loads medium size image
+        zoomDimensions = 'Medium';
+      }
+
       return(
         <img
-          src={this.buildImageSRC()['Large']}
-          width={this.getCurrentGalleryData().data[this.state.index].sizes['Large'].width}
-          height={this.getCurrentGalleryData().data[this.state.index].sizes['Large'].height}
-          className="zoom-image"
-          alt={this.state.name}
-          title={this.state.name}
+          src={this.buildImageSRC(section, category, subCategory, piece)['Large']}
+          width={this.getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
+          height={this.getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
+          className="zoom-image fade-in-zoom-image"
+          id="zoom-image"
+          onClick={this.zoomImageState}
         />
       );
     }
     return;
   }
 
-  buildNextArrowClassName() {
-    if (this.state.subCategory) {
-      return this.state.index === (galleryData[this.state.section][this.state.category][this.state.subCategory].data.length-1) ? "next disable-navigation" : "next";
-    } else if (this.state.category) {
-      return this.state.index === (galleryData[this.state.section][this.state.category].data.length-1) ? "next disable-navigation" : "next";
-    } else {
-      return this.state.index === (galleryData[this.state.section].data.length-1) ? "next disable-navigation" : "next";
-    }
-  }
+  // TODO: Get touchEvent's working for changing images for mobile/tablet
+  // dragImage(e) {
+  //   // CHECK IF MOBILE FIRST
+  //   console.log('gragImage');
+  //   console.log('>> e - ', e);
+  // }
 
-  previous() {
+  previousImg() {
     this.galleryWheel('previous');
   }
 
-  next() {
+  nextImg() {
     this.galleryWheel('next');
   }
 
   onKeyPressed(e) {
-    if ( e.keyCode == '37' && this.state.zoom == false) this.previous(); // left arrow
-    if ( e.keyCode == '39' && this.state.zoom == false) this.next(); // right arrow
+    if ( e.keyCode == '37' && this.state.zoom == false) this.previousImg(); // left arrow
+    if ( e.keyCode == '39' && this.state.zoom == false) this.nextImg(); // right arrow
     if ( e.keyCode == '187' || e.keyCode == '189' && this.state.zoom == false) this.zoomImageState();
   }
 
   render() {
-    window.addEventListener("keydown", this.onKeyPressed, true);
+    const { section, category, subCategory, piece } = this.props.match.params;
+    const imageData = this.findImageData(section, category, subCategory, piece);
+    const currentGalleryLength = this.getCurrentGalleryData(section, category, subCategory).data.length;
+    const currentIndex =  this.findGalleryIndex(section, category, subCategory, piece) + 1;
+
+    // If Tablet or Mobile load arrow colors. Otherwise, arrows should be black
+    let arrowsColor = 'arrow-background';
+    const windowWidth = window.innerWidth;
+    if ( 1024 >= windowWidth) {  // Tablet / Mobile
+      arrowsColor = imageData.arrows === 'light' ? 'arrows-light' : 'arrows-dark';
+    }
+
+    // Update orientation
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    if ( window.innerWidth > 1024) {          // Adjusts for desktop styles
+      width -= navigationWidth;               // Navigation
+      height -= 50                            // Toolbar
+    } else if (window.innerWidth <= 1023) {   // Adjusts for tablet styles
+      height -= 110;                          // Navigation + Toolbar
+    }
+    
+    // Considers aspect ratio of window
+    const imgWidth = imageData.sizes[this.state.currentSize].width;
+    const imgHeight = imageData.sizes[this.state.currentSize].height;
+    let currentOrientation = (height/width >= imgHeight/imgWidth) ? 
+      'gallery-image landscape fade-in-gallery-image' :
+      'gallery-image portrait fade-in-gallery-image';
 
     return (
-      <div className="image-viewer" tabIndex="0">
+      <div className={this.state.zoom === false ? "image-viewer" : "image-viewer-zoom image-viewer"} id="image-viewer-box" tabIndex="0">
         <WindowResizeListener
           /*
           TODO: Get debounce to work. Currently at 100
@@ -502,62 +505,74 @@ class ImageViewer extends Component {
           }
         }/>
 
-        <div id='zoom-box' className={this.state.zoom ? "zoom-box" : "zoom-box-hide"} onClick={this.zoomImageState}>
-          {this.buildZoomImage()}
-        </div>
+        {this.buildZoomImage(section, category, subCategory, piece, (currentIndex - 1))}
 
         <div className={this.state.zoom ? "image-hide" : "image-box"}>
-          <img
-            src={this.buildImageSRC()[this.state.currentSize]}
+          
+          <span className="image-vertical-spacer"></span>
+
+          <div className="previous-button-box"
+            onClick={this.previousImg}>
+            <ReactSVG
+              path={arrowLeft}
+              style={{width: 30, height: 90}}
+              className={this.state.zoom ? "image-hide" : 
+              (currentIndex === 1 ?
+                  `previous-arrow disable-navigation ${arrowsColor}` :
+                  `previous-arrow ${arrowsColor}`)}
+              wrapperClassName="previous-arrow"
+            />
+          </div>
+
+          <div className="next-button-box"
+            onClick={this.nextImg}>
+            <ReactSVG
+              path={arrowRight}
+              style={{width: 30, height: 90}}
+              className={this.state.zoom ? "image-hide" : 
+                (currentGalleryLength === currentIndex ? 
+                    `next-arrow disable-navigation ${arrowsColor}` :
+                    `next-arrow ${arrowsColor}`)}
+              wrapperClassName="next-arrow"
+            />
+          </div>
+
+          <Img
+            src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]}
             width={this.state.width}
             height={this.state.height}
-            className={this.state.imageOrientation === "portrait" ? "gallery-image portrait" : "gallery-image landscape"}
+            className={currentOrientation}
             id="gallery-image"
             alt={this.state.name}
-            title={this.state.name}
             onClick={this.zoomImageState}
-            draggable="true"
+            loader={this.loading()}
+            // TODO: Testing Tablet/Mobile image swiping
+            // onMouseDown={this.dragImage}
+            // onMouseUp={this.toggleMouseDown}
           />
+
+          {/* Background Previous Box */}
+          <div
+            className={this.state.zoom ? "image-hide" : 
+              (currentIndex === 1 ? "previous disable-navigation" : "previous")}
+            onClick={this.previousImg}>
+          </div>
+
+          {/* Background Next box */}
+          <div
+            className={this.state.zoom ? "image-hide" : 
+              (currentGalleryLength === currentIndex ? "next disable-navigation" : "next")}
+            onClick={this.nextImg}>
+          </div>
         </div>
 
-
-        {/* 
-          
-          TODO: Enable next/previous buttons
-
-        <div className={this.state.zoom ? "image-hide" : "image-controls"}>
-          <div
-            className={this.state.index === 0 ? "previous disable-navigation" : "previous"}
-            onClick={this.previous}>
-            <div className="previous-button-box">
-              <ReactSVG
-                path={arrow}
-                style={{width: 30, height: 30}}
-                className="previous-arrow"
-                wrapperClassName="previous-arrow"
-              />
-            </div>
-          </div>
-          <div
-            className={this.buildNextArrowClassName()}
-            onClick={this.next}>
-            <div className="next-button-box">
-              <ReactSVG
-                path={arrow}
-                style={{width: 30, height: 30}}
-                className="next-arrow"
-                wrapperClassName="next-arrow"
-              />
-            </div>
-          </div>
-        </div> 
-        */}
-
         <Toolbar 
-          imageData={this.state} 
+          imageData={imageData}
           imageZoom={this.zoomImageState}
           imageZoomState={this.state.zoom}
           imageHeight={this.state.height}
+          galleryLength={currentGalleryLength}
+          currentIndex={currentIndex}
         />
       </div>
     );
