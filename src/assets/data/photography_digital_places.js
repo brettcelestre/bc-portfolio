@@ -4,8 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: briones
   date: 
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
-  arrows: dark
+  arrows: light
   description: Briones, CA.
   sizes:
     Large:
@@ -22,6 +23,7 @@ const data = ymlLoader.load(`
   urlTitle: steep-revine
   date: 2010
   size:
+  orientation: landscape
   info: Nikon D50 - 50mm
   arrows: light
   description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA.
@@ -40,6 +42,7 @@ const data = ymlLoader.load(`
   urlTitle: treat-overpass
   date: 2011
   size: ''
+  orientation: landscape
   info: Nikon D50 - 50mm
   arrows: light
   description: 

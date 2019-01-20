@@ -6,6 +6,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-0
   date: 
   size: 
+  orientation: landscape
   info: Ink
   arrows: dark
   description: 
@@ -24,6 +25,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-1
   date:
   size: 
+  orientation: landscape
   info:  Ink
   arrows: dark
   description: ''
@@ -42,6 +44,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-2
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -60,6 +63,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-3
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -78,6 +82,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-4
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -96,6 +101,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-5
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -114,6 +120,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-6
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -132,6 +139,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-7
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -150,6 +158,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-8
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -168,6 +177,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-9
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -186,6 +196,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-10
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -204,6 +215,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-11
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -222,6 +234,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-12
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -240,6 +253,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-13
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''
@@ -258,6 +272,7 @@ const data = ymlLoader.load(`
   urlTitle: sketch-14
   date:
   size:
+  orientation: landscape
   info: Ink
   arrows: dark
   description: ''

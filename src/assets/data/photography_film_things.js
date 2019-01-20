@@ -4,8 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: bedroom-11-01-2015
   date: 2015 NOVEMBER
   size: ''
+  orientation: landscape
   description: 
-  arrows: dark
+  arrows: light
   info: Mixed Media
   sizes:
     Large:

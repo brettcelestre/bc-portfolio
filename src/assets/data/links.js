@@ -12,24 +12,13 @@ const tags = [
   'concept designer',
   'ux designer',
   'fashion designer',
-  'sculptor'
+  'sculptor',
+  'production technician',
+  'videographer',
+  'television director'
 ];
 
 const data = ymlLoader.load(`
-- title: Jeanne-Marie Garcia
-  tags:
-    - painter
-    - photographer
-  appearsOn:
-    - url: "/short-films/del-rio"
-      title: Del Rio
-      credit: Actor
-    - url: "/short-films/ballroom-dance-floor"
-      title: Ballroom Dance Floor
-      credit: Actor
-  links:
-    - type: Portfolio
-      url: http://www.jeannemariegarcia.com/
 - title: Matthew Celestre
   links:
     - type: Portfolio
@@ -45,6 +34,12 @@ const data = ymlLoader.load(`
     - painter
     - musician
     - film maker
+- title: Scott Celestre
+  links:
+    - type: Portfolio
+      url: https://medium.com/@directorscott2
+  tags:
+    - television director
 - title: Ryan Schmidt
   links:
     - type: SoundCloud
@@ -57,6 +52,12 @@ const data = ymlLoader.load(`
       url: https://feelingsparty.bandcamp.com/
   tags:
     - musician
+- title: Brittnay Budge
+  links:
+    - type: Portfolio
+      url: http://brittanybudge.com/
+  tags:
+    - painter
 - title: Kyle Luman
   links:
     - type: Portfolio
@@ -101,7 +102,7 @@ const data = ymlLoader.load(`
       url: http://andrewtsao.io/
   tags:
     - software engineer
-- title: Gabbi Mallona
+- title: Maria Gabriela Sanchez Mallona 
   links:
     - type: Portfolio
       url: https://magasama.com/
@@ -225,6 +226,12 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/good_online_content/
   tags:
     - photographer
+- title: Jarred Hodgdon
+  links:
+    - type: Portfolio
+      url: http://jarred-hodgdon.com/
+  tags:
+    - production technician
 - title: Kristopher Shinn
   links:
     - type: Portfolio
@@ -238,13 +245,41 @@ const data = ymlLoader.load(`
     - type: Portfolio
       url: http://erikbender.net/
   tags:
-    - painter, sculptor
+    - painter
+    - sculptor
+- title: Theodore Reid
+  links:
+    - type: Portfolio
+      url: https://vimeo.com/user2466028/videos?fbclid=IwAR3Fi8rCf-ZLdAbiTKOeIW0HtETCrIPDK25JqPYeaLyIWxnfeqFSMJDUbAU
+  tags:
+    - videographer
 `);
 
 module.exports = { data, tags };
 
 
+/////////////////
+// ADD LATER
+/////////////////
+
+// - title: Jeanne-Marie Garcia
+//   tags:
+//     - painter
+//     - photographer
+//   appearsOn:
+//     - url: "/short-films/del-rio"
+//       title: Del Rio
+//       credit: Actor
+//     - url: "/short-films/ballroom-dance-floor"
+//       title: Ballroom Dance Floor
+//       credit: Actor
+//   links:
+//     - type: Portfolio
+//       url: http://www.jeannemariegarcia.com/
+
+// TODO
 // Scott Celestre
+  // NEED FINAL WEBSITE?
 // jaymercury
 // Farhankhan Daya
 // Andrew Dawkin
@@ -256,15 +291,13 @@ module.exports = { data, tags };
 // Catherine Garcia
 
 // website broken
-//   {
-//     'title': 'Jason Abad',
-//     'tags': [graphicDesigner],
-//     'links': [
-//       {
-//         'type': 'Portfolio',
-//         'url': 'https://jayabad.carbonmade.com/'
-//       }
-//     ]
-//   },
+// - title: Jason Abad
+//   links:
+//     - type: Portfolio
+//       url: https://jayabad.carbonmade.com/
+//   tags:
+//     - graphic designer
+
+
 
 module.exports = { data, tags };

@@ -4,6 +4,7 @@ const data = ymlLoader.load(`
   urlTitle: grant
   date: 2017 MARCH
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Taken in Oakland, CA.
@@ -22,8 +23,9 @@ const data = ymlLoader.load(`
   urlTitle: brett-0
   date: 2013
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
-  arrows: dark
+  arrows: light
   description: Taken in Saratoga, CA.
   sizes:
     Large:
@@ -40,6 +42,7 @@ const data = ymlLoader.load(`
   urlTitle: brett-1
   date: 2013
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Taken in Saratoga, CA.
@@ -58,6 +61,7 @@ const data = ymlLoader.load(`
   urlTitle: danielle
   date: 2011
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Taken in Walnut Creek, CA.
@@ -76,6 +80,7 @@ const data = ymlLoader.load(`
   urlTitle: devon-&-matt
   date: 
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Taken in Oakland, CA.
@@ -94,8 +99,9 @@ const data = ymlLoader.load(`
   urlTitle: jeanne-marie-0
   date: 
   size: ''
+  orientation: portrait
   info: Nikon D800 - 50mm
-  arrows: light
+  arrows: dark
   description: Taken in Martinez, CA.
   sizes:
     Large:
@@ -112,6 +118,7 @@ const data = ymlLoader.load(`
   urlTitle: jeanne-marie-1
   date: 
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Walnut Creek, CA.
@@ -130,6 +137,7 @@ const data = ymlLoader.load(`
   urlTitle: justin
   date: 
   size: ''
+  orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
   description: Walnut Creek Skatepark.

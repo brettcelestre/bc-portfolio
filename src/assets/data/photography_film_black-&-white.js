@@ -4,8 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: me
   date: 
   size: 
+  orientation: landscape
   description: 
-  arrows: light
+  arrows: dark
   info: Nikon ??? - 50MM
   sizes:
     Large:
@@ -22,6 +23,7 @@ const data = ymlLoader.load(`
   urlTitle: jeanne-marie
   date: 
   size: 
+  orientation: landscape
   description: Nikon ??? - 50MM
   arrows: dark
   info: Taken in Castle Rock, Walnut Creek
@@ -40,6 +42,7 @@ const data = ymlLoader.load(`
   urlTitle: matt
   date: 2012?
   size: 
+  orientation: portrait
   description: Brother Matt painting the train interiors for our short film Del Rio.
   arrows: dark
   info: Nikon ??? - 50MM
@@ -58,6 +61,7 @@ const data = ymlLoader.load(`
   urlTitle: santa-cruz
   date: 2012
   size: 
+  orientation: landscape
   description: 
   arrows: light
   info: Nikon ??? - 50MM
@@ -76,6 +80,7 @@ const data = ymlLoader.load(`
   urlTitle: sjsu-0
   date: 2012
   size: 
+  orientation: landscape
   description: 
   arrows: light
   info: Nikon ??? - 50MM
@@ -94,8 +99,9 @@ const data = ymlLoader.load(`
   urlTitle: sjsu-1
   date: 2012
   size: 
+  orientation: portrait
   description: 
-  arrows: light
+  arrows: dark
   info: Nikon ??? - 50MM
   sizes:
     Large:

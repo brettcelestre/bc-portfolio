@@ -2,11 +2,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: AJ
   urlTitle: aj
-  date: 
+  date: 2011
   size: ''
-  description: 
+  orientation: landscape
+  description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: ''
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1500
@@ -20,11 +21,12 @@ const data = ymlLoader.load(`
 
 - title: Allen
   urlTitle: allen
-  date: 
+  date: 2011
   size: ''
-  description: 
-  arrows: light
-  info: ''
+  orientation: landscape
+  description: Taken for a Forbidden Science From Outer Space website
+  arrows: dark
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1448
@@ -38,11 +40,12 @@ const data = ymlLoader.load(`
 
 - title: Brendon
   urlTitle: brendon
-  date: 
+  date: 2009
   size: ''
-  description: 
+  orientation: landscape
+  description: Reflecting body as a life vessel in Briones Regional Park
   arrows: dark
-  info: ''
+  info: Nikon N55 - 50MM
   sizes:
     Large:
       width: 1500
@@ -56,11 +59,12 @@ const data = ymlLoader.load(`
 
 - title: Eugene & Dale
   urlTitle: eugene-&-dale
-  date: 
+  date: 2009
   size: ''
-  description: 
+  orientation: landscape
+  description: Interstate 24 West heading towards San Francisco
   arrows: dark
-  info: ''
+  info: Nikon N55 - 50MM
   sizes:
     Large:
       width: 1500
@@ -74,11 +78,12 @@ const data = ymlLoader.load(`
 
 - title: Geoff
   urlTitle: geoff
-  date: 
+  date: 2016
   size: ''
+  orientation: landscape
   description: 
   arrows: light
-  info: ''
+  info: Current Nikon - 50MM
   sizes:
     Large:
       width: 1500
@@ -92,11 +97,12 @@ const data = ymlLoader.load(`
 
 - title: Jeff
   urlTitle: jeff
-  date: 
+  date: 2011
   size: ''
+  orientation: portrait
   description: 
-  arrows: light
-  info: ''
+  arrows: dark
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 873
@@ -111,11 +117,12 @@ const data = ymlLoader.load(`
 
 - title: Jenny & Scott
   urlTitle: jenny-&-scott
-  date: 
+  date: 2007
   size: ''
-  description: 
-  arrows: light
-  info: ''
+  orientation: landscape
+  description: Pismo Beach, CA
+  arrows: dark
+  info: Nikon N55 - 50MM
   sizes:
     Large:
       width: 1500
@@ -129,11 +136,12 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie
   urlTitle: jeanne-marie
-  date: 
+  date: 2015
   size: ''
+  orientation: landscape
   description: 
   arrows: light
-  info: ''
+  info: Current Nikon - 50MM
   sizes:
     Large:
       width: 1500
@@ -147,11 +155,12 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie 1
   urlTitle: jeanne-marie-1
-  date: 
+  date: 2011
   size: ''
-  description: 
+  orientation: landscape
+  description: San Jose, CA
   arrows: light
-  info: ''
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1500
@@ -165,11 +174,12 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie 2
   urlTitle: jeanne-marie-2
-  date: 
+  date: 2011
   size: ''
-  description: 
-  arrows: light
-  info: ''
+  orientation: portrait
+  description: San Jose, CA
+  arrows: dark
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 854
@@ -183,11 +193,12 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie 3
   urlTitle: jeanne-marie-3
-  date: 
+  date: 2015
   size: ''
-  description: 
-  arrows: light
-  info: ''
+  orientation: landscape
+  description: Creating a Cuban cookbook for Maria
+  arrows: dark
+  info: Current Nikon - 50MM
   sizes:
     Large:
       width: 1500
@@ -201,11 +212,12 @@ const data = ymlLoader.load(`
 
 - title: Matt
   urlTitle: matt
-  date: 
+  date: 2007
   size: ''
+  orientation: portrait
   description: 
-  arrows: light
-  info: ''
+  arrows: dark
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 859
@@ -219,11 +231,12 @@ const data = ymlLoader.load(`
 
 - title: Matt 2
   urlTitle: matt-2
-  date: 
+  date: 2007
   size: ''
-  description: 
-  arrows: light
-  info: ''
+  orientation: portrait
+  description: Briones art trip
+  arrows: dark
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 855
@@ -237,11 +250,12 @@ const data = ymlLoader.load(`
 
 - title: Matt 3
   urlTitle: matt-3
-  date: 
+  date: 2011
   size: ''
+  orientation: landscape
   description: 
   arrows: light
-  info: ''
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1500
@@ -255,11 +269,12 @@ const data = ymlLoader.load(`
 
 - title: Matt 4
   urlTitle: matt-4
-  date: 
+  date: 2010
   size: ''
-  description: 
+  orientation: landscape
+  description: Drunk on a beach in Mexico
   arrows: dark
-  info: ''
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1500
@@ -273,11 +288,12 @@ const data = ymlLoader.load(`
 
 - title: Ryan
   urlTitle: ryan
-  date: 
+  date: 2011
   size: ''
-  description: 
+  orientation: landscape
+  description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: ''
+  info: Alan Blaustiens camera... - 50MM
   sizes:
     Large:
       width: 1500
@@ -291,11 +307,12 @@ const data = ymlLoader.load(`
 
 - title: Scott
   urlTitle: scott
-  date: 
+  date: 2008
   size: ''
+  orientation: portrait
   description: 
-  arrows: light
-  info: ''
+  arrows: dark
+  info: Nikon N55 - 50MM
   sizes:
     Large:
       width: 860

@@ -4,6 +4,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-01
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -22,6 +23,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-02
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -40,6 +42,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-03
   date: 2010 DECEMBER
   size: ''
+  orientation: portrait
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -58,6 +61,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-04
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -76,6 +80,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-05
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -94,8 +99,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-06
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -112,8 +118,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-07
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -130,8 +137,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-08
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -148,8 +156,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-09
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -166,8 +175,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-10
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -184,8 +194,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-11
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:
@@ -202,6 +213,7 @@ const data = ymlLoader.load(`
   urlTitle: tci-12
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
   arrows: dark
   description: ''
@@ -220,8 +232,9 @@ const data = ymlLoader.load(`
   urlTitle: tci-13
   date: 2010 DECEMBER
   size: ''
+  orientation: landscape
   info: D800, Photoshop
-  arrows: dark
+  arrows: light
   description: ''
   sizes:
     Large:

@@ -2,9 +2,10 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Briones Sunset
   urlTitle: briones-sunset
-  date: 
+  date: 2013
   size: ''
-  info:  Nikon D800 - 50mm
+  orientation: landscape
+  info: Nikon D800 - 50mm
   arrows: light
   description: Briones, CA.
   sizes:
@@ -22,7 +23,8 @@ const data = ymlLoader.load(`
   urlTitle: steep-revine
   date: 2010
   size: ''
-  info:  Nikon D800 - 50mm
+  orientation: landscape
+  info: Nikon D800 - 50mm
   arrows: light
   description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA.
   sizes:
@@ -38,9 +40,10 @@ const data = ymlLoader.load(`
 
 - title: Beaverton
   urlTitle: beaverton
-  date: 
+  date: 2010
   size: ''
-  info:  Nikon D800 - 50mm
+  orientation: landscape
+  info: Nikon D800 - 50mm
   arrows: light
   description: Beaverton, OR.
   sizes:

@@ -4,6 +4,7 @@ const data = ymlLoader.load(`
   - title: American Indian
     date: '2011'
     size: 16"X10.75"
+    orientation: landscape
     info: PAPER & GLUE
     arrows: dark
     description: ''

@@ -4,6 +4,7 @@ const data = ymlLoader.load(`
   urlTitle: fall
   date: 
   size: ''
+  orientation: landscape
   description: Pleasant Hill, CA
   arrows: light
   info: ''
@@ -22,6 +23,7 @@ const data = ymlLoader.load(`
   urlTitle: mexico
   date: 
   size: ''
+  orientation: landscape
   description: 
   arrows: dark
   info: ''
@@ -40,8 +42,9 @@ const data = ymlLoader.load(`
   urlTitle: tree
   date: 
   size: ''
+  orientation: landscape
   description: 
-  arrows: light
+  arrows: dark
   info: ''
   sizes:
     Large:
@@ -58,6 +61,7 @@ const data = ymlLoader.load(`
   urlTitle: yosemite
   date: 
   size: ''
+  orientation: landscape
   description: 
   arrows: dark
   info: ''

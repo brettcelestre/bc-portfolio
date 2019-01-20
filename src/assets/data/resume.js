@@ -10,6 +10,8 @@ Technical Skills:
     - NoSQL
     - Express
     - Hapi
+    - Blockchain
+    - Hyperledger Fabric
   Frontend:
     - React
     - Angular
@@ -39,12 +41,14 @@ Professional Experience:
     title: Senior Software Engineer
     date: MAY 2017 - PRESENT
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
+    header:
     description:
       - Developer on a Node.js microservices API layer used to connect multiple disparate backend systems for a large hospitality company to enable their product, including keyless entry.
       - Microservices are utilizing Docker containers, AWS API Gateway, AWS Application ELB, AWS ECS Clusters, Autoscaling, AWS SNS, DynamoDB, Jenkins, and Hapi using an agile workflow. Utilizing BDD unit and integration testing with Cucumber and Chai.
   - company: Freelance
     title: Full Stack Software Engineer
     date: OCTOBER 2016 - DECEMBER 2016
+    header:
     description: 
       - Architected a single-page app with AngularJS using UI Router and styled with SASS with a responsive design
       - Built a RESTful API with Node and Express with MongoDB and Mongoose schemas and queries
@@ -54,6 +58,7 @@ Professional Experience:
     title: QA Specialist
     date: JULY 2015 - APRIL 2016
     url: http://bookvolume.com/
+    header:
     description:
       - Conducted tests, merged branches, and released production deployments bi-weekly
       - Collaborated with engineers to test, run scripts, and verify MySQL database updates which lowered latency
@@ -61,7 +66,8 @@ Professional Experience:
   - company: The Stone Group
     title: Web and Graphic Designer
     date: JUNE 2014 - JULY 2015
-    url: 
+    url: http://stonegroupinc.com/
+    header:
     description:
       - Designed and built responsive emails which were sent to 100k subscribers twice weekly
       - Created and maintained websites and social media accounts executing online campaigns
@@ -70,7 +76,7 @@ Personal Applications:
     title: Front-End Software Engineer
     url:
     date: MARCH 2018
-    header: Personal Artist Portfolio for my brother Matthew Celestre
+    header: Artist portfolio for Matthew Celestre
     description:
       - Designed and built a responsive single-page app with React using React Router Dom and SASS
       - Deployed using AWS S3 and CloudFront
@@ -91,12 +97,14 @@ Personal Applications:
       - Integrated Socket.io between client-server to handle users voting data so planning can take place in real-time
       - Utilized Highcharts.js with responsive design for users to visualize voting data in real-time via Websockets
 Education:
-  - institution: Hack Reactor
+  - title: Hack Reactor
     header: Advanced Software Engineering Immersive
     date: MAY 2016
-  - institution: San Jose State University
+    url: https://www.hackreactor.com/
+  - title: San Jose State University
     header: Bachelor of Fine Arts - Digital Media
     date: DECEMBER 2013
+    url: http://www.sjsu.edu/
 `);
 
 module.exports = { resume };

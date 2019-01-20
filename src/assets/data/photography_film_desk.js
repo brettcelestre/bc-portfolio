@@ -4,8 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: "2016"
   date: 
   size: ''
+  orientation: landscape
   description: 
-  arrows: dark
+  arrows: light
   info: ''
   sizes:
     Large:
@@ -22,6 +23,7 @@ const data = ymlLoader.load(`
   urlTitle: "2015"
   date: 
   size: ''
+  orientation: landscape
   description: 
   arrows: dark
   info: ''
@@ -40,6 +42,7 @@ const data = ymlLoader.load(`
   urlTitle: "2013"
   date: 
   size: ''
+  orientation: landscape
   description: 
   arrows: dark
   info: ''
@@ -58,6 +61,7 @@ const data = ymlLoader.load(`
   urlTitle: "2012"
   date: 
   size: ''
+  orientation: landscape
   description: 
   arrows: dark
   info: ''
@@ -76,6 +80,7 @@ const data = ymlLoader.load(`
   urlTitle: "2011"
   date: 
   size: ''
+  orientation: landscape
   description: San Jose State University - CVB
   arrows: dark
   info: ''

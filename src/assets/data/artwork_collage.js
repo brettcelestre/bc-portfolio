@@ -93,9 +93,10 @@ const data = ymlLoader.load(`
     urlTitle: mccauley-at-war
     date: 2015 FEBRUARY
     size: 16" x 20"
+    orientation: portrait
     info: Paper, Glue
     arrows: dark
-    description: "Collage started in 2010 and completed in 2015. Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley."
+    description: "Started in 2010 and completed in 2015. Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley."
     sizes:
       Large:
         width: 899
@@ -111,9 +112,10 @@ const data = ymlLoader.load(`
     urlTitle: valley
     date: '2011'
     size: 16" X 10.75"
+    orientation: landscape
     info: Paper, Glue, & Ink
-    arrows: dark
-    description: ''
+    arrows: light
+    description: 'hi'
     sizes:
       Large:
         width: 1500
@@ -129,6 +131,7 @@ const data = ymlLoader.load(`
     urlTitle: american-indian
     date: '2011'
     size: 16" X 10.75"
+    orientation: landscape
     info: Paper & Glue
     arrows: dark
     description: ''

@@ -11,7 +11,7 @@ const data = ymlLoader.load(`
   urlTitle: driftwood
   date: 2015
   info: Driftwood, Walnut, Glue
-  description: I found this piece of driftwood and held onto it for a few years before mounting it.
+  description: 
   href:
   fontStyles:
   sizes:
@@ -27,6 +27,9 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
+
+// Driftwood - Description
+// I found this piece of driftwood and held onto it for a few years before mounting it.
 
 
 // - title: Side Table
