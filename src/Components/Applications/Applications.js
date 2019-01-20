@@ -41,7 +41,7 @@ class Applications extends Component {
     let loaderHeight, windowWidth = window.innerWidth;
     if ( windowWidth > 1024 ) {                                // Desktop
       loaderHeight = "300px";
-    } else if ( 1099 >= windowWidth && windowWidth >= 800 ) {  // Tablet
+    } else if ( 1024 >= windowWidth && windowWidth >= 800 ) {  // Tablet
       loaderHeight = "265px";
     } else if ( 799 >= windowWidth ) {                         // Modbile
       loaderHeight = "230px";
@@ -70,7 +70,7 @@ class Applications extends Component {
           <div className="application-image-box">
             <Img
               src={appImages[app.title]}
-              className="application-image"
+              className="application-image fade-in-gallery-image"
               loader={(
                 <div style={loaderStyles}>
                   <span style={loaderHelper}></span>

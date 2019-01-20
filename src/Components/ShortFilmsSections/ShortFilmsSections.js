@@ -86,7 +86,7 @@ class ShortFilmsSections extends Component {
     let loaderHeight, windowWidth = window.innerWidth;
     if ( windowWidth > 1024 ) {                                // Desktop
       loaderHeight = "540px";
-    } else if ( 1099 >= windowWidth && windowWidth >= 800 ) {  // Tablet
+    } else if ( 1024 >= windowWidth && windowWidth >= 800 ) {  // Tablet
       loaderHeight = "350px";
     } else if ( 799 >= windowWidth ) {                         // Modbile
       loaderHeight = "146px";
@@ -117,7 +117,7 @@ class ShortFilmsSections extends Component {
               <Img
                 src={filmCoverImages[buildFolderName(film.title)][this.state.currentSize]}
                 alt={film.title}
-                className="short-film-cover-image"
+                className="short-film-cover-image fade-in-gallery-image"
                 loader={(
                   <div style={loaderStyles}>
                     <span style={loaderHelper}></span>

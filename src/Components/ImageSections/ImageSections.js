@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import Img from 'react-image';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import './ImageSections.css';
 
@@ -46,7 +47,11 @@ class ImageSections extends Component {
   }
 
   setWindowSize(width){
-    width -= 155; // Adjusts for navigation 
+    // Adjusts for navigation 
+    if ( width >= 1024) {
+      width -= 137;
+    }
+
     if ( width >= 1100 ) {
       return 'Large';
     } else if ( width <= 1099 && width >= 800) {
@@ -88,25 +93,69 @@ class ImageSections extends Component {
     return title.split(' ').join('-').toLowerCase();
   }
 
+  imageThumbLoading() {
+    return (
+      <div className="thumb-image-loading"></div>
+    )
+  }
+
   buildSectionThumbs() {
     const category = this.state.category;
     let target = category ?
       this.state.section + category.substr(0,1).toUpperCase() + category.substr(1) :
       this.state.section;
 
-    return data[target].data.map((data, i) => {
-      let cover = category ?
-      require(`../../assets/gallery/${this.state.section}/${this.state.category}/${this.genUrlString(data.title)}/Banner_${this.state.currentSize}.jpg`) :
-      require(`../../assets/gallery/${this.state.section}/${this.genUrlString(data.title)}/Banner_${this.state.currentSize}.jpg`);
+    // const loaderStyles = {
+    //   height: "250px",
+    //   width: "100%",
+    //   backgroundColor: "#333333"
+    // }
 
+    // Fix lazy load height based on image aspect ratio and window size.
+    //   If mobile width = 100% window width
+    //   Tablet width = calc(100% - left/right padding)
+    //   Desktop width = calc(100% - left/right padding)
+    //   If greater than desktop Mac with it’s just true to size
+
+    let loaderHeight, windowWidth = window.innerWidth;
+    if ( windowWidth > 1024) {          // Desktop
+      loaderHeight = "225px";
+    } else if ( windowWidth <= 1024) {  // Tablet and Modbile
+      loaderHeight = "150px";
+    }
+
+    const loaderStyles = {
+      height: loaderHeight,
+      width: "100%",
+      textAlign: "center"
+    }
+
+    const loadingSpinnerStyles = {
+      verticalAlign: "middle"
+    }
+
+    const loaderHelper = {
+      display: "inline-block",
+      height: "100%",
+      verticalAlign: "middle"
+    }
+
+    return data[target].data.map((piece, i) => {
+      let cover = category ?
+      require(`../../assets/gallery/${this.state.section}/${this.state.category}/${this.genUrlString(piece.title)}/Banner_${this.state.currentSize}.jpg`) :
+      require(`../../assets/gallery/${this.state.section}/${this.genUrlString(piece.title)}/Banner_${this.state.currentSize}.jpg`);
       return (
-        <div className="section-thumbnail-box" key={data.title}>
-          <Link to={data.href} onClick={this.scrollToTop}>
-              <div className="section-thumbnail">
-                <img src={cover} className="thumb-image"/>
+        <div className="section-thumbnail-box" key={piece.title}>
+          <Link to={piece.href} onClick={this.scrollToTop}>
+              <div className="section-thumbnail" id="section-thumbnail">
+                <Img
+                  src={cover}
+                  className="thumb-image fade-in-gallery-image"
+                  loader={(<div style={loaderStyles}></div>)}
+                />
               </div>
               <div className="image-section-title">
-              <h2>{data.title}</h2>
+              <h2>{piece.title}</h2>
               </div>
           </Link>
         </div>
@@ -128,15 +177,6 @@ class ImageSections extends Component {
               this.windowSize(windowSize.windowWidth)
             }
           }/>
-
-        {/* 
-          // TODO: create section path
-        <div className="photography-folder-header">
-          <h2>
-            {this.state.section} > {this.state.category}
-          </h2>
-        </div> 
-        */}
 
         <div className="row section-thumbs">
           {this.buildSectionThumbs()}
