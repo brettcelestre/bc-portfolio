@@ -84,49 +84,6 @@ const data = ymlLoader.load(`
       width: 800
       height: 341
 
-- title: The Flying Disc
-  urlTitle: the-flying-disc
-  date: 2012 MAY
-  year: 2012
-  length: "1:18"
-  href: /short-films/the-flying-disc
-  description:
-  website: 
-  id: aw3WzAiKgY8
-  url: https://www.youtube.com/embed/aw3WzAiKgY8?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
-  embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/aw3WzAiKgY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  info: Written, Directed, & Special Effects by Brett Celestre
-  sizes:
-    Large:
-      width: 1500
-      height: 639
-    Medium:
-      width: 1100
-      height: 469
-    Small:
-      width: 800
-      height: 341
-
-- title: Dan Pool
-  urlTitle: dan-pool
-  date: 2011 September
-  year: 2011
-  length: "1:43"
-  href: /short-films/dan-pool
-  id: LqBw8UVvfXg
-  url: https://www.youtube.com/embed/LqBw8UVvfXg?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
-  fontStyles:
-  sizes:
-    Large:
-      width: 1500
-      height: 639
-    Medium:
-      width: 1100
-      height: 469
-    Small:
-      width: 800
-      height: 341
-
 - title: Justin Felix Vs Gavin Drago
   urlTitle: justin-felix-vs-gavin-drago
   date: 2010 JANUARY
@@ -165,3 +122,50 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
+
+
+// - title: The Flying Disc
+//   urlTitle: the-flying-disc
+//   date: 2012 MAY
+//   year: 2012
+//   length: "1:18"
+//   href: /short-films/the-flying-disc
+//   description:
+//   website: 
+//   id: aw3WzAiKgY8
+//   url: https://www.youtube.com/embed/aw3WzAiKgY8?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
+//   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/aw3WzAiKgY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+//   info: Written, Directed, & Special Effects by Brett Celestre
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 639
+//     Medium:
+//       width: 1100
+//       height: 469
+//     Small:
+//       width: 800
+//       height: 341
+
+// - title: Dan Pool
+//   urlTitle: dan-pool
+//   date: 2011 September
+//   year: 2011
+//   length: "1:43"
+//   href: /short-films/dan-pool
+//   id: LqBw8UVvfXg
+//   url: https://www.youtube.com/embed/LqBw8UVvfXg?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
+//   fontStyles:
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 639
+//     Medium:
+//       width: 1100
+//       height: 469
+//     Small:
+//       width: 800
+//       height: 341
+
+// real life 2
+// real life 
