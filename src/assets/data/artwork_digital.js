@@ -24,9 +24,9 @@ const data = ymlLoader.load(`
     date: SEPTEMBER 2012
     size: 
     orientation: landscape
-    info: Mixed media collage
+    info: Mixed media collage - Nikon D800
     arrows: light
-    description: The photos used were taken somewhere in Washington.
+    description: Photos taken somewhere in Washington.
     sizes:
       Large:
         width: 1500

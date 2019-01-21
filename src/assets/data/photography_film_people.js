@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1500
@@ -26,7 +26,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: dark
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1448
@@ -102,7 +102,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: 
   arrows: dark
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 873
@@ -160,7 +160,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: San Jose, CA
   arrows: light
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1500
@@ -179,7 +179,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: San Jose, CA
   arrows: dark
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 854
@@ -255,7 +255,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1500
@@ -274,7 +274,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Drunk on a beach in Mexico
   arrows: dark
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1500
@@ -293,7 +293,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: Alan Blaustiens camera... - 50MM
+  info: Nikon Nikomat FTn - 50MM
   sizes:
     Large:
       width: 1500

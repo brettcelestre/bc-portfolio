@@ -115,7 +115,7 @@ const data = ymlLoader.load(`
     orientation: landscape
     info: Paper, Glue, & Ink
     arrows: light
-    description: 'hi'
+    description:
     sizes:
       Large:
         width: 1500

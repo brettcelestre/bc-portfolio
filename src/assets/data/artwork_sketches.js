@@ -254,7 +254,7 @@ const data = ymlLoader.load(`
   date:
   size:
   orientation: landscape
-  info: Ink
+  info: Ink & Marker
   arrows: dark
   description: ''
   sizes:
