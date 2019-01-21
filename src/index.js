@@ -8,7 +8,7 @@ import './assets/css/normalize.css';
 import './index.css';
 
 import App from './Components/App/App.js';
-import Home from './Components/Home/Home.js';
+// import Home from './Components/Home/Home.js';
 import ImageSections from './Components/ImageSections/ImageSections.js';
 import ShortFilmsSections from './Components/ShortFilmsSections/ShortFilmsSections.js';
 import ShortFilms from './Components/ShortFilms/ShortFilms.js';
