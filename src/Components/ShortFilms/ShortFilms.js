@@ -91,7 +91,7 @@ class ShortFilms extends Component {
           <YouTube
             className="youtube-video"
             videoId={this.state.filmData.id}
-            opts={this.opts}
+            opts={opts}
             onReady={this.onPlayerReady}
             // onEnd={this.nextFilm}
           />
