@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ReactSVG from 'react-svg';
 
 import './App.css';
-import logo from '../../assets/img/logo-smaller-large-2.png';
+import logo from '../../assets/img/logo-smaller-large-3.png';
 import linkedinLogo from '../../assets/svg/social-linkedin.svg';
 import githubLogo from '../../assets/svg/social-github.svg';
 import instagramLogo from '../../assets/svg/social-instagram.svg';
-
-const menuIcon = require('../../assets/svg/random-menu-lines.svg');
+import exit from '../../assets/svg/cancel.svg';
+import menuIcon from '../../assets/svg/random-menu-lines.svg';
 
 const galleryData = {
   spatial: require('../../assets/data/spatial.js')
@@ -69,29 +69,38 @@ class App extends Component {
   }
 
   render() {
+
+    let socialMediaIconSize;
+    if ( window.innerWidth > 1024) {          // Desktop
+      socialMediaIconSize = 20;
+    } else if ( window.innerWidth <= 1024) {  // Tablet and Modbile
+      socialMediaIconSize = 30;
+    }
+
     return (
       <div className="app">
         <div className="menu-button" onClick={this.menuToggle}>
           <ReactSVG
-            path={menuIcon}
-            style={{width: 32, height: 32}}
-            className="menu-icon"
-            wrapperClassName="menu-icon"
+            path={this.state.mobileMenu ? exit : menuIcon}
+            style={this.state.mobileMenu ? {width: 23.5, height: 23.5} : {width: 32, height: 32}}
+            className={this.state.mobileMenu ? "menu-icon exit-icon" : "menu-icon"}
+            wrapperClassName={this.state.mobileMenu ? "menu-icon exit-icon" : "menu-icon"}
           />
         </div>
 
         <div className={this.state.fade ? "fade-show" : "fade-no-show"} onClick={this.menuToggle}></div>
 
         <div className="app-menu">
-          <img src={logo} className="logo" width="124px" height="133px" />
+
+          <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/>
+
           <div className="main-title-box">
-            <Link to="/" onClick={this.cleanUp}>
+            {/* <Link to="/" onClick={this.cleanUp}> */}
               <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
-            </Link>
+            {/* </Link> */}
           </div>
 
           <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
-
             <Link to="/photography" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Photography
@@ -122,67 +131,70 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/resources" replace onClick={this.cleanUp}>
+            {/* <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resources
               </div>
-            </Link>
+            </Link> */}
 
-            <Link to="/friends" replace onClick={this.cleanUp}>
+            <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title">
-                Friends
+                {/* Friends */}
+                Creatives
               </div>
             </Link>
 
-            <Link to="/about" replace onClick={this.cleanUp}>
+            {/* <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title">
                 About
               </div>
-            </Link>
+            </Link> */}
 
             <Link to="/resume" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resume
               </div>
             </Link>
+
+            <div className="social-media-spacer"></div>
             
-          </div>
+            <div className="social-links-box">
+              <div className="social-links">
+                <a href="https://www.linkedin.com/in/brettcelestre/" target="blank">
+                  <ReactSVG
+                    path={linkedinLogo}
+                    style={{width: socialMediaIconSize, height: socialMediaIconSize}}
+                    className="social-icon"
+                    wrapperClassName="social-icon"
+                  />
+                </a>
 
-          <div className="social-links-box">
-            <div className="social-links">
-              <a href="https://www.linkedin.com/in/brettcelestre/" target="blank">
-                <ReactSVG
-                  path={linkedinLogo}
-                  style={{width: 27, height: 27}}
-                  className="social-icon"
-                  wrapperClassName="social-icon"
-                />
-              </a>
+                <a href="https://github.com/brettcelestre" target="blank">
+                  <ReactSVG
+                    path={githubLogo}
+                    style={{width: socialMediaIconSize, height: socialMediaIconSize}}
+                    className="social-icon"
+                    wrapperClassName="social-icon"
+                  />
+                </a>
 
-              <a href="https://github.com/brettcelestre" target="blank">
-                <ReactSVG
-                  path={githubLogo}
-                  style={{width: 27, height: 27}}
-                  className="social-icon"
-                  wrapperClassName="social-icon"
-                />
-              </a>
-
-              <a href="https://www.instagram.com/brettcelestre/" target="blank">
-                <ReactSVG
-                  path={instagramLogo}
-                  style={{width: 27, height: 27}}
-                  className="social-icon"
-                  wrapperClassName="social-icon"
-                />
-              </a>
+                <a href="https://www.instagram.com/brettcelestre/" target="blank">
+                  <ReactSVG
+                    path={instagramLogo}
+                    style={{width: socialMediaIconSize, height: socialMediaIconSize}}
+                    className="social-icon"
+                    wrapperClassName="social-icon"
+                  />
+                </a>
+                
+              </div>
+            
+              <div className="copyright-box">
+                <h5 className="copyright">© {this.state.year}<br />
+                BRETT CELESTRE</h5>
+              </div>
             </div>
-          
-            <div className="copyright-box">
-              <h5 className="copyright">© {this.state.year} Brett Celestre</h5>
-            </div>
           </div>
-
         </div>
       </div>
     );
