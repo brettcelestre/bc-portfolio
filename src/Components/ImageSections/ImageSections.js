@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Img from 'react-image';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import './ImageSections.css';
+import spinner from '../../assets/img/spinner.gif';
 
 const data = {
   artwork:  require('../../assets/data/artwork-sections.js'),
@@ -151,7 +152,12 @@ class ImageSections extends Component {
                 <Img
                   src={cover}
                   className="thumb-image fade-in-gallery-image"
-                  loader={(<div style={loaderStyles}></div>)}
+                  loader={(
+                    <div style={loaderStyles}>
+                      <span style={loaderHelper}></span>
+                      <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
+                    </div>
+                  )}
                 />
               </div>
               <div className="image-section-title">
