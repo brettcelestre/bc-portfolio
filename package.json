@@ -11,6 +11,8 @@
     "react-html-parser": "^2.0.2",
     "react-image": "^1.0.1",
     "react-image-resizer": "^1.2.0",
+    "react-key-handler": "^1.2.0-beta.3",
+    "react-keydown": "^1.9.7",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.1.1",
     "react-svg": "^2.2.6",
