@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import './Creatives.css';
 
 import { data, tags } from '../../assets/data/links';
