@@ -1,18 +1,17 @@
 
 import React, { Component } from 'react';
 import Img from 'react-image';
-import { Link, Redirect } from 'react-router-dom';
 import './Applications.css';
 
 import spinner from '../../assets/img/spinner.gif';
 import applications from '../../assets/data/applications.js';
 
 const appImages = {
-  "MatthewCelestre.com": require('../../assets/gallery/applications/MatthewCelestre.png'),
-  "Stock Sight": require('../../assets/gallery/applications/StockSight.png'),
-  "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.png'),
-  "Qurvey": require('../../assets/gallery/applications/Qurvey.png'),
-  "FeedFuse": require('../../assets/gallery/applications/FeedFuse.png')
+  "MatthewCelestre.com": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
+  "Stock Sight": require('../../assets/gallery/applications/StockSight.jpg'),
+  "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.jpg'),
+  "Qurvey": require('../../assets/gallery/applications/Qurvey.jpg'),
+  "FeedFuse": require('../../assets/gallery/applications/FeedFuse.jpg')
 }
 
 class Applications extends Component {
@@ -74,7 +73,7 @@ class Applications extends Component {
               loader={(
                 <div style={loaderStyles}>
                   <span style={loaderHelper}></span>
-                  <img src={spinner} style={loadingSpinnerStyles} />
+                  <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
                 </div>
               )}
             />
@@ -125,7 +124,9 @@ class Applications extends Component {
   render() {
     return (
       <div className="applications">
-        {this.buildApplications()}
+        <div className="applications-section">
+          {this.buildApplications()}
+        </div>
       </div>
     );
   }
