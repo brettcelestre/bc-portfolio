@@ -17,52 +17,108 @@
   letter-spacing: $spacing;
 }
 
-.toolbar-desktop {
-  display: block;
-}
-
-.toolbar-mobile {
+.toolbar-reset-box-hide {
   display: none;
 }
 
+.disable-display {
+  display: none;
+}
+
+.toolbar-pull-box {
+  width: 100%;
+  height: 8px;
+}
+
+.toolbar-pull-bar {
+  background-color: #e0e0e0;
+  position: relative;
+  top: 5.5px;
+  display: table;
+  margin: 0 auto;
+  height: 4px;
+  width: 44px;
+  border-radius: 2px;
+}
+
+.toolbar-reset-box {
+  z-index: 35;
+  position: fixed !important;
+  top: -1px;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 104%;
+  height: 104%;
+  background-color: rgba(38, 38, 38, 0.7);
+}
+
+.fade-show {
+  z-index: 35;
+}
+
 .toolbar {
+  z-index: 30;
+}
+
+.toolbar-bar {
   z-index: 40;
+  display: block;
   background-color: #fcfcfc;
   margin: 0;
   padding: 0;
-  left: 155px;
+  left: 137px;
   width: 100%;
   height: 50px;
   position: fixed !important;
   bottom: 0;
   color: #161616;
-  transition-duration: 400ms;
+  transition-duration: 225ms;
+  box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .37);
+}
+
+.toolbar-bar-desktop {
   &:hover {
-    transition-duration: 200ms;
+    transition-duration: 225ms;
     box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .45);
-    .title {
+    cursor: pointer;
+    .title-desktop {
       font-size: 1.55rem;
       letter-spacing: 0px;
       transition-duration: 225ms;
     }
-    .image-details {
-      font-size: .85rem;
+    .image-date-desktop {
+      font-size: .875rem;
       letter-spacing: 2.2px;
+      line-height: 1.5rem;
+      margin-top: -2px;
       transition-duration: 225ms;
-    }
-    .description {
-      height: auto;
-      transition-duration: 200ms;
-      opacity: 100;
-      transition: opacity 200ms;
-      -webkit-transition: opacity 200ms;
     }
   }
 }
 
+.toolbar-bar-shadow {
+  transition-duration: 225ms;
+  box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .45);
+}
+
+.title-focus {
+  font-size: 1.55rem;
+  letter-spacing: 0px;
+  transition-duration: 225ms;
+}
+
+.image-date-focus {
+  font-size: .85rem;
+  letter-spacing: 2.2px;
+  transition-duration: 225ms;
+}
+
 .title-box {
   padding-left: 25px;
-  padding-top: 10px;
+  padding-top: 3px;
+  margin-top: 0px;
   text-align: left;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -94,17 +150,24 @@
   display: inline-block;
 }
 
-.description {
-  height: 0px;
+.image-description {
   width: calc(100% - 275px);
   opacity: 0;
-  transition: opacity 200ms;
-  transition-duration: 200ms;
-  -webkit-transition: opacity 200ms;
+  transition: opacity 225ms;
+  transition-duration: 225ms;
+  -webkit-transition: opacity 225ms;
   @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
   position: relative;
   padding-top: 5px;
   line-height: 1.2rem;
+}
+
+.description-focus {
+  height: auto;
+  opacity: 100;
+  transition: opacity 225ms;
+  transition-duration: 225ms;
+  -webkit-transition: opacity 225ms;
 }
 
 .description-details-spacer {
@@ -118,7 +181,8 @@
   position: fixed;
 }
 
-.image-details {
+.image-date {
+  display: inline-flex;
   @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
   padding-left: 14px;
   padding-top: 8px;
@@ -127,7 +191,7 @@
 }
 
 .gallery-index-box {
-  transition-duration: 200ms;
+  transition-duration: 225ms;
   display: inline-block;
   z-index: 41;
   position: fixed;
@@ -157,51 +221,107 @@
   display: none;
 }
 
-// Mobile size
-@media (max-width: 414px) and (max-height: 736px) {
+.image-fade{
+  background-color: rgba(38, 38, 38, 0.5);
+}
 
-  // TODO: Modify these up with current styles
+// Tablet Size - and (max-height: 736px)
+@media (max-width: 1024px)  {
+  .toolbar-bar {
+    left: 0px;
+    padding: 0 0 0 20px;
+  }
 
-  // .details {
-  //   padding-top: 8px;
-  //   margin: -5px 10px 40px 0px;
-  // }
+  .title-box {
+    padding-left: 12px;
+  }
+}
 
-  // .description {
-  //   display: none;
-  // }
+// Mobile size -  and (max-height: 736px)
+@media (max-width: 414px) {
 
-  // .title-year {
-  //   width: -webkit-calc(100% - 80px);
-  //   width:    -moz-calc(100% - 80px);
-  //   width:         calc(100% - 80px);
-  // }
+  .toolbar-bar {
+    z-index: 42;
+    padding: 0;
+    left: 0px;
+    position: fixed !important;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    color: #161616;
+    transition-duration: 225ms;
+    box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .25);
+  }
 
-  // .tools {
-  //   display: inline-block;
-  //   position: fixed;
-  //   right: 0;
-  // }
+  .image-box {
+    height: calc(100% - 130px);
+  }
 
-  // .gallery-index {
-  //   display: none;
-  // }
+  .image-date {
+    display: block;
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: -3px;
+    transition-duration: 225ms;
+  }
 
-  // .zoom-button {
-  //   display: block;
-  //   float: right;
-  //   padding: 20px;
-  //   // padding-right: 10px;
-  //   &:hover {
-  //     cursor: pointer;
-  //   }
-  // }
-
-  // .zoom-icon path {
-  //   fill: #ffffff;
-  // }  
+  .image-date-focus {
+    font-size: .95rem;
+    letter-spacing: 2.2px;
+    line-height: 1.5rem;
+    transition-duration: 225ms;
+  }
   
-  // .year-bottom {
-  //   display: inline-block;
-  // }
+  .title-box {
+    padding-left: 12px;
+    margin-top: 2px;
+  }
+
+  .title {
+    margin-top: 0px;
+    margin-bottom: -1px;
+  }
+
+  .title-focus {
+    font-size: 1.75rem;
+    letter-spacing: 0px;
+    transition-duration: 225ms;
+  }
+
+  .image-description {
+    width: calc(100% - 75px);
+    transition: opacity 225ms;
+    transition-duration: 225ms;
+    -webkit-transition: opacity 225ms;
+  }
+  
+  .description-focus {
+    width: calc(100% - 75px);
+    margin: 20px 0px 30px 0px;
+    font-size: .95rem;
+    height: auto;
+    opacity: 100;
+    transition: opacity 225ms;
+    transition-duration: 225ms;
+    -webkit-transition: opacity 225ms;
+  }
+
+  .description-details-spacer {
+    height: 5.85px;;
+  }
+
+  .gallery-index {
+    width: 54px;
+  }
+
+  .gallery-index-box {
+    transition-duration: 225ms;
+    z-index: 41;
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    right: 7px;
+    height: 43px;
+    width: 75px;
+  }
 }
