@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import Img from 'react-image';
 
@@ -42,7 +42,7 @@ class ShortFilmsSections extends Component {
     super(props)
     this.state = {
       films: films,
-      currentSize: this.setWindowSize(window.innerHeight)
+      currentSize: this.setWindowSize(window.innerWidth)
     }
 
     this.buildFilmsPreviews = this.buildFilmsPreviews.bind(this);
@@ -51,10 +51,10 @@ class ShortFilmsSections extends Component {
     this.saveScrollSpot = this.saveScrollSpot.bind(this);
   }
 
-  componentWillMount() {
+  // componentWillMount() {
     // TODO: Check localStorage - BC.Portfolio.FilmScrollSpot
     //   Then scroll to that spot
-  }
+  // }
 
   saveScrollSpot() {
     // TODO: Store film section scrolling spot
@@ -126,7 +126,7 @@ class ShortFilmsSections extends Component {
                 loader={(
                   <div style={loaderStyles}>
                     <span style={loaderHelper}></span>
-                    <img src={spinner} style={loadingSpinnerStyles} />
+                    <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
                   </div>
                 )}
               />  
@@ -144,7 +144,6 @@ class ShortFilmsSections extends Component {
   }
 
   render() {
-    console.log('this.currentSize', this.state.currentSize);
     return (
       <div className="short-films-sections">
         <WindowResizeListener
