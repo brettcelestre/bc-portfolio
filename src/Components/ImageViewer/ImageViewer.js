@@ -223,7 +223,7 @@ class ImageViewer extends Component {
     return (
       <div style={loaderStyles}>
         <span style={loaderHelper}></span>
-        <img src={spinner} style={loadingSpinnerStyles} />
+        <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
       </div>
     )
   }
@@ -284,7 +284,7 @@ class ImageViewer extends Component {
       } else if (window.innerWidth <= 1023) { // Adjusts for tablet styles
         height -= 110;                        // Navigation + Toolbar
       }
-    
+
       const { section, category, subCategory, piece } = this.props.match.params;
       const currentImageData = this.findImageData(section, category, subCategory, piece);
       const currentWindowSize = this.state.currentSize;
@@ -374,6 +374,8 @@ class ImageViewer extends Component {
           this.props.history.push(urlTitle);
         }
         break;
+      default:
+        break;
     }
   }
 
@@ -389,15 +391,6 @@ class ImageViewer extends Component {
 
   zoomImageState = (imageData) => {
     if (this.state.zoom) {
-      let windowSize;
-      const currentSize = window.innerHeight - 43;
-      if (currentSize >= 900) {
-        windowSize = 'Large';
-      } else if (currentSize >= 600) {
-        windowSize = 'Medium';
-      } else {
-        windowSize = 'Small';
-      }
       this.setState({
         zoom: false,
       });
