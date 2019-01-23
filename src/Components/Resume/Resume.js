@@ -151,16 +151,6 @@ class Resume extends Component {
         <div className="resume">
 
           <div className="resume-section-title">
-            Technical Skills
-          </div>
-
-          {this.buildTechSkills(resumeData['Technical Skills'])}
-
-          <div className="resume-divider">
-            <img src={dividerLines[0]} className="divider-img" alt="divider-bar" />
-          </div>
-
-          <div className="resume-section-title">
             Professional Experience
           </div>
 
@@ -181,16 +171,26 @@ class Resume extends Component {
           </div>
 
           <div className="resume-section-title">
+            Technical Skills
+          </div>
+
+          {this.buildTechSkills(resumeData['Technical Skills'])}
+
+          <div className="resume-divider">
+            <img src={dividerLines[0]} className="divider-img" alt="divider-bar" />
+          </div>
+
+          <div className="resume-section-title">
             Education
           </div>
 
           {this.buildEducationSection(resumeData['Education'])}
 
-          <div className="download-resume-section">
+          {/* <div className="download-resume-section">
             <div className="download-resume-button">
               Download PDF
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
