@@ -1,6 +1,6 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
-- title: MatthewCelestre.com
+- title: www.MatthewCelestre.com
   date: JULY 2018
   github: https://github.com/brettcelestre/mc-portfolio
   launch: http://www.matthewcelestre.com
@@ -11,16 +11,6 @@ const data = ymlLoader.load(`
     - HTML
     - SASS
     - AWS
-  sizes:
-    Large:
-      width: 1500
-      height: 1000
-    Medium:
-      width: 1100
-      height: 733
-    Small:
-      width: 800
-      height: 533
 
 - title: Stock Sight
   date: OCTOBER 2016
@@ -35,16 +25,6 @@ const data = ymlLoader.load(`
     - MongoDB
     - HTML
     - SASS
-  sizes:
-    Large:
-      width: 1500
-      height: 1000
-    Medium:
-      width: 1100
-      height: 733
-    Small:
-      width: 800
-      height: 533
 
 - title: The Performance Group
   date: NOVEMBER 2016
@@ -56,16 +36,6 @@ const data = ymlLoader.load(`
     - HTML
     - SASS
     - JavaScript
-  sizes:
-    Large:
-      width: 1500
-      height: 1000
-    Medium:
-      width: 1100
-      height: 733
-    Small:
-      width: 800
-      height: 533
 
 - title: Qurvey
   date: AUGUST 2015
@@ -81,16 +51,6 @@ const data = ymlLoader.load(`
     - MongoDB
     - HTML
     - SASS
-  sizes:
-    Large:
-      width: 1500
-      height: 1000
-    Medium:
-      width: 1100
-      height: 733
-    Small:
-      width: 800
-      height: 533
 
 - title: FeedFuse
   date: JULY 2015
@@ -105,18 +65,18 @@ const data = ymlLoader.load(`
     - MongoDB
     - HTML
     - SASS
-  sizes:
-    Large:
-      width: 1500
-      height: 1000
-    Medium:
-      width: 1100
-      height: 733
-    Small:
-      width: 800
-      height: 533
 `);
 
-module.exports = {
-data
-};
+module.exports = { data };
+
+// - title: www.BrettCelestre.com
+//   date: JANUARY 2019
+//   github: https://github.com/brettcelestre/bc-portfolio
+//   launch: https://www.brettcelestre.com
+//   header: Personal portfolio.
+//   description: Built an artist portfolio using React with a responsive design. Deployed with S3 and Cloudfront
+//   tech:
+//     - React
+//     - HTML
+//     - SASS
+//     - AWS

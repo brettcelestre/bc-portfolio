@@ -2,12 +2,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Briones
   urlTitle: briones
-  date: 
+  date: JULY 2012
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
-  description: Briones, CA.
+  description: Driving around Briones, CA with Kyle and Zhou
   sizes:
     Large:
       width: 1500
@@ -21,12 +21,12 @@ const data = ymlLoader.load(`
 
 - title: Steep Revine
   urlTitle: steep-revine
-  date: 2010
+  date: DECEMBER 2011
   size:
   orientation: landscape
   info: Nikon D50 - 50mm
   arrows: light
-  description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA.
+  description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA
   sizes:
     Large:
       width: 1500
@@ -40,7 +40,7 @@ const data = ymlLoader.load(`
 
 - title: Treat Overpass
   urlTitle: treat-overpass
-  date: 2011
+  date: JUNE 2011
   size: ''
   orientation: landscape
   info: Nikon D50 - 50mm

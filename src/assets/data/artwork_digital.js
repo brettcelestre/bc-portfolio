@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
     orientation: landscape
     info: Mixed media collage
     arrows: dark
-    description: ''
+    description: 
     sizes:
       Large:
         width: 1500

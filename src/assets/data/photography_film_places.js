@@ -2,12 +2,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: "730"
   urlTitle: "730"
-  date: 
+  date: NOVEMBER 2012
   size: ''
   orientation: landscape
-  description: 
+  description: San Jose, CA
   arrows: light
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -21,12 +21,12 @@ const data = ymlLoader.load(`
 
 - title: "780"
   urlTitle: "780"
-  date: 
+  date: NOVEMBER 2012
   size: ''
   orientation: landscape
-  description: 
+  description: View from my bedroom window while living on S 11th St, San Jose, CA
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -40,12 +40,12 @@ const data = ymlLoader.load(`
 
 - title: Mexico
   urlTitle: mexico
-  date: 
+  date: JANUARY 2011
   size: ''
   orientation: landscape
   description: 
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -59,12 +59,12 @@ const data = ymlLoader.load(`
 
 - title: Santa Clara
   urlTitle: santa-clara
-  date: 
+  date: NOVEMBER 2012
   size: ''
   orientation: landscape
   description: Downtown San Jose, CA.
   arrows: light
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -78,12 +78,12 @@ const data = ymlLoader.load(`
 
 - title: Second Street
   urlTitle: second-street
-  date: 
+  date: NOVEMBER 2012
   size: ''
   orientation: landscape
   description: Downtown San Jose, CA.
   arrows: light
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500

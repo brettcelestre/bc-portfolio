@@ -37,59 +37,67 @@ Technical Skills:
     - MySQL
     - OAuth2.0
 Professional Experience:
-  - company: Accenture Liquid Studios
+  - company: Accenture - Liquid Studios
     title: Senior Software Engineer
     date: MAY 2017 - PRESENT
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
     header:
     description:
-      - Developer on a Node.js microservices API layer used to connect multiple disparate backend systems for a large hospitality company to enable their product, including keyless entry.
-      - Microservices are utilizing Docker containers, AWS API Gateway, AWS Application ELB, AWS ECS Clusters, Autoscaling, AWS SNS, DynamoDB, Jenkins, and Hapi using an agile workflow. Utilizing BDD unit and integration testing with Cucumber and Chai.
-  - company: Freelance
+      - Utilized Hyperledger Fabric, Angular, and AWS to create a business-oriented supply chain application
+      - Developed a Node.js microservices API layer used to connect disparate backend systems for a large hospitality company to enable guests to manage reservations, user profiles, and digital keys
+      - Utilized the latest container and cloud technologies to achieve a highly available and scalable platform
+      - Architected and implemented a system to notify the mobile app of maintenance downtimes. Built Jenkins pipelines and utilized AWS Lambda, DynamoDB, and SNS 
+  - company: Self-Employed
     title: Full Stack Software Engineer
     date: OCTOBER 2016 - DECEMBER 2016
     header:
     description: 
-      - Architected a single-page app with AngularJS using UI Router and styled with SASS with a responsive design
-      - Built a RESTful API with Node and Express with MongoDB and Mongoose schemas and queries
-      - Executed asynchronous API calls with Yahoo YQL Finance API and Import.io to scrape Morningstar.com for data
-      - Redesigned and developed a company website to enhance UI/UX and improved SEO for mobile and web platforms
+      - Architected a single-page app with AngularJS and styled with SASS with a responsive design
+      - Built a RESTful API with Node.js and Express with MongoDB and Mongoose
+      - Redesigned and developed a responsive company website to improve client engagement and SEO
   - company: Wobo, Inc.
     title: QA Specialist
     date: JULY 2015 - APRIL 2016
     url: http://bookvolume.com/
     header:
     description:
-      - Conducted tests, merged branches, and released production deployments bi-weekly
-      - Collaborated with engineers to test, run scripts, and verify MySQL database updates which lowered latency
-      - Participated in Agile workflow lifecycle activities on a remote international team
+      - Conducted user tests, managed epic stories, and released production deployments bi-weekly
+      - Collaborated with engineers to ensure that features passed tests and verify MySQL database updates
+      - Participated in Agile workflow lifecycle activities on an international team
   - company: The Stone Group
     title: Web and Graphic Designer
     date: JUNE 2014 - JULY 2015
     url: http://stonegroupinc.com/
     header:
     description:
-      - Designed and built responsive emails which were sent to 100k subscribers twice weekly
-      - Created and maintained websites and social media accounts executing online campaigns
+      - Designed and built responsive emails which were sent to over 100k subscribers twice weekly
+      - Created and managed websites and social media accounts increasing customer engagement by 400%
 Personal Applications:
-  - project: www.MatthewCelestre.com
-    title: Front-End Software Engineer
+  - title: www.BrettCelestre.com
+    position: Front-End Software Engineer
+    date: JANUARY 2019
+    header: Personal online portfolio
+    description:
+      - Designed and built a responsive single-page app with React using React Router Dom and SASS
+      - Deployed with S3, Cloudfront, and Route53
+  - title: www.MatthewCelestre.com
+    position: Front-End Software Engineer
     url:
     date: MARCH 2018
     header: Artist portfolio for Matthew Celestre
     description:
       - Designed and built a responsive single-page app with React using React Router Dom and SASS
-      - Deployed using AWS S3 and CloudFront
-  - project: Qurvey
-    title: Full Stack Software Engineer
+      - Deployed using S3 and CloudFront
+  - title: Qurvey
+    position:  Full Stack Software Engineer
     url:
     date: JULY 2016
     header: Maps personality traits to pull results
     description:
-      - Designed and architected a single-page app with AngularJS using UI Router and Angular Materials for intuitive UI
+      - Designed and architected a single-page app with AngularJS using UI Router and Angular Materials
       - Created and maintained tests using Mocha, Chai, and Protractor.js and utilized Gulp, Travis.CI, and Webpack
-  - project: SprintPal
-    title: Full Stack Software Engineer
+  - title: SprintPal
+    position: Full Stack Software Engineer
     url:
     date: JUNE 2016
     header: Vote on tasks during sprint planning

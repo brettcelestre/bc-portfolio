@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -26,7 +26,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: dark
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1448
@@ -45,7 +45,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Reflecting body as a life vessel in Briones Regional Park
   arrows: dark
-  info: Nikon N55 - 50MM
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 1500
@@ -64,7 +64,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Interstate 24 West heading towards San Francisco
   arrows: dark
-  info: Nikon N55 - 50MM
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 1500
@@ -81,9 +81,9 @@ const data = ymlLoader.load(`
   date: 2016
   size: ''
   orientation: landscape
-  description: 
+  description: San Bruno, CA
   arrows: light
-  info: Current Nikon - 50MM
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500
@@ -102,7 +102,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: 
   arrows: dark
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 873
@@ -122,7 +122,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Pismo Beach, CA
   arrows: dark
-  info: Nikon N55 - 50MM
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 1500
@@ -141,7 +141,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: Current Nikon - 50MM
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500
@@ -160,7 +160,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: San Jose, CA
   arrows: light
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -179,7 +179,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: San Jose, CA
   arrows: dark
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 854
@@ -198,7 +198,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Creating a Cuban cookbook for Maria
   arrows: dark
-  info: Current Nikon - 50MM
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500
@@ -234,7 +234,7 @@ const data = ymlLoader.load(`
   date: 2007
   size: ''
   orientation: portrait
-  description: Briones art trip
+  description: Briones Regional Park art trip
   arrows: dark
   info: Nikon N55 - 50mm
   sizes:
@@ -255,7 +255,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -269,12 +269,12 @@ const data = ymlLoader.load(`
 
 - title: Matt 4
   urlTitle: matt-4
-  date: 2010
+  date: JANUARY 2011
   size: ''
   orientation: landscape
   description: Drunk on a beach in Mexico
   arrows: dark
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -293,7 +293,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
   arrows: light
-  info: Nikon Nikomat FTn - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -312,7 +312,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: 
   arrows: dark
-  info: Nikon N55 - 50MM
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 860

@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
-  description: Briones, CA.
+  description: Briones, CA
   sizes:
     Large:
       width: 1500
@@ -26,7 +26,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
-  description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA.
+  description: Steep Ravine Cabins and Campground, Mount Tamalpais, CA
   sizes:
     Large:
       width: 1500
@@ -38,14 +38,14 @@ const data = ymlLoader.load(`
       width: 800
       height: 532
 
-- title: Beaverton
-  urlTitle: beaverton
+- title: Eugene
+  urlTitle: eugene
   date: 2010
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
   arrows: light
-  description: Beaverton, OR.
+  description: Eugene, OR
   sizes:
     Large:
       width: 1500

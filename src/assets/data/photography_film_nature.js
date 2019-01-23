@@ -2,12 +2,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Fall
   urlTitle: fall
-  date: 
+  date: 2010
   size: ''
   orientation: landscape
   description: Pleasant Hill, CA
   arrows: light
-  info: ''
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 1500
@@ -21,12 +21,12 @@ const data = ymlLoader.load(`
 
 - title: Mexico
   urlTitle: mexico
-  date: 
+  date: JANUARY 2011
   size: ''
   orientation: landscape
   description: 
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -40,12 +40,12 @@ const data = ymlLoader.load(`
 
 - title: Tree
   urlTitle: tree
-  date: 
+  date: 2012
   size: ''
   orientation: landscape
-  description: 
+  description: Caples Lake, CA
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -59,12 +59,12 @@ const data = ymlLoader.load(`
 
 - title: Yosemite
   urlTitle: yosemite
-  date: 
+  date: 2013
   size: ''
   orientation: landscape
-  description: 
+  description: Yosemite, CA
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 843

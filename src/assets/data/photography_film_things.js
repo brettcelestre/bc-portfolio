@@ -2,12 +2,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Bedroom 11 01 2015
   urlTitle: bedroom-11-01-2015
-  date: 2015 NOVEMBER
+  date: NOVEMBER 2015
   size: ''
   orientation: landscape
   description: 
   arrows: light
-  info: Mixed Media
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500

@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: dark
-  info: Nikon ??? - 50MM
+  info: Nikon N55 - 50mm
   sizes:
     Large:
       width: 1500
@@ -21,12 +21,12 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie
   urlTitle: jeanne-marie
-  date: 
+  date: MARCH 2013
   size: 
   orientation: landscape
-  description: Nikon ??? - 50MM
+  description: Nikon Nikomat FTn - 50mm
   arrows: dark
-  info: Taken in Castle Rock, Walnut Creek
+  info: Taken in Castle Rock, Walnut Creek, CA
   sizes:
     Large:
       width: 1500
@@ -40,12 +40,12 @@ const data = ymlLoader.load(`
 
 - title: Matt
   urlTitle: matt
-  date: 2012?
+  date: MARCH 2013
   size: 
   orientation: portrait
-  description: Brother Matt painting the train interiors for our short film Del Rio.
+  description: My brother Matt painting the train interiors for our short film Del Rio
   arrows: dark
-  info: Nikon ??? - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 799
@@ -59,12 +59,12 @@ const data = ymlLoader.load(`
 
 - title: Santa Cruz
   urlTitle: santa-cruz
-  date: 2012
+  date: 2013
   size: 
   orientation: landscape
-  description: 
+  description: Taken while on a skate trip to Santa Cruz, CA
   arrows: light
-  info: Nikon ??? - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -78,12 +78,12 @@ const data = ymlLoader.load(`
 
 - title: SJSU 0
   urlTitle: sjsu-0
-  date: 2012
+  date: 2013
   size: 
   orientation: landscape
-  description: 
+  description: This was taken around 1AM while biking around San Jose State University
   arrows: light
-  info: Nikon ??? - 50MM
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -102,7 +102,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: 
   arrows: dark
-  info: Nikon ??? - 50MM
+  info: Nikon ??? - 50mm
   sizes:
     Large:
       width: 809

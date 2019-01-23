@@ -7,7 +7,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: ''
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500
@@ -26,7 +26,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: dark
-  info: ''
+  info: Nikon FM10 - 50mm
   sizes:
     Large:
       width: 1500
@@ -43,9 +43,9 @@ const data = ymlLoader.load(`
   date: 
   size: ''
   orientation: landscape
-  description: 
+  description: S 11th St, San Jose, CA
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -62,9 +62,9 @@ const data = ymlLoader.load(`
   date: 
   size: ''
   orientation: landscape
-  description: 
+  description: S 11th St, San Jose, CA
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -83,7 +83,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: San Jose State University - CVB
   arrows: dark
-  info: ''
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
