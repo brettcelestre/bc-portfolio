@@ -71,11 +71,18 @@ $navigation-width: 137px;
 }
 
 .friends-sort-select {
-  height: 29px;
+  height: 37px;
+  width: 237px;
   margin-right: 10px;
-  background-color: #fcfcfc;
-  border: solid .7px #d4d4d4;
+  background-color: #e8e8e8;
+  border: none;
   @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    border: none;
+  }
 }
 
 .friends-sort-select option {
@@ -84,15 +91,17 @@ $navigation-width: 137px;
 
 .filtered-option-box {
   display: inline-flex;
-  height: 20px;
+  height: 24px;
   width: auto;
   @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
-  padding: 4px 2px 2.5px 7px;
+  padding: 7px 2px 2.5px 7px;
   margin: 1px 4px;
   border-radius: 2px;
   border: solid .7px #d4d4d4;
   &:hover {
     cursor: pointer;
+    background-color: #e8e8e8;
+    border: solid .7px #e8e8e8;
   }
 }
 

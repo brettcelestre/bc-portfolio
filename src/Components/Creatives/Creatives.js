@@ -51,13 +51,18 @@ class Creatives extends Component {
   }
 
   filterByMedium(e) {
+    const newList = this.state.filteredMediums;
+    // Adds new filter
     if (!this.state.filteredMediums.includes(e.target.value)) {
-      const newList = this.state.filteredMediums;
       newList.push(e.target.value);
       this.setState({
         filteredMediums: newList
       });
     }
+    // Resets dropdown
+    document.getElementsByClassName('friends-sort-select')[0][0].selected = true;
+    var selection = document.querySelectorAll(`#friends-sort-select option#${e.target.value}`);
+    selection.selected = false;
   }
 
   removeMedium(e) {
@@ -116,13 +121,13 @@ class Creatives extends Component {
   buildSortDropdown() {
     const options = tags.map((data, i) => {
       return (
-        <option value={data} key={data} id={data}>{data}</option>
+        <option value={data} key={data} id={data} type='reset'>{data}</option>
       )
     });
     // TODO: Create custom dropdown menu
     return (
-      <select className="friends-sort-select" onChange={this.filterByMedium}>
-        <option disabled selected value> -- filter by medium -- </option>
+      <select className="friends-sort-select" id="friends-sort-select" onChange={this.filterByMedium}>
+        <option disabled selected value>  filter by medium</option>
         {options}
       </select>
     )
