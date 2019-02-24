@@ -1,21 +1,23 @@
 const ymlLoader = require('js-yaml');
 
 const tags = [
-  'painter',
-  'photographer',
-  'musician',
+  'burlesque',
+  'concept designer',
+  'fashion designer',
   'film maker',
-  'software engineer',
   'graphic designer',
   'illustrator',
-  'skateboarder',
-  'concept designer',
-  'ux designer',
-  'fashion designer',
-  'sculptor',
+  'musician',
+  'painter',
+  'photographer',
+  'product designer',
   'production technician',
-  'videographer',
-  'television director'
+  'sculptor',
+  'skateboarder',
+  'software engineer',
+  'television director',
+  'ux designer',
+  'videographer'
 ];
 
 const data = ymlLoader.load(`
@@ -109,6 +111,14 @@ const data = ymlLoader.load(`
   tags:
     - illustrator
     - graphic designer
+- title: Emjay Mercury
+  links:
+    - type: Portfolio
+      url: https://emjaymercury.com/
+    - type: Instagram
+      url: https://www.instagram.com/emjaymercury/
+  tags:
+    - burlesque
 - title: Sean Hipkin
   links:
     - type: Portfolio
@@ -154,8 +164,8 @@ const data = ymlLoader.load(`
     - type: Instagram
       url: https://www.instagram.com/vxvinny/
   tags:
-    - illustrator
     - concept designer
+    - illustrator
 - title: Nick Bers
   links:
     - type: Portfolio
@@ -168,6 +178,12 @@ const data = ymlLoader.load(`
       url: https://www.emiliebersphotography.com/
   tags:
     - photographer
+- title: Joel Jutagir
+  links:
+    - type: Portfolio
+      url: https://www.instagram.com/metroskateboarding/?hl=en
+  tags:
+    - skateboarder
 - title: Journey Coward
   links:
     - type: Portfolio
@@ -200,6 +216,12 @@ const data = ymlLoader.load(`
       url: http://marcustedesco.com/index.html
   tags:
     - software engineer
+- title: Colin McDonald
+  links:
+    - type: Portfolio
+      url: http://www.colinlmcdonald.com/
+  tags:
+    - software engineer
 - title: John Madrak
   links:
     - type: Portfolio
@@ -218,6 +240,12 @@ const data = ymlLoader.load(`
       url: http://www.zopilote.co/
   tags:
     - ux designer
+- title: Belinda Huang
+  links:
+    - type: Portfolio
+      url: https://www.belindahuang.com/
+  tags:
+    - product designer
 - title: Kevin Brown
   links:
     - type: Portfolio
@@ -280,10 +308,11 @@ module.exports = { data, tags };
 // TODO
 // Scott Celestre
   // NEED FINAL WEBSITE?
-// jaymercury
+
+// surg
+
 // Farhankhan Daya
 // Andrew Dawkin
-// Brittany Budge
 // Ricky Garcia
 // Grant Selland
 // Danielle Luz Belanger
