@@ -44,7 +44,7 @@ Professional Experience:
     header:
     description:
       - Utilized Hyperledger Fabric, Angular, and AWS to create a business-oriented supply chain application
-      - Developed a Node.js microservices API layer used to connect disparate backend systems for a large hospitality company to enable guests to manage reservations, user profiles, and digital keys
+      - Developed a Node.js microservices API layer used to connect disparate backend systems for a Fortune 500 Hospitality Client to enable guests to manage reservations, user profiles, and digital keys
       - Utilized the latest container and cloud technologies to achieve a highly available and scalable platform
       - Architected and implemented a system to notify the mobile app of maintenance downtimes. Built Jenkins pipelines and utilized AWS Lambda, DynamoDB, and SNS 
   - company: Self-Employed
@@ -79,6 +79,7 @@ Personal Applications:
     header: Personal online portfolio
     description:
       - Designed and built a responsive single-page app with React using React Router Dom and SASS
+      - Dynamically loads image sizes based off screen resolution for faster load times
       - Deployed with S3, Cloudfront, and Route53
   - title: www.MatthewCelestre.com
     position: Front-End Software Engineer
@@ -87,6 +88,7 @@ Personal Applications:
     header: Artist portfolio for Matthew Celestre
     description:
       - Designed and built a responsive single-page app with React using React Router Dom and SASS
+      - Dynamically loads image sizes based off screen resolution for faster load times
       - Deployed using S3 and CloudFront
   - title: Qurvey
     position:  Full Stack Software Engineer
