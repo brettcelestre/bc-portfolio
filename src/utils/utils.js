@@ -92,4 +92,13 @@ const updateImageSize = () => {
 // updateImageSize();
 // window.onresize = updateImageSize;
 
-module.exports = { updateImageSize };
+
+const scrollTop = () => { 
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0
+}
+
+module.exports = { 
+  updateImageSize,
+  scrollTop
+};
