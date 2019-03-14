@@ -1,0 +1,152 @@
+
+@font-face {
+  font-family: 'chapaza';
+  src: url('../../assets/fonts/Chapaza.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'old style';
+  src: url('../../assets/fonts/OLDSH___.TTF') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.short-films-details {
+  position: relative;
+  width: 100%;
+  max-width: 1500px !important;
+  margin: 0 auto;
+  padding: 20px 0 20px 137px;
+  box-sizing: border-box;
+}
+
+.short-films-details-box {
+  padding: 10px 40px;
+}
+
+// .short-films-details-info {
+//   display: inline-block;
+//   width: 100%;
+//   height: 60px;
+//   // background-color: red;
+//   background-image: url('../../assets/img/short-film-toolbar-background.jpg');
+//   // background-position: left bottom;
+//   background-position: 0px -15px;
+//   border-bottom-right-radius: 3px;
+//   border-bottom-left-radius: 3px;
+// }
+
+.short-films-details-info {
+  display: inline-block;
+  width: 100%;
+  height: 88px;
+  // background-color: red;
+  // background-image: url('../../assets/img/short-film-toolbar-background.jpg');
+  // background-position: left bottom;
+  // background-position: 0px -15px;
+  // border-bottom-right-radius: 3px;
+  // border-bottom-left-radius: 3px;
+}
+
+// .short-films-details-title {
+//   position: relative;
+//   width: auto;
+//   float: left;
+//   padding: 17.5px 0 0 23px;
+//   // @include font-setup('chapaza', 1.75rem, 500, rgb(20, 20, 20), none, -.75px);
+//   @include font-setup('chapaza', 1.73rem, 500, #282828, none, -0.55px);
+// }
+
+.short-films-details-title {
+  position: relative;
+  display: grid;
+  width: auto;
+  float: left;
+  height: 87px;
+  padding: 17.5px 0 0 23px;
+  @include font-setup('old style caps', 2.72rem, 500, #1f1f1f, none, 2.15px);
+}
+
+.short-films-details-year {
+  position: relative;
+  top: -1px;
+  padding-left: 4px;
+  @include font-setup('old style', 1rem, 100, #1d1d1d, none, 1.5px);
+}
+
+// .short-films-details-watch-button {
+//   position: relative;
+//   float: right;
+//   padding: 20px 26px 0 0;
+//   @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+// }
+
+.short-films-details-watch-button {
+  position: relative;
+  float: right;
+  height: 51px;
+  padding: 48px 41px 0 21px;
+  @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+}
+
+
+.short-films-details-description {
+  margin-top: 3px;
+  padding: 15px 27px;
+  @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.75px);
+  line-height: 23px;
+}
+
+.short-films-details-credits {
+  width: 100%;
+  text-align: center;
+  @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+  .short-films-details-credits-button {
+    margin: 0 auto;
+    width: 244px;
+    height: 18px;
+    padding: 13px;
+    margin-bottom: 12px;
+    margin-top: 18px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.short-film-options-box {
+  padding: 40px 0;
+}
+
+.short-film-options-details {
+  display: inline-block;
+  width: 100%;
+  height: 53px;
+  background-image: url('../../assets/img/short-film-toolbar-background.jpg');
+  background-position: 0px -23px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.short-film-options-title {
+  h3 {
+    @include font-setup('chapaza', 1.52rem, 500, #282828, none, -.25px);
+    margin: 15px;
+    padding-left: 9px;
+  }
+}
+
+// Tablet Size -  and (max-height: 736px)
+@media (max-width: 1024px) {
+}
+
+// Mobile Size
+@media (max-width: 414px) and (max-height: 736px) {
+}
