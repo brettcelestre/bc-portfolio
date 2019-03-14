@@ -1,0 +1,103 @@
+
+@font-face {
+  font-family: 'orwell';
+  src: url('../../assets/fonts/Orwell.ttf') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.short-films {
+  padding-left: 137px;
+  height: 100vh;
+  background-color: black;
+}
+
+#screen {
+  height: 100%;
+  width: 100%;
+}
+
+.theatre {
+  display:block;
+  margin: auto;
+  position: fixed;
+  z-index: 9;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  // Adjusts for navigation
+  width: -webkit-calc(100% - 137px);
+  width:    -moz-calc(100% - 137px);
+  width:         calc(100% - 137px);
+
+  // Adjusts for the exit button at the top
+  height: -webkit-calc(100vh - 70px);
+  height:    -moz-calc(100vh - 70px);
+  height:         calc(100vh - 70px);
+
+  // TODO: When I put the toolbar back in
+  // This adjusts for both the exit button and the toolbar
+  // height: -webkit-calc(100vh - 95px);
+  // height:    -moz-calc(100vh - 95px);
+  // height:         calc(100vh - 95px);
+}
+
+.youtube-video {
+  height: 100%;
+  width: 100%;
+}
+
+.theatre-exit {
+  display: table;
+  height: 35px;
+  width: 75px;
+  float: right;
+  cursor: pointer;
+}
+
+.x {
+  display: table-cell;  
+  @include font-setup('orwell', .8rem, 100, #b4b4b4, none, 5px);
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.2s ease-out;
+  &:hover{
+    transition: all 0.2s ease-out;
+    color: #e6e6e6;
+    background-color: #161616;
+    cursor: pointer;
+  }
+}
+
+.player-toolbar {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  padding-left: 20px;
+  
+  background-color: #131313;
+}
+
+// Tablet Size -  and (max-height: 736px) 
+@media (max-width: 1024px) {
+  .short-films {
+    padding-left: 0px;
+  }
+  .theatre {
+    width: 100%;
+    height: calc(100vh - 100px);
+    top: 60px;
+  }
+}
+
+// Mobile size
+@media (max-width: 414px) and (max-height: 736px) {
+
+}
