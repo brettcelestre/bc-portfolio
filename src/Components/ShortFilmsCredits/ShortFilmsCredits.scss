@@ -1,0 +1,44 @@
+
+@font-face {
+  font-family: 'orwell';
+  src: url('../../assets/fonts/Orwell.ttf') format('truetype');
+}
+
+@mixin font-setup($family, $size, $weight, $color, $decoration,  $spacing){
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.short-films-credits {
+  padding-left: 137px;
+  text-align: center;
+}
+
+.short-film-credits-back {
+  height: 20px;
+  width: auto;
+  padding: 13px 20px;
+  position: absolute;
+  top: 0;
+  left: 137px;
+  @include font-setup('old style', 1rem, 400, #1d1d1d, none, 1.5px);
+}
+
+.short-films-credits-box {
+  padding: 120px 280px;
+  @include font-setup('old style', .95rem, 100, #1d1d1d, none, 1.5px);
+  line-height: 1.45rem;
+}
+
+// Tablet Size -  and (max-height: 736px) 
+@media (max-width: 1024px) {
+}
+
+// Mobile size
+@media (max-width: 414px) and (max-height: 736px) {
+
+}
