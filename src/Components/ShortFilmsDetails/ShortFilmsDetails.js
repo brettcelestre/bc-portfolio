@@ -6,8 +6,15 @@ import Img from 'react-image';
 import { scrollTop } from '../../utils/utils.js';
 
 import spinner from '../../assets/img/spinner.gif';
+// import headerBg from '../../assets/img/short-film-toolbar-background-dark.png';
 import './ShortFilmsDetails.css';
 
+const dividerLines =[
+  require('../../assets/img/divider-line-01.png'),
+  require('../../assets/img/divider-line-02.png'),
+  require('../../assets/img/divider-line-03.png'),
+  require('../../assets/img/divider-line-04.png')
+];
 const films = require('../../assets/data/short-films.js');
 const navigationWidth = 137;
 const filmDetailsImages = {
@@ -133,6 +140,11 @@ class ShortFilmsDetails extends Component {
 
     return this.state.filmData.options.map((option) => {
       const optionKey = buildFolderName(option.name);
+
+      // const optionDetails = () => {
+      //   if (option.type === 'video')
+      // }
+
       return (
         <div className="short-film-options-box" id={option.name} key={option.name}>
 
@@ -153,7 +165,7 @@ class ShortFilmsDetails extends Component {
 
             <div className="short-film-options-details">
               <div className="short-film-options-title">
-                <h3>{option.name}</h3>
+                <h3>{option.name}</h3> <span className="short-film-option-length">{option.length}</span>
               </div>
             </div>
           </Link>
@@ -203,17 +215,19 @@ class ShortFilmsDetails extends Component {
 
         <div className="short-films-details-box">
           <div className="short-films-details-banner">
-            <Img
-              src={filmDetailsImages[this.state.filmData.urlTitle].details[this.state.currentSize]}
-              alt={this.state.filmData.title}
-              className="short-film-cover-image fade-in-gallery-image"
-              loader={(
-                <div style={loaderStyles}>
-                  <span style={loaderHelper}></span>
-                  <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
-                </div>
-              )}
-            />
+            <Link to={`/short-films/watch/${this.state.filmData.urlTitle}`}>
+              <Img
+                src={filmDetailsImages[this.state.filmData.urlTitle].details[this.state.currentSize]}
+                alt={this.state.filmData.title}
+                className="short-film-cover-image fade-in-gallery-image"
+                loader={(
+                  <div style={loaderStyles}>
+                    <span style={loaderHelper}></span>
+                    <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
+                  </div>
+                )}
+              />
+            </Link>
           </div>
 
           {/* <div className="short-films-details-info">
@@ -234,7 +248,7 @@ class ShortFilmsDetails extends Component {
           <div className="short-films-details-info">
               <div className="short-films-details-title">
                 {this.state.filmData.title}<br />
-                <span className="short-films-details-year">{this.state.filmData.year}</span>
+                <span className="short-films-details-year">{this.state.filmData.year} | {this.state.filmData.length}</span>
               </div>
               <Link to={`/short-films/watch/${this.state.filmData.urlTitle}`}>
                 <div className="short-films-details-watch-button">
@@ -245,6 +259,10 @@ class ShortFilmsDetails extends Component {
 
           <div className="short-films-details-description">
             {this.state.filmData.description}
+          </div>
+
+          <div className="short-film--divider">
+            <img src={dividerLines[2]} className="divider-img" alt="divider-bar"/>
           </div>
 
           <div className="short-films-details-credits">

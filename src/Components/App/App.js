@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ReactSVG from 'react-svg';
+import { scrollTop } from '../../utils/utils.js';
 
 import './App.css';
 import logo from '../../assets/img/logo-smaller-large-3.png';
@@ -61,8 +62,7 @@ class App extends Component {
   }
 
   cleanUp() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0;
+    scrollTop();
     if (window.innerWidth < 1024) {
       this.menuToggle();
     }
@@ -74,7 +74,8 @@ class App extends Component {
     if ( window.innerWidth > 1024) {          // Desktop
       socialMediaIconSize = 20;
     } else if ( window.innerWidth <= 1024) {  // Tablet and Modbile
-      socialMediaIconSize = 30;
+      // socialMediaIconSize = 30;
+      socialMediaIconSize = 27;
     }
 
     return (
@@ -82,7 +83,7 @@ class App extends Component {
         <div className="menu-button" onClick={this.menuToggle}>
           <ReactSVG
             path={this.state.mobileMenu ? exit : menuIcon}
-            style={this.state.mobileMenu ? {width: 23.5, height: 23.5} : {width: 32, height: 32}}
+            style={this.state.mobileMenu ? {width: 16, height: 16} : {width: 22, height: 22}}
             className={this.state.mobileMenu ? "menu-icon exit-icon" : "menu-icon"}
             wrapperClassName={this.state.mobileMenu ? "menu-icon exit-icon" : "menu-icon"}
           />
@@ -95,9 +96,7 @@ class App extends Component {
           <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/>
 
           <div className="main-title-box">
-            {/* <Link to="/" onClick={this.cleanUp}> */}
-              <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
-            {/* </Link> */}
+            <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
           </div>
 
           <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
@@ -131,30 +130,29 @@ class App extends Component {
               </div>
             </Link>
 
-            {/* <Link to="/resources" replace onClick={this.cleanUp}>
+            <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resources
               </div>
-            </Link> */}
+            </Link>
 
             <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title">
-                {/* Friends */}
                 Creatives
               </div>
             </Link>
 
-            {/* <Link to="/about" replace onClick={this.cleanUp}>
+            <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title">
                 About
               </div>
-            </Link> */}
+            </Link>
 
-            <Link to="/resume" replace onClick={this.cleanUp}>
+            {/* <Link to="/resume" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resume
               </div>
-            </Link>
+            </Link> */}
 
             <div className="social-media-spacer"></div>
             

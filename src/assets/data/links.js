@@ -3,6 +3,7 @@ const ymlLoader = require('js-yaml');
 const tags = [
   'burlesque',
   'concept designer',
+  'drag',
   'fashion designer',
   'film maker',
   'graphic designer',
@@ -119,6 +120,7 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/emjaymercury/
   tags:
     - burlesque
+    - drag
 - title: Sean Hipkin
   links:
     - type: Portfolio
@@ -198,6 +200,12 @@ const data = ymlLoader.load(`
       url: https://www.lulumartinezdesigns.com/
   tags:
     - graphic designer
+- title: Dan Newman
+  links:
+    - type: Portfolio
+      url: https://open.spotify.com/artist/5G5CCKuPlY35KEecEm1DtP?si=Ds7ja-QuQC2veox-62dEBQ
+  tags:
+    - musician
 - title: Maaike Scherff
   links:
     - type: Portfolio
@@ -249,7 +257,7 @@ const data = ymlLoader.load(`
 - title: Kevin Brown
   links:
     - type: Portfolio
-      url: http://funandconvenience.com/
+      url: http://kevinedward.com/
     - type: Instagram
       url: https://www.instagram.com/good_online_content/
   tags:

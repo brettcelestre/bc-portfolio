@@ -36,9 +36,22 @@
 
 // Tablet Size -  and (max-height: 736px) 
 @media (max-width: 1024px) {
+  .short-films-credits {
+    padding-left: 0px;
+  }
 }
 
 // Mobile size
 @media (max-width: 414px) and (max-height: 736px) {
+  .short-films-credits {
+    padding: 60px 20px 30px 20px;
+  }
 
+  .short-films-credits-box {
+    padding: 50px 0px 30px 0px;
+  }
+
+  .short-film-credits-back {
+    display: none;
+  }
 }

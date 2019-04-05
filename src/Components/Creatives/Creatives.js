@@ -41,7 +41,7 @@ class Creatives extends Component {
     const mediums = tags.join(', ');
     return(
       <div className="tags">
-        {mediums}
+        <span className="highlight">{mediums}</span>
       </div>
     )
   }
@@ -109,7 +109,7 @@ class Creatives extends Component {
       return (
         <a href={primaryLink.url} target="blank" key={data.title} onClick={this.visitingFriends} > {/* onMouseEnter={this.hoverAnimation} */}
           <div className="friends-section" id={data.title}>
-            <h4><span className="highlight">{data.title}</span></h4>
+            <h4>{data.title}</h4>
             {this.buildTags(data.tags)}
             {/* {this.buildLinks(data.links)} */}
           </div>
@@ -127,7 +127,7 @@ class Creatives extends Component {
     // TODO: Create custom dropdown menu
     return (
       <select className="friends-sort-select" id="friends-sort-select" onChange={this.filterByMedium}>
-        <option disabled selected value>  filter by medium</option>
+        <option disabled defaultValue value>  filter by medium</option>
         {options}
       </select>
     )

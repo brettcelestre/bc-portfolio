@@ -38,18 +38,16 @@ $navigation-width: 137px;
 }
 
 .resume {
-  margin-top: 15px;
   max-width: 800px;
   height: auto;
-  padding: 25px 15px 100px 15px;
+  padding: 1px 15px 100px 15px;
   margin: 0 auto;
 }
 
 .download-resume-section {
   display: block;
   width: 100%;
-  height: 65px;
-  margin-top: 40px;
+  height: 45px;
 }
 
 .download-resume-button {
@@ -156,15 +154,8 @@ a:visited {
 }
 
 .resume-font {
-  // font-family: Adobe Caslon,Georgia,Times New Roman,Times,serif;
-  
-  // Original
   @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 1rem, 500, #131313, none, .25px);
-
-  // Future Font
-  // @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.5px);
-
-  // font-size: 14.65px;
+  // @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.75px);
   line-height: 1.45rem;
   font-weight: 100;
 }
@@ -206,6 +197,10 @@ a:visited {
   width: 96%;
   height: 1px;
   background-color: #5b5b5b;
+}
+
+.tech-skills-section {
+  padding-left: 15px;
 }
 
 .code-tags {
@@ -291,7 +286,6 @@ a:visited {
     margin-left: 0px;
   } 
 }
-  
 
 // Mobile size - and (max-height: 736px)
 @media (max-width: 414px) {
@@ -301,7 +295,7 @@ a:visited {
   }
 
   .resume {
-    padding: 35px 16px 50px 16px;
+    padding: 20px 16px 50px 16px;
   }
 
   .downlown-resume-section {
@@ -353,7 +347,7 @@ a:visited {
   }
   
   .job-description {
-    padding: 4px 0px 9px 12.5px;
+    padding: 4px 0px 9px 2.5px;
   }
 
   .job-date-box {
@@ -364,6 +358,10 @@ a:visited {
 
   .job-date {
     padding: 0px;
+  }
+  
+  .tech-skills-section {
+    padding-left: 0px;
   }
 
   .tech-skill-section {

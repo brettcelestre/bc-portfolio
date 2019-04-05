@@ -1,8 +1,129 @@
-.home-content {
-    width: calc(100% - 155px);
-    left: 155px;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    z-index: -1;
+@font-face {
+  font-family: 'cuttyfruty';
+  src: url('../../assets/fonts/CuttyFruty.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'SplendidN';
+  src: url('../../assets/fonts/SplendidN.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'old style caps';
+  src: url('../../assets/fonts/OLDSSCH_.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'old style italic';
+  src: url('../../assets/fonts/OLDSIH__.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'chunk';
+  src: url('../../assets/fonts/CHUNT___.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'orwell';
+  src: url('../../assets/fonts/Orwell.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'chapaza';
+  src: url('../../assets/fonts/Chapaza.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: '1952';
+  src: url('../../assets/fonts/1952 RHEINMETALL.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CHUNT___';
+  src: url('../../assets/fonts/CHUNT___.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: 'LUCKY-TYPEWRITER';
+  src: url('../../assets/fonts/LUCKY-TYPEWRITER.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'OldNewspaperTypes';
+  src: url('../../assets/fonts/OldNewspaperTypes.ttf') format('truetype');
+}
+
+@mixin font-setup-new($family, $size, $weight, $color, $decoration, $spacing) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-decoration: $decoration;
+  letter-spacing: $spacing;
+}
+
+.home-content {
+  width: calc(100% - 155px);
+  left: 155px;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  padding: 10px;
+}
+
+.test1 {
+  @include font-setup-new('cuttyfruty', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+
+.test2 {
+  @include font-setup-new('SplendidN', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+
+.test3 {
+  @include font-setup-new('old style caps', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test4 {
+  @include font-setup-new('old style italic', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test5 {
+  @include font-setup-new('chunk', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test6 {
+  @include font-setup-new('orwell', 1rem, 500, #131313, none, .4px);
+  margin-top: 15px;
+}
+.test7 {
+  @include font-setup-new('chapaza', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test8 {
+  @include font-setup-new('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 1rem, 500, #131313, none, .1px);
+  margin-top: 15px;
+}
+.test9 {
+  @include font-setup-new('1952', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test10 {
+  @include font-setup-new('CHUNT___', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test11 {
+  @include font-setup-new('LUCKY-TYPEWRITER', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+.test12 {
+  @include font-setup-new('OldNewspaperTypes', .92rem, 500, #131313, none, -.2px);
+  margin-top: 15px;
+}
+
+.test18 {
+  font-size: 40px;
+}
+

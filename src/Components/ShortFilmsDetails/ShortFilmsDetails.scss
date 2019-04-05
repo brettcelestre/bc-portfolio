@@ -46,11 +46,22 @@
 .short-films-details-info {
   display: inline-block;
   width: 100%;
-  height: 88px;
+  height: 107px;
+  
+  // Dark film burn
+  // background-image: url('../../assets/img/short-film-toolbar-background-dark.png');
+
+  // Light Paper
+  background-image: url('../../assets/img/short-film-toolbar-background-3.png');
+  background-position: left bottom;
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 16px;
+  
+
   // background-color: red;
   // background-image: url('../../assets/img/short-film-toolbar-background.jpg');
-  // background-position: left bottom;
   // background-position: 0px -15px;
+  // background-position: left bottom;
   // border-bottom-right-radius: 3px;
   // border-bottom-left-radius: 3px;
 }
@@ -69,16 +80,16 @@
   display: grid;
   width: auto;
   float: left;
-  height: 87px;
-  padding: 17.5px 0 0 23px;
-  @include font-setup('old style caps', 2.72rem, 500, #1f1f1f, none, 2.15px);
+  height: 71px;
+  padding: 7.5px 0 0 30px;
+  @include font-setup('old style caps', 2.35rem, 500, #282524, none, 2.15px);
 }
 
 .short-films-details-year {
   position: relative;
-  top: -1px;
+  top: -2px;
   padding-left: 4px;
-  @include font-setup('old style', 1rem, 100, #1d1d1d, none, 1.5px);
+  @include font-setup('old style', 1rem, 100, #282524, none, 1.5px);
 }
 
 // .short-films-details-watch-button {
@@ -91,15 +102,15 @@
 .short-films-details-watch-button {
   position: relative;
   float: right;
-  height: 51px;
-  padding: 48px 41px 0 21px;
-  @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+  height: 55px;
+  padding: 41px 41px 0 21px;
+  @include font-setup('old style', .8rem, 700, #282524, none, 1.9px);
 }
 
 
 .short-films-details-description {
   margin-top: 3px;
-  padding: 15px 27px;
+  padding: 10px 36px 15px 36px;
   @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.75px);
   line-height: 23px;
 }
@@ -122,7 +133,7 @@
 }
 
 .short-film-options-box {
-  padding: 40px 0;
+  padding: 25px 0;
 }
 
 .short-film-options-details {
@@ -136,11 +147,29 @@
 }
 
 .short-film-options-title {
+  display: inline-flex;
   h3 {
     @include font-setup('chapaza', 1.52rem, 500, #282828, none, -.25px);
     margin: 15px;
     padding-left: 9px;
   }
+}
+
+.short-film-option-length {
+  @include font-setup('old style', 0.85rem, 300, #282524, none, 1.9px);
+  height: 30px;
+  padding: 19px 10px 0px 6px;
+}
+
+.short-film--divider {
+  margin: 20px 0 5px 0;
+  width: 100%;
+  text-align: center;
+}
+.divider-img {
+  width: 100%;
+  max-width: 768px;
+  height: auto;
 }
 
 // Tablet Size -  and (max-height: 736px)

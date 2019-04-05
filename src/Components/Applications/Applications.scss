@@ -77,8 +77,8 @@ $navigation-width: 137px;
 }
 
 .application-header {
-  // @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.5px);
-  @include font-setup('Adobe Caslon,Georgia,Times New Roman,Times,serif', 17.25px, 100, rgb(20, 20, 20), none, 0px);
+  // @include font-setup('Adobe Caslon,Georgia,Times New Roman,Times,serif', 17.25px, 100, rgb(20, 20, 20), none, 0px);
+  @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.5px);
   padding: 2px 0 1px 20px;
   line-height: 1.2rem;
 }

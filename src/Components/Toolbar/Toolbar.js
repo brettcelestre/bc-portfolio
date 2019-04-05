@@ -41,15 +41,17 @@ class Toolbar extends Component {
         let isMobile = false;
         switch (this.findWindowSize()) {
           case 'desktop':
-          heightAdjustment = 0;
-          break;
+            heightAdjustment = 0;
+            break;
           case 'tablet':
-          heightAdjustment = 0;
-          break;
+            heightAdjustment = 0;
+            break;
           case 'mobile':
-          isMobile = true;
-          heightAdjustment = 30;
-          break;
+            isMobile = true;
+            heightAdjustment = 30;
+            break;
+          default:
+            break;
         }
         const desc = document.getElementsByClassName('image-description');
         this.setState({
@@ -84,15 +86,17 @@ class Toolbar extends Component {
         let isMobile = false;
         switch (this.findWindowSize()) {
           case 'desktop':
-          heightAdjustment = 0;
-          break;
+            heightAdjustment = 0;
+            break;
           case 'tablet':
-          heightAdjustment = 0;
-          break;
+            heightAdjustment = 0;
+            break;
           case 'mobile':
-          isMobile = true;
-          heightAdjustment = 30;
-          break;
+            isMobile = true;
+            heightAdjustment = 30;
+            break;
+          default:
+            break;
         }
         const desc = document.getElementsByClassName('image-description');
         this.setState({
@@ -156,6 +160,8 @@ class Toolbar extends Component {
         toolbarHeight = 62 + this.state.descriptionHeight;
         indexHeight = 48 + (this.state.descriptionHeight / 2);
         break;
+      default:
+        break;
     }
 
     let toolbarStyles = {
@@ -192,9 +198,13 @@ class Toolbar extends Component {
             </div>
 
             <div className={this.state.showInfo ? "image-description description-focus" :"image-description"}>
-              {this.props.imageData.info}{this.includeSize()}<br />
+              <span className="image-info">
+                {this.props.imageData.info}{this.includeSize()}<br />
+              </span>
               <div className="description-details-spacer"></div>
-              {this.props.imageData.description}
+              <span className="image-description-details">
+                {this.props.imageData.description}
+              </span>
             </div>
           
             <div className="gallery-index-box" style={indexStyles}>

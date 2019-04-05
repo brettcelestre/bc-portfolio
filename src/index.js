@@ -8,10 +8,12 @@ import './assets/css/normalize.css';
 import './index.css';
 
 import App from './Components/App/App.js';
-// import Home from './Components/Home/Home.js';
+import Home from './Components/Home/Home.js';
 import ImageSections from './Components/ImageSections/ImageSections.js';
 import ShortFilmsSections from './Components/ShortFilmsSections/ShortFilmsSections.js';
-import ShortFilms from './Components/ShortFilms/ShortFilms.js';
+import ShortFilmsPlayer from './Components/ShortFilmsPlayer/ShortFilmsPlayer.js';
+import ShortFilmsCredits from './Components/ShortFilmsCredits/ShortFilmsCredits.js';
+import ShortFilmsDetails from './Components/ShortFilmsDetails/ShortFilmsDetails.js';
 import Applications from './Components/Applications/Applications.js';
 import Creatives from './Components/Creatives/Creatives.js';
 import Resources from './Components/Resources/Resources.js';
@@ -22,10 +24,13 @@ import ImageViewer from './Components/ImageViewer/ImageViewer.js';
 ReactDOM.render(
   <BrowserRouter>
     <div>
-      <Route path="/" component={App} zoom="false">
+      <Route path="/" component={App}>
       </Route>
       <Switch>
-        <Route name="short-films" path="/short-films/:film" component={ShortFilms} lastViewed=""/>
+        <Route name="short-films" path="/short-films/watch/:film" component={ShortFilmsPlayer} lastViewed=""/>
+        <Route name="short-films" path="/short-films/behind-the-scenes/:film" component={ShortFilmsPlayer} lastViewed=""/>
+        <Route name="short-films" path="/short-films/credits/:film" component={ShortFilmsCredits} lastViewed=""/>
+        <Route name="short-films" path="/short-films/:film" component={ShortFilmsDetails} lastViewed=""/>
         <Route name="short-films" path="/short-films" component={ShortFilmsSections} lastViewed=""/>
         <Route name="images" path="/:section/:category/:subCategory/:piece" component={ImageViewer} />
         <Route name="images" path="/:section/:category/sections" component={ImageSections} />
@@ -37,8 +42,8 @@ ReactDOM.render(
         <Route name="resources" path="/resources" component={Resources} />
         <Route name="about" path="/about" component={About} />
         <Route name="resume" path="/resume" component={Resume} />
+        <Route name="home" path="/home" component={Home} />
         <Route name="gallery-sections" path="/:section" component={ImageSections} />
-        {/* <Route name="home" path="/" component={Home} /> */}
         <Redirect to={{ pathname: `/resume` }}/>
       </Switch>
     </div>
