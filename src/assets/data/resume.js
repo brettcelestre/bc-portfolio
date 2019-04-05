@@ -4,7 +4,6 @@ const resume = ymlLoader.load(`
 Technical Skills:
   Backend:
     - Node.js
-    - AWS
     - Microservices
     - RESTful API
     - NoSQL
@@ -23,13 +22,16 @@ Technical Skills:
     - Bootstrap
     - jQuery
   Dev Ops: 
+    - AWS
     - Git
     - Jenkins
     - Docker
     - Unix
+    - Bash
     - Swagger
     - TDD/BD
   Experienced:
+    - Redux
     - Socket.IO
     - Protractor
     - Webpack
@@ -72,6 +74,21 @@ Professional Experience:
     description:
       - Designed and built responsive emails which were sent to over 100k subscribers twice weekly
       - Created and managed websites and social media accounts increasing customer engagement by 400%
+  - company: "TCI | SPX"
+    title: Digital Imaging and Photography
+    date: AUGUST 2011 - DECEMBER 2014
+    url: https://www.tcibr.com/
+    header:
+    description:
+      - Created primary product images used in multi-million dollar sales presentations for SPX, a Fortune 1000 Company
+      - Product photography, photo realistic image compositing, retouching
+  - company: Terres | Marketing Design
+    title: Digital Imaging Specialist
+    date: JULY 2008 - DECEMBER 2014
+    url: http://terresdesign.com/
+    header:
+    description:
+      - Photo realistic image compositing / retouching, stock photography research, websites, data sheets, company presentations, brochures, web banners and html email campaigns both for print and web
 Personal Applications:
   - title: www.BrettCelestre.com
     position: Front-End Software Engineer
@@ -106,6 +123,15 @@ Personal Applications:
     description:
       - Integrated Socket.io between client-server to handle users voting data so planning can take place in real-time
       - Utilized Highcharts.js with responsive design for users to visualize voting data in real-time via Websockets
+  - title: FeedFuse
+    position: Full Stack Software Engineer
+    url:
+    date: JUNE 2016
+    header: An exploratory web app to blend Twitter and Instagram posts
+    description:
+      - Implemented OAuth 2.0 authentication for logging into Twitter and Instagram simultaneously. 
+      - Architected backend routing for RESTful API calls. 
+      - Engineered front-end routing and created a sorting algorithm to fuse two social media data sets together.
 Education:
   - title: Hack Reactor
     header: Advanced Software Engineering Immersive

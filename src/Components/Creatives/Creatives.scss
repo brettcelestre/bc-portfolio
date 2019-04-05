@@ -18,6 +18,15 @@
   letter-spacing: $spacing;
 }
 
+::selection {
+  background: #272727;  /* WebKit/Blink Browsers */
+  color: #f8f8f8;
+}
+::-moz-selection {
+  background: #272727;  /* Gecko Browsers */
+  color: #f8f8f8;
+}
+
 $navigation-width: 137px;
 
 .friends {
@@ -29,6 +38,7 @@ $navigation-width: 137px;
 }
 
 .friends-columns {
+  margin-top: 7px;
   -webkit-column-count: auto; /* Chrome, Safari, Opera */
   -moz-column-count: auto; /* Firefox */
   column-count: auto;
@@ -55,16 +65,16 @@ $navigation-width: 137px;
   &:hover {
     h4 {
       font-weight: 600;
-      // color: rgb(104, 104, 104);
     }
-    // .highlight {
-    //   background-color: rgb(255, 255, 138);
-    // }
+    .highlight {
+      background-color: rgb(255, 249, 197);
+    }
   }
 }
 
 .friends-sort-box {
-  display: inline-flex;
+  // display: inline-flex;
+  display: inline-block;
   width: 100%;
   height: auto;
   margin-bottom: 10px;
@@ -95,9 +105,9 @@ $navigation-width: 137px;
   width: auto;
   @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
   padding: 7px 2px 2.5px 7px;
-  margin: 1px 4px;
+  margin: 1px 8px 7px 0px;
   border-radius: 2px;
-  border: solid .7px #d4d4d4;
+  border: solid .7px #e4e4e4;
   &:hover {
     cursor: pointer;
     background-color: #e8e8e8;
@@ -128,7 +138,7 @@ $navigation-width: 137px;
 // Tablet Size -  and (max-height: 736px) 
 @media (max-width: 1024px) {
   .friends {
-    width: 100%;
+    width: calc(100% - 100px);
     margin-top: 60px;
     margin-left: 0;
     padding: 27px 50px 75px 50px;

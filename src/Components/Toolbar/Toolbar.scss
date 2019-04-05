@@ -156,10 +156,17 @@
   transition: opacity 225ms;
   transition-duration: 225ms;
   -webkit-transition: opacity 225ms;
-  @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
   position: relative;
   padding-top: 5px;
   line-height: 1.2rem;
+}
+
+.image-info {
+  @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
+}
+
+.image-description-details {
+  @include font-setup('SplendidN', 1.15rem, 500, #131313, none, -1.5px);
 }
 
 .description-focus {

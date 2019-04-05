@@ -1,5 +1,9 @@
 
 const ymlLoader = require('js-yaml');
+const delRioGallery = require('./photography_del_rio.js');
+
+// - name: Sketches
+//       href: /artwork/sketches/del-rio
 
 const data = ymlLoader.load(`
 - title: Del Rio
@@ -18,40 +22,16 @@ const data = ymlLoader.load(`
   options: 
     - name: Behind The Scenes
       href: /short-films/behind-the-scenes/del-rio
-      sizes:
-        Large:
-          width: 1500
-          height: 639
-        Medium:
-          width: 1100
-          height: 469
-        Small:
-          width: 800
-          height: 341
-    - name: Storyboards
+      type: video
+      length: "40:22 minutes"
+    - name: Photography
+      href: /photography/film/del-rio/${delRioGallery.data[0].urlTitle}
+      type: photos
+      length: ${delRioGallery.data.length} photos
+    - name: Storyboards Comparison
       href: /short-films/storyboards/del-rio
-      sizes:
-        Large:
-          width: 1500
-          height: 639
-        Medium:
-          width: 1100
-          height: 469
-        Small:
-          width: 800
-          height: 341
-    - name: Sketches
-      href: /artwork/sketches/del-rio
-      sizes:
-        Large:
-          width: 1500
-          height: 639
-        Medium:
-          width: 1100
-          height: 469
-        Small:
-          width: 800
-          height: 341
+      type: video
+      length: "5:36 minutes"
   credits: <strong>Written & Directed</strong></ br>\
         by</ br>\
         Matthew & Brett Celestre</ br></ br></ br> \
@@ -131,11 +111,22 @@ const data = ymlLoader.load(`
   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/qSpbsE7gabM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   options: 
     - name: Behind The Scenes
+      type: video
+      length: "???"
       href: /short-films/behind-the-scenes/ballroom-dance-floor
     - name: Storyboards
+      type: video
+      length: "???"
+      id: "??"
       href: /short-films/storyboards/ballroom-dance-floor
     - name: Drawings
+      type: photos
+      length: ???
       href: /artwork/drawings/ballroom-dance-floor
+    - name: Trailer
+      length: "2:28 minutes"
+      id: WMyra5stRws
+      href: /short-films/ballroom-dance-floor/trailer
   credits: <strong>Written & Directed</strong></ br>
     by</ br>
     Matthew & Brett Celestre</ br></ br></ br>
@@ -177,7 +168,9 @@ const data = ymlLoader.load(`
   options: 
     - name: Sketches
       href: /artwork/sketches/the-flying-disc
-  credits: Written, Directed, & Special Effects by Brett Celestre
+  credits: <strong>Written, Directed, & Special Effects</strong></ br>
+    by</ br>
+    Brett Celestre
   sizes:
     Large:
       width: 1500
@@ -199,7 +192,9 @@ const data = ymlLoader.load(`
   id: LqBw8UVvfXg
   url: https://www.youtube.com/embed/LqBw8UVvfXg?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
   options: 
-  credits: Written & Directed by Brett Celestre 
+  credits: <strong>Written & Directed</strong></ br>
+    by</ br>
+    Brett Celestre 
   sizes:
     Large:
       width: 1500
@@ -217,7 +212,7 @@ const data = ymlLoader.load(`
   year: 2010
   length: "1:37"
   href: /short-films/justin-felix-vs-gavin-drago
-  description:
+  description: An epic showdown between two heavyweight Creek Park lukers ends in what some might consider dirty footwork. Justin Felix and his posse enter the park with sheer confidence, while Gavin stocks up on liquid courage. Someone's ultimately going to be crusin for a brusin.
   website: 
   id: KCizRihPlU0
   url: https://www.youtube.com/embed/KCizRihPlU0?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
@@ -226,18 +221,23 @@ const data = ymlLoader.load(`
     - name: Drawings
       href: /artwork/Drawings/justin-felix-vs-gavin-drago
   viewFullCredits: true
-  credits: Written & Directed by Matthew & Brett Celestre
-    Animated by Brett & Matthew Celestre
+  credits: <strong>Written & Directed</strong></ br>
+    by</ br>
+    Matthew & Brett Celestre</ br></ br></ br>
 
-    Voice Actors
-    Scott Celestre
-    Ryan Schmidt
+    <strong>Animated</strong></ br>
+    by</ br>
+    Brett & Matthew Celestre</ br></ br></ br>
 
-    Actors
-    Justin Felix
-    Cole
-    Kevin Luker
-    Allyza
+    <strong>Voice Actors</strong></ br>
+    Scott Celestre</ br>
+    Ryan Schmidt</ br></ br></ br>
+
+    <strong>Actors</strong></ br>
+    Justin Felix</ br>
+    Cole</ br>
+    Kevin Luker</ br>
+    Allyza</ br>
     Belly G
 
   sizes:
@@ -254,7 +254,25 @@ const data = ymlLoader.load(`
 
 module.exports = { data };
 
-
+// ballroom - teaser 3
+// https://www.youtube.com/watch?v=WMyra5stRws
+// - name: Teaser 3
+//       href: /short-films/ballroom-dance-floor/teaser-3
 
 // real life 2
+// https://www.youtube.com/watch?v=PvN9qTF3BeU
+
 // real life 
+// https://www.youtube.com/watch?v=AtxKViR0RSg
+
+// sk8 moves
+// https://www.youtube.com/watch?v=qSUITyfWhgI
+
+// HDelight - Extreme Super Slow-Mo Skateboard Maneuvers
+// https://www.youtube.com/watch?v=BccQcHwRuqM
+
+// patterns
+// https://www.youtube.com/watch?v=-Evb3S3qoTM
+
+// minister
+// https://www.youtube.com/watch?v=O437kB4NbaU

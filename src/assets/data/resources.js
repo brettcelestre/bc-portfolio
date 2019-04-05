@@ -35,7 +35,15 @@ Organizations:
     header: LGBTQ civil rights organization working at the local, state and national levels
     url: https://www.eqca.org/
 
+News:
+  - title: The North Star
+    header: A modern hub for liberation journalism
+    url: https://thenorthstar.com/
+
 Art:
+  - title: Nick Hakim
+    header: Musician
+    url: http://nickhakim.com/
   - title: WikiArt
     header: Visual Art Encyclopedia
     url: https://www.wikiart.org/
@@ -43,7 +51,7 @@ Art:
     header:  Film and animation studio
     url: http://encyclopediapictura.com/
   - title: But does it Float
-    header:
+    header: Art blog
     url: https://butdoesitfloat.com/Index
   - title: This is Colossal
     header: Art, design, and visual culture
@@ -86,15 +94,15 @@ People:
   - title: Shaun King
     header: Writer, civil rights activist, and co-founder of Real Justice PAC and The North Star
     url: https://www.shaunking.org/
+  - title: Paul Stamets
+    header: Mycologist, author and advocate of bioremediation and medicinal fungi
+    url: https://fungi.com/pages/about-us
   - title: Aaron Schwartz
     header: Computer programmer, entrepreneur, writer, political organizer, and Internet hacktivist
     url: https://en.wikipedia.org/wiki/Aaron_Swartz
   - title: Lawrence Lessig
     header: Academic, attorney, and political activist
     url: http://www.lessig.org/about/
-  - title: Paul Stamets
-    header: Mycologist, author and advocate of bioremediation and medicinal fungi
-    url: https://fungi.com/pages/about-us
   - title: Michael Pollan
     header: Author, journalist, activist, and the Lewis K. Chan Arts Lecturer and Professor of Practice of Non-Fiction at Harvard University
     url: https://michaelpollan.com/
@@ -103,6 +111,9 @@ Companies:
   - title: Host Defense
     header: Harnessing the power of mushrooms to support your health
     url: https://hostdefense.com/
+  - title: Imperfect Produce
+    header: Healthy, delicious fruits and veggies for about 30% less than grocery stores, delivered to your door
+    url: https://www.imperfectproduce.com/
   - title: Eco Bags
     header: Ethically and sustainably sourced, durable-reusable bags that inspire people to reduce, reuse, recycle and re-imagine the world we live in
     url: https://www.ecobags.com/

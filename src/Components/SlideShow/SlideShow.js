@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+// import { Link, Redirect } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import './SlideShow.css';
 
@@ -23,7 +23,7 @@ class SlideShow extends Component {
   }
 
   setOrientation() {
-    if ( this.state.orientation !== window.innerWidth < 1024 ? 'landscape' : 'portrait') {
+    if ( (this.state.orientation !== window.innerWidth) < 1024 ? 'landscape' : 'portrait') {
       this.setState({
         orientation: window.innerWidth < 1024 ? 'landscape' : 'portrait',
         index: 0
@@ -32,9 +32,10 @@ class SlideShow extends Component {
   }
 
   nextImage() {
-    const nextIndex = this.state.index++ < (this.state.images[this.state.orientation].length - 1) ? this.state.index++ : 0;
+    const nextIndex = this.state.index + 1;
+    const actualNextIndex = nextIndex < (this.state.images[this.state.orientation].length - 1) ? nextIndex : 0;
     this.setState({
-      index: nextIndex
+      index: actualNextIndex
     });
   }
 
@@ -52,7 +53,7 @@ class SlideShow extends Component {
              key={i} 
              id={i}
              className="slideshow-control-box" 
-             style={this.state.index === i ? {backgroundColor: "#f8f8f8"} : {}}></div>
+             style={this.state.index === i ? {backgroundColor: "#e0e0e0"} : {}}></div>
       )
     });
   }

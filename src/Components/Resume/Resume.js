@@ -81,7 +81,7 @@ class Resume extends Component {
   buildTechSkills(skills) {
     return Object.keys(skills).map((skill, i) => {
       return (
-        <div className="resume-font description-padding-15" key={`${skill}-${i}`}>
+        <div className="resume-font tech-skills-section" key={`${skill}-${i}`}>
           <div className="tech-skill-section">
             <strong>{skill}:</strong>
           </div>
@@ -150,6 +150,12 @@ class Resume extends Component {
       <div className="resume-section">
         <div className="resume">
 
+          <div className="download-resume-section">
+            <div className="download-resume-button">
+              Download PDF
+            </div>
+          </div>
+
           <div className="resume-section-title">
             Professional Experience
           </div>
@@ -185,12 +191,6 @@ class Resume extends Component {
           </div>
 
           {this.buildEducationSection(resumeData['Education'])}
-
-          {/* <div className="download-resume-section">
-            <div className="download-resume-button">
-              Download PDF
-            </div>
-          </div> */}
 
         </div>
       </div>

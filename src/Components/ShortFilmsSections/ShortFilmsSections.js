@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import Img from 'react-image';
+import { scrollTop } from '../../utils/utils.js';
 
 import spinner from '../../assets/img/spinner.gif';
 import './ShortFilmsSections.css';
@@ -59,6 +60,7 @@ class ShortFilmsSections extends Component {
   saveScrollSpot() {
     // TODO: Store film section scrolling spot
     //  localStorage.setItem(`BC.Portfolio.FilmScrollSpot`, currentScrollSpot);
+    scrollTop();
   }
 
   setWindowSize(width){
@@ -133,8 +135,10 @@ class ShortFilmsSections extends Component {
             </div>
 
             <div className="short-film-details">
-              <h3>{film.title}</h3>
-              <h4>{film.year} | {film.length}</h4>
+              <div className="short-film-info">
+                <h3>{film.title}</h3>
+                <h4>{film.year} | {film.length}</h4>
+              </div>
             </div>
           </Link>
 

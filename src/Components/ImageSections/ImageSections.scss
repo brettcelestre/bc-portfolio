@@ -24,10 +24,11 @@ $navigation-width: 137px;
 .thumbs-section-outer {
   width: calc(100% - 217px);
   margin-left: $navigation-width;
-  padding-top: 65px;
-  padding-bottom: 110px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 55px 40px 110px 40px;
+  // padding-top: 65px;
+  // padding-bottom: 110px;
+  // padding-right: 40px;
+  // padding-left: 40px;
 }
 
 .section-thumbs {
@@ -111,9 +112,11 @@ $navigation-width: 137px;
 
   .thumbs-section-outer {
     width: 100%;
-    margin-top: 42px;
+    // margin-top: 42px;
+    margin-top: 27px;
     padding-left: 0px;
     padding-right: 0px;
+    padding-bottom: 31px;
     margin-left: 0px;
   } 
 
@@ -122,8 +125,16 @@ $navigation-width: 137px;
   }
 
   .image-section-title {
+    height: 48px;
+    background-position: 0px -5px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
+    // TEST
+    h2 {
+      padding: 15px 27px 15px 27px;
+      @include font-setup('chapaza', 1.27rem, 500, #282828, none, -.25px);
+    }
+    
   }
 
   .description {

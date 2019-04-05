@@ -7,7 +7,8 @@ import spinner from '../../assets/img/spinner.gif';
 import applications from '../../assets/data/applications.js';
 
 const appImages = {
-  "MatthewCelestre.com": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
+  // "www.BrettCelestre.com": require('../../assets/gallery/applications/BrettCelestre.jpg'),
+  "www.MatthewCelestre.com": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
   "Stock Sight": require('../../assets/gallery/applications/StockSight.jpg'),
   "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.jpg'),
   "Qurvey": require('../../assets/gallery/applications/Qurvey.jpg'),
