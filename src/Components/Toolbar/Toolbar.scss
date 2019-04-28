@@ -82,14 +82,13 @@
   &:hover {
     transition-duration: 225ms;
     box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .45);
-    cursor: pointer;
     .title-desktop {
       font-size: 1.55rem;
       letter-spacing: 0px;
       transition-duration: 225ms;
     }
     .image-date-desktop {
-      font-size: .875rem;
+      font-size: .835rem;
       letter-spacing: 2.2px;
       line-height: 1.5rem;
       margin-top: -2px;
@@ -117,7 +116,7 @@
 
 .title-box {
   padding-left: 25px;
-  padding-top: 3px;
+  padding-top: 0px;
   margin-top: 0px;
   text-align: left;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -130,8 +129,7 @@
 }
 
 .title {
-  @include font-setup('chapaza', 1.35rem, 500, rgb(20, 20, 20), none, -.75px);
-  margin-top: 3px;
+  @include font-setup('old style caps', 1.35rem, 500, #282524, none, .15px);
   display: inline-table;
   margin-bottom: -5px;
   transition-duration: 225ms;
@@ -192,7 +190,7 @@
   display: inline-flex;
   @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
   padding-left: 14px;
-  padding-top: 8px;
+  padding-top: 11px;
   position: absolute;
   transition-duration: 225ms;
 }

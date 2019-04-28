@@ -20,9 +20,34 @@ class Toolbar extends Component {
     this.toolbarContract = this.toolbarContract.bind(this);
   }
 
-  // componentWillUpdate() {
-    // TODO: detect incoming prop changes and hide the toolbar for desktop
-  // }
+  componentDidUpdate() {
+    if ( this.state.descriptionHeight !== 0) {
+      let heightAdjustment;
+      let isMobile = false;
+      switch (this.findWindowSize()) {
+        case 'desktop':
+          heightAdjustment = 0;
+          break;
+        case 'tablet':
+          heightAdjustment = 0;
+          break;
+        case 'mobile':
+          isMobile = true;
+          heightAdjustment = 30;
+          break;
+        default:
+          break;
+      }
+      const desc = document.getElementsByClassName('image-description');
+      const test = desc[0].clientHeight + heightAdjustment;
+      if (test !== this.state.descriptionHeight) {
+        this.setState({
+          isMobile,
+          descriptionHeight: desc[0].clientHeight + heightAdjustment
+        });
+      }
+    }
+  }
 
   findWindowSize() {
     const windowWidth = window.innerWidth;
