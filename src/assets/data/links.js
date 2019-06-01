@@ -46,7 +46,7 @@ const data = ymlLoader.load(`
 - title: Ryan Schmidt
   links:
     - type: SoundCloud
-      url: https://soundcloud.com/the-bozos-1
+      url: https://thebozosthebozosthebozos.bandcamp.com/
   tags:
     - musician
 - title: Andrew Jinkins
@@ -67,6 +67,12 @@ const data = ymlLoader.load(`
       url: https://www.kylelumanphotography.com/
   tags:
     - photographer
+- title: Grant Selland
+  links:
+    - type: SoundCloud
+      url: https://soundcloud.com/messboard/tracks
+  tags:
+    - musician
 - title: Jake Vincent
   links:
     - type: Flickr
@@ -105,13 +111,6 @@ const data = ymlLoader.load(`
       url: http://andrewtsao.io/
   tags:
     - software engineer
-- title: Maria Gabriela Sanchez Mallona 
-  links:
-    - type: Portfolio
-      url: https://magasama.com/
-  tags:
-    - illustrator
-    - graphic designer
 - title: Emjay Mercury
   links:
     - type: Portfolio
@@ -121,12 +120,37 @@ const data = ymlLoader.load(`
   tags:
     - burlesque
     - drag
+- title: Maria Gabriela Sanchez Mallona 
+  links:
+    - type: Portfolio
+      url: https://magasama.com/
+  tags:
+    - illustrator
+    - graphic designer
+- title: Michelle Fernandez
+  links:
+    - type: Portfolio
+      url: https://www.michellemfernandez.com/
+  tags:
+    - ux designer
+- title: Emilio Villalba
+  links:
+    - type: Portfolio
+      url: http://emiliovillalbaart.com/
+  tags:
+    - painter
 - title: Sean Hipkin
   links:
     - type: Portfolio
       url: https://www.seanhipkin.com/
   tags:
     - illustrator
+- title: Cybelle Dabner
+  links:
+    - type: YouTube
+      url: https://www.youtube.com/user/Cybski420/videos
+  tags:
+    - musician
 - title: Sarah Jaffe
   links:
     - type: Portfolio

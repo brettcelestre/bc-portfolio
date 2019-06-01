@@ -64,24 +64,6 @@ const data = ymlLoader.load(`
       width: 436
       height: 600
 
-- title: Pen Holder
-  urlTitle: pen-holder
-  date: 2014
-  info: Walnut - 1.75" x 1.75" x 1.75"
-  description: 
-  href:
-  fontStyles:
-  sizes:
-    Large:
-      width: 1018
-      height: 1200
-    Medium:
-      width: 764
-      height: 900
-    Small:
-      width: 509
-      height: 600
-
 - title: Side Table
   urlTitle: side-table
   date: 2012
@@ -99,6 +81,24 @@ const data = ymlLoader.load(`
     Small:
       width: 800
       height: 534
+
+- title: Pen Holder
+  urlTitle: pen-holder
+  date: 2014
+  info: Walnut - 1.75" x 1.75" x 1.75"
+  description: 
+  href:
+  fontStyles:
+  sizes:
+    Large:
+      width: 1018
+      height: 1200
+    Medium:
+      width: 764
+      height: 900
+    Small:
+      width: 509
+      height: 600
 
 - title: Toms
   urlTitle: toms

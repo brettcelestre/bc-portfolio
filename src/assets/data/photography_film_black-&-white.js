@@ -1,5 +1,24 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
+- title: Living Room
+  urlTitle: living-room
+  date: 
+  size: 
+  orientation: landscape
+  description: 
+  arrows: dark
+  info: Nikon N55 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 983
+    Medium:
+      width: 1100
+      height: 721
+    Small:
+      width: 800
+      height: 524
+
 - title: Me
   urlTitle: me
   date: 
