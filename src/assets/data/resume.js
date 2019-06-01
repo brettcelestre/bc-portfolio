@@ -39,9 +39,16 @@ Technical Skills:
     - MySQL
     - OAuth2.0
 Professional Experience:
+  - company: Starcity
+    title: Software Engineer
+    date: APRIL 2019 - PRESENT
+    url: https://www.starcity.com/
+    header:
+    description:
+      - React, Node.js, Clojure, GraphQL, AWS
   - company: Accenture - Liquid Studios
     title: Senior Software Engineer
-    date: MAY 2017 - PRESENT
+    date: MAY 2017 - MARCH 2019
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
     header:
     description:

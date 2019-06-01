@@ -1,5 +1,43 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
+- title: Fresh Air
+  urlTitle: fresh-air
+  date: ????????
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 994
+    Medium:
+      width: 1100
+      height: 729
+    Small:
+      width: 800
+      height: 530
+
+- title: Room
+  urlTitle: room
+  date: ????????
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 974
+    Medium:
+      width: 1100
+      height: 714
+    Small:
+      width: 800
+      height: 519
+
 - title: Bedroom 11 01 2015
   urlTitle: bedroom-11-01-2015
   date: NOVEMBER 2015

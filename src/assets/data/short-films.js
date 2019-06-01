@@ -5,6 +5,26 @@ const delRioGallery = require('./photography_del_rio.js');
 // - name: Sketches
 //       href: /artwork/sketches/del-rio
 
+// Ballroom - Options
+// - name: Drawings
+//       type: photos
+//       length: ???
+//       href: /artwork/drawings/ballroom-dance-floor
+// - name: Teaser 2
+  // length: 19 seconds
+  // id: dOP9svsdfBU
+  // href: /short-films/ballroom-dance-floor/teaser-2
+
+
+// the flying disc - Options
+// - name: Sketches
+// type: photos
+// href: /artwork/sketches/the-flying-disc
+
+// justin vs gavin
+// - name: Drawings
+//       href: /artwork/Drawings/justin-felix-vs-gavin-drago
+
 const data = ymlLoader.load(`
 - title: Del Rio
   urlTitle: del-rio
@@ -21,16 +41,18 @@ const data = ymlLoader.load(`
   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/h8nbA3BLtbI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   options: 
     - name: Behind The Scenes
-      href: /short-films/behind-the-scenes/del-rio
       type: video
+      href: /short-films/del-rio/behind-the-scenes
+      id: iesCBSqrVZ4
       length: "40:22 minutes"
     - name: Photography
-      href: /photography/film/del-rio/${delRioGallery.data[0].urlTitle}
       type: photos
+      href: /photography/del-rio/${delRioGallery.data[0].urlTitle}
       length: ${delRioGallery.data.length} photos
     - name: Storyboards Comparison
-      href: /short-films/storyboards/del-rio
       type: video
+      href: /short-films/del-rio/storyboards-comparison
+      id: IaKfoVWGeFo
       length: "5:36 minutes"
   credits: <strong>Written & Directed</strong></ br>\
         by</ br>\
@@ -112,21 +134,24 @@ const data = ymlLoader.load(`
   options: 
     - name: Behind The Scenes
       type: video
-      length: "???"
-      href: /short-films/behind-the-scenes/ballroom-dance-floor
-    - name: Storyboards
+      id: 2BD8ac_xJEE
+      length: "5:02 minutes"
+      href: /short-films/ballroom-dance-floor/behind-the-scenes
+    - name: Storyboards Part One
       type: video
-      length: "???"
-      id: "??"
-      href: /short-films/storyboards/ballroom-dance-floor
-    - name: Drawings
-      type: photos
-      length: ???
-      href: /artwork/drawings/ballroom-dance-floor
-    - name: Trailer
-      length: "2:28 minutes"
+      length: "55 seconds"
+      id: BdHaw1btKAk
+      href: /short-films/ballroom-dance-floor/storyboards-part-one
+    - name: Storyboards Part Two
+      type: video
+      length: "56 seconds"
+      id: 3nBm5A7_ZiE
+      href: /short-films/ballroom-dance-floor/storyboards-part-two
+    - name: Teaser Three
+      type: video
+      length: "2:26 minutes"
       id: WMyra5stRws
-      href: /short-films/ballroom-dance-floor/trailer
+      href: /short-films/ballroom-dance-floor/teaser-three
   credits: <strong>Written & Directed</strong></ br>
     by</ br>
     Matthew & Brett Celestre</ br></ br></ br>
@@ -166,8 +191,6 @@ const data = ymlLoader.load(`
   url: https://www.youtube.com/embed/aw3WzAiKgY8?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/aw3WzAiKgY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   options: 
-    - name: Sketches
-      href: /artwork/sketches/the-flying-disc
   credits: <strong>Written, Directed, & Special Effects</strong></ br>
     by</ br>
     Brett Celestre
@@ -218,8 +241,6 @@ const data = ymlLoader.load(`
   url: https://www.youtube.com/embed/KCizRihPlU0?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/KCizRihPlU0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   options:
-    - name: Drawings
-      href: /artwork/Drawings/justin-felix-vs-gavin-drago
   viewFullCredits: true
   credits: <strong>Written & Directed</strong></ br>
     by</ br>

@@ -1,5 +1,43 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
+- title: Summer
+  urlTitle: summer
+  date: 2018
+  size: ''
+  orientation: landscape
+  description: Taken in Madrid, Spain
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 995
+    Medium:
+      width: 1100
+      height: 730
+    Small:
+      width: 800
+      height: 531
+
+- title: Deer of Meridian
+  urlTitle: deer-of-meridian
+  date: 2016
+  size: ''
+  orientation: landscape
+  description: Mount Diablo, California
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 926
+    Medium:
+      width: 1100
+      height: 679
+    Small:
+      width: 800
+      height: 494
+
 - title: Fall
   urlTitle: fall
   date: 2010
