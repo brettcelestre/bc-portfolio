@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Toolbar.css';
+import arrow from '../../assets/img/toolbar-arrow.png';
 
 class Toolbar extends Component {
 
@@ -33,7 +34,7 @@ class Toolbar extends Component {
           break;
         case 'mobile':
           isMobile = true;
-          heightAdjustment = 30;
+          heightAdjustment = 10;
           break;
         default:
           break;
@@ -118,7 +119,7 @@ class Toolbar extends Component {
             break;
           case 'mobile':
             isMobile = true;
-            heightAdjustment = 30;
+            heightAdjustment = 10;
             break;
           default:
             break;
@@ -192,6 +193,9 @@ class Toolbar extends Component {
     let toolbarStyles = {
       height: `${toolbarHeight}px`,
     };
+    if (this.state.showInfo) {
+      mobileTabletBar +=  ' toolbar-down-arrow';
+    }
 
     let indexStyles = {
       height: `${indexHeight}px`,
@@ -208,6 +212,7 @@ class Toolbar extends Component {
 
           <div className="toolbar-pull-box">
             <div className={mobileTabletBar}>
+              <img src={arrow} />
             </div>
           </div>
 
