@@ -20,7 +20,9 @@ $navigation-width: 137px;
   padding-left: $navigation-width;
   height: 100vh;
   width: calc(100% - $navigation-width);
-  display: -webkit-box;
+  // width: calc(100% - 137px);
+  // display: -webkit-box;
+  display: inline-flex;
 }
 
 .about-gallery {
@@ -30,13 +32,13 @@ $navigation-width: 137px;
 }
 
 .about-section {
-  position: fixed;
+  // position: fixed;
   z-index: 1;
   height: 100vh;
-  width: calc(100% - ($navigation-width + 440));
-  float: right;
+  // width: calc(100% - ($navigation-width + 440));
+  // float: right;
   // background-color: red;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .about-content {
@@ -44,7 +46,53 @@ $navigation-width: 137px;
   @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.5px);
 }
 
-// Mobile size
-@media (max-width: 414px) and (max-height: 736px) {
+.about-email-at {
+  font-size: 1rem;
+}
 
+// Tablet Size
+@media (max-width: 1025px) {
+  .about {
+    margin-top: 60px;
+    padding-top: 0px;
+    padding-left: 0px;
+    height: auto;
+    width: 100%;
+    display: block;
+  }
+  .about-section {
+    width: auto;
+    height: auto;
+    padding: 0 40px;
+  }
+  .about-content {
+    padding: 0px 0px 40px 0px;
+  }
+}
+
+// Mobile size
+// and (max-height: 736px)
+@media (max-width: 414px) {
+  .about {
+    display: inline-block;
+    margin-top: 50px;
+    padding-left: 0px;
+    overflow-x: hidden;
+  }
+
+  .about-section {
+    position: absolute;
+    padding: 25px 15px 30px 15px;
+    width: calc(100% - 30px);
+  }
+
+  .slideshow-container {
+    height: auto;
+    padding: 0px !important;
+    width: 100%;
+  }
+
+  .about-content {
+    padding: 0px;
+  }
 }

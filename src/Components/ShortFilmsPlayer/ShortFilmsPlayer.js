@@ -9,7 +9,7 @@ class ShortFilmsPlayer extends Component {
 
   componentWillUnmount() {
     // Stores current time of film locally
-    localStorage.setItem(`BC.Portfolio.${this.state.filmData.title}`, this.state.youTubeTarget.getCurrentTime());
+    // localStorage.setItem(`BC.Portfolio.${this.state.filmData.title}`, this.state.youTubeTarget.getCurrentTime());
   }
 
   constructor(props){
@@ -20,7 +20,7 @@ class ShortFilmsPlayer extends Component {
       height: 0,
       videoUrl: '',
       theatreMode: false,
-      filmData: this.findFilmData(this.buildFileName(props.match.params.film)),
+      filmData: this.findFilmData(props.match.params.filmTarget, this.buildFileName(props.match.params.film)),
       youTubeTarget: {},
       filmTimes: {}
     }
@@ -33,8 +33,30 @@ class ShortFilmsPlayer extends Component {
     this.nextFilm = this.nextFilm.bind(this);
   }
 
-  findFilmData(targetTitle) {
-    return films.data.find(film => targetTitle === film.title);
+  findFilmData(filmTarget, targetTitle) {
+    const target = filmTarget.split('-').join(' ').toLowerCase();
+    if (filmTarget === 'watch') {
+        return films.data.find(film => targetTitle === film.title);
+    }
+    return  films.data.find(film => targetTitle === film.title)
+              .options.find(option => option.name.toLowerCase() === target);
+    // switch(filmTarget) {
+    //   case 'watch':
+    //     return films.data.find(film => targetTitle === film.title);
+    //     break;
+    //   case 'behind-the-scenes':
+    //     return  films.data.find(film => targetTitle === film.title)
+    //               .options.find(option => option.name.toLowerCase() === target);
+    //     break;
+    //   case 'storyboards-comparison':
+    //     return  films.data.find(film => targetTitle === film.title)
+    //               .options.find(option => option.name.toLowerCase() === target);
+    //     break;
+    //   default:
+    //     console.log('No :filmTarget selected');
+    //     return films.data.find(film => targetTitle === film.title);
+    //     break;
+    // }
   }
 
   buildFileName(title) {
@@ -67,7 +89,7 @@ class ShortFilmsPlayer extends Component {
     })
     // Starts film at previous viewing timestamp
     // TODO: if timestamp is too far in the past, don't use
-    event.target.seekTo(localStorage.getItem(`BC.Portfolio.${this.state.filmData.title}`), true);
+    // event.target.seekTo(localStorage.getItem(`BC.Portfolio.${this.state.filmData.title}`), true);
   }
 
   buildTheatre(){
@@ -75,7 +97,9 @@ class ShortFilmsPlayer extends Component {
       // height: '390',
       // width: '640',
       playerVars: {
-        autoplay: 0,
+        rel: 0,
+        showinfo: 0,
+        autoplay: 1,
         modestbranding: 1,
         suggestedQuality: 'hd720'
       }
@@ -92,7 +116,7 @@ class ShortFilmsPlayer extends Component {
             className="youtube-video"
             videoId={this.state.filmData.id}
             opts={opts}
-            onReady={this.onPlayerReady}
+            // onReady={this.onPlayerReady}
             // onEnd={this.nextFilm}
           />
         </div>
@@ -101,6 +125,14 @@ class ShortFilmsPlayer extends Component {
   }
 
   render() {
+    // if ( ) {
+    //   return (
+    //     <div className="short-films">
+    //       {this.buildTheatre()}
+    //     </div>
+    //   );
+    // }
+
     return (
       <div className="short-films">
         {this.buildTheatre()}

@@ -45,7 +45,7 @@ Professional Experience:
     url: https://www.starcity.com/
     header:
     description:
-      - React, Node.js, Clojure, GraphQL, AWS
+      - React, Node.js, Clojure, GraphQL, AWS, Google Analytics, WordPress
   - company: Accenture - Liquid Studios
     title: Senior Software Engineer
     date: MAY 2017 - MARCH 2019

@@ -25,10 +25,6 @@ $navigation-width: 137px;
   width: calc(100% - 217px);
   margin-left: $navigation-width;
   padding: 55px 40px 110px 40px;
-  // padding-top: 65px;
-  // padding-bottom: 110px;
-  // padding-right: 40px;
-  // padding-left: 40px;
 }
 
 .section-thumbs {
@@ -72,8 +68,8 @@ $navigation-width: 137px;
   border-bottom-left-radius: 3px;
 
   h2 {
-    padding: 15px 27px 15px 27px;
-    @include font-setup('chapaza', 1.52rem, 500, #282828, none, -.25px);
+    padding: 18px 27px 8px 27px;
+    @include font-setup('chapaza', 1.32rem, 500, #282828, none, -.25px);
   }
 }
 
@@ -91,8 +87,7 @@ $navigation-width: 137px;
   }
 }
 
-
-// Tablet Size -  and (max-height: 736px) 
+// Tablet Size
 @media (max-width: 1024px) {
   .thumbs-section-outer {
     width: 100%;
@@ -107,12 +102,10 @@ $navigation-width: 137px;
   }
 }
 
-// Mobile Size -  and (max-height: 736px)
+// Mobile Size
 @media (max-width: 414px) {
-
   .thumbs-section-outer {
     width: 100%;
-    // margin-top: 42px;
     margin-top: 27px;
     padding-left: 0px;
     padding-right: 0px;
@@ -125,18 +118,17 @@ $navigation-width: 137px;
   }
 
   .image-section-title {
-    height: 48px;
-    background-position: 0px -5px;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    // TEST
+    height: 51px;
+    background-image: url('../../assets/img/sections-title-background-mobile.png');
+    background-position: 0px -27px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
     h2 {
       padding: 15px 27px 15px 27px;
       @include font-setup('chapaza', 1.27rem, 500, #282828, none, -.25px);
+      opacity: .93;
     }
-    
   }
-
   .description {
     margin: -5px 10px 40px 15px;
     h2 {
