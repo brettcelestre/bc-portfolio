@@ -52,7 +52,7 @@ class Resume extends Component {
               </span>
               <br />
               <a href={job.url} target="blank">
-                <span className="resume-company-title">
+                <span className={job.url ? "resume-link" : ''}>
                   {job.company}
                 </span>
               </a>
@@ -112,7 +112,7 @@ class Resume extends Component {
               
               <div className="resume-education-title">
                 <a href={instituion.url} target="blank">
-                  <div className="position">
+                  <div className="position resume-link">
                     <strong>{instituion.title}</strong>
                   </div>
                 </a>
@@ -152,8 +152,12 @@ class Resume extends Component {
 
           <div className="download-resume-section">
             <div className="download-resume-button">
-              Download PDF
+              <span className="download-resume-font">Download PDF</span>
             </div>
+          </div>
+
+          <div className="resume-divider">
+            <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
           </div>
 
           <div className="resume-section-title">
