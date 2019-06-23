@@ -27,9 +27,9 @@ ReactDOM.render(
       <Route path="/" component={App}>
       </Route>
       <Switch>
-        <Route name="short-films" path="/short-films/watch/:film" component={ShortFilmsPlayer} lastViewed=""/>
-        <Route name="short-films" path="/short-films/behind-the-scenes/:film" component={ShortFilmsPlayer} lastViewed=""/>
         <Route name="short-films" path="/short-films/credits/:film" component={ShortFilmsCredits} lastViewed=""/>
+        <Route name="short-films" path="/short-films/:film/:filmTarget" component={ShortFilmsPlayer} lastViewed=""/>
+        {/* <Route name="short-films" path="/short-films/behind-the-scenes/:film" component={ShortFilmsPlayer} lastViewed=""/> */}
         <Route name="short-films" path="/short-films/:film" component={ShortFilmsDetails} lastViewed=""/>
         <Route name="short-films" path="/short-films" component={ShortFilmsSections} lastViewed=""/>
         <Route name="images" path="/:section/:category/:subCategory/:piece" component={ImageViewer} />
@@ -44,7 +44,7 @@ ReactDOM.render(
         <Route name="resume" path="/resume" component={Resume} />
         <Route name="home" path="/home" component={Home} />
         <Route name="gallery-sections" path="/:section" component={ImageSections} />
-        <Redirect to={{ pathname: `/resume` }}/>
+        <Redirect to={{ pathname: `/photography` }}/>
       </Switch>
     </div>
   </BrowserRouter>
