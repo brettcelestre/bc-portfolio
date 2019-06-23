@@ -31,14 +31,29 @@
 }
 
 .toolbar-pull-bar {
-  background-color: #e0e0e0;
   position: relative;
-  top: 5.5px;
+  top: -3px;
   display: table;
   margin: 0 auto;
   height: 4px;
   width: 44px;
   border-radius: 2px;
+  img {
+    width: 100%;
+    height: auto;
+    opacity: .15;
+  }
+}
+
+.toolbar-down-arrow {
+  top: 0px;
+  img {
+    opacity: .5;
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+  }
 }
 
 .toolbar-reset-box {
@@ -75,23 +90,17 @@
   bottom: 0;
   color: #161616;
   transition-duration: 225ms;
-  box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .37);
+  box-shadow: rgba(6, 6, 6, 0.17) 0px 4px 20.3px;
 }
 
 .toolbar-bar-desktop {
   &:hover {
     transition-duration: 225ms;
-    box-shadow: 0px 4px 14.3px rgba(20, 20, 20, .45);
+    box-shadow: rgba(6, 6, 6, 0.25) 0px 4px 50.3px;
     .title-desktop {
-      font-size: 1.55rem;
-      letter-spacing: 0px;
       transition-duration: 225ms;
     }
     .image-date-desktop {
-      font-size: .835rem;
-      letter-spacing: 2.2px;
-      line-height: 1.5rem;
-      margin-top: -2px;
       transition-duration: 225ms;
     }
   }
@@ -103,7 +112,7 @@
 }
 
 .title-focus {
-  font-size: 1.55rem;
+  font-size: 1rem;
   letter-spacing: 0px;
   transition-duration: 225ms;
 }
@@ -115,7 +124,7 @@
 }
 
 .title-box {
-  padding-left: 25px;
+  padding-left: 40px;
   padding-top: 0px;
   margin-top: 0px;
   text-align: left;
@@ -129,13 +138,14 @@
 }
 
 .title {
-  @include font-setup('old style caps', 1.35rem, 500, #282524, none, .15px);
-  display: inline-table;
   margin-bottom: -5px;
+  @include font-setup('chapaza', 1.1rem, 500, #282524, none, -.2px);
+  display: inline-table;
+  margin-top: 7.3px;
   transition-duration: 225ms;
 }
 .title-zoom {
-  font-size: 2rem;
+  font-size: 1.225rem;
 }
 .year {
   font-family: 'Libre Baskerville', serif;
@@ -176,7 +186,7 @@
 }
 
 .description-details-spacer {
-  height: 2.6px;
+  height: 1px;
 }
 
 .info {
@@ -190,7 +200,7 @@
   display: inline-flex;
   @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
   padding-left: 14px;
-  padding-top: 11px;
+  padding-top: 9px;
   position: absolute;
   transition-duration: 225ms;
 }
@@ -204,14 +214,15 @@
   right: 0;
   height: 43px;
   width: 100px;
+  padding-right: 21px;
 }
 
 .gallery-index {
   width: 70px;
   height: 43px;
-  @include font-setup('chapaza', 1.1rem, 500, rgb(20, 20, 20), none, -.75px);
+  @include font-setup('chapaza', .9rem, 500, rgb(20, 20, 20), none, -.75px);
   letter-spacing: 5px;
-  padding-top: 7px;
+  padding-top: 9px;
   float: right;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -266,17 +277,11 @@
     display: block;
     padding-left: 0;
     padding-top: 0;
-    margin-top: -3px;
+    font-size: .71rem;
+    margin-top: -1px;
     transition-duration: 225ms;
   }
 
-  .image-date-focus {
-    font-size: .95rem;
-    letter-spacing: 2.2px;
-    line-height: 1.5rem;
-    transition-duration: 225ms;
-  }
-  
   .title-box {
     padding-left: 12px;
     margin-top: 2px;
@@ -287,13 +292,8 @@
     margin-bottom: -1px;
   }
 
-  .title-focus {
-    font-size: 1.75rem;
-    letter-spacing: 0px;
-    transition-duration: 225ms;
-  }
-
   .image-description {
+    display: none;
     width: calc(100% - 75px);
     transition: opacity 225ms;
     transition-duration: 225ms;
@@ -301,8 +301,9 @@
   }
   
   .description-focus {
+    display: block;
     width: calc(100% - 75px);
-    margin: 20px 0px 30px 0px;
+    margin: 15px 0px 30px 0px;
     font-size: .95rem;
     height: auto;
     opacity: 100;
@@ -312,7 +313,7 @@
   }
 
   .description-details-spacer {
-    height: 5.85px;;
+    height: 1.85px;;
   }
 
   .gallery-index {
