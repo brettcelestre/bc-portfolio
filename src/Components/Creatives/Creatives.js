@@ -150,6 +150,7 @@ class Creatives extends Component {
     return (
       <div className="friends">
         <div className="friends-sort-box">
+          {/* <span className="type">Filter: </span> */}
           {this.buildSortDropdown()}
           {this.buildFilteredMediums()}
         </div>

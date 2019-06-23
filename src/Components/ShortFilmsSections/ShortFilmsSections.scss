@@ -52,20 +52,27 @@
 
 .short-film-details {
   text-align: left;
-  padding: 2px 27px 2px 27px;
+  height: 76px;
+  padding: 0px 27px;
   background-image: url('../../assets/img/short-film-toolbar-background.jpg');
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
 
   h3 {
     margin-top: 0px;
-    padding-top: 12px;
+    padding-top: 19px;
     margin-bottom: -22px;
-    @include font-setup('chapaza', 1.52rem, 500, #282828, none, -.25px);
+    @include font-setup('chapaza', 1.32rem, 500, #282828, none, -.25px);
+    // @include font-setup('old style caps', 1.52rem, 500, #282524, none, 2.15px);
+    
+    // @include font-setup('old style caps', 2rem, 500, #282524, none, .15px);
+    // @include font-setup('old style caps', 1.85rem, 500, #282524, none, .15px);
+    // padding-top: 4px;
+    // margin-bottom: -22px;
   }
 
   h4 {
-    @include font-setup('old style', .8rem, 100, #1d1d1d, none, 1.5px);
+    @include font-setup('old style', .85rem, 100, #1d1d1d, none, 1.5px);
   }
 }
 
@@ -83,11 +90,12 @@
 }
 
 // Mobile Size
-@media (max-width: 414px) and (max-height: 736px) {
+// and (max-height: 736px)
+@media (max-width: 414px) {
   .short-films-sections {
     margin: 0px;
     top: 55px;
-    padding: 0px;
+    padding: 0px 0px 45px 0px;
   }
   
   .short-film-box {
@@ -97,10 +105,24 @@
   .short-film-details {
     height: 55px;
     margin-top: -2px;
-    background-position: 0px -15px;
-    padding: 0px 27px 5px 27px;
+    padding: 3px 27px 0px 27px;
+    height: 61px;
+    background-image: url('../../assets/img/sections-title-background-mobile.png');
+    background-position: 0px -14px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+
     h3 {
+      padding-top: 8.5px;
+      padding-bottom: 0px;
       @include font-setup('chapaza', 1.27rem, 500, #282828, none, -.25px);
+      opacity: .93;
+      // @include font-setup('old style caps', 1.32rem, 500, #282524, none, .15px);
+    }
+    h4 {
+      opacity: .93;
+      margin-top: 16px;
+      font-size: .8rem;
     }
   }
 }

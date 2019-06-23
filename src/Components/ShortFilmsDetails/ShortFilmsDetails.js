@@ -34,7 +34,7 @@ const buildFolderName = (title) => {
 const requireAllImages = (data) => {
   data.forEach((film) => {
     const name = buildFolderName(film.title);
-    console.log('name name = ', name);
+    // console.log('name name = ', name);
     filmDetailsImages[name] = {details: {}};
     filmDetailsImages[name].details = {
       Small: require(`../../assets/gallery/short-films/${name}/details/Banner_Small.jpg`),
@@ -42,7 +42,7 @@ const requireAllImages = (data) => {
       Large: require(`../../assets/gallery/short-films/${name}/details/Banner_Large.jpg`)
     }
     if(film.options !== null && film.options.length) {
-      console.log(' options = ', film.options);
+      // console.log(' options = ', film.options);
       film.options.forEach((option) => {
         const optionKey = buildFolderName(option.name);
         filmDetailsImages[name][optionKey] = {
@@ -177,7 +177,7 @@ class ShortFilmsDetails extends Component {
 
   render() {
     // const { film } = this.props.match.params;
-    console.log('Dtails = ', this.state.filmData);
+    // console.log('Dtails = ', this.state.filmData);
 
     let loaderHeight, windowWidth = window.innerWidth;
     if ( windowWidth > 1024 ) {                                // Desktop
@@ -215,11 +215,11 @@ class ShortFilmsDetails extends Component {
 
         <div className="short-films-details-box">
           <div className="short-films-details-banner">
-            <Link to={`/short-films/watch/${this.state.filmData.urlTitle}`}>
+            <Link to={`/short-films/${this.state.filmData.urlTitle}/watch`}>
               <Img
                 src={filmDetailsImages[this.state.filmData.urlTitle].details[this.state.currentSize]}
                 alt={this.state.filmData.title}
-                className="short-film-cover-image fade-in-gallery-image"
+                className="short-film-cover-image fade-in-details-gallery-image"
                 loader={(
                   <div style={loaderStyles}>
                     <span style={loaderHelper}></span>
@@ -245,23 +245,23 @@ class ShortFilmsDetails extends Component {
               {this.state.filmData.description}
           </div> */}
 
-          <div className="short-films-details-info">
+          <Link to={`/short-films/${this.state.filmData.urlTitle}/watch`}>
+            <div className="short-films-details-info">
               <div className="short-films-details-title">
                 {this.state.filmData.title}<br />
                 <span className="short-films-details-year">{this.state.filmData.year} | {this.state.filmData.length}</span>
               </div>
-              <Link to={`/short-films/watch/${this.state.filmData.urlTitle}`}>
-                <div className="short-films-details-watch-button">
-                  WATCH FILM
-                </div>
-              </Link>
-          </div>
+              <div className="short-films-details-watch-button">
+                WATCH FILM
+              </div>
+            </div>
+          </Link>
 
           <div className="short-films-details-description">
             {this.state.filmData.description}
           </div>
 
-          <div className="short-film--divider">
+          <div className="short-film-divider">
             <img src={dividerLines[2]} className="divider-img" alt="divider-bar"/>
           </div>
 

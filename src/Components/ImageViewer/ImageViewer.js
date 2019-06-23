@@ -1,18 +1,18 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import PropTypes from 'prop-types';
 import Img from 'react-image';
-import ReactSVG from 'react-svg';
+// import ReactSVG from 'react-svg';
 // import { Link, Redirect } from 'react-router-dom';
 // import { withRouter } from 'react-router';
 // import { keyHandler, KEYPRESS } from 'react-key-handler';
 
 import spinner from '../../assets/img/spinner.gif';
+import galleryArrow from '../../assets/img/gallery-arrow-2.png';
 import './ImageViewer.css';
 import Toolbar from '../Toolbar/Toolbar.js';
-const arrowLeft = require('../../assets/svg/ios-arrow-left.svg');
-const arrowRight = require('../../assets/svg/ios-arrow-right.svg');
 
 const navigationWidth = 137;
 
@@ -32,6 +32,7 @@ const galleryData ={
       things: require('../../assets/data/photography_film_things.js'),
       people: require('../../assets/data/photography_film_people.js')
     },
+    'del-rio': require('../../assets/data/photography_del_rio.js'),
     client: require('../../assets/data/photography_client.js'),
     digital: {
       // 'everyday-life': require('../../assets/data/photography_digital_everyday-life.js'),
@@ -62,6 +63,7 @@ let images = {
       things: {}
     },
     client: {},
+    'del-rio': {},
     digital: {
       'everyday-life': {},
       people: {},
@@ -206,7 +208,7 @@ class ImageViewer extends Component {
       textAlign: "center",
       position: "fixed",
       top: "0",
-      opacity: ".44"
+      opacity: ".25"
     }
 
     const loadingSpinnerStyles = {
@@ -452,7 +454,8 @@ class ImageViewer extends Component {
   onKeyPressed(e) {
     if ( e.keyCode == '37' && this.state.zoom == false) this.previousImg(); // left arrow
     if ( e.keyCode == '39' && this.state.zoom == false) this.nextImg(); // right arrow
-    if ( e.keyCode == '187' || e.keyCode == '189' && this.state.zoom == false) this.zoomImageState();
+    // TODO: currently breaks if your mouse is over the toolbar and you zoom out
+    // if ( e.keyCode == '187' || e.keyCode == '189' && this.state.zoom == false) this.zoomImageState();
   }
 
   render() {
@@ -501,12 +504,22 @@ class ImageViewer extends Component {
         {this.buildZoomImage(section, category, subCategory, piece, (currentIndex - 1))}
 
         <div className={this.state.zoom ? "image-hide" : "image-box"}>
-          
           <span className="image-vertical-spacer"></span>
+          
+          {/* This needs to work for all situations. Client/del rio doesn't work.  */}
+
+          <div className="image-view-breadcrumb">
+            {(section && section !== 'spatial') && <Link to={`/${section}`}><span className="image-view-breadcrumb-link">{section}</span></Link>}
+            {category && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
+            {category && !subCategory && <Link to={`/${section}/${category}/${galleryData[section][category].data[0].urlTitle}`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
+            {category && subCategory && <Link to={`/${section}/${category}/sections`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
+            {/* {subCategory && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
+            {subCategory && <Link to={`/${section}/${category}/${subCategory}/${galleryData[section][category][subCategory].data[0].urlTitle}`}><span className="image-view-breadcrumb-link">{subCategory}</span></Link>} */}
+          </div>
 
           <div className="previous-button-box"
             onClick={this.previousImg}>
-            <ReactSVG
+            {/* <ReactSVG
               path={arrowLeft}
               style={{width: 30, height: 90}}
               className={this.state.zoom ? "image-hide" : 
@@ -514,12 +527,19 @@ class ImageViewer extends Component {
                   `previous-arrow disable-navigation ${arrowsColor}` :
                   `previous-arrow ${arrowsColor}`)}
               wrapperClassName="previous-arrow"
-            />
+            /> */}
+            <img 
+              src={galleryArrow} 
+              className={this.state.zoom ? "image-hide" : 
+              (currentIndex === 1 ?
+                  `previous-arrow disable-navigation ${arrowsColor}` :
+                  `previous-arrow ${arrowsColor}`)}
+              />
           </div>
 
           <div className="next-button-box"
             onClick={this.nextImg}>
-            <ReactSVG
+            {/* <ReactSVG
               path={arrowRight}
               style={{width: 30, height: 90}}
               className={this.state.zoom ? "image-hide" : 
@@ -527,7 +547,14 @@ class ImageViewer extends Component {
                     `next-arrow disable-navigation ${arrowsColor}` :
                     `next-arrow ${arrowsColor}`)}
               wrapperClassName="next-arrow"
-            />
+            /> */}
+            <img 
+              src={galleryArrow} 
+              className={this.state.zoom ? "image-hide" : 
+                (currentGalleryLength === currentIndex ? 
+                    `next-arrow disable-navigation ${arrowsColor}` :
+                    `next-arrow ${arrowsColor}`)}
+              />
           </div>
 
           <Img

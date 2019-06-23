@@ -25,8 +25,11 @@
 
 .resource-section {
   padding-top: 25px;
-  padding-bottom: 2px;
-  @include font-setup('chapaza', 1.52rem, 500, rgb(20, 20, 20), none, -.25px);
+  // padding-bottom: 2px;
+  // @include font-setup('chapaza', 1.52rem, 500, rgb(20, 20, 20), none, -.25px);
+
+  @include font-setup('old style caps', 1.94rem, 500, #1f1f1f, none, 2.15px);
+  padding-bottom: 3px;
 }
 
 .resource-link {
@@ -67,7 +70,13 @@
     
   }
 
+  .resource-section {
+    padding-top: 55px;
+    padding-bottom: 15px;
+  }
+
   .resource-link {
-    padding: 4.5px 0;
+    // padding: 4.5px 0;
+    padding: 4.5px 0 11px 0;
   }
 }

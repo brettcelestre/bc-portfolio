@@ -43,6 +43,7 @@ class ImageSections extends Component {
     this.setWindowSize = this.setWindowSize.bind(this);
     this.windowSize = this.windowSize.bind(this);
     this.scrollToTop = this.scrollToTop.bind(this);
+    // this.buildBreadcrumb = this.buildBreadcrumb.bind(this);
     this.buildSectionThumbs = this.buildSectionThumbs.bind(this);
     this.genUrlString = this.genUrlString.bind(this);
   }
@@ -168,6 +169,10 @@ class ImageSections extends Component {
       )
     });
   }
+
+  // buildBreadcrumb() {
+  //   const { section, category } = this.props;
+  // }
 
   render() {
     return (

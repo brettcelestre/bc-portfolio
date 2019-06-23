@@ -20,7 +20,6 @@ class App extends Component {
 
   constructor(props) {
     super(props)
-    
     this.state = {
       medium: '',
       mobileMenu: false,
@@ -49,6 +48,7 @@ class App extends Component {
 
   menuToggle() {
     if (this.state.mobileMenu) {
+
       this.setState({
         mobileMenu: false,
         fade: false
@@ -74,7 +74,6 @@ class App extends Component {
     if ( window.innerWidth > 1024) {          // Desktop
       socialMediaIconSize = 20;
     } else if ( window.innerWidth <= 1024) {  // Tablet and Modbile
-      // socialMediaIconSize = 30;
       socialMediaIconSize = 27;
     }
 
@@ -101,49 +100,49 @@ class App extends Component {
 
           <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
             <Link to="/photography" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-photo">
                 Photography
               </div>
             </Link>
 
             <Link to="/artwork" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-art">
                 Artwork
               </div>
             </Link>
 
             <Link to="/short-films" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-films">
                 Short Films
               </div>
             </Link>
             
             <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-spatial">
                 Spatial
               </div>
             </Link>
 
             <Link to="/applications" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-apps">
                 Applications
               </div>
             </Link>
 
-            <Link to="/resources" replace onClick={this.cleanUp}>
+            {/* <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resources
               </div>
-            </Link>
+            </Link> */}
 
             <Link to="/creatives" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-creatives">
                 Creatives
               </div>
             </Link>
 
             <Link to="/about" replace onClick={this.cleanUp}>
-              <div className="section-title">
+              <div className="section-title menu-about">
                 About
               </div>
             </Link>
