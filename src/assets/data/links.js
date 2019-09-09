@@ -18,7 +18,8 @@ const tags = [
   'software engineer',
   'television director',
   'ux designer',
-  'videographer'
+  'videographer',
+  'visual designer'
 ];
 
 const data = ymlLoader.load(`
@@ -176,6 +177,12 @@ const data = ymlLoader.load(`
       url: http://terresdesign.com/
   tags:
     - graphic designer
+- title: Jackie Ngo
+  links:
+    - type: Portfolio
+      url: http://jackiengo.com/
+  tags:
+    - visual designer
 - title: Nick Di Tomasso
   links:
     - type: Portfolio

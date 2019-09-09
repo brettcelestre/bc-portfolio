@@ -113,7 +113,8 @@
     border-bottom-left-radius: 0px;
 
     h3 {
-      padding-top: 8.5px;
+      // padding-top: 8.5px;
+      padding-top: 11.5px;
       padding-bottom: 0px;
       @include font-setup('chapaza', 1.27rem, 500, #282828, none, -.25px);
       opacity: .93;

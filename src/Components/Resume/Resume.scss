@@ -79,7 +79,7 @@ $navigation-width: 137px;
 
 
 .resume-section-title {
-  @include font-setup('old style caps', 1.94rem, 500, #1f1f1f, none, 2.15px);
+  @include font-setup('old style caps', 1.64rem, 500, #1f1f1f, none, 2.15px);
   padding-top: 40px;
   padding-bottom: 10px;
 }
@@ -273,13 +273,21 @@ a:visited {
 
 // Mobile size - and (max-height: 736px)
 @media (max-width: 414px) {
+  .download-resume-section {
+    display: none;
+  }
+
+  .first-divider {
+    display: none;
+  }
+
   .resume-section {
     height: 100%;
     margin-top: 60px;
   }
 
   .resume {
-    padding: 20px 16px 50px 16px;
+    padding: 0px 16px 50px 16px;
   }
 
   .downlown-resume-section {
@@ -307,7 +315,8 @@ a:visited {
 
   .resume-section-title {
     padding-top: 55px;
-    font-size: 2.14rem;
+    // font-size: 2.14rem;
+    font-size: 1.64rem;
   }
  
   .resume-job-title {
@@ -321,7 +330,7 @@ a:visited {
   }
 
   .position {
-    font-size: 22.75px;
+    font-size: 20.75px;
   }
   
   .job-description {

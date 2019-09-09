@@ -174,6 +174,7 @@ class ImageViewer extends Component {
     this.findGalleryIndex = this.findGalleryIndex.bind(this);
     this.findGalleryLength = this.findGalleryLength.bind(this);
     this.getCurrentGalleryData = this.getCurrentGalleryData.bind(this);
+    this.startSlideshow = this.startSlideshow.bind(this);
     // this.dragImage = this.dragImage.bind(this);
   }
 
@@ -443,6 +444,19 @@ class ImageViewer extends Component {
   //   console.log('>> e - ', e);
   // }
 
+  startSlideshow() {
+    const { galleryWheel } = this;
+    // add a style to the images to fade in slower
+    console.log('slideshow start');
+    setInterval(() => {
+      galleryWheel('next');  
+    }, 3000);
+  }
+
+  stopSlideshow() {
+    // TODO STOP slideshow. maybe make the slideshow button a toggle
+  }
+
   previousImg() {
     this.galleryWheel('previous');
   }
@@ -593,6 +607,7 @@ class ImageViewer extends Component {
           imageHeight={this.state.height}
           galleryLength={currentGalleryLength}
           currentIndex={currentIndex}
+          startSlideshow={this.startSlideshow}
         />
       </div>
     );

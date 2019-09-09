@@ -159,6 +159,7 @@ class Toolbar extends Component {
   }
 
   render() {
+    const { startSlideshow } = this.props;
     if ( this.props.imageZoomState) return null;
 
     let toolbarHeight,
@@ -237,6 +238,9 @@ class Toolbar extends Component {
               </span>
             </div>
           
+            {/* <div className="slideshow-button" onClick={startSlideshow}>
+              Slideshow
+            </div> */}
             <div className="gallery-index-box" style={indexStyles}>
               <div className="gallery-index">
                 {this.props.currentIndex}/{this.props.galleryLength}
