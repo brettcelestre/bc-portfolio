@@ -205,6 +205,16 @@
   transition-duration: 225ms;
 }
 
+.slideshow-button {
+  display: inline-block;
+  bottom: 11px;
+  position: fixed;
+  right: 105px;
+  background-color: red;
+  padding: 6px;
+
+}
+
 .gallery-index-box {
   transition-duration: 225ms;
   display: inline-block;

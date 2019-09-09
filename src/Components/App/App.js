@@ -129,11 +129,11 @@ class App extends Component {
               </div>
             </Link>
 
-            {/* <Link to="/resources" replace onClick={this.cleanUp}>
-              <div className="section-title">
+            <Link to="/resources" replace onClick={this.cleanUp}>
+              <div className="section-title menu-resources">
                 Resources
               </div>
-            </Link> */}
+            </Link>
 
             <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title menu-creatives">

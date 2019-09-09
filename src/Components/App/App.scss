@@ -169,41 +169,46 @@ li {
   }
 }
 
-.menu-photo:hover {
-  background-image: url('../../assets/img/menu-photo.png');
-  background-repeat: no-repeat;
-  background-position: 4px -1px;;
-}
-.menu-art:hover {
-  background-image: url('../../assets/img/menu-art.png');
-  background-repeat: no-repeat;
-  background-position: 3px 1px;
-}
-.menu-films:hover {
-  background-image: url('../../assets/img/menu-films.png');
-  background-repeat: no-repeat;
-  background-position: 5px 8px;
-}
-.menu-spatial:hover {
-  background-image: url('../../assets/img/menu-spatial.png');
-  background-repeat: no-repeat;
-  background-position: 6px 6px;
-}
-.menu-apps:hover {
-  background-image: url('../../assets/img/menu-apps.png');
-  background-repeat: no-repeat;
-  background-position: 3px 8px;
-}
-.menu-creatives:hover {
-  background-image: url('../../assets/img/menu-creatives.png');
-  background-repeat: no-repeat;
-  background-position: 4px 3px;
-}
-.menu-about:hover {
-  background-image: url('../../assets/img/menu-art.png');
-  background-repeat: no-repeat;
-  background-position: -10px 1px;
-}
+// .menu-photo:hover {
+//   background-image: url('../../assets/img/menu-photo.png');
+//   background-repeat: no-repeat;
+//   background-position: 4px -1px;;
+// }
+// .menu-art:hover {
+//   background-image: url('../../assets/img/menu-art.png');
+//   background-repeat: no-repeat;
+//   background-position: 3px 1px;
+// }
+// .menu-films:hover {
+//   background-image: url('../../assets/img/menu-films.png');
+//   background-repeat: no-repeat;
+//   background-position: 5px 8px;
+// }
+// .menu-spatial:hover {
+//   background-image: url('../../assets/img/menu-spatial.png');
+//   background-repeat: no-repeat;
+//   background-position: 6px 6px;
+// }
+// .menu-apps:hover {
+//   background-image: url('../../assets/img/menu-apps.png');
+//   background-repeat: no-repeat;
+//   background-position: 3px 8px;
+// }
+// .menu-resources:hover {
+//   background-image: url('../../assets/img/menu-films.png');
+//   background-repeat: no-repeat;
+//   background-position: 5px 8px;
+// }
+// .menu-creatives:hover {
+//   background-image: url('../../assets/img/menu-creatives.png');
+//   background-repeat: no-repeat;
+//   background-position: 4px 3px;
+// }
+// .menu-about:hover {
+//   background-image: url('../../assets/img/menu-art.png');
+//   background-repeat: no-repeat;
+//   background-position: -10px 1px;
+// }
 
 .option {
   @include font-setup-new('old style caps', .9rem, 100, rgb(20, 20, 20), none, -.2px);
@@ -344,7 +349,7 @@ li {
     padding-top: 11.5px;
     padding-bottom: 11px;
     padding-left: 25px;
-    border-bottom: 1px solid #282828;
+    // border-bottom: 1px solid #282828;
     transition-duration: 0ms;
 
     &:hover {

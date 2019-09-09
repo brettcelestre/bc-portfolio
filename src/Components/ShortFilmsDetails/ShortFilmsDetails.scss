@@ -166,13 +166,17 @@
   .short-films-details-title {
     width: 92%;
     font-size: 1.35rem;
-    padding: 6px 0 0 15px;
-    height: 60px;
+    padding: 16px 0 0 22px;
+    height: 48px;
   }
 
   .short-films-details-year {
     font-size: .85rem;
     top: -3px;
+  }
+
+  .short-film-options-title h3 {
+    padding-top: 0px;
   }
 
   .short-films-details-watch-button {

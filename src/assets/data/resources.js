@@ -14,6 +14,12 @@ Books:
   - title: The Story of Stuff
     header: Critical of excessive consumerism and promotes sustainability
     url: https://www.amazon.com/The-Story-Stuff-Overconsumption-Communities/dp/1451610297
+  - title: How to Change Your Mind
+    header: Michael Pollan
+    url: https://www.amazon.com/dp/B076GPJXWZ/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1
+  - title: The Lost Language of Plants
+    header: Stephen Harrod Buhner
+    url: https://www.amazon.com/Lost-Language-Plants-Ecological-Importance-ebook/dp/B005LOPNHU
   - title: "Transgender History: The Roots of Today's Revolution"
     header: Covering American transgender history from the mid-twentieth century to today
     url: https://www.amazon.com/Transgender-History-second-Todays-Revolution/dp/158005689X/ref=pd_sim_14_1/146-2916249-1511617?_encoding=UTF8&pd_rd_i=158005689X&pd_rd_r=99693848-37ec-11e9-ba03-d93446ec90f0&pd_rd_w=1Wnr0&pd_rd_wg=wiVUR&pf_rd_p=90485860-83e9-4fd9-b838-b28a9b7fda30&pf_rd_r=HXA4QATYBYK8KRGFKB59&psc=1&refRID=HXA4QATYBYK8KRGFKB59

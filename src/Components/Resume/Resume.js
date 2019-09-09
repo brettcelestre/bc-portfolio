@@ -156,7 +156,7 @@ class Resume extends Component {
             </div>
           </div>
 
-          <div className="resume-divider">
+          <div className="resume-divider first-divider">
             <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
           </div>
 
