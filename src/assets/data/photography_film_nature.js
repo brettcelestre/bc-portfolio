@@ -19,8 +19,8 @@ const data = ymlLoader.load(`
       width: 800
       height: 531
 
-- title: Deer of Meridian
-  urlTitle: deer-of-meridian
+- title: Deer
+  urlTitle: deer
   date: 2016
   size: ''
   orientation: landscape

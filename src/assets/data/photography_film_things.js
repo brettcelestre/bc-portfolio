@@ -56,6 +56,25 @@ const data = ymlLoader.load(`
     Small:
       width: 800
       height: 510
+
+- title: Living Room
+  urlTitle: living-room
+  date: 2013
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon Nikomat FTn - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 983
+    Medium:
+      width: 1100
+      height: 721
+    Small:
+      width: 800
+      height: 524
 `);
 
 module.exports = { data };
