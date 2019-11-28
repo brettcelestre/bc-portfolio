@@ -6,7 +6,8 @@ Technical Skills:
     - Node.js
     - Microservices
     - RESTful API
-    - NoSQL
+    - PostgreSQL
+    - DynamoDB
     - Express
     - Hapi
     - Blockchain
@@ -17,6 +18,7 @@ Technical Skills:
     - JavaScript
     - HTML
     - CSS
+    - Redux
     - SCSS/SASS
     - UI/UX
     - Bootstrap
@@ -25,13 +27,13 @@ Technical Skills:
     - AWS
     - Git
     - Jenkins
+    - CircleCI
     - Docker
     - Unix
     - Bash
     - Swagger
     - TDD/BD
   Experienced:
-    - Redux
     - Socket.IO
     - Protractor
     - Webpack
@@ -40,14 +42,15 @@ Technical Skills:
     - OAuth2.0
 Professional Experience:
   - company: Starcity
-    title: Software Engineer
+    title: Full Stack Software Engineer
     date: APRIL 2019 - PRESENT
     url: https://www.starcity.com/
     header:
     description:
-      - React, React Native, Node.js, Clojure, GraphQL, AWS, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
+      - React, Node.js, GraphQL, AWS, React Native, Clojure, Sendbird, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
+      - Developed a internal admin dashboard for our community team to moderate the Starcity mobile apps content and direct message community members.
   - company: Accenture - Liquid Studios
-    title: Senior Software Engineer
+    title: Software Engineer
     date: MAY 2017 - MARCH 2019
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
     header:
@@ -56,14 +59,6 @@ Professional Experience:
       - Developed a Node.js microservices API layer used to connect disparate backend systems for a Fortune 500 Hospitality Client to enable guests to manage reservations, user profiles, and digital keys
       - Utilized the latest container and cloud technologies to achieve a highly available and scalable platform
       - Architected and implemented a system to notify the mobile app of maintenance downtimes. Built Jenkins pipelines and utilized AWS Lambda, DynamoDB, and SNS 
-  - company: Self-Employed
-    title: Full Stack Software Engineer
-    date: OCTOBER 2016 - DECEMBER 2016
-    header:
-    description: 
-      - Architected a single-page app with AngularJS and styled with SASS with a responsive design
-      - Built a RESTful API with Node.js and Express with MongoDB and Mongoose
-      - Redesigned and developed a responsive company website to improve client engagement and SEO
   - company: Wobo, Inc.
     title: QA Specialist
     date: JULY 2015 - APRIL 2016
@@ -97,7 +92,7 @@ Professional Experience:
     description:
       - Photo realistic image compositing / retouching, stock photography research, websites, data sheets, company presentations, brochures, web banners and html email campaigns both for print and web
 Personal Applications:
-  - title: www.BrettCelestre.com
+  - title: BrettCelestre.com
     position: Front-End Software Engineer
     date: JANUARY 2019
     header: Personal online portfolio
@@ -105,7 +100,7 @@ Personal Applications:
       - Designed and built a responsive single-page app with React using React Router Dom and SASS
       - Dynamically loads image sizes based off screen resolution for faster load times
       - Deployed with S3, Cloudfront, and Route53
-  - title: www.MatthewCelestre.com
+  - title: MatthewCelestre.com
     position: Front-End Software Engineer
     url:
     date: MARCH 2018
@@ -151,3 +146,15 @@ Education:
 `);
 
 module.exports = { resume };
+
+// add link to starcity app
+// https://apps.apple.com/us/app/starcity/id1457383827
+
+// - company: Self-Employed
+// title: Full Stack Software Engineer
+// date: OCTOBER 2016 - DECEMBER 2016
+// header:
+// description: 
+//   - Architected a single-page app with AngularJS and styled with SASS with a responsive design
+//   - Built a RESTful API with Node.js and Express with MongoDB and Mongoose
+//   - Redesigned and developed a responsive company website to improve client engagement and SEO

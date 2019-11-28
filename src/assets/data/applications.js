@@ -1,6 +1,22 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
-- title: www.MatthewCelestre.com
+- title: Starcity Dashboard
+  date: OCTOBER 2019
+  github: 
+  launch: 
+  header: Admin dashboard to manage Starcity's mobile app.
+  description: Built an artist portfolio using React with a responsive design. Deployed with S3 and Cloudfront
+  tech:
+    - React
+    - Redux
+    - GraphQL
+    - Node.js
+    - Express
+    - Postgres
+    - AWS
+    - Circle.ci
+
+- title: Matthew Celestre
   date: JULY 2018
   github: https://github.com/brettcelestre/mc-portfolio
   launch: http://www.matthewcelestre.com

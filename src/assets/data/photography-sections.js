@@ -62,19 +62,20 @@ const data = ymlLoader.load(`
       width: 800
       height: 532
 
-- title: Client
-  href: /photography/client/${clientStart.title.split(' ').join('-').toLowerCase()}
-  fontStyles:
-  sizes:
-    Large:
-      width: 1500
-      height: 998
-    Medium:
-      width: 1100
-      height: 732
-    Small:
-      width: 800
-      height: 532
-`);
-
+      `);
+      
 module.exports = { data };
+
+      // - title: Client
+//   href: /photography/client/${clientStart.title.split(' ').join('-').toLowerCase()}
+//   fontStyles:
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 998
+//     Medium:
+//       width: 1100
+//       height: 732
+//     Small:
+//       width: 800
+//       height: 532

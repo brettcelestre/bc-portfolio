@@ -2,7 +2,7 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Jeanne-Marie Eixample
   urlTitle: jeanne-marie-eixample
-  date: 2018
+  date: AUGUST 2018
   size: ''
   orientation: landscape
   description: 
@@ -19,28 +19,10 @@ const data = ymlLoader.load(`
       width: 800
       height: 531
 
-- title: Tram Driver 2
-  urlTitle: tram-driver-2
-  date: 2018
-  size: ''
-  orientation: landscape
-  description: 
-  arrows: light
-  info: Nikon FM10 - 50mm
-  sizes:
-    Large:
-      width: 1500
-      height: 995
-    Medium:
-      width: 1100
-      height: 730
-    Small:
-      width: 800
-      height: 531
 
-- title: Tram Driver 1
-  urlTitle: tram-driver-1
-  date: 2018
+- title: Tram Driver
+  urlTitle: tram-driver
+  date: AUGUST 2018
   size: ''
   orientation: portrait
   description: 
@@ -421,3 +403,23 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
+
+
+// - title: Tram Driver 2
+//   urlTitle: tram-driver-2
+//   date: 2018
+//   size: ''
+//   orientation: landscape
+//   description: 
+//   arrows: light
+//   info: Nikon FM10 - 50mm
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 995
+//     Medium:
+//       width: 1100
+//       height: 730
+//     Small:
+//       width: 800
+//       height: 531

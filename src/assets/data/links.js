@@ -38,6 +38,7 @@ const data = ymlLoader.load(`
     - painter
     - musician
     - film maker
+    - skateboarder
 - title: Scott Celestre
   links:
     - type: Portfolio
@@ -56,7 +57,7 @@ const data = ymlLoader.load(`
       url: https://feelingsparty.bandcamp.com/
   tags:
     - musician
-- title: Brittnay Budge
+- title: Brittany Budge
   links:
     - type: Portfolio
       url: http://brittanybudge.com/
@@ -68,6 +69,7 @@ const data = ymlLoader.load(`
       url: https://www.kylelumanphotography.com/
   tags:
     - photographer
+    - skateboarder
 - title: Grant Selland
   links:
     - type: SoundCloud
@@ -88,12 +90,14 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/zhoucow/
   tags:
     - photographer
+    - skateboarder
 - title: Jesse Gale
   links:
     - type: BandCamp
       url: https://youngestofelders.bandcamp.com/
   tags:
     - musician
+    - skateboarder
 - title: Corey Duffel
   links:
     - type: Instagram
@@ -121,31 +125,13 @@ const data = ymlLoader.load(`
   tags:
     - burlesque
     - drag
-- title: Maria Gabriela Sanchez Mallona 
-  links:
-    - type: Portfolio
-      url: https://magasama.com/
-  tags:
-    - illustrator
-    - graphic designer
-- title: Michelle Fernandez
-  links:
-    - type: Portfolio
-      url: https://www.michellemfernandez.com/
-  tags:
-    - ux designer
-- title: Emilio Villalba
-  links:
-    - type: Portfolio
-      url: http://emiliovillalbaart.com/
-  tags:
-    - painter
 - title: Sean Hipkin
   links:
     - type: Portfolio
       url: https://www.seanhipkin.com/
   tags:
     - illustrator
+    - skateboarder
 - title: Cybelle Dabner
   links:
     - type: YouTube
@@ -183,6 +169,41 @@ const data = ymlLoader.load(`
       url: http://jackiengo.com/
   tags:
     - visual designer
+- title: Jia Gao
+  links:
+    - type: Portfolio
+      url: https://www.jia-gao.com/
+  tags:
+    - graphic designer
+    - product designer
+- title: Krishi Patel
+  links:
+    - type: Portfolio
+      url: https://krishipatel.com/
+  tags:
+    - ux designer
+    - product designer
+    - graphic designer
+- title: Maria Gabriela Sanchez Mallona 
+  links:
+    - type: Portfolio
+      url: https://magasama.com/
+  tags:
+    - illustrator
+    - graphic designer
+- title: Michelle Fernandez
+  links:
+    - type: Portfolio
+      url: https://www.michellemfernandez.com/
+  tags:
+    - ux designer
+    - skateboarder
+- title: Emilio Villalba
+  links:
+    - type: Portfolio
+      url: http://emiliovillalbaart.com/
+  tags:
+    - painter
 - title: Nick Di Tomasso
   links:
     - type: Portfolio
@@ -190,6 +211,7 @@ const data = ymlLoader.load(`
   tags:
     - illustrator
     - musician
+    - skateboarder
 - title: Vincenzo Barkasy
   links:
     - type: Portfolio
@@ -199,6 +221,7 @@ const data = ymlLoader.load(`
   tags:
     - concept designer
     - illustrator
+    - skateboarder
 - title: Nick Bers
   links:
     - type: Portfolio
@@ -249,6 +272,7 @@ const data = ymlLoader.load(`
       url: https://www.jonnyclugston.com/
   tags:
     - photographer
+    - skateboarder
 - title: Marcus Tedesco
   links:
     - type: Portfolio
@@ -279,6 +303,7 @@ const data = ymlLoader.load(`
       url: http://www.zopilote.co/
   tags:
     - ux designer
+    - skateboarder
 - title: Belinda Huang
   links:
     - type: Portfolio
