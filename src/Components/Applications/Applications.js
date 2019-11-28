@@ -8,7 +8,8 @@ import applications from '../../assets/data/applications.js';
 
 const appImages = {
   // "www.BrettCelestre.com": require('../../assets/gallery/applications/BrettCelestre.jpg'),
-  "www.MatthewCelestre.com": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
+  "Starcity Dashboard": require('../../assets/gallery/applications/starcity-dashboard.png'),
+  "Matthew Celestre": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
   "Stock Sight": require('../../assets/gallery/applications/StockSight.jpg'),
   "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.jpg'),
   "Qurvey": require('../../assets/gallery/applications/Qurvey.jpg'),
@@ -83,7 +84,7 @@ class Applications extends Component {
           <div className="application-description-box">
             
             <div className="application-title">
-              <h2>{app.title}</h2>
+              <h2>{app.title.toUpperCase()}</h2>
             </div>
 
             <div className="application-header">
