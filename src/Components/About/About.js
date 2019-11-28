@@ -50,10 +50,10 @@ class About extends Component {
           I am a mixed media creative who enjoys experimentation.
            {/* and exploring techniques.  */}
           {/* I am most interested in combining techniques from one medium to another - typically traditional and digital.  */}
-          {/* <br /><br /><br /> */}
+          <br /><br /><br />
           {/* In 2013, I graduated from San Jose State University with a Bachelor of Fine Arts in Digital Media.
           <br /><br /><br /> */}
-          {/* Currently a software engineer at <a href="https://www.starcity.com" className="highlight" target="blank">Starcity</a> in San Francisco. */}
+          Currently a software engineer at <a href="https://www.starcity.com" className="highlight" target="blank">Starcity</a> in San Francisco.
           <br /><br /><br />
           <Link to="/resume" replace className="highlight">
             View Resume
