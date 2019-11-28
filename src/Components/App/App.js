@@ -24,9 +24,10 @@ class App extends Component {
       medium: '',
       mobileMenu: false,
       fade: false,
-      year: new Date().getFullYear()
+      year: new Date().getFullYear(),
+      selected: props.location.pathname.split('/')[1]
     };
-    
+
     this.createUrlPathForPiece = this.createUrlPathForPiece.bind(this);
     this.menuToggle = this.menuToggle.bind(this);
     this.cleanUp = this.cleanUp.bind(this);
@@ -69,6 +70,9 @@ class App extends Component {
   }
 
   render() {
+    const { selected } = this.state;
+
+    console.log('selected', selected);
 
     let socialMediaIconSize;
     if ( window.innerWidth > 1024) {          // Desktop
@@ -100,6 +104,7 @@ class App extends Component {
 
           <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
             <Link to="/photography" replace onClick={this.cleanUp}>
+              {/* Add function to detect if these routes are in the url, then add custom strike class */}
               <div className="section-title menu-photo">
                 Photography
               </div>
@@ -129,11 +134,11 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/resources" replace onClick={this.cleanUp}>
+            {/* <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title menu-resources">
                 Resources
               </div>
-            </Link>
+            </Link> */}
 
             <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title menu-creatives">
