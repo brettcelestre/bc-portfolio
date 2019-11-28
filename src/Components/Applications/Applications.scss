@@ -68,7 +68,7 @@ $navigation-width: 137px;
   h2 {
     padding-left: 20px;
     margin: 16px 0 1px 0;
-    @include font-setup('chapaza', 1.5rem, 500, #282828, none, -.25px);
+    @include font-setup('chapaza', 1.42rem, 500, #282828, none, -.25px);
   }
 }
 
@@ -78,7 +78,7 @@ $navigation-width: 137px;
 }
 
 .application-header {
-  @include font-setup('SplendidN', 1.25rem, 500, #131313, none, -1.5px);
+  @include font-setup('SplendidN', 1.2rem, 500, #131313, none, -1.8px);
   padding: 2px 0 1px 20px;
   line-height: 1.2rem;
 }
