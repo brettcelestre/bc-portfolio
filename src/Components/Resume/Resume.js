@@ -156,42 +156,42 @@ class Resume extends Component {
             </div>
           </div>
 
-          <div className="resume-divider first-divider">
-            <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
-          </div>
-
           <div className="resume-section-title">
             Professional Experience
           </div>
 
-          {this.buildJobsSection(resumeData['Professional Experience'])}
-
           <div className="resume-divider">
             <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
           </div>
+
+          {this.buildJobsSection(resumeData['Professional Experience'])}
 
           <div className="resume-section-title">
             Personal Applications
           </div>
 
-          {this.buildJobsSection(resumeData['Personal Applications'])}
-
           <div className="resume-divider">
-            <img src={dividerLines[2]} className="divider-img" alt="divider-bar"/>
+            <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
           </div>
+
+          {this.buildJobsSection(resumeData['Personal Applications'])}
 
           <div className="resume-section-title">
             Technical Skills
           </div>
 
-          {this.buildTechSkills(resumeData['Technical Skills'])}
-
           <div className="resume-divider">
-            <img src={dividerLines[0]} className="divider-img" alt="divider-bar" />
+            <img src={dividerLines[2]} className="divider-img" alt="divider-bar"/>
           </div>
+
+          {this.buildTechSkills(resumeData['Technical Skills'])}
 
           <div className="resume-section-title">
             Education
+          </div>
+
+          <div className="resume-divider">
+            <img src={dividerLines[0]} className="divider-img" alt="divider-bar" />
           </div>
 
           {this.buildEducationSection(resumeData['Education'])}
