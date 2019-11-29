@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-// import Img from 'react-image';
+import Img from 'react-image';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import spinner from '../../assets/img/spinner.gif';
 import './SlideShow.css';
@@ -112,7 +112,37 @@ class SlideShow extends Component {
     )
   }
 
+  // loading() {
+  //   const loaderStyles = {
+  //     height: "100%",
+  //     width: "100%",
+  //     textAlign: "center",
+  //     position: "fixed",
+  //     top: "0",
+  //     opacity: ".25"
+  //   }
+
+  //   const loadingSpinnerStyles = {
+  //     width: "44px",
+  //     height: "44px",
+  //     verticalAlign: "middle"
+  //   }
+
+  //   const loaderHelper = {
+  //     display: "inline-block",
+  //     height: "100%",
+  //     verticalAlign: "middle"
+  //   }
+  //   return (
+  //     <div style={loaderStyles}>
+  //       <span style={loaderHelper}></span>
+  //       <img src={spinner} style={loadingSpinnerStyles} alt="spinner"/>
+  //     </div>
+  //   )
+  // }
+
   render() {
+    const { loading } = this;
     const orientation = window.innerWidth < BREAKPOINT ? 'landscape' : 'portrait';
     const size = window.innerWidth < (BREAKPOINT - 2) ? 'small' : 'large';
 
@@ -126,9 +156,10 @@ class SlideShow extends Component {
         }/>
 
         {/* TODO Implement <Img> with proper loader */}
-        <img
+        <Img
           src={this.props.images[orientation][size][this.state.index]} 
           className="bio-images"
+          loader={loading()}
           />
 
         <div className="slideshow-index-controls">
