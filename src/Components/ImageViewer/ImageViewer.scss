@@ -422,6 +422,11 @@ $navigation-width: 137px;
     display:none;
 }
 
+.image-carousel {
+  position: absolute;
+  top: 0;
+}
+
 // Tablet Size - and (max-height: 736px)
 @media (max-width: 1024px) {
 

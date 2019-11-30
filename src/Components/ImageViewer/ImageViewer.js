@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import PropTypes from 'prop-types';
 import Img from 'react-image';
+
+import { Carousel } from 'react-responsive-carousel'; //.Carousel;
 // import ReactSVG from 'react-svg';
 // import { Link, Redirect } from 'react-router-dom';
 // import { withRouter } from 'react-router';
@@ -472,17 +474,25 @@ class ImageViewer extends Component {
     // if ( e.keyCode == '187' || e.keyCode == '189' && this.state.zoom == false) this.zoomImageState();
   }
 
+  onSwipeChange = (e) => {
+    console.log('onSwipeChange ', e);
+  }
+
   render() {
+    const { onSwipeChange } = this;
     const { section, category, subCategory, piece } = this.props.match.params;
     const imageData = this.findImageData(section, category, subCategory, piece);
     const currentGalleryLength = this.getCurrentGalleryData(section, category, subCategory).data.length;
     const currentIndex =  this.findGalleryIndex(section, category, subCategory, piece) + 1;
+
+    let mobile = false;
 
     // If Tablet or Mobile load arrow colors. Otherwise, arrows should be black
     let arrowsColor = 'arrow-background';
     const windowWidth = window.innerWidth;
     if ( 1024 >= windowWidth) {  // Tablet / Mobile
       arrowsColor = imageData.arrows === 'light' ? 'arrows-light' : 'arrows-dark';
+      mobile = true;
     }
 
     // Update orientation
@@ -494,6 +504,8 @@ class ImageViewer extends Component {
     } else if (window.innerWidth <= 1023) {   // Adjusts for tablet styles
       height -= 110;                          // Navigation + Toolbar
     }
+
+    console.log('mobile true = ', mobile);
     
     // Considers aspect ratio of window
     const imgWidth = imageData.sizes[this.state.currentSize].width;
@@ -570,20 +582,46 @@ class ImageViewer extends Component {
                     `next-arrow ${arrowsColor}`)}
               />
           </div>
-
-          <Img
-            src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]}
-            width={this.state.width}
-            height={this.state.height}
-            className={currentOrientation}
-            id="gallery-image"
-            alt={this.state.name}
-            onClick={this.zoomImageState}
-            loader={this.loading()}
-            // TODO: Testing Tablet/Mobile image swiping
-            // onMouseDown={this.dragImage}
-            // onMouseUp={this.toggleMouseDown}
-          />
+          {mobile ? (
+            <Carousel 
+              className="image-carousel"
+              showArrows={false}
+              infiniteLoop={false}
+              showIndicators={false}
+              showStatus={false}
+              showThumbs={false}
+              onChange={onSwipeChange}
+              // onClickItem={onClickItem}
+              // onClickThumb={onClickThumb}>
+              >
+                  <div>
+                      <img src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]} />
+                      <p className="legend">Legend 1</p>
+                  </div>
+                  <div>
+                      <img src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]} />
+                      <p className="legend">Legend 2</p>
+                  </div>
+                  <div>
+                      <img src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]} />
+                      <p className="legend">Legend 3</p>
+                  </div>
+              </Carousel>
+          ) : (
+            <Img
+              src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]}
+              width={this.state.width}
+              height={this.state.height}
+              className={currentOrientation}
+              id="gallery-image"
+              alt={this.state.name}
+              onClick={this.zoomImageState}
+              loader={this.loading()}
+              // TODO: Testing Tablet/Mobile image swiping
+              // onMouseDown={this.dragImage}
+              // onMouseUp={this.toggleMouseDown}
+            />
+          )}
 
           {/* Background Previous Box */}
           <div
