@@ -452,7 +452,7 @@ class ImageViewer extends Component {
     console.log('slideshow start');
     setInterval(() => {
       galleryWheel('next');  
-    }, 3000);
+    }, 5000);
   }
 
   stopSlideshow() {
