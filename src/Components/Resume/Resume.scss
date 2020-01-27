@@ -44,6 +44,7 @@ $navigation-width: 137px;
 }
 
 .download-resume-section {
+  margin-top: 60px;
   display: block;
   width: 100%;
   height: 45px;
@@ -67,7 +68,7 @@ $navigation-width: 137px;
   // }
   &:hover {
     cursor: pointer;
-    transition: 300ms;
+    transition: 500ms;
     background-color: rgb(245, 244, 243);
     width: 160px;
     .download-resume-font {
@@ -313,7 +314,8 @@ a:visited {
   .resume-section-title {
     padding-top: 25px;
     // font-size: 2.14rem;
-    font-size: 1.25rem;
+    // font-size: 1.25rem;
+    font-size: 1.45rem;
     padding-left: 0px;
   }
  
@@ -323,9 +325,10 @@ a:visited {
     line-height: 25px;
   }
 
-  .resume-company-title {
-    padding-left: 0px;
-  }
+  // .resume-company-title {
+  //   padding-left: 0px;
+  //   background-color: rgb(255, 249, 197);
+  // }
 
   .position {
     // font-size: 20.75px;
@@ -373,5 +376,9 @@ a:visited {
 
   .education-date-box {
     float: left;
+  }
+
+  .code {
+    font-size: 11px;
   }
 }

@@ -58,8 +58,8 @@ class About extends Component {
           <Link to="/resume" replace className="highlight">
             View Resume
           </Link>
-          <br /><br />
-          <a href="https://www.instagram.com/brettcelestre/" target="blank"  className="highlight">
+          {/* <br /><br /> */}
+          {/* <a href="https://www.instagram.com/brettcelestre/" target="blank"  className="highlight">
             Instagram
           </a>
           <br />
@@ -69,7 +69,7 @@ class About extends Component {
           <br />
           <a href="/https://www.linkedin.com/in/brettcelestre/" target="blank" className="highlight">
             LinkedIn
-          </a>
+          </a> */}
           <br /><br />
           Reach out
           <br />

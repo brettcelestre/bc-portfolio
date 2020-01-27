@@ -241,6 +241,7 @@ class Toolbar extends Component {
             {/* <div className="slideshow-button" onClick={startSlideshow}>
               Slideshow
             </div> */}
+            
             <div className="gallery-index-box" style={indexStyles}>
               <div className="gallery-index">
                 {this.props.currentIndex}/{this.props.galleryLength}

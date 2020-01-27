@@ -2,7 +2,7 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Fresh Air
   urlTitle: fresh-air
-  date: ????????
+  date: 2017
   size: ''
   orientation: landscape
   description: 
@@ -21,7 +21,7 @@ const data = ymlLoader.load(`
 
 - title: Room
   urlTitle: room
-  date: ????????
+  date: 2016
   size: ''
   orientation: landscape
   description: 

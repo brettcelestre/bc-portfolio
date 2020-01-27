@@ -94,44 +94,6 @@ const data = ymlLoader.load(`
       Small:
         width: 800
         height: 462
-  
-  - title: Jeanne-Marie
-    urlTitle: jeanne-marie
-    date: DECEMBER 2010
-    size: 
-    orientation: landscape
-    info: 'Mixed media collage'
-    arrows: light
-    description: ''
-    sizes:
-      Large:
-        width: 1500
-        height: 998
-      Medium:
-        width: 1100
-        height: 732
-      Small:
-        width: 800
-        height: 532
-
-  - title: AJ
-    urlTitle: aj
-    date: DECEMBER 2010
-    size: 
-    orientation: landscape
-    info: 'Mixed media collage'
-    arrows: dark
-    description: ''
-    sizes:
-      Large:
-        width: 1500
-        height: 998
-      Medium:
-        width: 1100
-        height: 732
-      Small:
-        width: 800
-        height: 532
 
   - title: Dufrense
     urlTitle: dufrense
@@ -173,3 +135,42 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
+
+
+// - title: Jeanne-Marie
+// urlTitle: jeanne-marie
+// date: DECEMBER 2010
+// size: 
+// orientation: landscape
+// info: 'Mixed media collage'
+// arrows: light
+// description: ''
+// sizes:
+//   Large:
+//     width: 1500
+//     height: 998
+//   Medium:
+//     width: 1100
+//     height: 732
+//   Small:
+//     width: 800
+//     height: 532
+
+// - title: AJ
+// urlTitle: aj
+// date: DECEMBER 2010
+// size: 
+// orientation: landscape
+// info: 'Mixed media collage'
+// arrows: dark
+// description: ''
+// sizes:
+//   Large:
+//     width: 1500
+//     height: 998
+//   Medium:
+//     width: 1100
+//     height: 732
+//   Small:
+//     width: 800
+//     height: 532

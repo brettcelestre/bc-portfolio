@@ -48,7 +48,7 @@
 $navigation-width: 137px;
 
 .friends {
-  width: -webkit-calc(100% - 167px);
+  width: -webkit-calc(100% - 200px);
   // height: 100vh;
   padding-top: 40px;
   margin-left: 140px;
@@ -90,10 +90,21 @@ $navigation-width: 137px;
     margin-bottom: -2px;
   }
   &:hover {
+    // background-color: red;
+    // HERE
+    // transition: 250ms;
+
+    // background-color: rgb(245, 244, 244);
+    // box-shadow: 0px 0px 8.5px rgba(231, 231, 229, 0.35);
+
     h4 {
       font-weight: 600;
+      
+      // transition: 0ms;
+      // letter-spacing: .5px;
     }
     .highlight {
+      // transition: 0ms;
       background-color: rgb(255, 249, 197);
     }
   }
@@ -102,7 +113,8 @@ $navigation-width: 137px;
 .filter-button {
   display: inline-flex;
   position: sticky;
-  width: 237px;
+  width: 232px;
+  // width: 251px;
   height: 19px;
   border-radius: 1.5px;
   background-color: #e8e8e8;
@@ -111,7 +123,8 @@ $navigation-width: 137px;
   padding: 10px;
   margin-right: 10px;
   padding-left: 13px;
-  z-index: 99;
+  z-index: 90;
+  margin-bottom: 5px;
   transition: 250ms;
   &:hover {
     cursor: pointer;
@@ -122,12 +135,13 @@ $navigation-width: 137px;
 .filter-button-show {
   // background-color: #5d5d5d;
   
+  // margin-top: -5px;
   color: #e8e8e8;
   background-color: #212121;
   transition: 250ms;
   &:hover {
     cursor: pointer;
-    background-color: #212121;
+    background-color: #0c0c0c;
   }
 }
 
@@ -139,17 +153,20 @@ $navigation-width: 137px;
 }
 
 .filter-options {
-  // margin-top: -5px;
+  margin-top: -5px;
 
   display: none;
   position: absolute;
-  z-index: 99;
+  z-index: 80;
   transition: 250ms;
   @include font-setup('SplendidN', 1.1rem, 500, rgb(20, 20, 20), none, -1px);
-  width: 259px;
-  padding: 2px 0 8px 0;
+  width: 251px;
+  padding: 7px 0 12px 3px;
   color: rgb(20, 20, 20);
   background-color: #e8e8e8;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .bold {
@@ -161,10 +178,21 @@ $navigation-width: 137px;
 
 .filter-options-show {
   display: block;
+  &:hover {
+    transition: 750ms;
+    box-shadow: 0px 0px 8.5px rgba(20, 20, 20, 0.35);
+  }
 }
+
 
 .filter-option {
   padding: 3px 0px 3px 13px;
+  // span 
+  // transition: 250ms;
+  &:hover {
+    font-weight: bold;
+    letter-spacing: -.9px;
+  }
 }
 
 .filtered-shade {
@@ -178,6 +206,7 @@ $navigation-width: 137px;
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+  z-index: 75;
 }
 
 .creatives-fade-show {
@@ -225,6 +254,8 @@ $navigation-width: 137px;
 }
 
 .filtered-option-box {
+  transition: 250ms;
+
   display: inline-flex;
   height: 24px;
   width: auto;
@@ -235,6 +266,7 @@ $navigation-width: 137px;
   border: solid .7px #e4e4e4;
   &:hover {
     cursor: pointer;
+    // text-decoration: line-through;
     background-color: #e8e8e8;
     border: solid .7px #e8e8e8;
   }
@@ -283,9 +315,16 @@ $navigation-width: 137px;
 
   .friends {
     width: 100%;
-    margin-top: 60px;
+    // margin-top: 60px;
     margin-left: 0;
-    padding: 27px 0px 75px 0px;
+    padding: 10px 0px 75px 0px;
+  }
+
+  .filter-button {
+    // width: 90%;
+    // &:hover {
+    //   background-color: #e8e8e8;
+    // }
   }
 
   .friends-sort-box {

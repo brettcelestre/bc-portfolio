@@ -150,14 +150,14 @@ class Resume extends Component {
       <div className="resume-section">
         <div className="resume">
 
-          <div className="download-resume-section">
+          {/* <div className="download-resume-section">
             <div className="download-resume-button">
               <span className="download-resume-font">Download PDF</span>
             </div>
-          </div>
+          </div> */}
 
           <div className="resume-section-title">
-            Professional Experience
+            Experience
           </div>
 
           <div className="resume-divider">
@@ -166,7 +166,7 @@ class Resume extends Component {
 
           {this.buildJobsSection(resumeData['Professional Experience'])}
 
-          <div className="resume-section-title">
+          {/* <div className="resume-section-title">
             Personal Applications
           </div>
 
@@ -174,7 +174,7 @@ class Resume extends Component {
             <img src={dividerLines[1]} className="divider-img" alt="divider-bar"/>
           </div>
 
-          {this.buildJobsSection(resumeData['Personal Applications'])}
+          {this.buildJobsSection(resumeData['Personal Applications'])} */}
 
           <div className="resume-section-title">
             Technical Skills
@@ -195,6 +195,12 @@ class Resume extends Component {
           </div>
 
           {this.buildEducationSection(resumeData['Education'])}
+
+          <div className="download-resume-section">
+            <div className="download-resume-button">
+              <span className="download-resume-font">Download PDF</span>
+            </div>
+          </div>
 
         </div>
       </div>

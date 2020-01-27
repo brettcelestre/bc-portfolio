@@ -1,5 +1,24 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
+- title: "2018"
+  urlTitle: "2018"
+  date: 
+  size: ''
+  orientation: landscape
+  description: Working on building this website
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1006
+    Medium:
+      width: 1100
+      height: 738
+    Small:
+      width: 800
+      height: 537
+
 - title: "2016"
   urlTitle: "2016"
   date: 

@@ -146,17 +146,17 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/about" replace onClick={this.cleanUp}>
+            {/* <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title menu-about">
                 About
               </div>
-            </Link>
+            </Link> */}
 
-            {/* <Link to="/resume" replace onClick={this.cleanUp}>
+            <Link to="/resume" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resume
               </div>
-            </Link> */}
+            </Link>
 
             <div className="social-media-spacer"></div>
             

@@ -46,24 +46,6 @@ const ymlLoader = require('js-yaml');
 
 
 const data = ymlLoader.load(`
-- title: Driftwood
-  urlTitle: driftwood
-  date: 2015
-  info: Driftwood, Walnut, Glue - 20" x 5.75" x 5.75"
-  description: 
-  href:
-  fontStyles:
-  sizes:
-    Large:
-      width: 873
-      height: 1200
-    Medium:
-      width: 654
-      height: 900
-    Small:
-      width: 436
-      height: 600
-
 - title: Side Table
   urlTitle: side-table
   date: 2012
@@ -81,6 +63,24 @@ const data = ymlLoader.load(`
     Small:
       width: 800
       height: 534
+
+- title: Driftwood
+  urlTitle: driftwood
+  date: 2015
+  info: Driftwood, Walnut, Glue - 20" x 5.75" x 5.75"
+  description: 
+  href:
+  fontStyles:
+  sizes:
+    Large:
+      width: 873
+      height: 1200
+    Medium:
+      width: 654
+      height: 900
+    Small:
+      width: 436
+      height: 600
 
 - title: Pen Holder
   urlTitle: pen-holder
