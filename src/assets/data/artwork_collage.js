@@ -61,7 +61,7 @@ const data = ymlLoader.load(`
     date: FEBRUARY 2015
     size: 16" x 20"
     orientation: portrait
-    info: Paper, Glue
+    info: Paper & Glue
     arrows: dark
     description: "Created entirely out of images from the book Life: World War 2: History's Greatest Conflict in Pictures by Richard B. Stolley."
     sizes:
@@ -99,7 +99,7 @@ const data = ymlLoader.load(`
     date: JANUARY 2009
     size: 14" x 17"
     orientation: portrait
-    info: Paper, Glue, & Ink
+    info: Paper & Glue
     arrows: dark
     description: Visual interpretation of the album.
     descriptionUpdate: <Link to="/watch/electric-ladyland/behind-the-scenes"><span="image-viewer-internal-link">Timelapse making of video.</span></Link>
@@ -120,7 +120,7 @@ const data = ymlLoader.load(`
     size: 16" x 13"
     info: Paper & Glue
     arrows: dark
-    description: My first collage. Created to get away from the computer screen.
+    description: My first collage. Created to get away from the computer screen. Yet here we are.
     descriptionUpdate: This launched my passion for creating collages and collecting collage material.
     sizes:
       Large:

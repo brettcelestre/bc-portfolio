@@ -4,16 +4,17 @@ const resume = ymlLoader.load(`
 Technical Skills:
   Backend:
     - Node.js
-    - Microservices
-    - RESTful API
+    - GraphQL
     - PostgreSQL
     - DynamoDB
+    - Microservices
+    - RESTful API
     - Express
     - Hapi
-    - Blockchain
-    - Hyperledger Fabric
+    - Logging
   Frontend:
     - React
+    - React Native
     - Angular
     - JavaScript
     - HTML
@@ -23,6 +24,7 @@ Technical Skills:
     - UI/UX
     - Bootstrap
     - jQuery
+    - Event Tracking
   Dev Ops: 
     - AWS
     - Git
@@ -34,24 +36,29 @@ Technical Skills:
     - Swagger
     - TDD/BD
   Experienced:
+    - Analytics
+    - MySQL
     - Socket.IO
     - Protractor
     - Webpack
     - Gulp
-    - MySQL
     - OAuth2.0
 Professional Experience:
   - company: Starcity
     title: Full Stack Software Engineer
     date: APRIL 2019 - PRESENT
+    location: San Francisco, CA
     url: https://www.starcity.com/
     header:
     description:
-      - React, Node.js, GraphQL, AWS, React Native, Clojure, Sendbird, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
-      - Developed a internal admin dashboard for our community team to moderate the Starcity mobile apps content and direct message community members.
+      - Fast paced start-up, working closely with our VP of Engineering and Director of Product Management 
+      - Currently working in React Native on Starcity's mobile app bringing core features to life such as direct messaging, a community bulletin board, member events, and in app/push notifications
+      - Lead developer of a green field React/Redux admin dashboard used by our community team for content moderation of our mobile app and direct messaging our members
+      - Our backend is Node.js, GraphQL, and PostgreSQL deployed on AWS. I’ve helped set up lifecycle and event analytics across our systems and helped improve our member application portal 
   - company: Accenture - Liquid Studios
     title: Software Engineer
     date: MAY 2017 - MARCH 2019
+    location: San Francisco, CA
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
     header:
     description:
@@ -62,6 +69,7 @@ Professional Experience:
   - company: Wobo, Inc.
     title: QA Specialist
     date: JULY 2015 - APRIL 2016
+    location: Martinez, CA
     url: http://bookvolume.com/
     header:
     description:
@@ -71,6 +79,7 @@ Professional Experience:
   - company: The Stone Group
     title: Web and Graphic Designer
     date: JUNE 2014 - JULY 2015
+    location: Pleasanton, CA
     url: http://stonegroupinc.com/
     header:
     description:
@@ -79,6 +88,7 @@ Professional Experience:
   - company: "TCI | SPX"
     title: Digital Imaging and Photography
     date: AUGUST 2011 - DECEMBER 2014
+    location: Fremont, CA
     url: https://www.tcibr.com/
     header:
     description:
@@ -87,6 +97,7 @@ Professional Experience:
   - company: Terres | Marketing Design
     title: Digital Imaging Specialist
     date: JULY 2008 - DECEMBER 2014
+    location: San Ramon, CA
     url: http://terresdesign.com/
     header:
     description:
@@ -147,8 +158,11 @@ Education:
 
 module.exports = { resume };
 
+// Starcity stuff below
 // add link to starcity app
 // https://apps.apple.com/us/app/starcity/id1457383827
+// - React, Node.js, GraphQL, AWS, React Native, Clojure, Sendbird, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
+//       - Developed a internal admin dashboard for our community team to moderate the Starcity mobile apps content and direct message community members.
 
 // - company: Self-Employed
 // title: Full Stack Software Engineer

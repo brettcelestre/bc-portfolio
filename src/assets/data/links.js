@@ -6,6 +6,7 @@ const tags = [
   'drag',
   'fashion designer',
   'film maker',
+  'florist',
   'graphic designer',
   'illustrator',
   'musician',
@@ -204,6 +205,7 @@ const data = ymlLoader.load(`
       url: http://emiliovillalbaart.com/
   tags:
     - painter
+    - skateboarder
 - title: Nick Di Tomasso
   links:
     - type: Portfolio
@@ -297,6 +299,12 @@ const data = ymlLoader.load(`
       url: http://www.makerandmineral.com/
   tags:
     - fashion designer
+- title: Kelly Hackett
+  links:
+    - type: Portfolio
+      url: https://www.milkweed.studio/
+  tags:
+    - florist
 - title: Mike Buzzard
   links:
     - type: Blog
@@ -345,6 +353,12 @@ const data = ymlLoader.load(`
       url: https://vimeo.com/user2466028/videos?fbclid=IwAR3Fi8rCf-ZLdAbiTKOeIW0HtETCrIPDK25JqPYeaLyIWxnfeqFSMJDUbAU
   tags:
     - videographer
+- title: Bill Kiley
+  links:
+    - type: Portfolio
+      url: https://billkiley.bandcamp.com/
+  tags:
+    - musician
 `);
 
 module.exports = { data, tags };

@@ -72,6 +72,12 @@ $navigation-width: 137px;
   }
 }
 
+.application-type {
+  padding: 7px 0 7px 20px;
+  // @include font-setup('old style', .8rem, 100, rgb(20, 20, 20), none, 1.3px);
+  @include font-setup('SplendidN', 1.2rem, 500, #131313, none, -1.8px);
+}
+
 .application-date {
   padding: 7px 0 12px 20px;
   @include font-setup('old style', .8rem, 100, rgb(20, 20, 20), none, 1.3px);
@@ -85,6 +91,18 @@ $navigation-width: 137px;
 
 .application-tech-stack {
   padding: 12px 0 0 20px;
+}
+
+.application-description {
+  @include font-setup('SplendidN', 1.2rem, 500, #131313, none, -1.8px);
+  padding: 10px 0 10px 20px;
+  line-height: 1.2rem;
+}
+
+.application-description-link {
+  &:hover {
+    background-color: rgb(255, 249, 197);
+  }
 }
 
 .application-options {
@@ -120,15 +138,16 @@ $navigation-width: 137px;
 }
 
 // Mobile Sizes
-@media (max-width: 414px) and (max-height: 736px) {
+@media (max-width: 414px) and (max-height: 813px) {
   .applications {
     width: 100%;
-    margin-top: 60px;
-    padding: 10px 0px;
+    // margin-top: 60px;
+    // padding: 10px 0px;
+    padding: 0px;
   }
 
   .applications-section {
-    padding: 0px;
+    padding: 0px 0px 35px 0px;
   }
 
   .application-box {
@@ -161,8 +180,17 @@ $navigation-width: 137px;
     padding-top: 4px;
   }
 
+  .application-type {
+    padding: 2px 0 10px 10px;
+    // @include font-setup('old style', .8rem, 100, rgb(20, 20, 20), none, 1.3px);
+  }
+
   .application-header {
-    padding: 0 0 8px 9px;
+    padding: 4px 0 8px 9px;
+  }
+
+  .application-description {
+    padding: 10px 0 10px 10px;
   }
 
   .application-options {

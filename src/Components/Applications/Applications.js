@@ -8,7 +8,8 @@ import applications from '../../assets/data/applications.js';
 
 const appImages = {
   // "www.BrettCelestre.com": require('../../assets/gallery/applications/BrettCelestre.jpg'),
-  "Starcity Dashboard": require('../../assets/gallery/applications/starcity-dashboard.png'),
+  "Starcity's Mobile App": require('../../assets/gallery/applications/starcity-dashboard.png'),
+  "Starcity's Admin Dashboard": require('../../assets/gallery/applications/Starcity_Dashboard_01.jpg'),
   "Matthew Celestre": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
   "Stock Sight": require('../../assets/gallery/applications/StockSight.jpg'),
   "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.jpg'),
@@ -84,33 +85,47 @@ class Applications extends Component {
           <div className="application-description-box">
             
             <div className="application-title">
-              <h2>{app.title.toUpperCase()}</h2>
+              {/* <h2>{app.title.toUpperCase()}</h2> */}
+              <h2>{app.title}</h2>
             </div>
 
             <div className="application-header">
               {app.header}
             </div>
 
+            { app.description && (
+              <div className="application-description" dangerouslySetInnerHTML={{ __html: app.description }}>
+              </div>
+            )}
+
+            <div className="application-type" dangerouslySetInnerHTML={{ __html: app.type }}>
+              </div>
+            {/* <div className="application-type">
+              {app.type}.
+            </div> */}
+
             <div className="application-date">
               {app.date}
             </div>
 
-            <div className="application-options">
-              {app.github &&
-                <a href={app.github} target="blank">
-                  <div className="application-github">
-                    GitHub
-                  </div>
-                </a>
-              }
-              {app.launch &&
-                <a href={app.launch} target="blank">
-                  <div className="application-launch">
-                    Launch
-                  </div>
-                </a>
-              }
-            </div>
+            { (app.github || app.launch) && (
+              <div className="application-options">
+                {app.github &&
+                  <a href={app.github} target="blank">
+                    <div className="application-github">
+                      GitHub
+                    </div>
+                  </a>
+                }
+                {app.launch &&
+                  <a href={app.launch} target="blank">
+                    <div className="application-launch">
+                      Launch
+                    </div>
+                  </a>
+                }
+              </div>
+            )}
 
             <div className="application-tech-stack">
               {this.buildTechStack(app.tech)}

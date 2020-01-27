@@ -84,10 +84,16 @@ class SlideShow extends Component {
     });
   }
 
-  loading() {
+  loading(size) {
+    //   t: 660px;
+    //   min-height: 300px;
     const loaderStyles = {
-      height: "270px",
-      width: "100%",
+      // height: "270px",
+      // width: "100%",
+
+      // Bio section large
+      height: "630px",
+      width: "458.17px",
       textAlign: "center",
       top: "0",
       opacity: ".25"
@@ -146,6 +152,17 @@ class SlideShow extends Component {
     const orientation = window.innerWidth < BREAKPOINT ? 'landscape' : 'portrait';
     const size = window.innerWidth < (BREAKPOINT - 2) ? 'small' : 'large';
 
+    // const loader;
+    // if (size === 'small') {
+    //   // loader = 
+    // } else if {
+    //   loader = {
+
+    //   }
+    //   t: 660px;
+    //   min-height: 300px;
+    // }
+
     return(
       <div className="slideshow-container">
         <WindowResizeListener
@@ -159,7 +176,7 @@ class SlideShow extends Component {
         <Img
           src={this.props.images[orientation][size][this.state.index]} 
           className="bio-images"
-          loader={loading()}
+          loader={loading(size)}
           />
 
         <div className="slideshow-index-controls">

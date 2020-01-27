@@ -25,6 +25,19 @@ const delRioGallery = require('./photography_del_rio.js');
 // - name: Drawings
 //       href: /artwork/Drawings/justin-felix-vs-gavin-drago
 
+/*
+Del Rio - new description
+
+Del Rio is a short thriller film set to a song my friend Ryan Schimdt made originally called Traveling Plans.
+
+The cast is comprised of friends and family who were excited enough about the project to dedicate their time for free. 
+
+The greenscreen was built outside in the sideyard of Ryan's house, so all filming of people had to happen after the sun went down. Since we filmed during my summer breaks from school the sun didn't set until 8-9pm. We often filmed past mid night since we didn't want to make people come back for multiple days of shooting. The main characters had more shots and ended up spending around 4 nights filming their scenes.
+
+This film took us two and half years to complete. The bulk of building the sets an
+Be sure to check out the 42 minute behind the scenes documentary below.
+*/
+
 const data = ymlLoader.load(`
 - title: Del Rio
   urlTitle: del-rio
@@ -32,7 +45,8 @@ const data = ymlLoader.load(`
   year: 2014
   length: "8:24"
   href: /short-films/del-rio
-  description: Del Rio is a short thriller film, set in a grim deserted valley, baptized with the same title. As an extravagant locomotive, the Loxodonta Express, navigates through carrying a prosperous assortment of passengers and wealth; their destination will collide with the horrific dangers that unknowingly lay directly in their path.
+  description: 
+  descriptionOld: Del Rio is a short thriller film, set in a grim deserted valley, baptized with the same title. As an extravagant locomotive, the Loxodonta Express, navigates through carrying a prosperous assortment of passengers and wealth; their destination will collide with the horrific dangers that unknowingly lay directly in their path.
   website: https://www.instagram.com/delriofilm/?hl=en
   instagram: "@delriofilm"
   imdb: https://www.imdb.com/title/tt2334592
