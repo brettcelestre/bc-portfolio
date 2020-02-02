@@ -154,7 +154,7 @@ const data = ymlLoader.load(`
 
 - title: Two Beggers
   urlTitle: two-beggers
-  date: 2018
+  date: AUGUST 2018
   size: ''
   orientation: landscape
   description: Barcelona, Spain

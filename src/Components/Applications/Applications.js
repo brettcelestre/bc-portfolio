@@ -8,13 +8,14 @@ import applications from '../../assets/data/applications.js';
 
 const appImages = {
   // "www.BrettCelestre.com": require('../../assets/gallery/applications/BrettCelestre.jpg'),
-  "Starcity's Mobile App": require('../../assets/gallery/applications/starcity-dashboard.png'),
+  "Starcity's Mobile App": require('../../assets/gallery/applications/Starcity_App_01.jpg'),
   "Starcity's Admin Dashboard": require('../../assets/gallery/applications/Starcity_Dashboard_01.jpg'),
   "Matthew Celestre": require('../../assets/gallery/applications/MatthewCelestre.jpg'),
   "Stock Sight": require('../../assets/gallery/applications/StockSight.jpg'),
   "The Performance Group": require('../../assets/gallery/applications/ThePerformanceGroup.jpg'),
   "Qurvey": require('../../assets/gallery/applications/Qurvey.jpg'),
-  "FeedFuse": require('../../assets/gallery/applications/FeedFuse.jpg')
+  "FeedFuse": require('../../assets/gallery/applications/FeedFuse.jpg'),
+  "SprintPal": require('../../assets/gallery/applications/SprintPal.jpg')
 }
 
 class Applications extends Component {

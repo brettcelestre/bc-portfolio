@@ -40,49 +40,49 @@ const data = ymlLoader.load(`
     - musician
     - film maker
     - skateboarder
+
 - title: Scott Celestre
   links:
     - type: Portfolio
       url: https://medium.com/@directorscott2
   tags:
     - television director
+
 - title: Ryan Schmidt
   links:
     - type: SoundCloud
       url: https://thebozosthebozosthebozos.bandcamp.com/
   tags:
     - musician
+
 - title: Andrew Jinkins
   links:
     - type: BandCamp
       url: https://feelingsparty.bandcamp.com/
   tags:
     - musician
+
 - title: Brittany Budge
   links:
     - type: Portfolio
       url: http://brittanybudge.com/
   tags:
     - painter
-- title: Kyle Luman
-  links:
-    - type: Portfolio
-      url: https://www.kylelumanphotography.com/
-  tags:
-    - photographer
-    - skateboarder
+
 - title: Grant Selland
   links:
     - type: SoundCloud
       url: https://soundcloud.com/messboard/tracks
   tags:
     - musician
+
 - title: Jake Vincent
   links:
     - type: Flickr
       url: https://www.flickr.com/photos/snowmonsterrr/
   tags:
     - photographer
+
 - title: Andrew Zhou
   links:
     - type: Portfolio
@@ -92,6 +92,7 @@ const data = ymlLoader.load(`
   tags:
     - photographer
     - skateboarder
+
 - title: Jesse Gale
   links:
     - type: BandCamp
@@ -99,24 +100,28 @@ const data = ymlLoader.load(`
   tags:
     - musician
     - skateboarder
+
 - title: Corey Duffel
   links:
     - type: Instagram
       url: https://www.instagram.com/coreyduffel
   tags:
     - skateboarder
+
 - title: Kevin Stewart
   links:
     - type: BandCamp
       url: https://athletesmouth.bandcamp.com/
   tags:
     - musician
+
 - title: Andrew Tsao
   links:
     - type: Portfolio
       url: http://andrewtsao.io/
   tags:
     - software engineer
+
 - title: Emjay Mercury
   links:
     - type: Portfolio
@@ -126,6 +131,7 @@ const data = ymlLoader.load(`
   tags:
     - burlesque
     - drag
+
 - title: Sean Hipkin
   links:
     - type: Portfolio
@@ -133,12 +139,22 @@ const data = ymlLoader.load(`
   tags:
     - illustrator
     - skateboarder
+
+- title: Kyle Luman
+  links:
+    - type: Portfolio
+      url: https://www.kylelumanphotography.com/
+  tags:
+    - photographer
+    - skateboarder
+
 - title: Cybelle Dabner
   links:
     - type: YouTube
       url: https://www.youtube.com/user/Cybski420/videos
   tags:
     - musician
+
 - title: Sarah Jaffe
   links:
     - type: Portfolio
@@ -146,30 +162,35 @@ const data = ymlLoader.load(`
   tags:
     - film maker
     - photographer
+
 - title: Sarah Watters
   links:
     - type: Portfolio
       url: http://www.wattersdesign.com/
   tags:
     - graphic designer
+
 - title: Stephen Chow
   links:
     - type: Portfolio
       url: https://www.stephenchowphoto.com/
   tags:
     - photographer
+
 - title: Brad Terres
   links:
     - type: Portfolio
       url: http://terresdesign.com/
   tags:
     - graphic designer
-- title: Jackie Ngo
+
+- title: John Peña
   links:
     - type: Portfolio
-      url: http://jackiengo.com/
+      url: https://www.jpena.io/
   tags:
-    - visual designer
+    - software engineer
+
 - title: Jia Gao
   links:
     - type: Portfolio
@@ -177,6 +198,15 @@ const data = ymlLoader.load(`
   tags:
     - graphic designer
     - product designer
+
+- title: Jackie Ngo
+  links:
+    - type: Portfolio
+      url: http://jackiengo.com/
+  tags:
+    - visual designer
+    - graphic designer
+
 - title: Krishi Patel
   links:
     - type: Portfolio
@@ -185,6 +215,7 @@ const data = ymlLoader.load(`
     - ux designer
     - product designer
     - graphic designer
+
 - title: Maria Gabriela Sanchez Mallona 
   links:
     - type: Portfolio
@@ -192,6 +223,7 @@ const data = ymlLoader.load(`
   tags:
     - illustrator
     - graphic designer
+
 - title: Michelle Fernandez
   links:
     - type: Portfolio
@@ -199,6 +231,8 @@ const data = ymlLoader.load(`
   tags:
     - ux designer
     - skateboarder
+    - photographer
+
 - title: Emilio Villalba
   links:
     - type: Portfolio
@@ -206,6 +240,7 @@ const data = ymlLoader.load(`
   tags:
     - painter
     - skateboarder
+
 - title: Nick Di Tomasso
   links:
     - type: Portfolio
@@ -214,6 +249,7 @@ const data = ymlLoader.load(`
     - illustrator
     - musician
     - skateboarder
+
 - title: Vincenzo Barkasy
   links:
     - type: Portfolio
@@ -224,24 +260,28 @@ const data = ymlLoader.load(`
     - concept designer
     - illustrator
     - skateboarder
+
 - title: Nick Bers
   links:
     - type: Portfolio
       url: http://nickbers.com/
   tags:
     - graphic designer
+
 - title: Emily Bers
   links:
     - type: Portfolio
       url: https://www.emiliebersphotography.com/
   tags:
     - photographer
+
 - title: Joel Jutagir
   links:
     - type: Portfolio
       url: https://www.instagram.com/metroskateboarding/?hl=en
   tags:
     - skateboarder
+
 - title: Journey Coward
   links:
     - type: Portfolio
@@ -250,24 +290,28 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/journeycoward/
   tags:
     - painter
+
 - title: Lulu Martinez
   links:
     - type: Portfolio
       url: https://www.lulumartinezdesigns.com/
   tags:
     - graphic designer
+
 - title: Dan Newman
   links:
     - type: Portfolio
       url: https://open.spotify.com/artist/5G5CCKuPlY35KEecEm1DtP?si=Ds7ja-QuQC2veox-62dEBQ
   tags:
     - musician
+
 - title: Maaike Scherff
   links:
     - type: Portfolio
       url: https://maaikescherff.com/
   tags:
     - illustrator
+
 - title: Jonny Clugston
   links:
     - type: Portfolio
@@ -275,36 +319,42 @@ const data = ymlLoader.load(`
   tags:
     - photographer
     - skateboarder
+
 - title: Marcus Tedesco
   links:
     - type: Portfolio
       url: http://marcustedesco.com/index.html
   tags:
     - software engineer
+
 - title: Colin McDonald
   links:
     - type: Portfolio
       url: http://www.colinlmcdonald.com/
   tags:
     - software engineer
+
 - title: John Madrak
   links:
     - type: Portfolio
       url: http://madrak.net/
   tags:
     - software engineer
+
 - title: Samantha Ives
   links:
     - type: Portfolio
       url: http://www.makerandmineral.com/
   tags:
     - fashion designer
+
 - title: Kelly Hackett
   links:
     - type: Portfolio
       url: https://www.milkweed.studio/
   tags:
     - florist
+
 - title: Mike Buzzard
   links:
     - type: Blog
@@ -312,12 +362,14 @@ const data = ymlLoader.load(`
   tags:
     - ux designer
     - skateboarder
+
 - title: Belinda Huang
   links:
     - type: Portfolio
       url: https://www.belindahuang.com/
   tags:
     - product designer
+
 - title: Kevin Brown
   links:
     - type: Portfolio
@@ -326,12 +378,14 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/good_online_content/
   tags:
     - photographer
+
 - title: Jarred Hodgdon
   links:
     - type: Portfolio
       url: http://jarred-hodgdon.com/
   tags:
     - production technician
+
 - title: Kristopher Shinn
   links:
     - type: Portfolio
@@ -340,6 +394,7 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/kristophershinn/
   tags:
     - photographer
+
 - title: Erik Bender
   links:
     - type: Portfolio
@@ -347,12 +402,14 @@ const data = ymlLoader.load(`
   tags:
     - painter
     - sculptor
+
 - title: Theodore Reid
   links:
     - type: Portfolio
       url: https://vimeo.com/user2466028/videos?fbclid=IwAR3Fi8rCf-ZLdAbiTKOeIW0HtETCrIPDK25JqPYeaLyIWxnfeqFSMJDUbAU
   tags:
     - videographer
+
 - title: Bill Kiley
   links:
     - type: Portfolio

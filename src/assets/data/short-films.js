@@ -45,7 +45,7 @@ const data = ymlLoader.load(`
   year: 2014
   length: "8:24"
   href: /short-films/del-rio
-  description: 
+  description: A short thriller film about a train robbery.
   descriptionOld: Del Rio is a short thriller film, set in a grim deserted valley, baptized with the same title. As an extravagant locomotive, the Loxodonta Express, navigates through carrying a prosperous assortment of passengers and wealth; their destination will collide with the horrific dangers that unknowingly lay directly in their path.
   website: https://www.instagram.com/delriofilm/?hl=en
   instagram: "@delriofilm"

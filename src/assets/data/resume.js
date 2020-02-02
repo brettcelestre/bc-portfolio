@@ -13,14 +13,15 @@ Technical Skills:
     - Hapi
     - Logging
   Frontend:
+    - JavaScript
     - React
     - React Native
+    - Redux
     - Angular
-    - JavaScript
     - HTML
     - CSS
-    - Redux
     - SCSS/SASS
+    - Styled Components
     - UI/UX
     - Bootstrap
     - jQuery
@@ -51,10 +52,10 @@ Professional Experience:
     url: https://www.starcity.com/
     header:
     description:
-      - Fast paced start-up, working closely with our VP of Engineering and Director of Product Management 
-      - Currently working in React Native on Starcity's mobile app bringing core features to life such as direct messaging, a community bulletin board, member events, and in app/push notifications
-      - Lead developer of a green field React/Redux admin dashboard used by our community team for content moderation of our mobile app and direct messaging our members
-      - Our backend is Node.js, GraphQL, and PostgreSQL deployed on AWS. I’ve helped set up lifecycle and event analytics across our systems and helped improve our member application portal 
+      - Y Combinator start-up, working closely with our VP of Engineering and Director of Product Management 
+      - Delivered core features to Starcity’s mobile app in React Native such as direct messaging, bulletin board, member events, help desk, and in app/push notifications. Available in <a href="https://apps.apple.com/us/app/starcity/id1457383827" target="blank">App Store</a> and Google Play.
+      - Lead developer of a green field React/Redux admin dashboard used by our community team to prevent abuse, maintain a safe mobile app community, and direct message our members
+      - Developed backend in Node.js, GraphQL, and PostgreSQL deployed on AWS. I set up lifecycle and event analytics across our systems to help improve our sales funnel 
   - company: Accenture - Liquid Studios
     title: Software Engineer
     date: MAY 2017 - MARCH 2019
@@ -161,6 +162,12 @@ module.exports = { resume };
 // Starcity stuff below
 // add link to starcity app
 // https://apps.apple.com/us/app/starcity/id1457383827
+
+// - Fast paced start-up, working closely with our VP of Engineering and Director of Product Management 
+// - Currently working in React Native on Starcity's mobile app bringing core features to life such as direct messaging, a community bulletin board, member events, and in app/push notifications
+// - Lead developer of a green field React/Redux admin dashboard used by our community team for content moderation of our mobile app and direct messaging our members
+// - Our backend is Node.js, GraphQL, and PostgreSQL deployed on AWS. I’ve helped set up lifecycle and event analytics across our systems and helped improve our member application portal 
+
 // - React, Node.js, GraphQL, AWS, React Native, Clojure, Sendbird, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
 //       - Developed a internal admin dashboard for our community team to moderate the Starcity mobile apps content and direct message community members.
 

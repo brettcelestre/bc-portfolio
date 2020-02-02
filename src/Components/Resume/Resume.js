@@ -196,11 +196,11 @@ class Resume extends Component {
 
           {this.buildEducationSection(resumeData['Education'])}
 
-          <div className="download-resume-section">
+          {/* <div className="download-resume-section">
             <div className="download-resume-button">
               <span className="download-resume-font">Download PDF</span>
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>
