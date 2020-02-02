@@ -127,7 +127,8 @@ $navigation-width: 137px;
 @media (max-width: 1024px) {
   .applications {
     width: calc(100% - 40px);
-    margin-top: 40px;
+    // margin-top: 40px;
+    margin-top: 15px;
     padding: 20px;
     margin-left: 0px;
   }

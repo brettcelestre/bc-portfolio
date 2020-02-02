@@ -2,10 +2,10 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Starcity's Mobile App
   date: SEPTEMBER 2019
-  type: Created at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>.
+  type: Created at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
   github: 
   launch: https://apps.apple.com/us/app/starcity/id1457383827
-  header: Mobile app for members to direct message, post on their community bulletin board, RSVP to events, and report tenant issues. 
+  header: Mobile app for members to direct message, post on their community bulletin board, RSVP to events, and report issues. Available on iOS and Android.
   description: 
   tech:
     - React Native
@@ -106,9 +106,28 @@ const data = ymlLoader.load(`
     - MongoDB
     - HTML
     - SASS
+
+- title: SprintPal
+  date: JULY 2015
+  type: Created with <a href="https://andrewtsao.io/" target="blank" class="application-description-link">Andrew Tsao</a>.
+  github: https://github.com/brettcelestre/sprintpal
+  launch: 
+  header: Enables agile teams to vote on tasks during sprint planning.
+  description: 
+  tech:
+    - Angular.js
+    - Node.js
+    - Express
+    - MongoDB
+    - Socket.io
+    - Highcharts.js
+    - HTML
+    - SASS
 `);
 
 module.exports = { data };
+
+// Add SprintPal back in, Details in resume
 
 // - title: www.BrettCelestre.com
 //   date: JANUARY 2019

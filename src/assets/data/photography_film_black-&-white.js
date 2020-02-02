@@ -43,9 +43,9 @@ const data = ymlLoader.load(`
   date: MARCH 2013
   size: 
   orientation: landscape
-  description: Nikon Nikomat FTn - 50mm
+  description: Taken in Castle Rock, Walnut Creek, CA
   arrows: dark
-  info: Taken in Castle Rock, Walnut Creek, CA
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 1500
@@ -102,7 +102,7 @@ const data = ymlLoader.load(`
   orientation: portrait
   description: 
   arrows: dark
-  info: Nikon ??? - 50mm
+  info: Nikon Nikomat FTn - 50mm
   sizes:
     Large:
       width: 809
