@@ -35,7 +35,7 @@ notes.txt
 # production builds
 /build
 /old-builds
-build.sh
+.env
 
 # misc
 .DS_Store
