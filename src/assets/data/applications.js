@@ -5,7 +5,7 @@ const data = ymlLoader.load(`
   type: Created at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
   github: 
   launch: https://apps.apple.com/us/app/starcity/id1457383827
-  header: Mobile app for members to direct message, post on their community bulletin board, RSVP to events, and report issues. Available on iOS and Android.
+  header: Mobile app for members to direct message, post on their community bulletin board, RSVP to events, and report issues. Available in App Store and Google Play.
   description: 
   tech:
     - React Native
@@ -14,7 +14,7 @@ const data = ymlLoader.load(`
     - Express
     - Postgres
     - AWS
-    - Circle.ci
+    - CircleCi
     - Fastlane
     - SendBird
     - OneSignal

@@ -53,7 +53,7 @@ Professional Experience:
     header:
     description:
       - Y Combinator start-up, working closely with our VP of Engineering and Director of Product Management 
-      - Delivered core features to Starcity’s mobile app in React Native such as direct messaging, bulletin board, member events, help desk, and in app/push notifications. Available in <a href="https://apps.apple.com/us/app/starcity/id1457383827" target="blank">App Store</a> and Google Play.
+      - Delivered core features to Starcity’s mobile app in React Native such as direct messaging, bulletin board, member events, help desk, and in app/push notifications.
       - Lead developer of a green field React/Redux admin dashboard used by our community team to prevent abuse, maintain a safe mobile app community, and direct message our members
       - Developed backend in Node.js, GraphQL, and PostgreSQL deployed on AWS. I set up lifecycle and event analytics across our systems to help improve our sales funnel 
   - company: Accenture - Liquid Studios

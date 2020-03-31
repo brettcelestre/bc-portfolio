@@ -193,101 +193,103 @@ const data = ymlLoader.load(`
       width: 800
       height: 341
 
-- title: The Flying Disc
-  urlTitle: the-flying-disc
-  date: 2012 MAY
-  year: 2012
-  length: "1:18"
-  href: /short-films/the-flying-disc
-  description: One disc. One newspaper. One phone call. Major disappointment.
-  website: 
-  id: aw3WzAiKgY8
-  url: https://www.youtube.com/embed/aw3WzAiKgY8?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
-  embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/aw3WzAiKgY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  options: 
-  credits: <strong>Written, Directed, & Special Effects</strong></ br>
-    by</ br>
-    Brett Celestre
-  sizes:
-    Large:
-      width: 1500
-      height: 639
-    Medium:
-      width: 1100
-      height: 469
-    Small:
-      width: 800
-      height: 341
-
-- title: Dan Pool
-  urlTitle: dan-pool
-  date: 2011 September
-  year: 2011
-  length: "1:43"
-  href: /short-films/dan-pool
-  description: Deep underground in San Jose State University's Recreational Center one man is on a mission to have the perfect game of billards. His single shot could change the world, but on this day fate had different plans.
-  id: LqBw8UVvfXg
-  url: https://www.youtube.com/embed/LqBw8UVvfXg?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
-  options: 
-  credits: <strong>Written & Directed</strong></ br>
-    by</ br>
-    Brett Celestre 
-  sizes:
-    Large:
-      width: 1500
-      height: 639
-    Medium:
-      width: 1100
-      height: 469
-    Small:
-      width: 800
-      height: 341
-
-- title: Justin Felix Vs Gavin Drago
-  urlTitle: justin-felix-vs-gavin-drago
-  date: 2010 JANUARY
-  year: 2010
-  length: "1:37"
-  href: /short-films/justin-felix-vs-gavin-drago
-  description: An epic showdown between two heavyweight Creek Park lukers ends in what some might consider dirty footwork. Justin Felix and his posse enter the park with sheer confidence, while Gavin stocks up on liquid courage. Someone's ultimately going to be crusin for a brusin.
-  website: 
-  id: KCizRihPlU0
-  url: https://www.youtube.com/embed/KCizRihPlU0?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
-  embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/KCizRihPlU0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  options:
-  viewFullCredits: true
-  credits: <strong>Written & Directed</strong></ br>
-    by</ br>
-    Matthew & Brett Celestre</ br></ br></ br>
-
-    <strong>Animated</strong></ br>
-    by</ br>
-    Brett & Matthew Celestre</ br></ br></ br>
-
-    <strong>Voice Actors</strong></ br>
-    Scott Celestre</ br>
-    Ryan Schmidt</ br></ br></ br>
-
-    <strong>Actors</strong></ br>
-    Justin Felix</ br>
-    Cole</ br>
-    Kevin Luker</ br>
-    Allyza</ br>
-    Belly G
-
-  sizes:
-    Large:
-      width: 1500
-      height: 639
-    Medium:
-      width: 1100
-      height: 469
-    Small:
-      width: 800
-      height: 341
 `);
 
 module.exports = { data };
+
+
+// - title: The Flying Disc
+//   urlTitle: the-flying-disc
+//   date: 2012 MAY
+//   year: 2012
+//   length: "1:18"
+//   href: /short-films/the-flying-disc
+//   description: One disc. One newspaper. One phone call. Major disappointment.
+//   website: 
+//   id: aw3WzAiKgY8
+//   url: https://www.youtube.com/embed/aw3WzAiKgY8?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
+//   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/aw3WzAiKgY8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+//   options: 
+//   credits: <strong>Written, Directed, & Special Effects</strong></ br>
+//     by</ br>
+//     Brett Celestre
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 639
+//     Medium:
+//       width: 1100
+//       height: 469
+//     Small:
+//       width: 800
+//       height: 341
+
+// - title: Dan Pool
+//   urlTitle: dan-pool
+//   date: 2011 September
+//   year: 2011
+//   length: "1:43"
+//   href: /short-films/dan-pool
+//   description: Deep underground in San Jose State University's Recreational Center one man is on a mission to have the perfect game of billards. His single shot could change the world, but on this day fate had different plans.
+//   id: LqBw8UVvfXg
+//   url: https://www.youtube.com/embed/LqBw8UVvfXg?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
+//   options: 
+//   credits: <strong>Written & Directed</strong></ br>
+//     by</ br>
+//     Brett Celestre 
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 639
+//     Medium:
+//       width: 1100
+//       height: 469
+//     Small:
+//       width: 800
+//       height: 341
+
+// - title: Justin Felix Vs Gavin Drago
+//   urlTitle: justin-felix-vs-gavin-drago
+//   date: 2010 JANUARY
+//   year: 2010
+//   length: "1:37"
+//   href: /short-films/justin-felix-vs-gavin-drago
+//   description: An epic showdown between two heavyweight Creek Park lukers ends in what some might consider dirty footwork. Justin Felix and his posse enter the park with sheer confidence, while Gavin stocks up on liquid courage. Someone's ultimately going to be crusin for a brusin.
+//   website: 
+//   id: KCizRihPlU0
+//   url: https://www.youtube.com/embed/KCizRihPlU0?rel=0&showinfo=0&autoplay=1&version=3&enablejsapi=1
+//   embeded: <iframe width="560" height="315" src="https://www.youtube.com/embed/KCizRihPlU0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+//   options:
+//   viewFullCredits: true
+//   credits: <strong>Written & Directed</strong></ br>
+//     by</ br>
+//     Matthew & Brett Celestre</ br></ br></ br>
+
+//     <strong>Animated</strong></ br>
+//     by</ br>
+//     Brett & Matthew Celestre</ br></ br></ br>
+
+//     <strong>Voice Actors</strong></ br>
+//     Scott Celestre</ br>
+//     Ryan Schmidt</ br></ br></ br>
+
+//     <strong>Actors</strong></ br>
+//     Justin Felix</ br>
+//     Cole</ br>
+//     Kevin Luker</ br>
+//     Allyza</ br>
+//     Belly G
+
+//   sizes:
+//     Large:
+//       width: 1500
+//       height: 639
+//     Medium:
+//       width: 1100
+//       height: 469
+//     Small:
+//       width: 800
+//       height: 341
 
 // ballroom - teaser 3
 // https://www.youtube.com/watch?v=WMyra5stRws
