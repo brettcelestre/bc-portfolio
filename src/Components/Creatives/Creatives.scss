@@ -36,6 +36,17 @@
   }
 }
 
+@keyframes fadeInFriendsOpacity {
+  0% {
+    opacity: 0;
+    margin-left: -5px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
 ::selection {
   background: #272727;  /* WebKit/Blink Browsers */
   color: #f8f8f8;
@@ -55,6 +66,11 @@ $navigation-width: 137px;
   padding-left: 60px;
   padding-bottom: 75px;
   // transition: 2000ms;
+
+  // animation-name: fadeInFriendsOpacity;
+  // animation-iteration-count: 1;
+  // animation-timing-function: ease-in;
+  // animation-duration: 400ms;
 }
 
 .friends-pre-fade {
@@ -74,6 +90,12 @@ $navigation-width: 137px;
   -webkit-column-width: 253px;
      -moz-column-width: 253px;
           column-width: 253px;
+
+  animation-name: fadeInFriendsOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 300ms;
+
   div {
     padding: 4.75px 0;
   }
