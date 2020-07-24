@@ -72,8 +72,6 @@ class App extends Component {
   render() {
     const { selected } = this.state;
 
-    console.log('selected', selected);
-
     let socialMediaIconSize;
     if ( window.innerWidth > 1024) {          // Desktop
       socialMediaIconSize = 20;
@@ -146,15 +144,15 @@ class App extends Component {
               </div>
             </Link>
 
-            {/* <Link to="/about" replace onClick={this.cleanUp}>
-              <div className="section-title menu-about">
-                About
+            {/* <Link to="/resume" replace onClick={this.cleanUp}>
+              <div className="section-title">
+                Resume
               </div>
             </Link> */}
 
-            <Link to="/resume" replace onClick={this.cleanUp}>
-              <div className="section-title">
-                Resume
+            <Link to="/about" replace onClick={this.cleanUp}>
+              <div className="section-title menu-about">
+                About
               </div>
             </Link>
 

@@ -1,13 +1,19 @@
 
 const ymlLoader = require('js-yaml');
+const { startImg } = require('../../utils/utils');
 
-const collageStart = require('../../assets/data/artwork_collage.js').data[0];
-const digitalStart = require('../../assets/data/artwork_digital.js').data[0];
-const sketchesStart = require('../../assets/data/artwork_sketches.js').data[0];
+const collage = require('../../assets/data/artwork_collage.js');
+const digital = require('../../assets/data/artwork_digital.js');
+const sketches = require('../../assets/data/artwork_sketches.js');
+
+// const length = collage.data.length
+//   + digital.data.length
+//   + sketches.data.length;
 
 const data = ymlLoader.load(`
 - title: Digital
-  href: /artwork/digital/${digitalStart.title.split(' ').join('-').toLowerCase()}
+  href: /artwork/digital/${startImg(digital).urlTitle}
+  length: ${digital.data.length}
   fontStyles:
   sizes:
     Large:
@@ -21,7 +27,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Collage
-  href: /artwork/collage/${collageStart.title.split(' ').join('-').toLowerCase()}
+  href: /artwork/collage/${startImg(collage).urlTitle}
+  length: ${collage.data.length}
   fontStyles:
   sizes:
     Large:
@@ -35,7 +42,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Sketches
-  href: /artwork/sketches/${sketchesStart.title.split(' ').join('-').toLowerCase()}
+  href: /artwork/sketches/${startImg(sketches).urlTitle}
+  length: ${sketches.data.length}
   fontStyles:
   sizes:
     Large:

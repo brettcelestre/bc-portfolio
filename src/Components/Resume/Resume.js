@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import Dust from '../Dust/Dust.js';
+import { isMobile } from '../../utils/utils';
 import './Resume.css';
 
 const {resume: resumeData} = require('../../assets/data/resume.js');
@@ -146,6 +148,17 @@ class Resume extends Component {
 
   render() {
 
+    // 
+    let windowSize; // Finds current size of window
+    const width = window.innerWidth;
+    if ( width >= 1025 ) {
+      windowSize = 'Large';
+    } else if ( width <= 1024 && width >= 800) {
+      windowSize = 'Medium';
+    } else if ( width <= 799) {
+      windowSize = 'Small';
+    }
+
     return (
       <div className="resume-section">
         <div className="resume">
@@ -203,6 +216,8 @@ class Resume extends Component {
           </div> */}
 
         </div>
+
+        {/* <Dust frequency={isMobile ? 50 : 100} intensity={!isMobile}/> */}
       </div>
     );
   }

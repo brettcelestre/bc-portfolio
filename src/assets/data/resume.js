@@ -5,6 +5,7 @@ Technical Skills:
   Backend:
     - Node.js
     - GraphQL
+    - Apollo
     - PostgreSQL
     - DynamoDB
     - Microservices

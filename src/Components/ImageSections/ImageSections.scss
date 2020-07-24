@@ -61,15 +61,23 @@ $navigation-width: 137px;
 .image-section-title {
   width: 100%;
   max-width: 1200px;
-  height: 53px;
+  height: 71px;
   text-align: left;
   background-image: url('../../assets/img/sections-title-background-2.jpg');
   border-bottom-right-radius: 5px;
+  background-position: 0px 18px;
   border-bottom-left-radius: 3px;
+  display: flex;
+  justify-content: space-between;
 
   h2 {
     padding: 18px 27px 8px 27px;
     @include font-setup('chapaza', 1.32rem, 500, #282828, none, -.25px);
+  }
+
+  span {
+    padding: 34px 34px 0 0;
+    @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
   }
 }
 
@@ -118,15 +126,18 @@ $navigation-width: 137px;
   }
 
   .image-section-title {
-    height: 51px;
+    height: 65px;
     background-image: url('../../assets/img/sections-title-background-mobile.png');
-    background-position: 0px -27px;
+    background-position: 0px -12px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
     h2 {
       padding: 15px 27px 15px 27px;
       @include font-setup('chapaza', 1.27rem, 500, #282828, none, -.25px);
       opacity: .93;
+    }
+    span {
+      font-size: 10.5px;
     }
   }
   .description {

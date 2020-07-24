@@ -159,6 +159,11 @@ $navigation-width: 137px;
   margin: auto;
   z-index: 8;
   padding: 65px 100px;
+
+  // // test
+  // position: relative;
+  // z-index: 10;
+
   &:hover {
     cursor: zoom-out;
   }
@@ -207,6 +212,7 @@ $navigation-width: 137px;
 }
 
 .gallery-image {
+  // opacity: 0;
   margin: auto;
   vertical-align: middle;
   z-index: 26;
@@ -214,6 +220,11 @@ $navigation-width: 137px;
   image-rendering: crisp-edges;
   width: auto;
   height: 100%;
+  -webkit-animation: fadein 300ms; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 300ms; /* Firefox < 16 */
+      -ms-animation: fadein 300ms; /* Internet Explorer */
+       -o-animation: fadein 300ms; /* Opera < 12.1 */
+          animation: fadein 300ms;
   &:hover {
     cursor: -moz-zoom-in; 
     cursor: -webkit-zoom-in; 
@@ -221,29 +232,31 @@ $navigation-width: 137px;
   }
 }
 
-.fade-out-gallery-image {
-  -webkit-animation: fadeout 150ms; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeout 150ms; /* Firefox < 16 */
-      -ms-animation: fadeout 150ms; /* Internet Explorer */
-       -o-animation: fadeout 150ms; /* Opera < 12.1 */
-          animation: fadeout 150ms;
-}
+// Currently not used!
+// .fade-out-gallery-image {
+//   -webkit-animation: fadeout 150ms; /* Safari, Chrome and Opera > 12.1 */
+//      -moz-animation: fadeout 150ms; /* Firefox < 16 */
+//       -ms-animation: fadeout 150ms; /* Internet Explorer */
+//        -o-animation: fadeout 150ms; /* Opera < 12.1 */
+//           animation: fadeout 150ms;
+// }
 
 .fade-in-gallery-image {
-  -webkit-animation: fadein 300ms; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 300ms; /* Firefox < 16 */
-      -ms-animation: fadein 300ms; /* Internet Explorer */
-       -o-animation: fadein 300ms; /* Opera < 12.1 */
-          animation: fadein 300ms;
+  // -webkit-animation: fadein 300ms; /* Safari, Chrome and Opera > 12.1 */
+  //    -moz-animation: fadein 300ms; /* Firefox < 16 */
+  //     -ms-animation: fadein 300ms; /* Internet Explorer */
+  //      -o-animation: fadein 300ms; /* Opera < 12.1 */
+  //         animation: fadein 300ms;
 }
 
-.fade-out-zoom-image {
-  -webkit-animation: fadein 150ms; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 150ms; /* Firefox < 16 */
-      -ms-animation: fadein 150ms; /* Internet Explorer */
-       -o-animation: fadein 150ms; /* Opera < 12.1 */
-          animation: fadein 150ms;
-}
+// Currently not used!
+// .fade-out-zoom-image {
+//   -webkit-animation: fadein 150ms; /* Safari, Chrome and Opera > 12.1 */
+//      -moz-animation: fadein 150ms; /* Firefox < 16 */
+//       -ms-animation: fadein 150ms; /* Internet Explorer */
+//        -o-animation: fadein 150ms; /* Opera < 12.1 */
+//           animation: fadein 150ms;
+// }
 
 .fade-in-zoom-image {
   -webkit-animation: fadein 500ms; /* Safari, Chrome and Opera > 12.1 */
@@ -337,8 +350,27 @@ $navigation-width: 137px;
   left: -10px;
   position: fixed;
   width: calc((100% - 150px) / 2);
+  
+  // Testing out big drop shadow that comes from under menu when you 
+  // move mouse off image to the left
+  .previous-shadow {
+    // position: relative;
+    // height: calc(100vh - 54px);
+    // left: -136px;
+    // top: -26px;
+    // width: 100px;
+    // border-radius: 4px;
+    // box-shadow: 25px 25px 20px #111;
+    // transition: 50ms;
+  }
+
   &:hover {
     cursor: pointer;
+
+    .previous-shadow {
+      // transition: 150ms;
+      // left: -126px;
+    }
   }
 }
 
@@ -349,6 +381,8 @@ $navigation-width: 137px;
   width: 175px;
   height: 225px;
   z-index: 99;
+
+
   &:hover {
     cursor: pointer;
     .arrow-background {
@@ -359,6 +393,10 @@ $navigation-width: 137px;
               animation: buttonBackgroundFadeIn 350ms;
       // background-color: rgba(255,255,255,.21);
     }
+  }
+  .previous-shadow {
+    transition: 150ms;
+    left: -126px;
   }
 }
 

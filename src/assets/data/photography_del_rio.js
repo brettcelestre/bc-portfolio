@@ -19,6 +19,126 @@ const data = ymlLoader.load(`
       width: 800
       height: 533
 
+- title: Burning The Barn
+  urlTitle: burning-the-barn-1
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1082
+    Medium:
+      width: 1100
+      height: 793
+    Small:
+      width: 800
+      height: 577
+
+- title: Burning The Barn 2
+  urlTitle: burning-the-barn-2
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1080
+    Medium:
+      width: 1100
+      height: 792
+    Small:
+      width: 800
+      height: 576
+
+- title: Burning The Barn 3
+  urlTitle: burning-the-barn-3
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1075
+    Medium:
+      width: 1100
+      height: 788
+    Small:
+      width: 800
+      height: 573
+
+- title: Burning The Barn 4
+  urlTitle: burning-the-barn-4
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1079
+    Medium:
+      width: 1100
+      height: 791
+    Small:
+      width: 800
+      height: 575
+
+- title: Burning The Barn 5
+  urlTitle: burning-the-barn-5
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1074
+    Medium:
+      width: 1100
+      height: 788
+    Small:
+      width: 800
+      height: 573
+
+- title: Burning The Barn 6
+  urlTitle: burning-the-barn-6
+  date: AUGUST 9, 2013
+  day: 9
+  year: 2013
+  orientation: landscape
+  info: Nikon Nikomat FTn - 50mm
+  description: 
+  arrows: light
+  sizes:
+    Large:
+      width: 1500
+      height: 1077
+    Medium:
+      width: 1100
+      height: 790
+    Small:
+      width: 800
+      height: 575
+
 - title: Ryan & Joel
   urlTitle: ryan-&-joel
   date: OCTOBER 2012
@@ -144,44 +264,6 @@ const data = ymlLoader.load(`
     Small:
       width: 402
       height: 600
-
-- title: Burning The Barn
-  urlTitle: burning-the-barn
-  date: AUGUST 2013
-  orientation: landscape
-  info: Nikon Nikomat FTn - 50mm
-  description: The night we burned the barn was a very important becuase we only had one chance to get it right.
-  wip:  I planned a shot list for the night and we had to move fast setting up each next 
-  arrows: dark
-  sizes:
-    Large:
-      width: 1500
-      height: 1082
-    Medium:
-      width: 1100
-      height: 703
-    Small:
-      width: 800
-      height: 577
-
-
-- title: Burning The Barn 2
-  urlTitle: burning-the-barn-02
-  date: AUGUST 2013
-  orientation: landscape
-  info: Nikon Nikomat FTn - 50mm
-  description: 
-  arrows: dark
-  sizes:
-    Large:
-      width: 1500
-      height: 1080
-    Medium:
-      width: 1100
-      height: 792
-    Small:
-      width: 800
-      height: 576
 
 - title: Creating The Desert
   urlTitle: creating-the-desert

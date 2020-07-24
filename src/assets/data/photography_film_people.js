@@ -1,5 +1,81 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
+- title: Matt 5
+  urlTitle: matt-5
+  date: 2019
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1009
+    Medium:
+      width: 1100
+      height: 740
+    Small:
+      width: 800
+      height: 538
+
+- title: Eric & Jeff
+  urlTitle: eric-&-jeff
+  date: 2019
+  size: ''
+  orientation: landscape
+  description: Happy Camp, CA
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1017
+    Medium:
+      width: 1100
+      height: 746
+    Small:
+      width: 800
+      height: 543
+
+- title: Charlotte & Scott
+  urlTitle: charlotte-&-scott
+  date: OCTOBER 2018
+  size: ''
+  orientation: landscape
+  description: Aptos, CA
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1015
+    Medium:
+      width: 1100
+      height: 745
+    Small:
+      width: 800
+      height: 541
+
+- title: Jeanne-Marie Madrid
+  urlTitle: jeanne-marie-madrid
+  date: AUGUST 2018
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 995
+    Medium:
+      width: 1100
+      height: 730
+    Small:
+      width: 800
+      height: 531
+
 - title: Jeanne-Marie Eixample
   urlTitle: jeanne-marie-eixample
   date: AUGUST 2018
@@ -7,7 +83,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: Nikon FM10 - 50mm
+  info: Nikon FM10 - 85mm
   sizes:
     Large:
       width: 1500
@@ -58,6 +134,27 @@ const data = ymlLoader.load(`
       width: 800
       height: 504
 
+- title: Grant
+  urlTitle: grant
+  date: MARCH 27, 2017
+  day: 27
+  year: 2017
+  size: ''
+  orientation: landscape
+  description: Oakland, CA
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 949
+    Medium:
+      width: 1100
+      height: 696
+    Small:
+      width: 800
+      height: 506
+
 - title: Matt & Me Editing
   urlTitle: matt-&-me-editing
   date: 2017
@@ -65,7 +162,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: 
   arrows: light
-  info: Nikon FM10 - 50mm
+  info: Nikon FM10 - 85mm
   sizes:
     Large:
       width: 1500
@@ -77,6 +174,25 @@ const data = ymlLoader.load(`
       width: 800
       height: 504
 
+- title: Jeanne-Marie Watching Construction
+  urlTitle: jeanne-marie-watching-construction
+  date: 2016
+  size: ''
+  orientation: landscape
+  description: Concord, CA
+  arrows: light
+  info: Nikon FM10 - 85mm
+  sizes:
+    Large:
+      width: 1500
+      height: 990
+    Medium:
+      width: 1100
+      height: 726
+    Small:
+      width: 800
+      height: 528
+
 - title: Geoff
   urlTitle: geoff
   date: 2016
@@ -84,7 +200,7 @@ const data = ymlLoader.load(`
   orientation: landscape
   description: San Bruno, CA
   arrows: light
-  info: Nikon FM10 - 50mm
+  info: Nikon FM10 - 85mm
   sizes:
     Large:
       width: 1500
@@ -133,6 +249,104 @@ const data = ymlLoader.load(`
     Small:
       width: 800
       height: 510
+
+- title: Jeanne-Marie Shooting
+  urlTitle: jeanne-marie-shooting
+  date: JANUARY 2013
+  year: 2013
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1059
+    Medium:
+      width: 1100
+      height: 777
+    Small:
+      width: 800
+      height: 565
+
+- title: Jeanne-Marie Buzzed
+  urlTitle: jeanne-marie-buzzed
+  date: JANUARY 2013
+  year: 2013
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon FM10 - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1074
+    Medium:
+      width: 1100
+      height: 788
+    Small:
+      width: 800
+      height: 573
+
+- title: Masked Strangers
+  urlTitle: masked-strangers
+  date: 2012
+  year: 2012
+  size: ''
+  orientation: landscape
+  description: 
+  arrows: light
+  info: Nikon Nikomat FTn - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1071
+    Medium:
+      width: 1100
+      height: 785
+    Small:
+      width: 800
+      height: 571
+
+- title: Jeanne-Marie 1
+  urlTitle: jeanne-marie-1
+  date: 2012
+  size: ''
+  orientation: landscape
+  description: San Jose, CA
+  arrows: light
+  info: Nikon Nikomat FTn - 50mm
+  sizes:
+    Large:
+      width: 1500
+      height: 1074
+    Medium:
+      width: 1100
+      height: 788
+    Small:
+      width: 800
+      height: 573
+
+- title: Jeanne-Marie 2
+  urlTitle: jeanne-marie-2
+  date: 2012
+  size: ''
+  orientation: portrait
+  description: San Jose, CA
+  arrows: dark
+  info: Nikon Nikomat FTn - 50mm
+  sizes:
+    Large:
+      width: 854
+      height: 1200
+    Medium:
+      width: 641
+      height: 900
+    Small:
+      width: 427
+      height: 600
 
 - title: AJ
   urlTitle: aj
@@ -192,48 +406,12 @@ const data = ymlLoader.load(`
       height: 825
       TODO: update small file size so height is 600 instead of width
 
-- title: Jeanne-Marie 1
-  urlTitle: jeanne-marie-1
-  date: 2011
-  size: ''
-  orientation: landscape
-  description: San Jose, CA
-  arrows: light
-  info: Nikon Nikomat FTn - 50mm
-  sizes:
-    Large:
-      width: 1500
-      height: 1074
-    Medium:
-      width: 1100
-      height: 788
-    Small:
-      width: 800
-      height: 573
-
-- title: Jeanne-Marie 2
-  urlTitle: jeanne-marie-2
-  date: 2011
-  size: ''
-  orientation: portrait
-  description: San Jose, CA
-  arrows: dark
-  info: Nikon Nikomat FTn - 50mm
-  sizes:
-    Large:
-      width: 854
-      height: 1200
-    Medium:
-      width: 641
-      height: 900
-    Small:
-      width: 427
-      height: 600
-
 - title: Matt 3
   urlTitle: matt-3
   date: 2011
   size: ''
+  taggedPeople:
+    - Matthew Celestre
   orientation: landscape
   description: 
   arrows: light
@@ -253,6 +431,8 @@ const data = ymlLoader.load(`
   urlTitle: matt-4
   date: JANUARY 2011
   size: ''
+  taggedPeople:
+    - Matthew Celestre
   orientation: landscape
   description: Drunk on a beach in Mexico
   arrows: dark
@@ -399,6 +579,63 @@ const data = ymlLoader.load(`
       height: 900
     Small:
       width: 427
+      height: 600
+
+- title: Jake
+  urlTitle: jake
+  date: 2007
+  size: ''
+  orientation: portrait
+  description: 
+  arrows: light
+  info: Nikon N55 - 50mm
+  sizes:
+    Large:
+      width: 857
+      height: 1200
+    Medium:
+      width: 643
+      height: 900
+    Small:
+      width: 429
+      height: 600
+
+- title: Jake & Brittany
+  urlTitle: jake-&-brittany
+  date: 2007
+  size: ''
+  orientation: portrait
+  description: 
+  arrows: light
+  info: Nikon N55 - 50mm
+  sizes:
+    Large:
+      width: 859
+      height: 1200
+    Medium:
+      width: 644
+      height: 900
+    Small:
+      width: 429
+      height: 600
+
+- title: Me
+  urlTitle: me
+  date: 2007
+  size: ''
+  orientation: portrait
+  description: 
+  arrows: light
+  info: Nikon N55 - 50mm
+  sizes:
+    Large:
+      width: 802
+      height: 1200
+    Medium:
+      width: 602
+      height: 900
+    Small:
+      width: 401
       height: 600
 `);
 
