@@ -1,15 +1,21 @@
 
 const ymlLoader = require('js-yaml');
+const { startImg } = require('../../utils/utils');
 
-const placesStart = require('../../assets/data/photography_digital_places.js').data[0];
-// const manipulationsStart = require('../../assets/data/photography_digital_manipulations.js').data[0];
-// const everydayLifeStart = require('../../assets/data/photography_digital_everyday-life.js').data[0];
-const natureStart = require('../../assets/data/photography_digital_nature.js').data[0];
-const peopleStart = require('../../assets/data/photography_digital_people.js').data[0];
+const places = require('../../assets/data/photography_digital_places.js');
+// const manipulationsStart = require('../../assets/data/photography_digital_manipulations.js');
+// const everydayLifeStart = require('../../assets/data/photography_digital_everyday-life.js');
+const nature = require('../../assets/data/photography_digital_nature.js');
+const people = require('../../assets/data/photography_digital_people.js');
+
+const length = places.data.length
+  + nature.data.length
+  + people.data.length;
 
 const data = ymlLoader.load(`
 - title: People
-  href: /photography/digital/people/${peopleStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/digital/people/${startImg(people).urlTitle}
+  length: ${people.data.length}
   fontStyles:
   sizes:
     Large:
@@ -23,7 +29,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Nature
-  href: /photography/digital/nature/${natureStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/digital/nature/${startImg(nature).urlTitle}
+  length: ${nature.data.length}
   fontStyles:
   sizes:
     Large:
@@ -37,7 +44,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Places
-  href: /photography/digital/places/${placesStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/digital/places/${startImg(places).urlTitle}
+  length: ${places.data.length}
   fontStyles:
   sizes:
     Large:
@@ -51,12 +59,12 @@ const data = ymlLoader.load(`
       height: 532
 `);
 
-module.exports = { data };
+module.exports = { data, length };
 
 
 
 // - title: Everyday Life
-//   href: /photography/digital/everyday-life/${everydayLifeStart.title.split(' ').join('-').toLowerCase()}
+//   href: /photography/digital/everyday-life/${startImg(everydayLife).urlTitle}
 //   fontStyles:
 //   sizes:
 //     Large:
@@ -70,7 +78,7 @@ module.exports = { data };
 //       height: 532
 
 // - title: Manipulations
-//   href: /photography/digital/desk/${manipulationsStart.title.split(' ').join('-').toLowerCase()}
+//   href: /photography/digital/desk/${startImg(manipulations).urlTitle}
 //   fontStyles:
 //   sizes:
 //     Large:

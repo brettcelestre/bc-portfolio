@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import { isMobile } from '../../utils/utils';
+import Dust from '../Dust/Dust.js';
 import './Creatives.css';
 
 import { data, tags } from '../../assets/data/links';
@@ -226,7 +228,6 @@ class Creatives extends Component {
     return (
       <div className="friends" id="friends-bg">
         <div className="friends-sort-box">
-          {/* <span className="type">Filter: </span> */}
           {this.buildSortDropdown()}
           
           <div className={this.state.fade ? "filter-options filter-options-show" : "filter-options"}>
@@ -234,12 +235,14 @@ class Creatives extends Component {
           </div>
           
           {this.buildFilteredMediums()}
-
         </div>
+
         <div className={this.state.fade ? "creatives-fade-show" : "creatives-fade-no-show"} onClick={this.toggleFilter}></div>
         <div className="friends-columns">
           {this.buildFriends()}
         </div>
+
+        {/* <Dust frequency={isMobile ? 50 : 90} intensity={!isMobile}/> */}
       </div>
     );
   }

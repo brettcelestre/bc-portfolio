@@ -1,16 +1,25 @@
 
 const ymlLoader = require('js-yaml');
+const { startImg } = require('../../utils/utils');
 
-const blackAndWhiteStart = require('../../assets/data/photography_film_black-&-white.js').data[0];
-const deskStart = require('../../assets/data/photography_film_desk.js').data[0];
-const placesStart = require('../../assets/data/photography_film_places.js').data[0];
-const natureStart = require('../../assets/data/photography_film_nature.js').data[0];
-const peopleStart = require('../../assets/data/photography_film_people.js').data[0];
-const thingsStart = require('../../assets/data/photography_film_things.js').data[0];
+const blackAndWhite = require('../../assets/data/photography_film_black-&-white.js');
+const desk = require('../../assets/data/photography_film_desk.js');
+const places = require('../../assets/data/photography_film_places.js');
+const nature = require('../../assets/data/photography_film_nature.js');
+const people = require('../../assets/data/photography_film_people.js');
+const things = require('../../assets/data/photography_film_things.js');
+
+const length = people.data.length 
+  + nature.data.length 
+  + places.data.length 
+  + things.data.length 
+  + desk.data.length
+  + blackAndWhite.data.length;
 
 const data = ymlLoader.load(`
 - title: People
-  href: /photography/film/people/${peopleStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/people/${startImg(people).urlTitle}
+  length: ${people.data.length}
   fontStyles:
   sizes:
     Large:
@@ -24,7 +33,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Nature
-  href: /photography/film/nature/${natureStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/nature/${startImg(nature).urlTitle}
+  length: ${nature.data.length}
   fontStyles:
   sizes:
     Large:
@@ -38,7 +48,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Places
-  href: /photography/film/places/${placesStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/places/${startImg(places).urlTitle}
+  length: ${places.data.length}
   fontStyles:
   sizes:
     Large:
@@ -52,7 +63,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Black & White
-  href: /photography/film/black-&-white/${blackAndWhiteStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/black-&-white/${startImg(blackAndWhite).urlTitle}
+  length: ${blackAndWhite.data.length}
   fontStyles:
   sizes:
     Large:
@@ -66,7 +78,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Things
-  href: /photography/film/things/${thingsStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/things/${startImg(things).urlTitle}
+  length: ${things.data.length}
   fontStyles:
   sizes:
     Large:
@@ -80,7 +93,8 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Desk
-  href: /photography/film/desk/${deskStart.title.split(' ').join('-').toLowerCase()}
+  href: /photography/film/desk/${startImg(desk).urlTitle}
+  length: ${desk.data.length}
   fontStyles:
   sizes:
     Large:
@@ -94,4 +108,4 @@ const data = ymlLoader.load(`
       height: 532
 `);
 
-module.exports = { data };
+module.exports = { data, length };

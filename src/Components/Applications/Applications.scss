@@ -36,6 +36,8 @@ $navigation-width: 137px;
   max-width: 1200px;
   padding: 40px 30px 70px 30px;
   margin: 0 auto;
+  position: relative;
+  z-index: 10;
 }
 
 .application-box {

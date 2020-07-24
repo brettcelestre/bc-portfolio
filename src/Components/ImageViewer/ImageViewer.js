@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { WindowResizeListener } from 'react-window-resize-listener';
 import PropTypes from 'prop-types';
+import Dust from '../Dust/Dust.js';
 import Img from 'react-image';
 // import ReactSVG from 'react-svg';
 // import { Link, Redirect } from 'react-router-dom';
@@ -158,24 +159,10 @@ class ImageViewer extends Component {
       size: currentImageData.size,
       currentSize: this.setWindowSize(window.innerWidth),
       loading: '"../../assets/svg/load-c.svg"',
-      zoom: false
+      zoom: false,
+      toolbarExpand: false,
+      toolbarContract: false
     }
-        
-    this.setWindowSize = this.setWindowSize.bind(this);
-    this.loading = this.loading.bind(this);
-    this.windowSize = this.windowSize.bind(this);
-    this.galleryWheel = this.galleryWheel.bind(this);
-    this.zoomImageState = this.zoomImageState.bind(this);
-    this.nextImg = this.nextImg.bind(this);
-    this.previousImg = this.previousImg.bind(this);
-    this.onKeyPressed = this.onKeyPressed.bind(this);
-    this.findImageData = this.findImageData.bind(this);
-    this.buildZoomImage = this.buildZoomImage.bind(this);
-    this.findGalleryIndex = this.findGalleryIndex.bind(this);
-    this.findGalleryLength = this.findGalleryLength.bind(this);
-    this.getCurrentGalleryData = this.getCurrentGalleryData.bind(this);
-    this.startSlideshow = this.startSlideshow.bind(this);
-    // this.dragImage = this.dragImage.bind(this);
   }
 
   componentDidMount() {
@@ -202,7 +189,8 @@ class ImageViewer extends Component {
     return true;
   }
 
-  loading() {
+  loading = () => {
+    // Move to scss
     const loaderStyles = {
       height: "100%",
       width: "100%",
@@ -231,7 +219,7 @@ class ImageViewer extends Component {
     )
   }
 
-  setWindowSize(width){
+  setWindowSize = (width) => {
     width -= navigationWidth; // Adjusts for navigation 
     if ( width >= 1100 ) {
       return 'Large';
@@ -242,7 +230,7 @@ class ImageViewer extends Component {
     }
   }
 
-  findGalleryLength (section, category = null, subCategory = null) {
+  findGalleryLength = (section, category = null, subCategory = null) => {
     if (subCategory) {
       return galleryData[section][category][subCategory].data.length;
     } else if ( category ) {
@@ -252,12 +240,12 @@ class ImageViewer extends Component {
     }
   }
 
-  buildSRC(category, piece, size) {
+  buildSRC = (category, piece, size) => {
     const fileTitle = piece.split(' ').join('_');
     return `../../assets/gallery/${category}/${fileTitle}_${size}.jpg`;
   }
 
-  findImageData(section, category = null, subCategory = null, name) {
+  findImageData = (section, category = null, subCategory = null, name) => {
     if (subCategory) {
       return galleryData[section][category][subCategory].data.find((piece) => {
         return name === piece.urlTitle;
@@ -269,7 +257,7 @@ class ImageViewer extends Component {
     }
   }
 
-  findGalleryIndex(section, category = null, subCategory = null, targetTitle) {
+  findGalleryIndex = (section, category = null, subCategory = null, targetTitle) => {
     if (subCategory) {
       return galleryData[section][category][subCategory].data.findIndex(piece => piece.urlTitle === targetTitle);
     } else if ( category ) {
@@ -279,7 +267,7 @@ class ImageViewer extends Component {
     }
   }
 
-  windowSize(width, height) {
+  windowSize = (width, height) => {
     if (!this.state.zoom) {                   //  Makes sure you're not zoomed in
       if ( window.innerWidth > 1024) {        // Adjusts for desktop styles
         width -= navigationWidth;             // Navigation
@@ -342,23 +330,23 @@ class ImageViewer extends Component {
     }
   }
 
-  galleryWheel(direction) {
-      const path = this.props.history.location.pathname.split('/');
-      let section, category, subCategory, piece;
-      // Deconstructs current path from props
-      if (path.length === 5) {
-        section = path[1];
-        category = path[2];
-        subCategory = path[3];
-        piece = path[4];
-      } else if ( path.length === 4) {
-        section = path[1];
-        category = path[2];
-        piece = path[3];
-      } else if ( path.length === 3) {
-        section = path[1];
-        piece = path[2];
-      }
+  galleryWheel = (direction) => {
+    const path = this.props.history.location.pathname.split('/');
+    let section, category, subCategory, piece;
+    // Deconstructs current path from props
+    if (path.length === 5) {
+      section = path[1];
+      category = path[2];
+      subCategory = path[3];
+      piece = path[4];
+    } else if ( path.length === 4) {
+      section = path[1];
+      category = path[2];
+      piece = path[3];
+    } else if ( path.length === 3) {
+      section = path[1];
+      piece = path[2];
+    }
 
     const currentGalleryData = this.getCurrentGalleryData(section, category, subCategory).data;
     const currentGalleryLength = currentGalleryData.length - 1;
@@ -382,7 +370,7 @@ class ImageViewer extends Component {
     }
   }
 
-  getCurrentGalleryData(section, category, subCategory) {
+  getCurrentGalleryData = (section, category, subCategory) => {
     if (subCategory) {
       return galleryData[section][category][subCategory];
     } else if (category) {
@@ -393,7 +381,8 @@ class ImageViewer extends Component {
   }
 
   zoomImageState = (imageData) => {
-    if (this.state.zoom) {
+    const { zoom } = this.state;
+    if (zoom) {
       this.setState({
         zoom: false,
       });
@@ -405,7 +394,7 @@ class ImageViewer extends Component {
     }
   }
 
-  buildImageSRC(section, category = null, subCategory = null, piece) {
+  buildImageSRC = (section, category = null, subCategory = null, piece) => {
     if (subCategory) {
       return images[section][category][subCategory][piece];
     } else if (category) {
@@ -415,9 +404,11 @@ class ImageViewer extends Component {
     }
   }
 
-  buildZoomImage(section, category, subCategory, piece, index) {
-    if (this.state.zoom) {
-      const newHeight = this.getCurrentGalleryData(section, category, subCategory).data[index].sizes['Large'].height;
+  buildZoomImage = (section, category, subCategory, piece, index) => {
+    const { getCurrentGalleryData, buildImageSRC, zoomImageState } = this;
+    const { zoom } = this.state;
+    if (zoom) {
+      const newHeight = getCurrentGalleryData(section, category, subCategory).data[index].sizes['Large'].height;
       let zoomDimensions = 'Large';
       if ( window.innerWidth <= 799) {   // Mobile - Loads medium size image
         zoomDimensions = 'Medium';
@@ -425,12 +416,12 @@ class ImageViewer extends Component {
 
       return(
         <img
-          src={this.buildImageSRC(section, category, subCategory, piece)['Large']}
-          width={this.getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
-          height={this.getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
+          src={buildImageSRC(section, category, subCategory, piece)['Large']}
+          width={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
+          height={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
           className="zoom-image fade-in-zoom-image"
           id="zoom-image"
-          onClick={this.zoomImageState}
+          onClick={zoomImageState}
         />
       );
     }
@@ -444,39 +435,56 @@ class ImageViewer extends Component {
   //   console.log('>> e - ', e);
   // }
 
-  startSlideshow() {
+  startSlideshow = () => {
     const { galleryWheel } = this;
     // add a style to the images to fade in slower
-    console.log('slideshow start');
+    // console.log('slideshow start');
     setInterval(() => {
       galleryWheel('next');  
     }, 3000);
   }
 
-  stopSlideshow() {
+  stopSlideshow = () => {
     // TODO STOP slideshow. maybe make the slideshow button a toggle
   }
 
-  previousImg() {
+  previousImg = () => {
     this.galleryWheel('previous');
   }
 
-  nextImg() {
+  nextImg = () => {
     this.galleryWheel('next');
   }
 
-  onKeyPressed(e) {
-    if ( e.keyCode == '37' && this.state.zoom == false) this.previousImg(); // left arrow
-    if ( e.keyCode == '39' && this.state.zoom == false) this.nextImg(); // right arrow
+  onKeyPressed = (e) => {
+    const { zoom, toolbarExpand, toolbarContract } = this.state;
+    if ( e.keyCode == '37' && zoom == false) this.previousImg(); // left arrow
+    if ( e.keyCode == '39' && zoom == false) this.nextImg(); // right arrow
+    // Have down array pop UP the toolbar // down arrow
+    if ( e.keyCode == '40' && zoom == false && toolbarExpand === false) {
+      // this.setState({
+      //   toolbarExpand: true
+      // })
+    } 
+    // Have up array pop DOWN the toolbar
+    if ( e.keyCode == '38' && zoom == false && toolbarContract === false) {
+      // this.setState({
+      //   toolbarContract: true
+      // });
+    }
+    
     // TODO: currently breaks if your mouse is over the toolbar and you zoom out
     // if ( e.keyCode == '187' || e.keyCode == '189' && this.state.zoom == false) this.zoomImageState();
   }
 
-  render() {
+  render = () => {
     const { section, category, subCategory, piece } = this.props.match.params;
     const imageData = this.findImageData(section, category, subCategory, piece);
-    const currentGalleryLength = this.getCurrentGalleryData(section, category, subCategory).data.length;
+    const galleryData = this.getCurrentGalleryData(section, category, subCategory).data;
+    const galleryData2 = this.getCurrentGalleryData(section, category, subCategory);
+    const currentGalleryLength = galleryData.length;
     const currentIndex =  this.findGalleryIndex(section, category, subCategory, piece) + 1;
+    const galleryPath = {section, category, subCategory, piece };
 
     // If Tablet or Mobile load arrow colors. Otherwise, arrows should be black
     let arrowsColor = 'arrow-background';
@@ -499,8 +507,12 @@ class ImageViewer extends Component {
     const imgWidth = imageData.sizes[this.state.currentSize].width;
     const imgHeight = imageData.sizes[this.state.currentSize].height;
     let currentOrientation = (height/width >= imgHeight/imgWidth) ? 
-      'gallery-image landscape fade-in-gallery-image' :
-      'gallery-image portrait fade-in-gallery-image';
+      'gallery-image landscape' :
+      'gallery-image portrait';
+      // 'gallery-image landscape fade-in-gallery-image' :
+      // 'gallery-image portrait fade-in-gallery-image';
+
+      console.log(" >> galleryData ", galleryData);
 
     return (
       <div className={this.state.zoom === false ? "image-viewer" : "image-viewer-zoom image-viewer"} id="image-viewer-box" tabIndex="0">
@@ -525,7 +537,7 @@ class ImageViewer extends Component {
           <div className="image-view-breadcrumb">
             {(section && section !== 'spatial') && <Link to={`/${section}`}><span className="image-view-breadcrumb-link">{section}</span></Link>}
             {category && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
-            {category && !subCategory && <Link to={`/${section}/${category}/${galleryData[section][category].data[0].urlTitle}`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
+            {category && !subCategory && <Link to={`/${section}/${category}/${galleryData[0].urlTitle}`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
             {category && subCategory && <Link to={`/${section}/${category}/sections`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
             {/* {subCategory && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
             {subCategory && <Link to={`/${section}/${category}/${subCategory}/${galleryData[section][category][subCategory].data[0].urlTitle}`}><span className="image-view-breadcrumb-link">{subCategory}</span></Link>} */}
@@ -590,6 +602,7 @@ class ImageViewer extends Component {
             className={this.state.zoom ? "image-hide" : 
               (currentIndex === 1 ? "previous disable-navigation" : "previous")}
             onClick={this.previousImg}>
+              <div className="previous-shadow"></div>
           </div>
 
           {/* Background Next box */}
@@ -601,14 +614,23 @@ class ImageViewer extends Component {
         </div>
 
         <Toolbar 
+          // pass up arrow this.state.toolbarExpand
+          // pass down arrow this.state.toolbarContract
           imageData={imageData}
           imageZoom={this.zoomImageState}
           imageZoomState={this.state.zoom}
+          galleryPath={galleryPath}
+          galleryData={galleryData}
+          buildImageSRC={this.buildImageSRC}
+          currentSize={this.state.currentSize}
           imageHeight={this.state.height}
           galleryLength={currentGalleryLength}
           currentIndex={currentIndex}
           startSlideshow={this.startSlideshow}
         />
+
+        {/* Dust mainly doesn't look good on mobile */}
+        {/* {!this.state.zoom && <Dust frequency={50} intensity={false}/>} */}
       </div>
     );
   }

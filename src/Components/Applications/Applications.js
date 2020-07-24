@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import Img from 'react-image';
+import Dust from '../Dust/Dust.js';
 import './Applications.css';
 
 import spinner from '../../assets/img/spinner.gif';
@@ -145,6 +146,7 @@ class Applications extends Component {
         <div className="applications-section">
           {this.buildApplications()}
         </div>
+        {/* <Dust frequency={150} intensity={true} /> */}
       </div>
     );
   }
