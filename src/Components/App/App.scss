@@ -97,7 +97,8 @@ $navigation-width: 137px;
   position: relative;
   display: block;
   width: $navigation-width;
-  margin-top: -7px;
+  margin-top: 60px;
+  // padding-top: 90px;
   height: 35px;
   text-align: center;
 }
@@ -424,6 +425,7 @@ li {
   }
 
   .main-title {
+    display: none;
     letter-spacing: -0.07rem;
     font-size: 1.55rem;
     margin-top: 7.25px;
