@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Toolbar.css';
 import arrow from '../../assets/img/toolbar-arrow.png';
+import person from '../../assets/svg/ios-person.svg';
+import Scroll from '../Scroll/Scroll';
+import Img from 'react-image';
 
 class Toolbar extends Component {
 
@@ -10,15 +14,12 @@ class Toolbar extends Component {
       zoomWidth: { width: 'auto' },
       descriptionHeight: 0,
       showInfo: false,
+      showThumbs: false,
+      scrollThumbsPreview: false,
+      // scrollThumbsPreview: true,
       isMobile: this.findWindowSize()
     }
 
-    this.findWindowSize = this.findWindowSize.bind(this);
-    this.toolbarInfoToggle = this.toolbarInfoToggle.bind(this);
-    this.resetToolbarHeight = this.resetToolbarHeight.bind(this);
-    this.includeSize = this.includeSize.bind(this);
-    this.toolbarExpand = this.toolbarExpand.bind(this);
-    this.toolbarContract = this.toolbarContract.bind(this);
   }
 
   componentDidUpdate() {
@@ -50,7 +51,7 @@ class Toolbar extends Component {
     }
   }
 
-  findWindowSize() {
+  findWindowSize = () => {
     const windowWidth = window.innerWidth;
     if ( windowWidth > 1024) {
       return 'desktop';
@@ -61,7 +62,7 @@ class Toolbar extends Component {
     }
   }
 
-  toolbarExpand() {
+  toolbarExpand = () => {
     if ( this.findWindowSize() === 'desktop' ) {
         let heightAdjustment;
         let isMobile = false;
@@ -88,7 +89,7 @@ class Toolbar extends Component {
     }
   }
 
-  toolbarContract() {
+  toolbarContract = () => {
     if ( this.findWindowSize() === 'desktop' ) {
       this.setState({
         showInfo: false,
@@ -98,7 +99,7 @@ class Toolbar extends Component {
     }
   }
 
-  toolbarInfoToggle(where) {
+  toolbarInfoToggle = (where) => {
     const size = this.findWindowSize();
     if ( size === 'tablet' || size === 'mobile' ) {
       if (this.state.showInfo) {
@@ -134,7 +135,7 @@ class Toolbar extends Component {
     }
   }
 
-  displayResetBox(){
+  displayResetBox = () => {
     if (this.state.showInfo) {
       return(
         <div className="toolbar-reset-box"
@@ -145,23 +146,61 @@ class Toolbar extends Component {
     return;
   }
 
-  resetToolbarHeight(){
+  resetToolbarHeight = () => {
     this.setState({
       descriptionHeight: 0
     })
   }
 
-  includeSize(){
+  includeSize = () => {
     if (this.props.imageData.size) {
       return ` - ${this.props.imageData.size}`;
     }
     return '';
   }
 
+  includePeople = () => {
+    if (this.props.imageData.taggedPeople) {
+      return (
+        <span className="tagged-people">
+          <img src={person} className="tagged-person-icon" /> {this.props.imageData.taggedPeople.map(p => p)}
+        </span>
+      )
+    }
+    return '';
+  }
+
+  toggleScrollThumbsPreview = () => {
+    const { scrollThumbsPreview } = this.state;
+    this.setState({
+      scrollThumbsPreview: !scrollThumbsPreview
+    });
+  }
+
+  showScrollThumbsPreview = () => {
+    const { showInfo } = this.state;
+    this.setState({
+      scrollThumbsPreview: true
+    });
+  }
+
+  hideScrollThumbsPreview = () => {
+    this.setState({
+      scrollThumbsPreview: false
+    });
+  }
+
+  loadingPreview = (x) => {
+    return (<div className="loading-preview-image">{x}</div>)
+  }
+
   render() {
-    const { startSlideshow } = this.props;
+    const { startSlideshow, galleryData, imageData, buildImageSRC, galleryPath, currentSize } = this.props;
+    const { toggleScrollThumbsPreview, showScrollThumbsPreview, hideScrollThumbsPreview, loadingPreview } = this;
+    const { showInfo, showThumbs, scrollThumbsPreview, descriptionHeight } = this.state;
     if ( this.props.imageZoomState) return null;
 
+    const desktopResting = 50;
     let toolbarHeight,
         indexHeight,
         mobileTabletBar,
@@ -174,18 +213,21 @@ class Toolbar extends Component {
         titleClassNames += ' title-desktop';
         dateClassNames += ' image-date-desktop';
         mobileTabletBar = 'disable-display';
-        toolbarHeight = 50 + this.state.descriptionHeight;
-        indexHeight = 43 + (this.state.descriptionHeight / 2);
+        toolbarHeight = desktopResting + descriptionHeight;
+        // indexHeight = desktopResting + (descriptionHeight / 2);
+        indexHeight = desktopResting + descriptionHeight;
         break;
       case 'tablet':
         mobileTabletBar = 'toolbar-pull-bar';
-        toolbarHeight = 50 + this.state.descriptionHeight;
-        indexHeight = 43 + (this.state.descriptionHeight / 2);
+        toolbarHeight = 50 + descriptionHeight;
+        // indexHeight = desktopResting + (descriptionHeight / 2);
+        indexHeight = desktopResting + descriptionHeight;
         break;
       case 'mobile':
         mobileTabletBar = 'toolbar-pull-bar';
-        toolbarHeight = 62 + this.state.descriptionHeight;
-        indexHeight = 48 + (this.state.descriptionHeight / 2);
+        toolbarHeight = 62 + descriptionHeight;
+        // indexHeight = 48 + (descriptionHeight / 2);
+        indexHeight = 48 + descriptionHeight;
         break;
       default:
         break;
@@ -199,15 +241,25 @@ class Toolbar extends Component {
     }
 
     let indexStyles = {
-      height: `${indexHeight}px`,
+      height: `${indexHeight}px`
     };
+
+    const indexHoverStyles = {
+      paddingTop: `${indexHeight / 2 }px`
+    }
+
+    console.log("Toolbar:");
+    console.log(" > imageData = ", imageData);
+    console.log(" > galleryData = ", galleryData);
 
     return (
       <div 
       className="toolbar"
       onMouseEnter={this.toolbarExpand}
       onMouseLeave={this.toolbarContract}
-      onClick={this.toolbarInfoToggle}>
+      onClick={this.toolbarInfoToggle}
+      // onMouseEnter={toggleScrollThumbsPreview}
+      >
 
         <div className={toollbarClassNames} style={toolbarStyles}>
 
@@ -230,7 +282,13 @@ class Toolbar extends Component {
 
             <div className={this.state.showInfo ? "image-description description-focus" :"image-description"}>
               <span className="image-info">
-                {this.props.imageData.info}{this.includeSize()}<br />
+                {this.props.imageData.info}
+                {this.includeSize()}
+                {this.props.imageData.taggedPeople && (
+                  this.includePeople()
+                )}
+                <br />
+                {/* {this.props.imageData.info}{this.includeSize()}<br /> */}
               </span>
               <div className="description-details-spacer"></div>
               <span className="image-description-details">
@@ -241,11 +299,71 @@ class Toolbar extends Component {
             {/* <div className="slideshow-button" onClick={startSlideshow}>
               Slideshow
             </div> */}
+
+            {/* <div className="gallery-thumb-box" style={toolbarStyles} onClick={showThumbScroll}> */}
+              {/* <Scroll showInfo={this.state.showInfo} height={indexHeight} /> */}
+              {/* <div className={showInfo ? "thumb-box-animation" : "hide"}>
+                
+              </div> */}
+            {/* </div> */}
             
-            <div className="gallery-index-box" style={indexStyles}>
+            {/* {scrollThumbsPreview && (
+              <div className="scroll-thumbs-preview-container" onMouseLeave={toggleScrollThumbsPreview}>
+                BOX
+              </div>
+            )} */}
+
+            <div
+              className={`scroll-thumbs-preview-container ${scrollThumbsPreview ? "preview-show" : ""}`}
+              onMouseEnter={showScrollThumbsPreview} 
+              onMouseLeave={hideScrollThumbsPreview}
+              >
+                {scrollThumbsPreview && galleryData.map((image) => {
+                  // console.log("  >> image.title ", image.title);
+                  // console.log("  >> galleryPath = ", galleryPath);
+                  const { section, category, subCategory, piece } = galleryPath;
+                  const linkUrl = () => {
+                    if (section && category && subCategory) {
+                      return `/${section}/${category}/${subCategory}/${image.urlTitle}`;
+                    }
+                    if (section && category) {
+                      return `/${section}/${category}/${image.urlTitle}`;
+                    }
+                  };
+
+                  const link = linkUrl();
+
+                  console.log("link = ", link);
+                  // return <div>testing</div>;
+                  // return (
+                  //   <Link to={link} replace className="thumb-preview-container">
+                  //     {loadingPreview()}
+                  //   </Link>);
+                  return (
+                    <Link to={link} replace className="thumb-preview-container">
+                      {/* {loadingPreview(image.urlTitle)} */}
+                      <Img 
+                        src={buildImageSRC(section, category, subCategory, image.urlTitle)[currentSize]}
+                        className="thumb-preview-image"
+                        loading={loadingPreview}
+                        key={`${image.urlTitle}-thumb`}
+                        />
+                    </Link>);
+                })}
+                <div className="thumb-gallery-spacer"></div>
+            </div>
+
+            <div 
+              className="gallery-index-box" 
+              style={indexStyles}
+              onClick={showScrollThumbsPreview}
+              onMouseEnter={showScrollThumbsPreview}
+              onMouseLeave={hideScrollThumbsPreview}
+              >
               <div className="gallery-index">
                 {this.props.currentIndex}/{this.props.galleryLength}
               </div>
+              <Scroll showInfo={this.state.showInfo} height={indexHeight} />
             </div>
           
           </div>

@@ -47,19 +47,20 @@ class About extends Component {
     return (
       <div className="about-section">
         <div className="about-content">
-          I am a mixed media creative who enjoys experimentation.
+          {/* I am a mixed media creative who enjoys experimentation. */}
            {/* and exploring techniques.  */}
           {/* I am most interested in combining techniques from one medium to another - typically traditional and digital.  */}
-          <br /><br /><br />
+          {/* <br /><br /><br /> */}
           {/* In 2013, I graduated from San Jose State University with a Bachelor of Fine Arts in Digital Media.
           <br /><br /><br /> */}
-          Currently a software engineer at <a href="https://www.starcity.com" className="highlight" target="blank">Starcity</a> in San Francisco.
-          <br /><br /><br />
+          {/* Currently a software engineer at <a href="https://www.starcity.com" className="highlight" target="blank">Starcity</a> in San Francisco. */}
+          {/* <br /><br /><br /> */}
+          
           <Link to="/resume" replace className="highlight">
-            View Resume
+            Resume
           </Link>
-          {/* <br /><br /> */}
-          {/* <a href="https://www.instagram.com/brettcelestre/" target="blank"  className="highlight">
+          <br />
+          <a href="https://www.instagram.com/brettcelestre/" target="blank"  className="highlight">
             Instagram
           </a>
           <br />
@@ -69,9 +70,8 @@ class About extends Component {
           <br />
           <a href="/https://www.linkedin.com/in/brettcelestre/" target="blank" className="highlight">
             LinkedIn
-          </a> */}
-          <br /><br />
-          Reach out
+          </a>
+          <br />
           <br />
           <span className="highlight"><a href="mailto:brettcelestre@gmail.com">brettcelestre<span className="about-email-at">@</span>gmail.com</a></span>
         </div>

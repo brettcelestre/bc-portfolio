@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Img from 'react-image';
 import { WindowResizeListener } from 'react-window-resize-listener';
+import { isMobile } from '../../utils/utils';
 import './ImageSections.css';
 import spinner from '../../assets/img/spinner.gif';
 
@@ -142,13 +143,13 @@ class ImageSections extends Component {
       verticalAlign: "middle"
     }
 
-    return data[target].data.map((piece, i) => {
+    return data[target].data.map((section, i) => {
       let cover = category ?
-      require(`../../assets/gallery/${this.state.section}/${this.state.category}/${this.genUrlString(piece.title)}/Banner_${this.state.currentSize}.jpg`) :
-      require(`../../assets/gallery/${this.state.section}/${this.genUrlString(piece.title)}/Banner_${this.state.currentSize}.jpg`);
+      require(`../../assets/gallery/${this.state.section}/${this.state.category}/${this.genUrlString(section.title)}/Banner_${this.state.currentSize}.jpg`) :
+      require(`../../assets/gallery/${this.state.section}/${this.genUrlString(section.title)}/Banner_${this.state.currentSize}.jpg`);
       return (
-        <div className="section-thumbnail-box" key={piece.title}>
-          <Link to={piece.href} onClick={this.scrollToTop}>
+        <div className="section-thumbnail-box" key={section.title}>
+          <Link to={section.href} onClick={this.scrollToTop}>
               <div className="section-thumbnail" id="section-thumbnail">
                 <Img
                   src={cover}
@@ -162,7 +163,8 @@ class ImageSections extends Component {
                 />
               </div>
               <div className="image-section-title">
-              <h2>{piece.title}</h2>
+              <h2>{section.title}</h2>
+              <span>{section.length} {this.state.section === 'artwork' ? "IMAGES" : "PHOTOS"}</span>
               </div>
           </Link>
         </div>

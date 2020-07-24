@@ -92,13 +92,20 @@ const updateImageSize = () => {
 // updateImageSize();
 // window.onresize = updateImageSize;
 
+const isMobile = () => window.innerWidth <= 799;
 
 const scrollTop = () => { 
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0
 }
 
+const startImg = (section) => {
+  return section.data[0];
+};
+
 module.exports = { 
   updateImageSize,
-  scrollTop
+  isMobile,
+  scrollTop,
+  startImg
 };

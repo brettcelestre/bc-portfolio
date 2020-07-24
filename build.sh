@@ -37,7 +37,7 @@ echo "---------------------------------"
 echo "> 6/6 Archiving build"
 DATE=$(date '+%m-%d-%Y')
 ARCHIVE_FOLDER="build-${DATE}"
-mv build "../${ARCHIVE_PATH}/"
+mv "build" "../${ARCHIVE_PATH}/${ARCHIVE_FOLDER}"
 
 echo "\n\n"
 
