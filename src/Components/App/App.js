@@ -96,7 +96,7 @@ class App extends Component {
 
         <div className="app-menu">
 
-          <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/>
+          {/* <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/> */}
 
           <div className="main-title-box">
             <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
@@ -122,17 +122,17 @@ class App extends Component {
               </div>
             </Link>
             
-            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
+            {/* <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
               <div className="section-title menu-spatial">
                 Spatial
               </div>
-            </Link>
+            </Link> */}
 
-            <Link to="/applications" replace onClick={this.cleanUp}>
+            {/* <Link to="/applications" replace onClick={this.cleanUp}>
               <div className="section-title menu-apps">
                 Applications
               </div>
-            </Link>
+            </Link> */}
 
             {/* <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title menu-resources">
@@ -152,11 +152,11 @@ class App extends Component {
               </div>
             </Link> */}
 
-            <Link to="/resume" replace onClick={this.cleanUp}>
+            {/* <Link to="/resume" replace onClick={this.cleanUp}>
               <div className="section-title">
                 Resume
               </div>
-            </Link>
+            </Link> */}
 
             <div className="social-media-spacer"></div>
             
