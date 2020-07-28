@@ -20,18 +20,25 @@
 
 .short-films-sections {
   position: relative;
-  width: 100%;
+  // width: 100%;
   max-width: 1500px !important;
   margin: 0 auto;
-  padding: 20px 0 20px 137px;
   box-sizing: border-box;
+  // Original
+  // padding: 20px 0 20px 137px;
+  
+  // Matches everything else
+  margin-left: 137px;
+  width: calc(100% - 137px);
+  padding: 22px 40px 110px 40px;
 }
 
 .short-film-box {
   width: auto;
   max-width: 1500px;
   max-height: 900px;
-  padding: 40px;
+  padding-bottom: 40px;
+  // padding: 40px;
   &:hover {
     cursor: pointer;
   }
@@ -79,14 +86,10 @@
 // Tablet Size -  and (max-height: 736px)
 @media (max-width: 1024px) {
   .short-films-sections {
+    max-width: unset;
     margin: 65px 0;
-    padding: 0 35px;
-  }
-
-  .short-film-box {
-    padding: 40px 0;
-  }
-  
+    width: 100%;
+  }  
 }
 
 // Mobile Size

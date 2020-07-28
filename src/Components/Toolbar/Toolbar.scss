@@ -250,40 +250,41 @@ $nav-h-desktop-rest: 50px;
 
   // background-color: blue;
 
-  &:hover {
-    cursor: pointer;
-    .gallery-index {
-      // @include font-setup('chapaza', 1.2rem, 500, rgb(20, 20, 20), none, -.75px);
-      font-size: 1rem;
-      transition-duration: 150ms;
-    }
-    // .scroll-thumbs-preview-container {
-    //   display: block;
-    //   background-color: blue;
-    // }
-    .scroll-container {
-      // transition-duration: 500ms;
-      // top: 33px;
-      opacity: 0;
-    }
-    .scroll-box {
-      // width: 14px;
-      // height: 14px;
-      // padding: 0 15px;
-      // animation-name: scrollBoxZoom;
-      // animation-iteration-count: infinite;
-      // animation-timing-function: linear;
-      // animation-duration: 6000ms;
-    }
-      // display: none;
-      // width: 100px;
-      // top: -50px;
-    // }
-    // .scroll-box {
-    //   width: 16px;
-    //   height: 16px;
-    // } 
-  }
+  // Scroll thumbs styles
+  // &:hover {
+  //   cursor: pointer;
+  //   .gallery-index {
+  //     // @include font-setup('chapaza', 1.2rem, 500, rgb(20, 20, 20), none, -.75px);
+  //     font-size: 1rem;
+  //     transition-duration: 150ms;
+  //   }
+  //   // .scroll-thumbs-preview-container {
+  //   //   display: block;
+  //   //   background-color: blue;
+  //   // }
+  //   .scroll-container {
+  //     // transition-duration: 500ms;
+  //     // top: 33px;
+  //     opacity: 0;
+  //   }
+  //   .scroll-box {
+  //     // width: 14px;
+  //     // height: 14px;
+  //     // padding: 0 15px;
+  //     // animation-name: scrollBoxZoom;
+  //     // animation-iteration-count: infinite;
+  //     // animation-timing-function: linear;
+  //     // animation-duration: 6000ms;
+  //   }
+  //     // display: none;
+  //     // width: 100px;
+  //     // top: -50px;
+  //   // }
+  //   // .scroll-box {
+  //   //   width: 16px;
+  //   //   height: 16px;
+  //   // } 
+  // }
 }
 
 // .scrolling-wrapper {

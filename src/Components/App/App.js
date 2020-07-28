@@ -24,7 +24,6 @@ class App extends Component {
       medium: '',
       mobileMenu: false,
       fade: false,
-      year: new Date().getFullYear(),
       selected: props.location.pathname.split('/')[1]
     };
 
@@ -70,7 +69,9 @@ class App extends Component {
   }
 
   render() {
-    const { selected } = this.state;
+    // const { selected } = this.state;
+    const year = new Date().getFullYear();
+
 
     let socialMediaIconSize;
     if ( window.innerWidth > 1024) {          // Desktop
@@ -132,7 +133,7 @@ class App extends Component {
               </div>
             </Link> */}
 
-            {/* <Link to="/resources" replace onClick={this.cleanUp}>
+            <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title menu-resources">
                 Resources
               </div>
@@ -190,7 +191,7 @@ class App extends Component {
               </div>
             
               <div className="copyright-box">
-                <h5 className="copyright">© {this.state.year}<br />
+                <h5 className="copyright">© {year}<br />
                 BRETT CELESTRE</h5>
               </div>
             </div>

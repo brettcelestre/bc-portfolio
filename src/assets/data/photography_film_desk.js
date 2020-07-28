@@ -2,6 +2,7 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: "2018"
   urlTitle: "2018"
+  cdn: "https://res.cloudinary.com/dpsjit8an/image/upload/v1595906337/portfolio/2018_Large_jtr6is.jpg"
   date: 
   size: ''
   orientation: landscape

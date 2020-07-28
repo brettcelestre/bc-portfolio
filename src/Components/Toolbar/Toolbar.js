@@ -214,20 +214,26 @@ class Toolbar extends Component {
         dateClassNames += ' image-date-desktop';
         mobileTabletBar = 'disable-display';
         toolbarHeight = desktopResting + descriptionHeight;
-        // indexHeight = desktopResting + (descriptionHeight / 2);
-        indexHeight = desktopResting + descriptionHeight;
+        indexHeight = desktopResting + (descriptionHeight / 2);
+
+        // Scroll Height
+        // indexHeight = desktopResting + descriptionHeight;
         break;
       case 'tablet':
         mobileTabletBar = 'toolbar-pull-bar';
         toolbarHeight = 50 + descriptionHeight;
-        // indexHeight = desktopResting + (descriptionHeight / 2);
-        indexHeight = desktopResting + descriptionHeight;
+        indexHeight = desktopResting + (descriptionHeight / 2);
+        
+        // Scroll Height
+        // indexHeight = desktopResting + descriptionHeight;
         break;
       case 'mobile':
         mobileTabletBar = 'toolbar-pull-bar';
         toolbarHeight = 62 + descriptionHeight;
-        // indexHeight = 48 + (descriptionHeight / 2);
-        indexHeight = 48 + descriptionHeight;
+        indexHeight = 48 + (descriptionHeight / 2);
+        
+        // Scroll Height
+        // indexHeight = 48 + descriptionHeight;
         break;
       default:
         break;
@@ -309,6 +315,10 @@ class Toolbar extends Component {
               </div>
             )} */}
 
+            {/* 
+
+            Thumb Scroll below
+
             <div
               className={`scroll-thumbs-preview-container ${scrollThumbsPreview ? "preview-show" : ""}`}
               onMouseEnter={showScrollThumbsPreview} 
@@ -336,7 +346,6 @@ class Toolbar extends Component {
                   //   </Link>);
                   return (
                     <Link to={link} replace className="thumb-preview-container">
-                      {/* {loadingPreview(image.urlTitle)} */}
                       <Img 
                         src={buildImageSRC(section, category, subCategory, image.urlTitle)[currentSize]}
                         className="thumb-preview-image"
@@ -346,7 +355,7 @@ class Toolbar extends Component {
                     </Link>);
                 })}
                 <div className="thumb-gallery-spacer"></div>
-            </div>
+            </div> */}
 
             <div 
               className="gallery-index-box" 
@@ -358,7 +367,7 @@ class Toolbar extends Component {
               <div className="gallery-index">
                 {this.props.currentIndex}/{this.props.galleryLength}
               </div>
-              <Scroll showInfo={this.state.showInfo} height={indexHeight} />
+              {/* <Scroll showInfo={this.state.showInfo} height={indexHeight} /> */}
             </div>
           
           </div>
