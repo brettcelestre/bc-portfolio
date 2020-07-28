@@ -248,10 +248,6 @@ class Toolbar extends Component {
       paddingTop: `${indexHeight / 2 }px`
     }
 
-    console.log("Toolbar:");
-    console.log(" > imageData = ", imageData);
-    console.log(" > galleryData = ", galleryData);
-
     return (
       <div 
       className="toolbar"
@@ -333,7 +329,6 @@ class Toolbar extends Component {
 
                   const link = linkUrl();
 
-                  console.log("link = ", link);
                   // return <div>testing</div>;
                   // return (
                   //   <Link to={link} replace className="thumb-preview-container">
