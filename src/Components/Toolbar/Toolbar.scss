@@ -335,6 +335,7 @@ $nav-h-desktop-rest: 50px;
   margin: 0px 6px;
   // top: 0px;
   transition-duration: 250ms;
+  justify-content: bottom;
   &:hover {
     // top: -9px;
     // margin-top: 0px;
@@ -352,10 +353,22 @@ $nav-h-desktop-rest: 50px;
 
 .thumb-preview-image {
   // margin-top: 2.5px;
+  // margin-top: 0px;
+  // top: 0px;
   height: 175px;
   width: auto;
+  transition-duration: 250ms;
   box-shadow: 2px 3px 7px 0  rgba(6, 6, 6, .67);
+  &:hover {
+    transition-duration: 250ms;
+    // top: -15px;
+    height: 200px;
+  }
 }
+
+// .thumb--selected {
+//   height: 
+// }
 
 .thumb-gallery-spacer {
   position: relative;
