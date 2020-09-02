@@ -131,7 +131,7 @@ class App extends Component {
               <div className="section-title menu-apps">
                 Applications
               </div>
-            </Link> */}
+            </Link>
 
             <Link to="/resources" replace onClick={this.cleanUp}>
               <div className="section-title menu-resources">
