@@ -3,7 +3,7 @@
 # ARCHIVE_PATH=name-of-archive-folder-in-parent-directory
 
 echo "---------------------------------"
-echo "       Starting build"
+echo "       Starting deployment"
 echo "---------------------------------"
 source .env
 
@@ -37,11 +37,11 @@ echo "---------------------------------"
 echo "> 6/6 Archiving build"
 DATE=$(date '+%m-%d-%Y')
 ARCHIVE_FOLDER="build-${DATE}"
-mv "/build" "../${ARCHIVE_PATH}"
+mv "./build" "../${ARCHIVE_PATH}/${ARCHIVE_FOLDER}"
 
 echo "\n\n"
 
 
 echo "---------------------------------"
-echo "       Build Successful"
+echo "       Deployment Successful"
 echo "---------------------------------"

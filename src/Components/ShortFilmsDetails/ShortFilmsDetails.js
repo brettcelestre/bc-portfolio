@@ -34,7 +34,6 @@ const buildFolderName = (title) => {
 const requireAllImages = (data) => {
   data.forEach((film) => {
     const name = buildFolderName(film.title);
-    // console.log('name name = ', name);
     filmDetailsImages[name] = {details: {}};
     filmDetailsImages[name].details = {
       Small: require(`../../assets/gallery/short-films/${name}/details/Banner_Small.jpg`),
@@ -42,7 +41,6 @@ const requireAllImages = (data) => {
       Large: require(`../../assets/gallery/short-films/${name}/details/Banner_Large.jpg`)
     }
     if(film.options !== null && film.options.length) {
-      // console.log(' options = ', film.options);
       film.options.forEach((option) => {
         const optionKey = buildFolderName(option.name);
         filmDetailsImages[name][optionKey] = {
@@ -141,10 +139,6 @@ class ShortFilmsDetails extends Component {
     return this.state.filmData.options.map((option) => {
       const optionKey = buildFolderName(option.name);
 
-      // const optionDetails = () => {
-      //   if (option.type === 'video')
-      // }
-
       return (
         <div className="short-film-options-box" id={option.name} key={option.name}>
 
@@ -176,9 +170,6 @@ class ShortFilmsDetails extends Component {
   }
 
   render() {
-    // const { film } = this.props.match.params;
-    // console.log('Dtails = ', this.state.filmData);
-
     let loaderHeight, windowWidth = window.innerWidth;
     if ( windowWidth > 1024 ) {                                // Desktop
       loaderHeight = "540px";
@@ -257,13 +248,13 @@ class ShortFilmsDetails extends Component {
             </div>
           </Link>
 
-          <div className="short-films-details-description">
+          {/* <div className="short-films-details-description">
             {this.state.filmData.description}
-          </div>
+          </div> */}
 
-          <div className="short-film-divider">
+          {/* <div className="short-film-divider">
             <img src={dividerLines[2]} className="divider-img" alt="divider-bar"/>
-          </div>
+          </div> */}
 
           <div className="short-films-details-credits">
             <Link to={`/short-films/credits/${this.state.filmData.urlTitle}`}
