@@ -111,7 +111,11 @@ class Creatives extends Component {
       }, []);
     }
 
-    return friendsData.map((data, i) => {
+    return friendsData.sort(function(a, b){
+      if(a.title < b.title) { return -1; }
+      if(a.title > b.title) { return 1; }
+      return 0;
+      }).map((data, i) => {
       const primaryLink = data.links.find((val) => val.type === 'Portfolio') || data.links[0];
       // TODO: Support multiple links for multiple platforms
       return (

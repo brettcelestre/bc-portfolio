@@ -445,10 +445,6 @@ module.exports = { data, tags };
 //     - type: Portfolio
 //       url: http://www.jeannemariegarcia.com/
 
-// TODO
-// Scott Celestre
-  // NEED FINAL WEBSITE?
-
 // surg
 
 // Farhankhan Daya
