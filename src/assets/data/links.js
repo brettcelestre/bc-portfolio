@@ -260,6 +260,13 @@ const data = ymlLoader.load(`
     - concept designer
     - illustrator
     - skateboarder
+    
+- title: Jason Abad
+  links:
+    - type: Portfolio
+      url: https://www.jayabad.com/
+  tags:
+    - graphic designer
 
 - title: Nick Bers
   links:
@@ -459,7 +466,7 @@ module.exports = { data, tags };
 // - title: Jason Abad
 //   links:
 //     - type: Portfolio
-//       url: https://jayabad.carbonmade.com/
+//       url: https://www.jayabad.com/
 //   tags:
 //     - graphic designer
 

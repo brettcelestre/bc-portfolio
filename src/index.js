@@ -39,8 +39,8 @@ ReactDOM.render(
         <Route name="images" path="/:section/:piece" component={ImageViewer} />
         <Route name="applications" path="/applications" component={Applications} />
         <Route name="creatives" path="/creatives" component={Creatives} />
-        <Route name="resources" path="/resources" component={Resources} />
-        <Route name="about" path="/about" component={About} />
+        {/* <Route name="resources" path="/resources" component={Resources} /> */}
+        {/* <Route name="about" path="/about" component={About} /> */}
         <Route name="resume" path="/resume" component={Resume} />
         <Route name="home" path="/home" component={Home} />
         <Route name="gallery-sections" path="/:section" component={ImageSections} />
