@@ -7,18 +7,17 @@ Technical Skills:
     - GraphQL
     - Apollo
     - PostgreSQL
-    - DynamoDB
     - Microservices
     - RESTful API
     - Express
     - Hapi
     - Logging
   Frontend:
-    - JavaScript
     - React
     - React Native
-    - Redux
     - Angular
+    - Redux
+    - JavaScript
     - HTML
     - CSS
     - SCSS/SASS
@@ -30,17 +29,17 @@ Technical Skills:
   Dev Ops: 
     - AWS
     - Git
-    - Jenkins
     - CircleCI
     - Docker
+    - Swagger
+    - Jenkins
+  Experienced:
     - Unix
     - Bash
-    - Swagger
-    - TDD/BD
-  Experienced:
     - Analytics
     - MySQL
     - Socket.IO
+    - TDD/BD
     - Protractor
     - Webpack
     - Gulp

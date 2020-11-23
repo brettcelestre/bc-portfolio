@@ -9,6 +9,7 @@ const tags = [
   'florist',
   'graphic designer',
   'illustrator',
+  'jewelry maker',
   'musician',
   'painter',
   'photographer',
@@ -100,6 +101,7 @@ const data = ymlLoader.load(`
   tags:
     - musician
     - skateboarder
+    - film maker
 
 - title: Corey Duffel
   links:
@@ -367,6 +369,16 @@ const data = ymlLoader.load(`
   tags:
     - florist
 
+- title: Maddy Leonard
+  links:
+    - type: Portfolio
+      title: Maddy Sprout
+      url: https://maddysprout.com/
+    - type: Instagram
+      username: maddysprout
+  tags:
+    - jewelry maker
+
 - title: Mike Buzzard
   links:
     - type: Blog
@@ -429,6 +441,17 @@ const data = ymlLoader.load(`
   tags:
     - musician
 `);
+
+/////////////////
+// Businesses - Stores
+/////////////////
+
+// Renner Screen Printing
+// https://www.rennerscreenprinting.com/
+// https://www.instagram.com/rennerscreenprinting/
+
+// Cursed Ink Print
+// https://www.cursedinkprint.co/about
 
 module.exports = { data, tags };
 

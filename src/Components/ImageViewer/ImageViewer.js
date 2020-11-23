@@ -512,7 +512,7 @@ class ImageViewer extends Component {
       // 'gallery-image landscape fade-in-gallery-image' :
       // 'gallery-image portrait fade-in-gallery-image';
 
-      console.log(" >> galleryData ", galleryData);
+      // console.log(" >> galleryData ", galleryData);
 
     return (
       <div className={this.state.zoom === false ? "image-viewer" : "image-viewer-zoom image-viewer"} id="image-viewer-box" tabIndex="0">

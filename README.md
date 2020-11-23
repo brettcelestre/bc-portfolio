@@ -1,3 +1,2 @@
-## Portfolio
 
-Portfolio written in React.
+Personal photography portfolio.

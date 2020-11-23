@@ -16,8 +16,8 @@ import ShortFilmsCredits from './Components/ShortFilmsCredits/ShortFilmsCredits.
 import ShortFilmsDetails from './Components/ShortFilmsDetails/ShortFilmsDetails.js';
 import Applications from './Components/Applications/Applications.js';
 import Creatives from './Components/Creatives/Creatives.js';
-import Resources from './Components/Resources/Resources.js';
-import About from './Components/About/About.js';
+// import Resources from './Components/Resources/Resources.js';
+// import About from './Components/About/About.js';
 import Resume from './Components/Resume/Resume.js';
 import ImageViewer from './Components/ImageViewer/ImageViewer.js';
 
@@ -45,6 +45,7 @@ ReactDOM.render(
         <Route name="home" path="/home" component={Home} />
         <Route name="gallery-sections" path="/:section" component={ImageSections} />
         <Redirect to={{ pathname: `/photography` }}/>
+        {/* <Route component={ErrorRedirect} /> */}
       </Switch>
     </div>
   </BrowserRouter>
