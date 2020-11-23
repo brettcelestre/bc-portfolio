@@ -26,6 +26,8 @@ notes.txt
 *.TTF
 *.otf
 
+package-lock.json
+
 # dependencies
 /node_modules
 
