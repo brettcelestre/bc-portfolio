@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { WindowResizeListener } from 'react-window-resize-listener';
+import WindowSizeListener from 'react-window-size-listener'
 import PropTypes from 'prop-types';
 import Dust from '../Dust/Dust.js';
 import Img from 'react-image';
+import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
 // import ReactSVG from 'react-svg';
 // import { Link, Redirect } from 'react-router-dom';
 // import { withRouter } from 'react-router';
@@ -14,6 +15,7 @@ import spinner from '../../assets/img/spinner.gif';
 import galleryArrow from '../../assets/img/gallery-arrow-2.png';
 import './ImageViewer.css';
 import Toolbar from '../Toolbar/Toolbar.js';
+import { imageSizes } from '../../utils/constants';
 
 const navigationWidth = 137;
 
@@ -144,7 +146,7 @@ class ImageViewer extends Component {
     const { section, category, subCategory, piece } = props.match.params;
     const currentImageData = this.findImageData(section, category, subCategory, piece);
     // Finds gallery index fom current image
-    const startIndex = this.findGalleryIndex(section, category, subCategory, currentImageData.title);
+    const startIndex = this.findGalleryIndex(section, category, subCategory, currentImageData.id);
     
     this.state = {
       imageData: currentImageData,
@@ -180,8 +182,14 @@ class ImageViewer extends Component {
     if (this.state.zoom) {
       const imageViewerBox = document.getElementById('image-viewer-box');
       const zoomImage = document.getElementById('zoom-image');
-      imageViewerBox.scrollLeft = (zoomImage.offsetWidth - imageViewerBox.offsetWidth) / 2;
-      imageViewerBox.scrollTop = (zoomImage.offsetHeight - imageViewerBox.offsetHeight) / 2;
+      
+      console.log('zoomImage = ', zoomImage);
+      // This breaks when I use the Img component (trying to get loading working)
+      // I think when this is loading, it doesn't have the
+      if (zoomImage) {
+        imageViewerBox.scrollLeft = (zoomImage.offsetWidth - imageViewerBox.offsetWidth) / 2;
+        imageViewerBox.scrollTop = (zoomImage.offsetHeight - imageViewerBox.offsetHeight) / 2;
+      }
     }
 
     // Puts focus on image-viewer so arrow keys will change image
@@ -245,25 +253,25 @@ class ImageViewer extends Component {
     return `../../assets/gallery/${category}/${fileTitle}_${size}.jpg`;
   }
 
-  findImageData = (section, category = null, subCategory = null, name) => {
+  findImageData = (section, category = null, subCategory = null, id) => {
     if (subCategory) {
       return galleryData[section][category][subCategory].data.find((piece) => {
-        return name === piece.urlTitle;
+        return id === piece.id;
       });
     } else if ( category ) {
-      return galleryData[section][category].data.find((piece) => name === piece.urlTitle);
+      return galleryData[section][category].data.find((piece) => id === piece.id);
     } else {
-      return galleryData[section].data.find((piece) => name === piece.urlTitle);
+      return galleryData[section].data.find((piece) => id === piece.id);
     }
   }
 
-  findGalleryIndex = (section, category = null, subCategory = null, targetTitle) => {
+  findGalleryIndex = (section, category = null, subCategory = null, targetId) => {
     if (subCategory) {
-      return galleryData[section][category][subCategory].data.findIndex(piece => piece.urlTitle === targetTitle);
+      return galleryData[section][category][subCategory].data.findIndex(piece => piece.id === targetId);
     } else if ( category ) {
-      return galleryData[section][category].data.findIndex(piece => piece.urlTitle === targetTitle);
+      return galleryData[section][category].data.findIndex(piece => piece.id === targetId);
     } else {
-      return galleryData[section].data.findIndex(piece => piece.urlTitle === targetTitle);
+      return galleryData[section].data.findIndex(piece => piece.id === targetId);
     }
   }
 
@@ -349,20 +357,24 @@ class ImageViewer extends Component {
     }
 
     const currentGalleryData = this.getCurrentGalleryData(section, category, subCategory).data;
+    console.log('currentGalleryDatas: ', currentGalleryData);
     const currentGalleryLength = currentGalleryData.length - 1;
     let currentIndex =  this.findGalleryIndex(section, category, subCategory, piece);
+    console.log('currentIndex: ', currentIndex);
 
     switch (direction) {
       case 'next':
         if ( currentIndex < currentGalleryLength ) {
-          const { urlTitle } = currentGalleryData[++currentIndex];
-          this.props.history.push(urlTitle);
+          const { id } = currentGalleryData[++currentIndex];
+          console.log('id = ', id);
+          this.props.history.push(id);
         }
         break;
       case 'previous':
         if ( currentIndex > 0 ) {
-          const { urlTitle } = currentGalleryData[--currentIndex];
-          this.props.history.push(urlTitle);
+          const { id } = currentGalleryData[--currentIndex];
+          console.log('id = ', id);
+          this.props.history.push(id);
         }
         break;
       default:
@@ -408,21 +420,35 @@ class ImageViewer extends Component {
     const { getCurrentGalleryData, buildImageSRC, zoomImageState } = this;
     const { zoom } = this.state;
     if (zoom) {
-      const newHeight = getCurrentGalleryData(section, category, subCategory).data[index].sizes['Large'].height;
+      const { src } = getCurrentGalleryData(section, category, subCategory).data[index];
       let zoomDimensions = 'Large';
       if ( window.innerWidth <= 799) {   // Mobile - Loads medium size image
         zoomDimensions = 'Medium';
       }
 
+      // TODO: get loading to work here
       return(
-        <img
-          src={buildImageSRC(section, category, subCategory, piece)['Large']}
-          width={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
-          height={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
+        <Image
+          cloudName="dpsjit8an"
+          publicId={`portfolio/${src}.jpg`}
+          loading="lazy"
           className="zoom-image fade-in-zoom-image"
+          onClick={this.zoomImageState}
           id="zoom-image"
-          onClick={zoomImageState}
+          alt={this.state.name}
+          // loader={this.loading()}
         />
+
+        // Previous
+        // <Img
+        //   src={buildImageSRC(section, category, subCategory, piece)['Large']}
+        //   width={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
+        //   height={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
+        //   className="zoom-image fade-in-zoom-image"
+        //   id="zoom-image"
+        //   onClick={zoomImageState}
+        //   loader={this.loading()}
+        // />
       );
     }
     return;
@@ -481,7 +507,7 @@ class ImageViewer extends Component {
     const { section, category, subCategory, piece } = this.props.match.params;
     const imageData = this.findImageData(section, category, subCategory, piece);
     const galleryData = this.getCurrentGalleryData(section, category, subCategory).data;
-    const galleryData2 = this.getCurrentGalleryData(section, category, subCategory);
+    // const galleryData2 = this.getCurrentGalleryData(section, category, subCategory);
     const currentGalleryLength = galleryData.length;
     const currentIndex =  this.findGalleryIndex(section, category, subCategory, piece) + 1;
     const galleryPath = {section, category, subCategory, piece };
@@ -506,22 +532,30 @@ class ImageViewer extends Component {
     // Considers aspect ratio of window
     const imgWidth = imageData.sizes[this.state.currentSize].width;
     const imgHeight = imageData.sizes[this.state.currentSize].height;
+    // currentOrientation = the current aspect ratio of the window image frame
     let currentOrientation = (height/width >= imgHeight/imgWidth) ? 
-      'gallery-image landscape' :
-      'gallery-image portrait';
-      // 'gallery-image landscape fade-in-gallery-image' :
-      // 'gallery-image portrait fade-in-gallery-image';
-
+      'landscape' :
+      'portrait';
+      
+      const {
+        src,
+        orientation
+      } = imageData;
+      const { currentSize } = this.state;
+      
       // console.log(" >> galleryData ", galleryData);
+      console.log("=========");
+      console.log("imageData ", imageData);
+      console.log("orientation = ", orientation);
+      console.log('imageSizes[currentSize] = ', imageSizes[currentSize]);
+      console.log("currentSize = ", currentSize);
 
     return (
       <div className={this.state.zoom === false ? "image-viewer" : "image-viewer-zoom image-viewer"} id="image-viewer-box" tabIndex="0">
-        <WindowResizeListener
-          /*
-          TODO: Get debounce to work. Currently at 100
-          DEBOUNCE_TIME={4000}
-          */
-         DEBOUNCE_TIME="500"
+        <WindowSizeListener
+          // TODO: Get debounce to work. Currently at 100
+          // DEBOUNCE_TIME={4000}
+          // DEBOUNCE_TIME="500"
           onResize={windowSize => {
             this.windowSize(windowSize.windowWidth, windowSize.windowHeight)
           }
@@ -575,16 +609,46 @@ class ImageViewer extends Component {
               wrapperClassName="next-arrow"
             /> */}
             <img 
-              src={galleryArrow} 
-              className={this.state.zoom ? "image-hide" : 
-                (currentGalleryLength === currentIndex ? 
+              src={galleryArrow}
+              className={this.state.zoom ? "image-hide" :
+                (currentGalleryLength === currentIndex ?
                     `next-arrow disable-navigation ${arrowsColor}` :
                     `next-arrow ${arrowsColor}`)}
               />
           </div>
 
-          <Img
+            {orientation === 'portrait' ? 
+              <Image
+                cloudName="dpsjit8an"
+                publicId={`portfolio/${src}.jpg`}                
+                height={imageSizes[currentSize].height}
+                crop="scale"
+                loading="lazy"
+                className={`gallery-image ${currentOrientation}`}
+                onClick={this.zoomImageState}
+                id="gallery-image"
+                alt={this.state.name}
+                // loader={this.loading()}
+              /> : null
+            }
+            {orientation === 'landscape' ?
+              <Image
+                cloudName="dpsjit8an"
+                publicId={`portfolio/${src}.jpg`}                
+                width={imageSizes[currentSize].width}
+                crop="scale"
+                className={`gallery-image ${currentOrientation}`}
+                onClick={this.zoomImageState}
+                id="gallery-image"
+                loading="lazy"
+                alt={this.state.name}
+                // loader={this.loading()}
+              /> : null
+            }
+
+          {/* <Img
             src={this.buildImageSRC(section, category, subCategory, piece)[this.state.currentSize]}
+            // src={`https://res.cloudinary.com/dpsjit8an/image/upload/v1606173137/portfolio/${id}.jpg`}
             width={this.state.width}
             height={this.state.height}
             className={currentOrientation}
@@ -595,7 +659,7 @@ class ImageViewer extends Component {
             // TODO: Testing Tablet/Mobile image swiping
             // onMouseDown={this.dragImage}
             // onMouseUp={this.toggleMouseDown}
-          />
+          /> */}
 
           {/* Background Previous Box */}
           <div

@@ -57,9 +57,11 @@ const ymlLoader = require('js-yaml');
 
 const data = ymlLoader.load(`
   - title: McCauley At War
+    id: d33c218b-a29d-475b-a784-0c6aed0e4be5
     urlTitle: mccauley-at-war
     date: FEBRUARY 2015
     size: 16" x 20"
+    src: McCauley_At_War_Large_azn6mx
     orientation: portrait
     info: Paper & Glue
     arrows: dark
@@ -76,9 +78,11 @@ const data = ymlLoader.load(`
         height: 600
 
   - title: Valley
+    id: 8bf8a0cc-c481-45af-a147-44bd9a113437
     urlTitle: valley
     date: '2011'
     size: 16" x 10.75"
+    src: 8bf8a0cc-c481-45af-a147-44bd9a113437_ju237x
     orientation: landscape
     info: Paper, Glue, & Ink
     arrows: light
@@ -95,8 +99,10 @@ const data = ymlLoader.load(`
         height: 550
 
   - title: Electric Ladyland
+    id: c970837f-dc49-42af-9f89-319afb54dc19
     urlTitle: electric-ladyland
     date: JANUARY 2009
+    src: Electric_Ladyland_Large_sna6zk
     size: 14" x 17"
     orientation: portrait
     info: Paper & Glue
@@ -115,10 +121,13 @@ const data = ymlLoader.load(`
         height: 600
 
   - title: LCD
+    id: bf3b4b8b-31b5-481e-98b1-fafbb076ff76
     urlTitle: lcd
     date:  JANUARY 2007
     size: 16" x 13"
+    src: LCD_Large_fhpjqe
     info: Paper & Glue
+    orientation: landscape
     arrows: dark
     description: My first collage. Created to get away from the computer screen. Yet here we are.
     descriptionUpdate: This launched my passion for creating collages and collecting collage material.

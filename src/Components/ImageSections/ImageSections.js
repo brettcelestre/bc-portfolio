@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Img from 'react-image';
-import { WindowResizeListener } from 'react-window-resize-listener';
+import WindowSizeListener from 'react-window-size-listener';
 import { isMobile } from '../../utils/utils';
 import './ImageSections.css';
 import spinner from '../../assets/img/spinner.gif';
@@ -180,7 +180,7 @@ class ImageSections extends Component {
     return (
       <div className="thumbs-section-outer">
         
-        <WindowResizeListener
+        <WindowSizeListener
             /*
             TODO: Get debounce to work. Currently at 100
             DEBOUNCE_TIME={4000}

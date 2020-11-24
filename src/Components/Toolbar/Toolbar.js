@@ -13,7 +13,10 @@ class Toolbar extends Component {
     this.state = {
       zoomWidth: { width: 'auto' },
       descriptionHeight: 0,
+      
       showInfo: false,
+      // showInfo: true,
+
       showThumbs: false,
       scrollThumbsPreview: false,
       // scrollThumbsPreview: true,
@@ -42,6 +45,7 @@ class Toolbar extends Component {
       }
       const desc = document.getElementsByClassName('image-description');
       const test = desc[0].clientHeight + heightAdjustment;
+      console.log('test: ', test);
       if (test !== this.state.descriptionHeight) {
         this.setState({
           isMobile,
@@ -81,6 +85,8 @@ class Toolbar extends Component {
             break;
         }
         const desc = document.getElementsByClassName('image-description');
+        console.log('descriptionHeight: ', this.state.descriptionHeight);
+        console.log('update: ', desc[0].clientHeight + heightAdjustment);
         this.setState({
           showInfo: true,
           isMobile,
@@ -200,6 +206,7 @@ class Toolbar extends Component {
     const { showInfo, showThumbs, scrollThumbsPreview, descriptionHeight } = this.state;
     if ( this.props.imageZoomState) return null;
 
+    // const desktopResting = 50;
     const desktopResting = 50;
     let toolbarHeight,
         indexHeight,
@@ -273,10 +280,10 @@ class Toolbar extends Component {
 
           <div className="title-box">
 
-            <div 
+            {/* <div 
               className={this.state.showInfo ? `${titleClassNames} title-focus` : `${titleClassNames}`}>
               {this.props.imageData.title}
-            </div>
+            </div> */}
 
             <div className={this.state.showInfo ? `${dateClassNames} image-date-focus` : `${dateClassNames}`}>
               {this.props.imageData.date}

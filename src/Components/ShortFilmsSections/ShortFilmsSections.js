@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { WindowResizeListener } from 'react-window-resize-listener';
+import WindowSizeListener from 'react-window-size-listener';
 import Img from 'react-image';
 import { scrollTop } from '../../utils/utils.js';
 
@@ -150,7 +150,7 @@ class ShortFilmsSections extends Component {
   render() {
     return (
       <div className="short-films-sections">
-        <WindowResizeListener
+        <WindowSizeListener
           DEBOUNCE_TIME={4000}
           onResize={windowSize => {
             this.windowSize(windowSize.windowWidth, windowSize.windowHeight)

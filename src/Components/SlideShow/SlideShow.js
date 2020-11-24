@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import Img from 'react-image';
-import { WindowResizeListener } from 'react-window-resize-listener';
+import WindowSizeListener from 'react-window-size-listener';
 import spinner from '../../assets/img/spinner.gif';
 import './SlideShow.css';
 
@@ -165,7 +165,7 @@ class SlideShow extends Component {
 
     return(
       <div className="slideshow-container">
-        <WindowResizeListener
+        <WindowSizeListener
           DEBOUNCE_TIME={500}
           onResize={windowSize => {
             this.setOrientation
