@@ -149,7 +149,7 @@ class ShortFilmsSections extends Component {
 
   render() {
     return (
-      <div className="short-films-sections">
+      <div className="short-films-container">
         <WindowSizeListener
           DEBOUNCE_TIME={4000}
           onResize={windowSize => {
@@ -157,7 +157,9 @@ class ShortFilmsSections extends Component {
           }
         }/>
 
-        {this.buildFilmsPreviews()}
+        <div className="short-films-sections">
+          {this.buildFilmsPreviews()}
+        </div>
       </div>
     );
   }

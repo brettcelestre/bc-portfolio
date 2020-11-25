@@ -2,7 +2,8 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: "2018"
   urlTitle: "2018"
-  cdn: "https://res.cloudinary.com/dpsjit8an/image/upload/v1595906337/portfolio/2018_Large_jtr6is.jpg"
+  id: e7343334-f063-488d-a4f3-f664b4365217
+  v: v1606270888
   date: 
   size: ''
   orientation: landscape
@@ -22,6 +23,8 @@ const data = ymlLoader.load(`
 
 - title: "2016"
   urlTitle: "2016"
+  id: 9ffe7d21-9d66-44e2-86fc-d6f0831e442c
+  v: v1606270926
   date: 
   size: ''
   orientation: landscape
@@ -41,6 +44,8 @@ const data = ymlLoader.load(`
 
 - title: "2015"
   urlTitle: "2015"
+  id: 7a1990eb-c027-41f2-878b-f7e52c536e29
+  v: v1606270961
   date: 
   size: ''
   orientation: landscape
@@ -60,6 +65,8 @@ const data = ymlLoader.load(`
 
 - title: "2013"
   urlTitle: "2013"
+  id: 6e4cd933-143f-4165-8549-4a022d68ec98
+  v: v1606270998
   date: 
   size: ''
   orientation: landscape
@@ -79,6 +86,8 @@ const data = ymlLoader.load(`
 
 - title: "2012"
   urlTitle: "2012"
+  id: 0d27a5cf-4906-4947-9715-998e78a386e1
+  v: v1606271033
   date: 
   size: ''
   orientation: landscape
@@ -98,6 +107,8 @@ const data = ymlLoader.load(`
 
 - title: "2011"
   urlTitle: "2011"
+  id: f4974b39-014f-4a8e-8122-86edc78334ca
+  v: v1606271064
   date: 
   size: ''
   orientation: landscape

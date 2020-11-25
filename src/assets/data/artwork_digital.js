@@ -1,6 +1,8 @@
 const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
   - title: Noah Lennox
+    id: 24f2b2cd-8229-4179-aee4-ad48e48aba8b
+    v: v1606259242
     urlTitle: noah-lennox
     date: MAY 2012
     size: 
@@ -21,6 +23,8 @@ const data = ymlLoader.load(`
   
   - title: Three Year
     urlTitle: three-year
+    id: 0d66fd50-53ce-4b8b-8dd7-cddf06f05b23
+    v: v1606262137
     date: SEPTEMBER 2012
     size: 
     orientation: landscape
@@ -40,6 +44,8 @@ const data = ymlLoader.load(`
 
   - title: For Reverend Green
     urlTitle: for-reverend-green
+    id: 251227b7-5709-47e3-b61a-d1687f4cc9a4
+    v: v1606262294
     date: FEBRUARY 2010
     size: 
     orientation: landscape
@@ -59,6 +65,8 @@ const data = ymlLoader.load(`
   
   - title: Progress
     urlTitle: progress
+    id: 9f753d77-33c4-4abb-89a9-25d29d7935db
+    v: v1606263219
     date: DECEMBER 2010
     size: 
     orientation: landscape
@@ -77,6 +85,8 @@ const data = ymlLoader.load(`
         height: 572
 
   - title: Sleep
+    id: 0de60159-32cb-4560-a3f9-f4a1841fefc3
+    v: v1606263331
     urlTitle: sleep
     date: JUNE 2010
     size: 
@@ -97,6 +107,8 @@ const data = ymlLoader.load(`
 
   - title: Dufrense
     urlTitle: dufrense
+    id: 0017e5c0-118e-426e-a6df-b683cb22b313
+    v: v1606263424
     date: JANUARY 2009
     size: 
     orientation: landscape
@@ -116,6 +128,8 @@ const data = ymlLoader.load(`
 
   - title: For The Last Fucking Time
     urlTitle: for-the-last-fucking-time
+    id: f4420b6d-1bf3-47bb-b501-978d99343485
+    v: v1606263491
     date: JULY 2007
     size: 
     orientation: landscape

@@ -182,8 +182,6 @@ class ImageViewer extends Component {
     if (this.state.zoom) {
       const imageViewerBox = document.getElementById('image-viewer-box');
       const zoomImage = document.getElementById('zoom-image');
-      
-      console.log('zoomImage = ', zoomImage);
       // This breaks when I use the Img component (trying to get loading working)
       // I think when this is loading, it doesn't have the
       if (zoomImage) {
@@ -340,41 +338,42 @@ class ImageViewer extends Component {
 
   galleryWheel = (direction) => {
     const path = this.props.history.location.pathname.split('/');
-    let section, category, subCategory, piece;
+    let section, category, subCategory, piece, previousSection;
     // Deconstructs current path from props
     if (path.length === 5) {
       section = path[1];
       category = path[2];
       subCategory = path[3];
       piece = path[4];
+      previousSection = `/${section}/${category}/sections`;
     } else if ( path.length === 4) {
       section = path[1];
       category = path[2];
       piece = path[3];
+      previousSection = `/${section}`;
     } else if ( path.length === 3) {
       section = path[1];
       piece = path[2];
+      previousSection = `/${section}`;
     }
 
     const currentGalleryData = this.getCurrentGalleryData(section, category, subCategory).data;
-    console.log('currentGalleryDatas: ', currentGalleryData);
     const currentGalleryLength = currentGalleryData.length - 1;
     let currentIndex =  this.findGalleryIndex(section, category, subCategory, piece);
-    console.log('currentIndex: ', currentIndex);
 
     switch (direction) {
       case 'next':
         if ( currentIndex < currentGalleryLength ) {
           const { id } = currentGalleryData[++currentIndex];
-          console.log('id = ', id);
           this.props.history.push(id);
         }
         break;
       case 'previous':
         if ( currentIndex > 0 ) {
           const { id } = currentGalleryData[--currentIndex];
-          console.log('id = ', id);
           this.props.history.push(id);
+        } else {
+          this.props.history.push(previousSection);
         }
         break;
       default:
@@ -420,7 +419,7 @@ class ImageViewer extends Component {
     const { getCurrentGalleryData, buildImageSRC, zoomImageState } = this;
     const { zoom } = this.state;
     if (zoom) {
-      const { src } = getCurrentGalleryData(section, category, subCategory).data[index];
+      const { id, v } = getCurrentGalleryData(section, category, subCategory).data[index];
       let zoomDimensions = 'Large';
       if ( window.innerWidth <= 799) {   // Mobile - Loads medium size image
         zoomDimensions = 'Medium';
@@ -430,7 +429,7 @@ class ImageViewer extends Component {
       return(
         <Image
           cloudName="dpsjit8an"
-          publicId={`portfolio/${src}.jpg`}
+          publicId={`${v}/portfolio/${id}.jpg`}
           loading="lazy"
           className="zoom-image fade-in-zoom-image"
           onClick={this.zoomImageState}
@@ -538,17 +537,11 @@ class ImageViewer extends Component {
       'portrait';
       
       const {
-        src,
+        id,
+        v,
         orientation
       } = imageData;
       const { currentSize } = this.state;
-      
-      // console.log(" >> galleryData ", galleryData);
-      console.log("=========");
-      console.log("imageData ", imageData);
-      console.log("orientation = ", orientation);
-      console.log('imageSizes[currentSize] = ', imageSizes[currentSize]);
-      console.log("currentSize = ", currentSize);
 
     return (
       <div className={this.state.zoom === false ? "image-viewer" : "image-viewer-zoom image-viewer"} id="image-viewer-box" tabIndex="0">
@@ -570,8 +563,8 @@ class ImageViewer extends Component {
 
           <div className="image-view-breadcrumb">
             {(section && section !== 'spatial') && <Link to={`/${section}`}><span className="image-view-breadcrumb-link">{section}</span></Link>}
-            {category && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
-            {category && !subCategory && <Link to={`/${section}/${category}/${galleryData[0].urlTitle}`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
+            {category && <span className="breadcrumb-arrow">&nbsp;&nbsp;&lt;&nbsp;&nbsp;</span>}
+            {category && !subCategory && <Link to={`/${section}/${category}/${galleryData[0].id}`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
             {category && subCategory && <Link to={`/${section}/${category}/sections`}><span className="image-view-breadcrumb-link">{category}</span></Link>}
             {/* {subCategory && <span className="breadcrumb-arrow">&nbsp;&nbsp;>&nbsp;&nbsp;</span>}
             {subCategory && <Link to={`/${section}/${category}/${subCategory}/${galleryData[section][category][subCategory].data[0].urlTitle}`}><span className="image-view-breadcrumb-link">{subCategory}</span></Link>} */}
@@ -620,7 +613,7 @@ class ImageViewer extends Component {
             {orientation === 'portrait' ? 
               <Image
                 cloudName="dpsjit8an"
-                publicId={`portfolio/${src}.jpg`}                
+                publicId={`${v}/portfolio/${id}.jpg`}                
                 height={imageSizes[currentSize].height}
                 crop="scale"
                 loading="lazy"
@@ -634,7 +627,7 @@ class ImageViewer extends Component {
             {orientation === 'landscape' ?
               <Image
                 cloudName="dpsjit8an"
-                publicId={`portfolio/${src}.jpg`}                
+                publicId={`${v}/portfolio/${id}.jpg`}                
                 width={imageSizes[currentSize].width}
                 crop="scale"
                 className={`gallery-image ${currentOrientation}`}

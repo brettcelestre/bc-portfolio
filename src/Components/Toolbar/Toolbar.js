@@ -201,7 +201,7 @@ class Toolbar extends Component {
   }
 
   render() {
-    const { startSlideshow, galleryData, imageData, buildImageSRC, galleryPath, currentSize } = this.props;
+    const { startSlideshow, galleryData, imageData, galleryPath, currentSize } = this.props;
     const { toggleScrollThumbsPreview, showScrollThumbsPreview, hideScrollThumbsPreview, loadingPreview } = this;
     const { showInfo, showThumbs, scrollThumbsPreview, descriptionHeight } = this.state;
     if ( this.props.imageZoomState) return null;

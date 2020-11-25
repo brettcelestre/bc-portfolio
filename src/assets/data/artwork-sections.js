@@ -12,7 +12,7 @@ const sketches = require('../../assets/data/artwork_sketches.js');
 
 const data = ymlLoader.load(`
 - title: Digital
-  href: /artwork/digital/${startImg(digital).urlTitle}
+  href: /artwork/digital/${startImg(digital).id}
   length: ${digital.data.length}
   fontStyles:
   sizes:
@@ -27,7 +27,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Collage
-  href: /artwork/collage/${startImg(collage).urlTitle}
+  href: /artwork/collage/${startImg(collage).id}
   length: ${collage.data.length}
   fontStyles:
   sizes:
@@ -42,7 +42,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Sketches
-  href: /artwork/sketches/${startImg(sketches).urlTitle}
+  href: /artwork/sketches/${startImg(sketches).id}
   length: ${sketches.data.length}
   fontStyles:
   sizes:

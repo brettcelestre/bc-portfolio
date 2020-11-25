@@ -2,6 +2,8 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Matt
   urlTitle: matt
+  id: 96916e8c-8603-48dc-8940-c8739defd2cd
+  v: v1606269743
   date: MARCH 2013
   size: 
   orientation: portrait
@@ -21,6 +23,8 @@ const data = ymlLoader.load(`
 
 - title: Living Room
   urlTitle: living-room
+  id: 0b5362a6-6bba-4ef5-b711-bf25191e3324
+  v: v1606269774
   date: 2013
   size: 
   orientation: landscape
@@ -40,6 +44,8 @@ const data = ymlLoader.load(`
 
 - title: Jeanne-Marie
   urlTitle: jeanne-marie
+  id: b07bb723-eaec-465b-95c8-9271d64ec01e
+  v: v1606269804
   date: MARCH 2013
   size: 
   orientation: landscape
@@ -59,6 +65,8 @@ const data = ymlLoader.load(`
 
 - title: Santa Cruz
   urlTitle: santa-cruz
+  id: 64993074-c697-4728-a490-329b1bf63c17
+  v: v1606269838
   date: 2013
   size: 
   orientation: landscape
@@ -78,6 +86,8 @@ const data = ymlLoader.load(`
 
 - title: SJSU 0
   urlTitle: sjsu-0
+  id: 989476f6-bb79-401d-a03a-a416c1a4b91a
+  v: v1606269865
   date: 2013
   size: 
   orientation: landscape
@@ -97,7 +107,9 @@ const data = ymlLoader.load(`
 
 - title: SJSU 1
   urlTitle: sjsu-1
-  date: 2012
+  id: dbe00f7e-25f1-467a-b569-de01c62c3dac
+  v: v1606269893
+  date: 2013
   size: 
   orientation: portrait
   description: 
@@ -116,6 +128,8 @@ const data = ymlLoader.load(`
 
 - title: Me
   urlTitle: me
+  id: c3cf4069-225f-4bf2-8844-f06cbaa4a4ef
+  v: v1606269920
   date: 2011
   size: 
   orientation: landscape

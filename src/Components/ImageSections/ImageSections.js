@@ -164,7 +164,7 @@ class ImageSections extends Component {
               </div>
               <div className="image-section-title">
               <h2>{section.title}</h2>
-              <span>{section.length} {this.state.section === 'artwork' ? "IMAGES" : "PHOTOS"}</span>
+              <span>{section.length}</span>
               </div>
           </Link>
         </div>

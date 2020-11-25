@@ -18,7 +18,7 @@ const length = people.data.length
 
 const data = ymlLoader.load(`
 - title: People
-  href: /photography/film/people/${startImg(people).urlTitle}
+  href: /photography/film/people/${startImg(people).id}
   length: ${people.data.length}
   fontStyles:
   sizes:
@@ -33,7 +33,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Nature
-  href: /photography/film/nature/${startImg(nature).urlTitle}
+  href: /photography/film/nature/${startImg(nature).id}
   length: ${nature.data.length}
   fontStyles:
   sizes:
@@ -48,7 +48,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Places
-  href: /photography/film/places/${startImg(places).urlTitle}
+  href: /photography/film/places/${startImg(places).id}
   length: ${places.data.length}
   fontStyles:
   sizes:
@@ -63,7 +63,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Black & White
-  href: /photography/film/black-&-white/${startImg(blackAndWhite).urlTitle}
+  href: /photography/film/black-&-white/${startImg(blackAndWhite).id}
   length: ${blackAndWhite.data.length}
   fontStyles:
   sizes:
@@ -78,7 +78,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Things
-  href: /photography/film/things/${startImg(things).urlTitle}
+  href: /photography/film/things/${startImg(things).id}
   length: ${things.data.length}
   fontStyles:
   sizes:
@@ -93,7 +93,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Desk
-  href: /photography/film/desk/${startImg(desk).urlTitle}
+  href: /photography/film/desk/${startImg(desk).id}
   length: ${desk.data.length}
   fontStyles:
   sizes:

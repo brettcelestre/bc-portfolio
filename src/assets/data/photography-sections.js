@@ -54,7 +54,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Del Rio
-  href: /photography/del-rio/${startImg(delRio).urlTitle}
+  href: /photography/del-rio/${startImg(delRio).id}
   length: ${delRio.data.length}
   fontStyles:
   sizes:

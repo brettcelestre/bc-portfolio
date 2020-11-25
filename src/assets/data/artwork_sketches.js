@@ -3,6 +3,8 @@ const ymlLoader = require('js-yaml');
 
 const data = ymlLoader.load(`
 - title: Sketch 14
+  id: b4399c4c-be4a-4043-8caa-47717d583885
+  v: v1606263866
   urlTitle: sketch-14
   date:
   size:
@@ -23,6 +25,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 13
   urlTitle: sketch-13
+  id: c781b3c7-183a-427a-89da-9e107966f12e
+  v: v1606263927
   date:
   size:
   orientation: landscape
@@ -42,6 +46,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 12
   urlTitle: sketch-12
+  id: 091be183-3727-4e22-b269-db62c9ed2f14
+  v: v1606263972
   date:
   size:
   orientation: landscape
@@ -61,6 +67,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 11
   urlTitle: sketch-11
+  id: baba2306-dc7a-4501-8ef9-b35c45dcf6c4
+  v: v1606264058
   date:
   size:
   orientation: landscape
@@ -80,6 +88,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 10
   urlTitle: sketch-10
+  id: 8e9a75d0-71b7-4fbb-9f55-4cf09283e7fe
+  v: v1606264133
   date:
   size:
   orientation: landscape
@@ -99,6 +109,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 9
   urlTitle: sketch-9
+  id: f36e983a-4832-4d3d-aa82-40bc17af2aff
+  v: v1606264175
   date:
   size:
   orientation: landscape
@@ -118,6 +130,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 8
   urlTitle: sketch-8
+  id: 0598777d-92a5-4efa-a139-caa97a655f3d
+  v: v1606264237
   date:
   size:
   orientation: landscape
@@ -137,6 +151,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 7
   urlTitle: sketch-7
+  id: 054d8e4a-0fe2-49e9-acf1-a45cd7892aff
+  v: v1606264236
   date:
   size:
   orientation: landscape
@@ -156,6 +172,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 6
   urlTitle: sketch-6
+  id: 040dee37-7bd0-410a-b43a-935d92283213
+  v: v1606264237
   date:
   size:
   orientation: landscape
@@ -175,6 +193,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 5
   urlTitle: sketch-5
+  id: dbb30347-83ea-463c-b61f-0485c2b115c8
+  v: v1606264236
   date:
   size:
   orientation: landscape
@@ -194,6 +214,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 4
   urlTitle: sketch-4
+  id: be9f86a7-b0b8-4113-8c2e-16c7ac829392
+  v: v1606264236
   date:
   size:
   orientation: landscape
@@ -213,6 +235,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 3
   urlTitle: sketch-3
+  id: a0a4c001-14e6-4064-8c32-edacfa419190
+  v: v1606264236
   date:
   size:
   orientation: landscape
@@ -232,6 +256,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 2
   urlTitle: sketch-2
+  id: b2308a3a-ebe9-4179-86ca-d0d7e459d0af
+  v: v1606264236
   date:
   size:
   orientation: landscape
@@ -251,6 +277,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 1
   urlTitle: sketch-1
+  id: 9402c3fb-2aac-47a1-b8bc-9161c85779d3
+  v: v1606264235
   date:
   size: 
   orientation: landscape
@@ -270,6 +298,8 @@ const data = ymlLoader.load(`
 
 - title: Sketch 0
   urlTitle: sketch-0
+  id: 3bb2996e-f397-4ba7-a142-132dd0c8afee
+  v: v1606264235
   date: 
   size: 
   orientation: landscape

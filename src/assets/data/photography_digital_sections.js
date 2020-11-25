@@ -14,7 +14,7 @@ const length = places.data.length
 
 const data = ymlLoader.load(`
 - title: People
-  href: /photography/digital/people/${startImg(people).urlTitle}
+  href: /photography/digital/people/${startImg(people).id}
   length: ${people.data.length}
   fontStyles:
   sizes:
@@ -29,7 +29,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Nature
-  href: /photography/digital/nature/${startImg(nature).urlTitle}
+  href: /photography/digital/nature/${startImg(nature).id}
   length: ${nature.data.length}
   fontStyles:
   sizes:
@@ -44,7 +44,7 @@ const data = ymlLoader.load(`
       height: 532
 
 - title: Places
-  href: /photography/digital/places/${startImg(places).urlTitle}
+  href: /photography/digital/places/${startImg(places).id}
   length: ${places.data.length}
   fontStyles:
   sizes:
@@ -64,7 +64,7 @@ module.exports = { data, length };
 
 
 // - title: Everyday Life
-//   href: /photography/digital/everyday-life/${startImg(everydayLife).urlTitle}
+//   href: /photography/digital/everyday-life/${startImg(everydayLife).id}
 //   fontStyles:
 //   sizes:
 //     Large:
@@ -78,7 +78,7 @@ module.exports = { data, length };
 //       height: 532
 
 // - title: Manipulations
-//   href: /photography/digital/desk/${startImg(manipulations).urlTitle}
+//   href: /photography/digital/desk/${startImg(manipulations).id}
 //   fontStyles:
 //   sizes:
 //     Large:
