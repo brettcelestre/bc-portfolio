@@ -26,6 +26,7 @@ Technical Skills:
     - Bootstrap
     - jQuery
     - Event Tracking
+    - Web Design
   Dev Ops: 
     - AWS
     - Git
@@ -38,9 +39,10 @@ Technical Skills:
     - Bash
     - Analytics
     - MySQL
+    - Looker
+    - Snowflake
     - Socket.IO
-    - TDD/BD
-    - Protractor
+    - TDD/BDD
     - Webpack
     - Gulp
     - OAuth2.0

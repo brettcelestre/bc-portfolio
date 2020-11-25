@@ -120,6 +120,12 @@ class App extends Component {
                 Short Films
               </div>
             </Link>
+
+            <Link to="/creatives" replace onClick={this.cleanUp}>
+              <div className="section-title menu-creatives">
+                Creatives
+              </div>
+            </Link>
             
             {/* <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
               <div className="section-title menu-spatial">
@@ -137,12 +143,6 @@ class App extends Component {
               <div className="section-title menu-resources">
                 Resources
               </div>
-            </Link> */}
-
-            <Link to="/creatives" replace onClick={this.cleanUp}>
-              <div className="section-title menu-creatives">
-                Creatives
-              </div>
             </Link>
 
             {/* <Link to="/resume" replace onClick={this.cleanUp}>
@@ -150,12 +150,14 @@ class App extends Component {
                 Resume
               </div>
             </Link>
+            
 
             <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title menu-about">
                 About
               </div>
-            </Link> */}
+            </Link>
+            */}
 
             <div className="social-media-spacer"></div>
             
