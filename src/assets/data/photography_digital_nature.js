@@ -2,6 +2,8 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Briones Sunset
   urlTitle: briones-sunset
+  id: c9ad3b72-28e0-4602-a01c-a807c1fc4b10
+  v: v1606275324
   date: 2013
   size: ''
   orientation: landscape
@@ -21,6 +23,8 @@ const data = ymlLoader.load(`
 
 - title: Steep Revine
   urlTitle: steep-revine
+  id: aa5f0cc0-4b81-4330-b45c-eab07f110713
+  v: v1606275369
   date: 2010
   size: ''
   orientation: landscape
@@ -40,6 +44,8 @@ const data = ymlLoader.load(`
 
 - title: Eugene
   urlTitle: eugene
+  id: 4a65c239-4ff5-46a5-8ed6-6806f5021745
+  v: v1606275401
   date: 2010
   size: ''
   orientation: landscape
