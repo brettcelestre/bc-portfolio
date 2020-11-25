@@ -46,92 +46,8 @@ const galleryData ={
     }
   },
   spatial: require('../../assets/data/spatial.js')
-}
+};
 
-let images = {
-  artwork: {
-    collage: {},
-    digital: {},
-    drawings: {},
-    sketches: {}
-  },
-  photography: {
-    film: {
-      desk: {},
-      'black-&-white': {},
-      'everyday-life': {},
-      nature: {},
-      people: {},
-      places: {},
-      things: {}
-    },
-    client: {},
-    'del-rio': {},
-    digital: {
-      'everyday-life': {},
-      people: {},
-      nature: {},
-      places: {},
-      things: {}
-    }
-  },
-  spatial: {},
-  'short-films': {}
-}
-
-// Formats piece name as JPG file name
-const buildFileName = (title) => {
-  if (title.toString().includes(' ')) {
-    return title.split(' ').join('_');
-  }
-  return title;
-}
-
-const requireAllImages = (data) => {
-  Object.keys(data).forEach((section) => {
-    // Single Layer deep
-    if ( section === 'spatial' || section === 'short-films') {
-      galleryData[section].data.forEach((piece) => {
-        const name = buildFileName(piece.title);
-        images[section][piece.urlTitle] = {
-          Small: require(`../../assets/gallery/${section}/${name}_Small.jpg`),
-          Medium: require(`../../assets/gallery/${section}/${name}_Medium.jpg`),
-          Large: require(`../../assets/gallery/${section}/${name}_Large.jpg`)
-        }
-      });
-    // Two Layers Deep
-    } else {
-      Object.keys(galleryData[section]).forEach((category) => {
-        // Is only a category
-        if ( galleryData[section][category].data) {
-          galleryData[section][category].data.forEach((piece) => {
-            const name = buildFileName(piece.title);
-            images[section][category][piece.urlTitle] = {
-              Small: require(`../../assets/gallery/${section}/${category}/${name}_Small.jpg`),
-              Medium: require(`../../assets/gallery/${section}/${category}/${name}_Medium.jpg`),
-              Large: require(`../../assets/gallery/${section}/${category}/${name}_Large.jpg`)
-            }
-          });
-
-        // Has a subcategory
-        } else if ( typeof galleryData[section][category] === 'object' ) {
-          Object.keys(galleryData[section][category]).forEach((subCategory) => {
-            galleryData[section][category][subCategory].data.forEach((piece) => {
-              const name = buildFileName(piece.title);
-              images[section][category][subCategory][piece.urlTitle] = {
-                Small: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Small.jpg`),
-                Medium: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Medium.jpg`),
-                Large: require(`../../assets/gallery/${section}/${category}/${subCategory}/${name}_Large.jpg`)
-              }
-            });
-          });
-        }
-      });
-    }
-  });
-}
-
-requireAllImages(galleryData);
 class ImageViewer extends Component {
 
   static propTypes = {
@@ -405,18 +321,8 @@ class ImageViewer extends Component {
     }
   }
 
-  buildImageSRC = (section, category = null, subCategory = null, piece) => {
-    if (subCategory) {
-      return images[section][category][subCategory][piece];
-    } else if (category) {
-      return images[section][category][piece];
-    } else {
-      return images[section][piece];
-    }
-  }
-
   buildZoomImage = (section, category, subCategory, piece, index) => {
-    const { getCurrentGalleryData, buildImageSRC, zoomImageState } = this;
+    const { getCurrentGalleryData, zoomImageState } = this;
     const { zoom } = this.state;
     if (zoom) {
       const { id, v } = getCurrentGalleryData(section, category, subCategory).data[index];
@@ -437,17 +343,6 @@ class ImageViewer extends Component {
           alt={this.state.name}
           // loader={this.loading()}
         />
-
-        // Previous
-        // <Img
-        //   src={buildImageSRC(section, category, subCategory, piece)['Large']}
-        //   width={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].width}
-        //   height={getCurrentGalleryData(section, category, subCategory).data[index].sizes[zoomDimensions].height}
-        //   className="zoom-image fade-in-zoom-image"
-        //   id="zoom-image"
-        //   onClick={zoomImageState}
-        //   loader={this.loading()}
-        // />
       );
     }
     return;
@@ -678,7 +573,6 @@ class ImageViewer extends Component {
           imageZoomState={this.state.zoom}
           galleryPath={galleryPath}
           galleryData={galleryData}
-          buildImageSRC={this.buildImageSRC}
           currentSize={this.state.currentSize}
           imageHeight={this.state.height}
           galleryLength={currentGalleryLength}
