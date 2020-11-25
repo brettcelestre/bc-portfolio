@@ -97,9 +97,9 @@ class App extends Component {
 
           {/* <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/> */}
 
-          <div className="main-title-box">
+          {/* <div className="main-title-box">
             <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
-          </div>
+          </div> */}
 
           <div className={this.state.mobileMenu ? "navigation navigation-mobile-show" : "navigation"}>
             <Link to="/photography" replace onClick={this.cleanUp}>
