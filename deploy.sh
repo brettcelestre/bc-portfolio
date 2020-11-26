@@ -23,7 +23,7 @@ echo "\n\n"
 
 echo "---------------------------------"
 echo "> 4/6 Deleting contents of bucket"
-aws s3 rm $BUCKET --recursive --exclude "log/"
+aws s3 rm $BUCKET --recursive --exclude "log/*"
 
 echo "\n\n"
 
