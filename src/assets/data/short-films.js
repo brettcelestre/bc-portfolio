@@ -61,7 +61,7 @@ const data = ymlLoader.load(`
       length: "40:22 minutes"
     - name: Photography
       type: photos
-      href: /photography/del-rio/${delRioGallery.data[0].urlTitle}
+      href: /photography/del-rio/${delRioGallery.data[0].id}
       length: ${delRioGallery.data.length} photos
     - name: Storyboards Comparison
       type: video

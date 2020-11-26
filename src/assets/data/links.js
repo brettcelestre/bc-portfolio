@@ -341,13 +341,6 @@ const data = ymlLoader.load(`
   tags:
     - software engineer
 
-- title: Colin McDonald
-  links:
-    - type: Portfolio
-      url: http://www.colinlmcdonald.com/
-  tags:
-    - software engineer
-
 - title: John Madrak
   links:
     - type: Portfolio
@@ -450,8 +443,13 @@ const data = ymlLoader.load(`
 // https://www.rennerscreenprinting.com/
 // https://www.instagram.com/rennerscreenprinting/
 
-// Cursed Ink Print
-// https://www.cursedinkprint.co/about
+// Broken Sites
+// - title: Colin McDonald
+//   links:
+//     - type: Portfolio
+//       url: http://www.colinlmcdonald.com/
+//   tags:
+//     - software engineer
 
 module.exports = { data, tags };
 
