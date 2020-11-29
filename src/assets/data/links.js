@@ -246,7 +246,7 @@ const data = ymlLoader.load(`
 - title: Nick Di Tomasso
   links:
     - type: Portfolio
-      url: http://nickdito9.wixsite.com/mindtime9
+      url: https://mindtime9.com/
   tags:
     - illustrator
     - musician

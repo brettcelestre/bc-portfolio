@@ -365,7 +365,7 @@ class ImageViewer extends Component {
   }
 
   stopSlideshow = () => {
-    // TODO STOP slideshow. maybe make the slideshow button a toggle
+    // TODO STOP slideshow. Make the slideshow button a toggle
   }
 
   previousImg = () => {
