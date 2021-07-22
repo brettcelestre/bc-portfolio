@@ -187,12 +187,21 @@ $nav-h-desktop-rest: 50px;
   transition-duration: 225ms;
   -webkit-transition: opacity 225ms;
   position: relative;
+  top: 25px;
   padding-top: 5px;
   line-height: 1.2rem;
 }
 
 .image-info {
-  @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
+  // @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
+  @include font-setup(
+    'medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 
+    .85rem, 
+    500,
+     #131313, 
+     none, 
+     .25px
+  );
 }
 
 .image-description-details {
@@ -220,9 +229,13 @@ $nav-h-desktop-rest: 50px;
 
 .image-date {
   display: inline-flex;
-  @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
-  padding-left: 14px;
-  padding-top: 9px;
+  // OG
+  // @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
+
+  // Test
+  @include font-setup('old style', 12.5px, 100, rgb(20, 20, 20), none, 1.25px);
+  // padding-left: 14px;
+  padding-top: 8px;
   position: absolute;
   transition-duration: 225ms;
 }
@@ -384,7 +397,7 @@ $nav-h-desktop-rest: 50px;
   @include font-setup('chapaza', .9rem, 500, rgb(20, 20, 20), none, -.75px);
   letter-spacing: 5px;
   // padding-top: 17px;
-  padding-top: 12px;
+  padding-top: 18px;
   float: right;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -438,6 +451,7 @@ $nav-h-desktop-rest: 50px;
 // Tablet Size - and (max-height: 736px)
 @media (max-width: 1024px)  {
   .toolbar-bar {
+    z-index: 102;
     left: 0px;
     padding: 0 0 0 20px;
   }
@@ -469,11 +483,16 @@ $nav-h-desktop-rest: 50px;
 
   .image-date {
     display: block;
-    padding-left: 0;
+    padding-left: 6px;
     padding-top: 0;
     font-size: .71rem;
-    margin-top: -1px;
+    margin-top: 13px;
     transition-duration: 225ms;
+  }
+
+  .image-date-focus {
+    padding-left: 1px;
+    margin-top: 9px;
   }
 
   .title-box {
@@ -512,6 +531,7 @@ $nav-h-desktop-rest: 50px;
 
   .gallery-index {
     width: 54px;
+    padding-top: 10px;
   }
 
   .gallery-index-box {

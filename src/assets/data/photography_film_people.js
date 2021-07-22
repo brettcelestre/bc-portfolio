@@ -220,7 +220,7 @@ const data = ymlLoader.load(`
   date: 2016
   size: ''
   orientation: landscape
-  description: San Bruno, CA
+  description: 
   arrows: light
   info: Nikon FM10 - 85mm
   sizes:
@@ -241,7 +241,7 @@ const data = ymlLoader.load(`
   date: 2015
   size: ''
   orientation: landscape
-  description: Creating a Cuban cookbook for her sister Maria
+  description: Jeanne-Marie watercoloring picadillo for a cookbook as a gift for her sister Maria.
   arrows: dark
   info: Nikon FM10 - 50mm
   sizes:
@@ -669,7 +669,7 @@ const data = ymlLoader.load(`
   date: 2007
   size: ''
   orientation: portrait
-  description: 
+  description: Jake and Brittany.
   arrows: light
   info: Nikon N55 - 50mm
   sizes:

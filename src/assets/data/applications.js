@@ -10,6 +10,7 @@ const data = ymlLoader.load(`
   tech:
     - React Native
     - GraphQL
+    - Apollo
     - Node.js
     - Express
     - Postgres
@@ -26,14 +27,16 @@ const data = ymlLoader.load(`
   github: 
   launch: 
   header: Admin dashboard to manage Starcity's mobile app. 
-  description: I was the lead developer of this green field application used by our experience and operations team for content moderation of our mobile app and direct messaging with members.
+  description: I was the lead developer of this green field application used by our Experience and Community teams for content moderation of our mobile app and direct messaging with members.
   tech:
     - React
     - Redux
     - GraphQL
+    - Apollo
     - Node.js
     - Express
     - Postgres
+    - SendBird
     - AWS
     - Circle.ci
 
@@ -42,7 +45,7 @@ const data = ymlLoader.load(`
   type: Personal Project.
   github: https://github.com/brettcelestre/mc-portfolio
   launch: http://www.matthewcelestre.com
-  header: Artist portfolio for my brother Matthew Celestre.
+  header: Artist portfolio for my brother, Matthew Celestre.
   description: 
   tech:
     - React

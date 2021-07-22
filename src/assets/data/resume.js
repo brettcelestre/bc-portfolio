@@ -2,62 +2,77 @@ const ymlLoader = require('js-yaml');
 
 const resume = ymlLoader.load(`
 Technical Skills:
+  Languages:
+    - JavaScript
+    - Python
+    - Bash
+  Cloud:
+    - AWS
+    - Google Cloud Platform
   Backend:
     - Node.js
     - GraphQL
-    - Apollo
     - PostgreSQL
+    - NoSQL
     - Microservices
-    - RESTful API
+    - Apollo
     - Express
-    - Hapi
-    - Logging
   Frontend:
     - React
     - React Native
     - Angular
     - Redux
-    - JavaScript
+    - Jest
+    - Styled Components
+    - Apollo
     - HTML
     - CSS
     - SCSS/SASS
-    - Styled Components
     - UI/UX
-    - Bootstrap
-    - jQuery
-    - Event Tracking
-    - Web Design
-  Dev Ops: 
-    - AWS
+  Technologies/Software:
     - Git
-    - CircleCI
+    - XCode
     - Docker
-    - Swagger
-    - Jenkins
-  Experienced:
-    - Unix
-    - Bash
-    - Analytics
-    - MySQL
+    - CircleCi
+    - Sentry
     - Looker
     - Snowflake
-    - Socket.IO
-    - TDD/BDD
-    - Webpack
-    - Gulp
-    - OAuth2.0
+    - Zendesk
+    - Figma
+    - Adobe Suite
 Professional Experience:
+  - company: Varo Bank
+    title: Software Engineer, API
+    date: JUNE 2021 - PRESENT
+    location: San Francisco, CA
+    url: https://www.varomoney.com/
+    header:
+    description:
+      - Temp
   - company: Starcity
-    title: Full Stack Software Engineer
-    date: APRIL 2019 - PRESENT
+    title: Senior Full Stack Software Engineer
+    date: FEBRUARY 2021 - MAY 2021
     location: San Francisco, CA
     url: https://www.starcity.com/
     header:
     description:
-      - Y Combinator start-up, working closely with our VP of Engineering and Director of Product Management 
-      - Delivered core features to Starcity’s mobile app in React Native such as direct messaging, bulletin board, member events, help desk, and in app/push notifications.
-      - Lead developer of a green field React/Redux admin dashboard used by our community team to prevent abuse, maintain a safe mobile app community, and direct message our members
-      - Developed backend in Node.js, GraphQL, and PostgreSQL deployed on AWS. I set up lifecycle and event analytics across our systems to help improve our sales funnel 
+     - Led our Experience Platform team and worked closely with stakeholders on delivering new features
+     - Managed and monitored our React Native mobile app releases for both iOS and Android
+     - Helped orchestrate the integration of Ollie.co software after Starcity acquired them
+     - Implemented changes to support the international launch of our Barcelona, Spain properties
+     - Addressed backend performance bottlenecks and optimized GraphQL queries
+     - Developed and maintained many of our sync scripts to keep our different systems up to date
+  - company: Starcity
+    title: Full Stack Software Engineer
+    date: APRIL 2019 - FEBRUARY 2021
+    location: San Francisco, CA
+    url: https://www.starcity.com/
+    header:
+    description:
+      - Delivered core features to Starcity’s mobile app in React Native, including direct messaging, bulletin board, member events, help desk, and in-app/push notifications. Available in App Store and Google Play
+      - Acted as lead developer of a green field React/Redux admin dashboard used by our community team to prevent abuse, maintain a safe mobile app community, and direct message our members
+      - Developed backend in Node.js, GraphQL, Apollo and PostgreSQL deployed on AWS
+      - Set up lifecycle and event analytics across our systems to help improve our sales funnel and member conversion
   - company: Accenture - Liquid Studios
     title: Software Engineer
     date: MAY 2017 - MARCH 2019
@@ -65,10 +80,9 @@ Professional Experience:
     url: https://www.accenture.com/us-en/capability-rapid-application-development-studio
     header:
     description:
-      - Utilized Hyperledger Fabric, Angular, and AWS to create a business-oriented supply chain application
-      - Developed a Node.js microservices API layer used to connect disparate backend systems for a Fortune 500 Hospitality Client to enable guests to manage reservations, user profiles, and digital keys
-      - Utilized the latest container and cloud technologies to achieve a highly available and scalable platform
-      - Architected and implemented a system to notify the mobile app of maintenance downtimes. Built Jenkins pipelines and utilized AWS Lambda, DynamoDB, and SNS 
+      - Developed a microservices backend with Node.js for the MGM Resorts mobile app to enable guests to manage show and dinner reservations, user profiles, and access their rooms with keyless entry
+      - Utilized Docker containers and configured AWS ECS, API Gateway, CloudWatch, Networking Security Policies, and ELB to achieve a highly available and scalable platform
+      - Architected and implemented a system to notify the mobile app of maintenance downtimes utilizing AWS Lambda, DynamoDB, and SNS, and set up CI/CD pipelines
   - company: Wobo, Inc.
     title: QA Specialist
     date: JULY 2015 - APRIL 2016
@@ -77,8 +91,7 @@ Professional Experience:
     header:
     description:
       - Conducted user tests, managed epic stories, and released production deployments bi-weekly
-      - Collaborated with engineers to ensure that features passed tests and verify MySQL database updates
-      - Participated in Agile workflow lifecycle activities on an international team
+      - Collaborated with engineers to test features and verify MySQL database updates
   - company: The Stone Group
     title: Web and Graphic Designer
     date: JUNE 2014 - JULY 2015
@@ -87,7 +100,7 @@ Professional Experience:
     header:
     description:
       - Designed and built responsive emails which were sent to over 100k subscribers twice weekly
-      - Created and managed websites and social media accounts increasing customer engagement by 400%
+      - Designed and managed websites, social media accounts, and ad campaigns for both print and web
   - company: "TCI | SPX"
     title: Digital Imaging and Photography
     date: AUGUST 2011 - DECEMBER 2014
@@ -160,24 +173,3 @@ Education:
 `);
 
 module.exports = { resume };
-
-// Starcity stuff below
-// add link to starcity app
-// https://apps.apple.com/us/app/starcity/id1457383827
-
-// - Fast paced start-up, working closely with our VP of Engineering and Director of Product Management 
-// - Currently working in React Native on Starcity's mobile app bringing core features to life such as direct messaging, a community bulletin board, member events, and in app/push notifications
-// - Lead developer of a green field React/Redux admin dashboard used by our community team for content moderation of our mobile app and direct messaging our members
-// - Our backend is Node.js, GraphQL, and PostgreSQL deployed on AWS. I’ve helped set up lifecycle and event analytics across our systems and helped improve our member application portal 
-
-// - React, Node.js, GraphQL, AWS, React Native, Clojure, Sendbird, Google Analytics, WordPress, Segment, Google Analytics, Salesforce
-//       - Developed a internal admin dashboard for our community team to moderate the Starcity mobile apps content and direct message community members.
-
-// - company: Self-Employed
-// title: Full Stack Software Engineer
-// date: OCTOBER 2016 - DECEMBER 2016
-// header:
-// description: 
-//   - Architected a single-page app with AngularJS and styled with SASS with a responsive design
-//   - Built a RESTful API with Node.js and Express with MongoDB and Mongoose
-//   - Redesigned and developed a responsive company website to improve client engagement and SEO

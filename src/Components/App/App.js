@@ -69,9 +69,7 @@ class App extends Component {
   }
 
   render() {
-    // const { selected } = this.state;
     const year = new Date().getFullYear();
-
 
     let socialMediaIconSize;
     if ( window.innerWidth > 1024) {          // Desktop
@@ -121,9 +119,21 @@ class App extends Component {
               </div>
             </Link>
 
+            <Link to="/applications" replace onClick={this.cleanUp}>
+              <div className="section-title menu-apps">
+                Applications
+              </div>
+            </Link>
+
             <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title menu-creatives">
                 Creatives
+              </div>
+            </Link>
+
+            <Link to="/resume" replace onClick={this.cleanUp}>
+              <div className="section-title">
+                Resume
               </div>
             </Link>
             
@@ -144,13 +154,6 @@ class App extends Component {
                 Resources
               </div>
             </Link>
-
-            {/* <Link to="/resume" replace onClick={this.cleanUp}>
-              <div className="section-title">
-                Resume
-              </div>
-            </Link>
-            
 
             <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title menu-about">

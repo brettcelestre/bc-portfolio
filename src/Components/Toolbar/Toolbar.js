@@ -45,7 +45,7 @@ class Toolbar extends Component {
       }
       const desc = document.getElementsByClassName('image-description');
       const test = desc[0].clientHeight + heightAdjustment;
-      console.log('test: ', test);
+      // console.log('test: ', test);
       if (test !== this.state.descriptionHeight) {
         this.setState({
           isMobile,
@@ -85,8 +85,8 @@ class Toolbar extends Component {
             break;
         }
         const desc = document.getElementsByClassName('image-description');
-        console.log('descriptionHeight: ', this.state.descriptionHeight);
-        console.log('update: ', desc[0].clientHeight + heightAdjustment);
+        // console.log('descriptionHeight: ', this.state.descriptionHeight);
+        // console.log('update: ', desc[0].clientHeight + heightAdjustment);
         this.setState({
           showInfo: true,
           isMobile,
@@ -285,7 +285,7 @@ class Toolbar extends Component {
               {this.props.imageData.title}
             </div> */}
 
-            <div className={this.state.showInfo ? `${dateClassNames} image-date-focus` : `${dateClassNames}`}>
+            <div className={this.state.showInfo ? `image-date-focus ${dateClassNames}` : `${dateClassNames}`}>
               {this.props.imageData.date}
             </div>
 

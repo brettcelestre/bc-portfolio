@@ -146,7 +146,7 @@ li {
 .navigation {
   position: relative;
   width: $navigation-width;
-  margin-top: 10px;
+  margin-top: 40px;
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
    -khtml-user-select: none; /* Konqueror HTML */
@@ -233,6 +233,7 @@ li {
 .social-links-box {
   display: table;
   position: fixed;
+  text-align: left;
   bottom: 0;
   height: 42px;
   width: $navigation-width;
@@ -259,15 +260,17 @@ li {
 }
 
 .copyright-box {
-  height: 44px;
+  height: 24px;
   margin-bottom: 17px;
-  margin-top: -5px;
+  margin-top: -12px;
 }
 
 .copyright {
   @include font-setup-new('SplendidN', 14.5px, 500, white, none, -1px);
   opacity: .6;
-  margin-top: 3px;
+  margin-top: 10px;
+  padding-left: 10px;
+  text-align: left;
 }
 
 // Tablet Size - and (max-height: 736px)
@@ -305,6 +308,7 @@ li {
   .menu-icon {
     fill: white;
     padding: 7px;
+    // padding: 7px 6px 6px 6px;
   }
 
   .exit-icon {
@@ -327,11 +331,11 @@ li {
     transition-duration: 300ms;
     position: fixed;
     float: right;
-    top: 50px;
+    top: 20px;
+    height: calc(100% - 20px);
     overflow: auto;
     width: 217px;
     right: -218px;
-    height: calc(100% - 50px);
     padding-top: 8px;
     background-color: #1d1d1d;
     color: #f8f8f8;
@@ -445,6 +449,8 @@ li {
   }
 
   .navigation {
+    top: 50px;
+    height: calc(100% - 50px);
     background-image: url('../../assets/img/menu-mobile.png');
     margin-top: 0px;
   }
