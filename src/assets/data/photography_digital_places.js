@@ -4,7 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: briones
   id: 6da9ba9b-19e1-494d-8822-f64f472f87f7
   v: v1606275861
-  date: JULY 2012
+  year: 2012
+  month: July
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
@@ -25,7 +27,9 @@ const data = ymlLoader.load(`
   urlTitle: steep-revine
   id: 2333def5-a598-471e-8a37-abdb5c04fe54
   v: v1606275901
-  date: DECEMBER 2011
+  year: 2011
+  month: December
+  day: 
   size:
   orientation: landscape
   info: Nikon D50 - 50mm
@@ -46,7 +50,9 @@ const data = ymlLoader.load(`
   urlTitle: treat-overpass
   id: fa1357ae-94fb-4597-a578-a1fc32ac361f
   v: v1606275931
-  date: JUNE 2011
+  year: 2011
+  month: June
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D50 - 50mm

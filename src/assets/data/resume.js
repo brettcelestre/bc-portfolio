@@ -48,7 +48,6 @@ Professional Experience:
     url: https://www.varomoney.com/
     header:
     description:
-      - Temp
   - company: Starcity
     title: Senior Full Stack Software Engineer
     date: FEBRUARY 2021 - MAY 2021

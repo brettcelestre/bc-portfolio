@@ -5,9 +5,12 @@ const data = ymlLoader.load(`
   id: 96916e8c-8603-48dc-8940-c8739defd2cd
   v: v1606269743
   date: MARCH 2013
+  year: 2013
+  month: March
+  day: 
   size: 
   orientation: portrait
-  description: My brother Matt painting the train interiors for our short film Del Rio
+  description: Matt painting the train interiors for our short film Del Rio
   arrows: dark
   info: Nikon Nikomat FTn - 50mm
   sizes:
@@ -26,6 +29,9 @@ const data = ymlLoader.load(`
   id: 0b5362a6-6bba-4ef5-b711-bf25191e3324
   v: v1606269774
   date: 2013
+  year: 2013
+  month: 
+  day: 
   size: 
   orientation: landscape
   description: 
@@ -47,9 +53,12 @@ const data = ymlLoader.load(`
   id: b07bb723-eaec-465b-95c8-9271d64ec01e
   v: v1606269804
   date: MARCH 2013
+  year: 2013
+  month: March
+  day: 
   size: 
   orientation: landscape
-  description: Taken in Castle Rock, Walnut Creek, CA
+  description: Jeanne-Marie
   arrows: dark
   info: Nikon Nikomat FTn - 50mm
   sizes:
@@ -68,9 +77,12 @@ const data = ymlLoader.load(`
   id: 64993074-c697-4728-a490-329b1bf63c17
   v: v1606269838
   date: 2013
+  year: 2013
+  month: 
+  day: 
   size: 
   orientation: landscape
-  description: Taken while on a skate trip to Santa Cruz, CA
+  description: Santa Cruz, CA
   arrows: light
   info: Nikon Nikomat FTn - 50mm
   sizes:
@@ -89,9 +101,12 @@ const data = ymlLoader.load(`
   id: 989476f6-bb79-401d-a03a-a416c1a4b91a
   v: v1606269865
   date: 2013
+  year: 2013
+  month: 
+  day: 
   size: 
   orientation: landscape
-  description: This was taken around 1AM while biking around San Jose State University
+  description: San Jose State University
   arrows: light
   info: Nikon Nikomat FTn - 50mm
   sizes:
@@ -110,9 +125,12 @@ const data = ymlLoader.load(`
   id: dbe00f7e-25f1-467a-b569-de01c62c3dac
   v: v1606269893
   date: 2013
+  year: 2013
+  month: 
+  day: 
   size: 
   orientation: portrait
-  description: 
+  description: San Jose State University
   arrows: dark
   info: Nikon Nikomat FTn - 50mm
   sizes:
@@ -131,9 +149,12 @@ const data = ymlLoader.load(`
   id: c3cf4069-225f-4bf2-8844-f06cbaa4a4ef
   v: v1606269920
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: 
   orientation: landscape
-  description: 
+  description: I
   arrows: dark
   info: Nikon N55 - 50mm
   sizes:

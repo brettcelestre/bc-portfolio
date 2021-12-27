@@ -48,7 +48,12 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Side Table
   urlTitle: side-table
+  id: NULL
+  v: NULL
   date: 2012
+  size: ''
+  orientation: landscape
+  arrows: light
   info: Walnut, Glue - 24.5" x 20" x 20"
   description: 
   href:

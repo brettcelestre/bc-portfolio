@@ -72,7 +72,7 @@ const data = ymlLoader.load(`
         by</ br>\
         Matthew & Brett Celestre</ br></ br></ br> \
         \
-        <strong>Original Music Written & Recorded</strong></ br>
+        <strong>Music Written & Recorded</strong></ br>
         by</ br>\
         Ryan 'GOOMBAH' Schmidt</ br></ br></ br> \
         \
@@ -169,7 +169,7 @@ const data = ymlLoader.load(`
   credits: <strong>Written & Directed</strong></ br>
     by</ br>
     Matthew & Brett Celestre</ br></ br></ br>
-    <strong>Original Song</strong></ br>
+    <strong>Music</strong></ br>
     by</ br>
     Andrew Jinkins</ br></ br></ br>
     <strong>Story</strong></ br>

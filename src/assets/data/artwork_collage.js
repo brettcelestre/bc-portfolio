@@ -6,7 +6,8 @@ const data = ymlLoader.load(`
     id: d33c218b-a29d-475b-a784-0c6aed0e4be5
     v: v1606177832
     urlTitle: mccauley-at-war
-    date: FEBRUARY 2015
+    year: 2015
+    month: February
     size: 16" x 20"
     orientation: portrait
     info: Paper & Glue
@@ -27,7 +28,8 @@ const data = ymlLoader.load(`
     id: 8bf8a0cc-c481-45af-a147-44bd9a113437
     v: v1606262038
     urlTitle: valley
-    date: '2011'
+    year: 2011
+    month: 
     size: 16" x 10.75"
     orientation: landscape
     info: Paper, Glue, & Ink
@@ -48,7 +50,8 @@ const data = ymlLoader.load(`
     id: c970837f-dc49-42af-9f89-319afb54dc19
     v: v1606177832
     urlTitle: electric-ladyland
-    date: JANUARY 2009
+    year: 2009
+    month: January
     src: c970837f-dc49-42af-9f89-319afb54dc19
     size: 14" x 17"
     orientation: portrait
@@ -71,7 +74,8 @@ const data = ymlLoader.load(`
     id: bf3b4b8b-31b5-481e-98b1-fafbb076ff76
     v: v1606177831
     urlTitle: lcd
-    date:  JANUARY 2007
+    year: 2007
+    month: January
     size: 16" x 13"
     info: Paper & Glue
     orientation: landscape

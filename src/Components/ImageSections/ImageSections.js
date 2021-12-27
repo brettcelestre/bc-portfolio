@@ -11,7 +11,8 @@ const data = {
   artwork:  require('../../assets/data/artwork-sections.js'),
   photography: require('../../assets/data/photography-sections.js'),
   photographyFilm: require('../../assets/data/photography_film_sections.js'),
-  photographyDigital: require('../../assets/data/photography_digital_sections.js')
+  photographyDigital: require('../../assets/data/photography_digital_sections.js'),
+  spatial: require('../../assets/data/spatial.js')
 }
 
 class ImageSections extends Component {
@@ -102,6 +103,28 @@ class ImageSections extends Component {
     )
   }
 
+  breadcrumbs(section, category) {
+    return (
+      <div className="image-sections-view-breadcrumb">
+        {(section && section !== 'spatial') && <Link to={`/${section}`}>
+          <span className="image-view-breadcrumb-link">
+            {section}
+          </span>
+        </Link>}
+        {(section && category && <span>
+          <span className="breadcrumb-arrow">&nbsp;&nbsp;&lt;&nbsp;&nbsp;</span>
+          <span className="image-view-breadcrumb-link">
+            {category}
+          </span>
+        </span>)}
+        
+        {/* {category && <span className="breadcrumb-arrow">&nbsp;&nbsp;&lt;&nbsp;&nbsp;</span>}
+        {category && !subCategory && <Link to={`/${section}/${category}/${data[0].id}`}><span className="image-view-breadcrumb-link">{category}</span></Link>} */}
+        {/* {category && subCategory && <Link to={`/${section}/${category}/sections`}><span className="image-view-breadcrumb-link">{category}</span></Link>} */}
+      </div>
+    )
+  }
+
   buildSectionThumbs() {
     const category = this.state.category;
     let target = category ?
@@ -173,10 +196,11 @@ class ImageSections extends Component {
   }
 
   // buildBreadcrumb() {
-  //   const { section, category } = this.props;
+    // const { section, category } = this.props;
   // }
 
   render() {
+    const { match: { params: { section, category } } } = this.props;
     return (
       <div className="thumbs-section-outer">
         
@@ -190,6 +214,8 @@ class ImageSections extends Component {
               this.windowSize(windowSize.windowWidth)
             }
           }/>
+
+        {this.breadcrumbs(section, category)}
 
         <div className="row section-thumbs">
           {this.buildSectionThumbs()}

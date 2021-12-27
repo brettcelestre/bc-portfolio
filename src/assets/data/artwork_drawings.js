@@ -2,7 +2,8 @@ const ymlLoader = require('js-yaml');
 
 const data = ymlLoader.load(`
   - title: American Indian
-    date: '2011'
+    year: 2011
+    month: 
     size: 16"X10.75"
     orientation: landscape
     info: PAPER & GLUE

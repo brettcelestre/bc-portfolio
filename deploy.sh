@@ -2,6 +2,9 @@
 # BUCKET=s3://name-of-target-bucket
 # ARCHIVE_PATH=name-of-archive-folder-in-parent-directory
 
+# TODO
+# Add error handling
+
 echo "---------------------------------"
 echo "       Starting deployment"
 echo "---------------------------------"

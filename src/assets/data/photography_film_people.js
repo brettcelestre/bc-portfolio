@@ -5,6 +5,8 @@ const data = ymlLoader.load(`
   id: d4096b7c-b1be-430c-ae28-959d23238bc6
   v: v1606266153
   date: 2019
+  year: 2019
+  month: 
   size: ''
   orientation: landscape
   description: 
@@ -26,6 +28,8 @@ const data = ymlLoader.load(`
   id: f26d8da5-9d46-41e8-9190-e7db71f347db
   v: v1606266189
   date: JULY 2019
+  year: 2019
+  month: July
   size: ''
   orientation: landscape
   description: Happy Camp, CA
@@ -47,6 +51,8 @@ const data = ymlLoader.load(`
   id: 9ec18ed7-f9f4-43ce-a2c7-5baad15ec800
   v: v1606266271
   date: OCTOBER 2018
+  year: 2018
+  month: October
   size: ''
   orientation: landscape
   description: Aptos, CA
@@ -68,6 +74,8 @@ const data = ymlLoader.load(`
   id: 64484f7e-b33c-4946-96d8-ca82a905c002
   v: v1606266503
   date: AUGUST 2018
+  year: 2018
+  month: August
   size: ''
   orientation: landscape
   description: 
@@ -89,6 +97,8 @@ const data = ymlLoader.load(`
   id: 607cc7f7-045a-4364-9a16-3847a7c04049
   v: v1606266920
   date: AUGUST 2018
+  year: 2018
+  month: August
   size: ''
   orientation: landscape
   description: 
@@ -111,6 +121,8 @@ const data = ymlLoader.load(`
   id: 3d05e59a-d91b-4830-88e8-10f51106752f
   v: v1606266968
   date: AUGUST 2018
+  year: 2018
+  month: August
   size: ''
   orientation: portrait
   description: 
@@ -132,6 +144,8 @@ const data = ymlLoader.load(`
   id: 9bff91e5-89b0-4692-8d8f-dfa1a99b9e2a
   v: v1606267013
   date: 2018
+  year: 2018
+  month: 
   size: ''
   orientation: landscape
   description: Painting a portrait of Grimes
@@ -153,8 +167,9 @@ const data = ymlLoader.load(`
   id: ba393acc-60f2-455e-9313-d9d38420f9e9
   v: v1606266063
   date: MARCH 27, 2017
-  day: 27
   year: 2017
+  month: March
+  day: 27
   size: ''
   orientation: landscape
   description: Oakland, CA
@@ -176,6 +191,9 @@ const data = ymlLoader.load(`
   id: ac174ff5-c2cf-45ff-b1dd-a7d505cd9797
   v: v1606267105
   date: 2017
+  year: 2017
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -197,6 +215,9 @@ const data = ymlLoader.load(`
   id: 313b82ee-d03b-4e70-8906-3e93c352b81d
   v: v1606267138
   date: 2016
+  year: 2016
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Concord, CA
@@ -218,6 +239,9 @@ const data = ymlLoader.load(`
   id: b0a78444-556f-43e4-ba6b-e2094e85fc1a
   v: v1606267170
   date: 2016
+  year: 2016
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -239,6 +263,9 @@ const data = ymlLoader.load(`
   id: 12b1dc70-1bdf-4981-92f2-8891c44089aa
   v: v1606267205
   date: 2015
+  year: 2015
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Jeanne-Marie watercoloring picadillo for a cookbook as a gift for her sister Maria.
@@ -260,6 +287,9 @@ const data = ymlLoader.load(`
   id: 4efd9ccb-56ed-4eb5-a61f-dba4fbf3800e
   v: v1606267246
   date: 2015
+  year: 2015
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -282,6 +312,8 @@ const data = ymlLoader.load(`
   v: v1606267316
   date: JANUARY 2013
   year: 2013
+  month: January
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -304,6 +336,8 @@ const data = ymlLoader.load(`
   v: v1606267347
   date: JANUARY 2013
   year: 2013
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -326,6 +360,8 @@ const data = ymlLoader.load(`
   v: v1606267383
   date: 2012
   year: 2012
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -347,6 +383,9 @@ const data = ymlLoader.load(`
   id: 2b843ad8-6822-44be-a447-4df7eded45db
   v: v1606267416
   date: 2012
+  year: 2012
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: San Jose, CA
@@ -368,6 +407,9 @@ const data = ymlLoader.load(`
   id: 1f9d1fff-27cc-401e-86bc-6b87b5867bd4
   v: v1606267452
   date: 2012
+  year: 2012
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: San Jose, CA
@@ -389,6 +431,9 @@ const data = ymlLoader.load(`
   id: f8e3d471-5f0a-49f9-83e9-b2c972e41892
   v: v1606267486
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
@@ -410,6 +455,9 @@ const data = ymlLoader.load(`
   id: 87f0fbf8-bcee-46d4-8897-cec07e4086d0
   v: v1606267524
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
@@ -431,6 +479,9 @@ const data = ymlLoader.load(`
   id: ec52ff68-e2dc-495a-acc5-9a75cc623998
   v: v1606267573
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: 
@@ -453,6 +504,9 @@ const data = ymlLoader.load(`
   id: 7be170b2-7e26-47f4-930a-592a845865e5
   v: v1606267615
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   taggedPeople:
     - Matthew Celestre
@@ -476,6 +530,9 @@ const data = ymlLoader.load(`
   id: e93cfa69-642a-4738-bf2b-9c2dbf3a69e2
   v: v1606267675
   date: JANUARY 2011
+  year: 2011
+  month: January
+  day: 
   size: ''
   taggedPeople:
     - Matthew Celestre
@@ -499,6 +556,9 @@ const data = ymlLoader.load(`
   id: c2cec8ff-a7a2-426e-abf8-cd582841bdf0
   v: v1606267711
   date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Taken for a Forbidden Science From Outer Space website
@@ -520,6 +580,9 @@ const data = ymlLoader.load(`
   id: efa35c21-b56f-4fb7-ac62-e55f3febc189
   v: v1606267746
   date: 2009
+  year: 2009
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Reflecting body as a life vessel in Briones Regional Park
@@ -541,6 +604,9 @@ const data = ymlLoader.load(`
   id: 4808596b-0067-48e9-b5f9-5894f59c79c7
   v: v1606267791
   date: 2009
+  year: 2009
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Interstate 24 West heading towards San Francisco
@@ -562,6 +628,9 @@ const data = ymlLoader.load(`
   id: a11efd50-fa53-4b13-aa74-ce23babe8372
   v: v1606267822
   date: 2008
+  year: 2008
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: 
@@ -583,6 +652,9 @@ const data = ymlLoader.load(`
   id: c781523d-3edd-4fc2-8a69-746bb6a3d0ec
   v: v1606267869
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Pismo Beach, CA
@@ -604,6 +676,9 @@ const data = ymlLoader.load(`
   id: 2ff1b6f0-c4ff-43fa-be05-1dcba015ea0c
   v: v1606267920
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: 
@@ -625,6 +700,9 @@ const data = ymlLoader.load(`
   id: 7b2e9c9c-688c-45d8-81b0-425a5731f68c
   v: v1606267959
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: Briones Regional Park art trip
@@ -646,9 +724,12 @@ const data = ymlLoader.load(`
   id: f4178d28-eea7-4c53-99e4-a688f84e1172
   v: v1606267994
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: portrait
-  description: 
+  description: Jake
   arrows: light
   info: Nikon N55 - 50mm
   sizes:
@@ -667,6 +748,9 @@ const data = ymlLoader.load(`
   id: b9539843-deac-47aa-8815-eef7739bf32b
   v: v1606268033
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: Jake and Brittany.
@@ -688,6 +772,9 @@ const data = ymlLoader.load(`
   id: 65d4b6b2-8e37-4fc6-b271-d5597bd7e7d9
   v: v1606268090
   date: 2007
+  year: 2007
+  month: 
+  day: 
   size: ''
   orientation: portrait
   description: 

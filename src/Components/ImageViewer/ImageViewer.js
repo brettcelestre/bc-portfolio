@@ -5,7 +5,7 @@ import WindowSizeListener from 'react-window-size-listener'
 import PropTypes from 'prop-types';
 import Dust from '../Dust/Dust.js';
 import Img from 'react-image';
-import { Image, CloudinaryContext, Transformation } from 'cloudinary-react';
+import { Image, CloudinaryContext, Transformation, Placeholder } from 'cloudinary-react';
 // import ReactSVG from 'react-svg';
 // import { Link, Redirect } from 'react-router-dom';
 // import { withRouter } from 'react-router';
@@ -516,8 +516,10 @@ class ImageViewer extends Component {
                 onClick={this.zoomImageState}
                 id="gallery-image"
                 alt={this.state.name}
-                // loader={this.loading()}
-              /> : null
+                loader={this.loading()}
+              >
+                <Placeholder type="blur" />
+                </Image> : null
             }
             {orientation === 'landscape' ?
               <Image
@@ -530,8 +532,10 @@ class ImageViewer extends Component {
                 id="gallery-image"
                 loading="lazy"
                 alt={this.state.name}
-                // loader={this.loading()}
-              /> : null
+                loader={this.loading()}
+                >
+                <Placeholder type="blur" />
+                </Image> : null
             }
 
           {/* <Img

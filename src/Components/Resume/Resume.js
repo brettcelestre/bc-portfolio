@@ -34,13 +34,16 @@ class Resume extends Component {
 
   buildJobsSection(jobs){
     const buildJobDescription = (items) => {
-      return items.map((item, i) => {
-        return (
-          <span key={`Description-${i}-${item.substr(0,10)}`}>
-            • {item}<br />
-          </span>
-        )
-      });
+      if (items && items.length) {
+        return items.map((item, i) => {
+          return (
+            <span key={`Description-${i}-${item.substr(0,10)}`}>
+              • {item}<br />
+            </span>
+          )
+        });
+      }
+      return null;
     }
 
     return jobs.map((job) => {

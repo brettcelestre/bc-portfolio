@@ -145,6 +145,10 @@ $nav-h-desktop-rest: 50px;
   transition-duration: 225ms;
 }
 
+// .month-focus {
+//   letter-spacing: 4.5px;
+// }
+
 .title-box {
   padding-left: 40px;
   padding-top: 0px;
@@ -194,18 +198,32 @@ $nav-h-desktop-rest: 50px;
 
 .image-info {
   // @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', .9rem, 500, #131313, none, .25px);
-  @include font-setup(
-    'medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 
-    .85rem, 
-    500,
-     #131313, 
-     none, 
-     .25px
-  );
+  
+  // OG
+  // @include font-setup(
+  //   'medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 
+  //   .85rem, 
+  //   500,
+  //    #131313, 
+  //    none, 
+  //    .25px
+  // );
+
+  // TESTING
+  font-family: monospace, Monaco;
+  font-size: 12.95px;
+  line-height: 1.45rem;
+  letter-spacing: -.25px;
+  font-weight: 100;
+  color: #111111 !important;
 }
 
 .image-description-details {
+  // OG
   @include font-setup('SplendidN', 1.15rem, 500, #131313, none, -1.5px);
+
+  // TESING
+  // @include font-setup('medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif', 17.5px, 500, #131313, none, .25px);
 }
 
 .description-focus {
@@ -234,10 +252,8 @@ $nav-h-desktop-rest: 50px;
 
   // Test
   @include font-setup('old style', 12.5px, 100, rgb(20, 20, 20), none, 1.25px);
-  // padding-left: 14px;
   padding-top: 8px;
   position: absolute;
-  transition-duration: 225ms;
 }
 
 .slideshow-button {
@@ -480,19 +496,29 @@ $nav-h-desktop-rest: 50px;
   .image-box {
     height: calc(100% - 130px);
   }
+  
+  // display: inline-flex;
+  // // OG
+  // // @include font-setup('old style', 11.5px, 100, rgb(20, 20, 20), none, 1.5px);
+
+  // // Test
+  // @include font-setup('old style', 12.5px, 100, rgb(20, 20, 20), none, 1.25px);
+  // // padding-left: 14px;
+  // padding-top: 8px;
+  // position: absolute;
+  // transition-duration: 225ms;
 
   .image-date {
-    display: block;
-    padding-left: 6px;
-    padding-top: 0;
-    font-size: .71rem;
-    margin-top: 13px;
-    transition-duration: 225ms;
+    // transition-duration: 225ms;
   }
 
   .image-date-focus {
-    padding-left: 1px;
-    margin-top: 9px;
+    // padding-left: 1px;
+    // margin-top: 9px;
+  }
+
+  .month-focus {
+    letter-spacing: unset;
   }
 
   .title-box {

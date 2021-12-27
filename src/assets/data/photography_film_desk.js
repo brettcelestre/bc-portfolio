@@ -5,6 +5,9 @@ const data = ymlLoader.load(`
   id: e7343334-f063-488d-a4f3-f664b4365217
   v: v1606270888
   date: 
+  year: 2018
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Working on building this website
@@ -26,6 +29,9 @@ const data = ymlLoader.load(`
   id: 9ffe7d21-9d66-44e2-86fc-d6f0831e442c
   v: v1606270926
   date: 
+  year: 2016
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -47,6 +53,9 @@ const data = ymlLoader.load(`
   id: 7a1990eb-c027-41f2-878b-f7e52c536e29
   v: v1606270961
   date: 
+  year: 2015
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -68,6 +77,9 @@ const data = ymlLoader.load(`
   id: 6e4cd933-143f-4165-8549-4a022d68ec98
   v: v1606270998
   date: 
+  year: 2013
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: S 11th St, San Jose, CA
@@ -89,6 +101,9 @@ const data = ymlLoader.load(`
   id: 0d27a5cf-4906-4947-9715-998e78a386e1
   v: v1606271033
   date: 
+  year: 2012
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: S 11th St, San Jose, CA
@@ -110,6 +125,9 @@ const data = ymlLoader.load(`
   id: f4974b39-014f-4a8e-8122-86edc78334ca
   v: v1606271064
   date: 
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: San Jose State University - CVB
@@ -129,3 +147,16 @@ const data = ymlLoader.load(`
 `);
 
 module.exports = { data };
+
+/* 
+
+  TODO
+
+  Missing:
+  2014
+  2010
+  2009
+  2008
+  2007
+
+*/

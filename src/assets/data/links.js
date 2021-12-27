@@ -21,7 +21,8 @@ const tags = [
   'television director',
   'ux designer',
   'videographer',
-  'visual designer'
+  'visual designer',
+  'writer'
 ];
 
 const data = ymlLoader.load(`
@@ -42,24 +43,10 @@ const data = ymlLoader.load(`
     - film maker
     - skateboarder
 
-- title: Scott Celestre
-  links:
-    - type: Portfolio
-      url: https://medium.com/@directorscott2
-  tags:
-    - television director
-
 - title: Ryan Schmidt
   links:
     - type: SoundCloud
       url: https://thebozosthebozosthebozos.bandcamp.com/
-  tags:
-    - musician
-
-- title: Andrew Jinkins
-  links:
-    - type: BandCamp
-      url: https://feelingsparty.bandcamp.com/
   tags:
     - musician
 
@@ -105,8 +92,8 @@ const data = ymlLoader.load(`
 
 - title: Corey Duffel
   links:
-    - type: Instagram
-      url: https://www.instagram.com/coreyduffel
+    - type: Shop
+      url: https://adoredskateboarding.com/
   tags:
     - skateboarder
 
@@ -280,7 +267,7 @@ const data = ymlLoader.load(`
 - title: Emily Bers
   links:
     - type: Portfolio
-      url: https://www.emiliebersphotography.com/
+      url: https://emiliebers.com/
   tags:
     - photographer
 
@@ -290,6 +277,7 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/metroskateboarding/?hl=en
   tags:
     - skateboarder
+    - film maker
 
 - title: Journey Coward
   links:
@@ -320,12 +308,14 @@ const data = ymlLoader.load(`
       url: https://maaikescherff.com/
   tags:
     - illustrator
+
 - title: Alexander Johnson
   links:
     - type: Portfolio
       url: https://metasyn.pw/
   tags:
     - software engineer
+
 - title: Jonny Clugston
   links:
     - type: Portfolio
@@ -350,21 +340,21 @@ const data = ymlLoader.load(`
 
 - title: Samantha Ives
   links:
-    - type: Portfolio
+    - type: Shop
       url: http://www.makerandmineral.com/
   tags:
     - fashion designer
 
 - title: Kelly Hackett
   links:
-    - type: Portfolio
+    - type: Shop
       url: https://www.milkweed.studio/
   tags:
     - florist
 
 - title: Maddy Leonard
   links:
-    - type: Portfolio
+    - type: Shop
       title: Maddy Sprout
       url: https://maddysprout.com/
     - type: Instagram
@@ -402,6 +392,7 @@ const data = ymlLoader.load(`
       url: http://jarred-hodgdon.com/
   tags:
     - production technician
+    - film maker
 
 - title: Kristopher Shinn
   links:
@@ -411,14 +402,6 @@ const data = ymlLoader.load(`
       url: https://www.instagram.com/kristophershinn/
   tags:
     - photographer
-
-- title: Erik Bender
-  links:
-    - type: Portfolio
-      url: http://erikbender.net/
-  tags:
-    - painter
-    - sculptor
 
 - title: Theodore Reid
   links:
@@ -433,6 +416,14 @@ const data = ymlLoader.load(`
       url: https://billkiley.bandcamp.com/
   tags:
     - musician
+
+- title: Danielle Luz Belanger
+  links:
+    - type: Portfolio
+      url: https://www.dluzb.com/
+  tags:
+    - photographer
+    - writer
 `);
 
 /////////////////
@@ -442,14 +433,6 @@ const data = ymlLoader.load(`
 // Renner Screen Printing
 // https://www.rennerscreenprinting.com/
 // https://www.instagram.com/rennerscreenprinting/
-
-// Broken Sites
-// - title: Colin McDonald
-//   links:
-//     - type: Portfolio
-//       url: http://www.colinlmcdonald.com/
-//   tags:
-//     - software engineer
 
 module.exports = { data, tags };
 
@@ -473,23 +456,52 @@ module.exports = { data, tags };
 //     - type: Portfolio
 //       url: http://www.jeannemariegarcia.com/
 
-// surg
+// - title: Scott Celestre
+//   links:
+//     - type: Portfolio
+//       url: https://medium.com/@directorscott2
+//   tags:
+//     - television director
 
 // Farhankhan Daya
 // Andrew Dawkin
 // Ricky Garcia
 // Grant Selland
-// Danielle Luz Belanger
 // Alec Moore
 // Catherine Garcia
+// John Shumaker - woodworks
 
-// website broken
+//============================================
+// websites broken
+
+// - title: Colin McDonald
+//   links:
+//     - type: Portfolio
+//       url: http://www.colinlmcdonald.com/
+//   tags:
+//     - software engineer
+
 // - title: Jason Abad
 //   links:
 //     - type: Portfolio
 //       url: https://www.jayabad.com/
 //   tags:
 //     - graphic designer
+
+// - title: Andrew Jinkins
+//   links:
+//     - type: BandCamp
+//       url: https://feelingsparty.bandcamp.com/
+//   tags:
+//     - musician
+
+// - title: Erik Bender
+//   links:
+//     - type: Portfolio
+//       url: http://erikbender.net/
+//   tags:
+//     - painter
+//     - sculptor
 
 
 

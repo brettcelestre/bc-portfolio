@@ -158,6 +158,21 @@ class Toolbar extends Component {
     })
   }
 
+  buildDate = (showInfo) => {
+    if (!this.props.imageData.year &
+        !this.props.imageData.month &
+        !this.props.imageData.day) {
+      return false;
+    }
+    if (!!this.props.imageData.month) {
+      return (
+        <span>{this.props.imageData.year} | <span className={showInfo ? 'month-focus' : ''}>{this.props.imageData.month}</span>
+        </span>
+      );
+    }
+    return `${this.props.imageData.year}`;
+  }
+
   includeSize = () => {
     if (this.props.imageData.size) {
       return ` - ${this.props.imageData.size}`;
@@ -236,6 +251,7 @@ class Toolbar extends Component {
         break;
       case 'mobile':
         mobileTabletBar = 'toolbar-pull-bar';
+        dateClassNames += ' image-date-mobile';
         toolbarHeight = 62 + descriptionHeight;
         indexHeight = 48 + (descriptionHeight / 2);
         
@@ -286,16 +302,18 @@ class Toolbar extends Component {
             </div> */}
 
             <div className={this.state.showInfo ? `image-date-focus ${dateClassNames}` : `${dateClassNames}`}>
-              {this.props.imageData.date}
+              {this.buildDate(this.state.showInfo)}
             </div>
 
             <div className={this.state.showInfo ? "image-description description-focus" :"image-description"}>
               <span className="image-info">
                 {this.props.imageData.info}
                 {this.includeSize()}
-                {this.props.imageData.taggedPeople && (
+
+                {/* Testing Tagged People */}
+                {/* {this.props.imageData.taggedPeople && (
                   this.includePeople()
-                )}
+                )} */}
                 <br />
                 {/* {this.props.imageData.info}{this.includeSize()}<br /> */}
               </span>

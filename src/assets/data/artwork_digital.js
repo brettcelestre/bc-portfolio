@@ -4,7 +4,8 @@ const data = ymlLoader.load(`
     id: 24f2b2cd-8229-4179-aee4-ad48e48aba8b
     v: v1606259242
     urlTitle: noah-lennox
-    date: MAY 2012
+    year: 2012
+    month: May
     size: 
     orientation: landscape
     info: Mixed media collage
@@ -25,7 +26,8 @@ const data = ymlLoader.load(`
     urlTitle: three-year
     id: 0d66fd50-53ce-4b8b-8dd7-cddf06f05b23
     v: v1606262137
-    date: SEPTEMBER 2012
+    year: 2012
+    month: September
     size: 
     orientation: landscape
     info: Mixed media collage - Nikon D800
@@ -46,7 +48,8 @@ const data = ymlLoader.load(`
     urlTitle: for-reverend-green
     id: 251227b7-5709-47e3-b61a-d1687f4cc9a4
     v: v1606262294
-    date: FEBRUARY 2010
+    year: 2010
+    month: February
     size: 
     orientation: landscape
     info: 'Photomanipulation - Nikon D50'
@@ -67,7 +70,8 @@ const data = ymlLoader.load(`
     urlTitle: progress
     id: 9f753d77-33c4-4abb-89a9-25d29d7935db
     v: v1606263219
-    date: DECEMBER 2010
+    year: 2010
+    month: December
     size: 
     orientation: landscape
     info: Digital collage
@@ -88,7 +92,8 @@ const data = ymlLoader.load(`
     id: 0de60159-32cb-4560-a3f9-f4a1841fefc3
     v: v1606263331
     urlTitle: sleep
-    date: JUNE 2010
+    year: 2010
+    month: June
     size: 
     orientation: landscape
     info: 'Photomanipulation - Nikon D50'
@@ -109,7 +114,8 @@ const data = ymlLoader.load(`
     urlTitle: dufrense
     id: 0017e5c0-118e-426e-a6df-b683cb22b313
     v: v1606263424
-    date: JANUARY 2009
+    year: 2009
+    month: January
     size: 
     orientation: landscape
     info: 'Photomanipulation - Nikon D50'
@@ -130,7 +136,8 @@ const data = ymlLoader.load(`
     urlTitle: for-the-last-fucking-time
     id: f4420b6d-1bf3-47bb-b501-978d99343485
     v: v1606263491
-    date: JULY 2007
+    year: 2007
+    month: July
     size: 
     orientation: landscape
     info: Mixed media collage

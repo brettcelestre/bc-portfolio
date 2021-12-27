@@ -12,7 +12,7 @@ class Home extends Component {
         <div className="test3">test3 old style caps - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
         <div className="test4">test4 old style italic - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
         <div className="test5">test5 chunk - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
-        <div className="test6">test6 orwell (I LIKE THIS ONE A LOT ) - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
+        <div className="test6">test6 orwell (############# ) - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
         <div className="test7">test7 chapaza - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
         <div className="test8">test8 medium-content-serif-font - Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>
         <div className="test9">test9 -1952  Designed and built responsive emails which were sent to 100k subscribers twice weekly</div>

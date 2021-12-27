@@ -2,7 +2,7 @@ const ymlLoader = require('js-yaml');
 const data = ymlLoader.load(`
 - title: Starcity's Mobile App
   date: SEPTEMBER 2019
-  type: Created at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
+  type: Built at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
   github: 
   launch: https://apps.apple.com/us/app/starcity/id1457383827
   header: Mobile app for members to direct message, post on their community bulletin board, RSVP to events, and report issues. Available in App Store and Google Play.
@@ -23,7 +23,7 @@ const data = ymlLoader.load(`
 
 - title: Starcity's Admin Dashboard
   date: OCTOBER 2019
-  type: Created at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
+  type: Built at <a href="https://starcity.com/" target="blank" class="application-description-link">Starcity</a>. Designed by <a href="https://www.jia-gao.com/" target="blank" class="application-description-link">Jia Gao</a>.
   github: 
   launch: 
   header: Admin dashboard to manage Starcity's mobile app. 
@@ -70,7 +70,7 @@ const data = ymlLoader.load(`
 
 - title: The Performance Group
   date: NOVEMBER 2016
-  type: Created for <a href="https://tpgsales.com/" target="blank" class="application-description-link">The Performance Group</a>.
+  type: Built for <a href="https://tpgsales.com/" target="blank" class="application-description-link">The Performance Group</a>.
   github: https://github.com/brettcelestre/tpg
   launch: http://tpgsales.com/
   header: Company website for a food brokerage firm out of Pleasanton, CA.
@@ -82,7 +82,7 @@ const data = ymlLoader.load(`
 
 - title: Qurvey
   date: AUGUST 2015
-  type: Created with <a href="https://github.com/royalbasmati" target="blank" class="application-description-link">Mario Roaf-Esparza</a>.
+  type: Built with <a href="https://github.com/royalbasmati" target="blank" class="application-description-link">Mario Roaf-Esparza</a>.
   github: https://github.com/brettcelestre/qurveyapp
   launch: 
   header: Maps personality traits to poll results.
@@ -97,7 +97,7 @@ const data = ymlLoader.load(`
 
 - title: FeedFuse
   date: JULY 2015
-  type: Created with <a href="https://andrewtsao.io/" target="blank" class="application-description-link">Andrew Tsao</a>.
+  type: Built with <a href="https://andrewtsao.io/" target="blank" class="application-description-link">Andrew Tsao</a>.
   github: https://github.com/brettcelestre/feedfuse
   launch: 
   header: Aggregates hashtags search results from Twitter and Instagram's API.
@@ -112,7 +112,7 @@ const data = ymlLoader.load(`
 
 - title: SprintPal
   date: JULY 2015
-  type: Created with <a href="https://andrewtsao.io/" target="blank" class="application-description-link">Andrew Tsao</a>.
+  type: Built with <a href="https://andrewtsao.io/" target="blank" class="application-description-link">Andrew Tsao</a>.
   github: https://github.com/brettcelestre/sprintpal
   launch: 
   header: Enables agile teams to vote on tasks during sprint planning.

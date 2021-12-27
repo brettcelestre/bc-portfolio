@@ -5,6 +5,9 @@ const data = ymlLoader.load(`
   id: 03518c13-de1c-40f4-838d-4432899bc753
   v: v1606268366
   date: 2018
+  year: 2018
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Taken in Madrid, Spain
@@ -26,6 +29,9 @@ const data = ymlLoader.load(`
   id: e4dfed56-0610-4d57-ad1b-dac3286f8edc
   v: v1606268398
   date: 2016
+  year: 2016
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Mount Diablo, California
@@ -47,6 +53,9 @@ const data = ymlLoader.load(`
   id: d94a9432-37eb-4732-966a-bed0d853379b
   v: v1606268431
   date: 2010
+  year: 2010
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Pleasant Hill, CA
@@ -68,6 +77,9 @@ const data = ymlLoader.load(`
   id: c101dcd5-6487-4f47-8ea4-6a7addb5a02a
   v: v1606268466
   date: JANUARY 2011
+  year: 2011
+  month: January
+  day: 
   size: ''
   orientation: landscape
   description: 
@@ -89,6 +101,9 @@ const data = ymlLoader.load(`
   id: d4d59d84-5c77-47a7-82d3-96f429f35705
   v: v1606268499
   date: 2012
+  year: 2012
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Caples Lake, CA
@@ -110,6 +125,9 @@ const data = ymlLoader.load(`
   id: 1a6ac4e0-5ca1-4b8e-b334-a7144404d841
   v: v1606268525
   date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   orientation: landscape
   description: Yosemite, CA

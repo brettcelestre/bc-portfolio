@@ -4,7 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: grant
   id: 8ccea559-70d0-46cb-b289-8c7934856192
   v: v1606274932
-  date: MARCH 2017
+  year: 2017
+  month: March
+  day: 
   size: ''
   description: Taken in Oakland, CA
   orientation: landscape
@@ -25,7 +27,9 @@ const data = ymlLoader.load(`
   urlTitle: brett-0
   id: 3f55e1b8-3503-4c09-92ee-495c70184397
   v: v1606274987
-  date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   description: Taken in Saratoga, CA
   orientation: landscape
@@ -46,7 +50,9 @@ const data = ymlLoader.load(`
   urlTitle: brett-1
   id: 2ed39276-2b72-45d1-be4a-36b7ea6ce996
   v: v1606275018
-  date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
@@ -67,7 +73,9 @@ const data = ymlLoader.load(`
   urlTitle: danielle
   id: d4751e40-a971-42fb-8b65-0fad68583b6b
   v: v1606275051
-  date: 2011
+  year: 2011
+  month: 
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
@@ -88,7 +96,9 @@ const data = ymlLoader.load(`
   urlTitle: devon-&-matt
   id: 5beb841f-abb0-4593-a7a3-f6697d931251
   v: v1606275084
-  date: APRIL 2012
+  year: 2012
+  month: April
+  day: 
   size: ''
   description: Taken in Oakland, CA
   info: Nikon D800 - 50mm
@@ -109,7 +119,9 @@ const data = ymlLoader.load(`
   urlTitle: jeanne-marie-0
   id: fb00b95c-56d6-4e06-bb53-789da66c418e
   v: v1606275119
-  date: OCTOBER 2014
+  year: 2014
+  month: October
+  day: 
   size: ''
   description: Taken in Martinez, CA
   orientation: portrait
@@ -130,7 +142,9 @@ const data = ymlLoader.load(`
   urlTitle: jeanne-marie-1
   id: aaafd1bf-7ab1-4480-89ea-93b0f6638e8d
   v: v1606275160
-  date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   description: Walnut Creek, CA
   orientation: landscape
@@ -151,7 +165,9 @@ const data = ymlLoader.load(`
   urlTitle: justin
   id: 44dcd4c0-4c6b-4a02-8168-a884aa14c6e8
   v: v1606275187
-  date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   description: Walnut Creek Skatepark
   orientation: landscape

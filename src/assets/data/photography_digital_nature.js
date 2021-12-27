@@ -4,7 +4,9 @@ const data = ymlLoader.load(`
   urlTitle: briones-sunset
   id: c9ad3b72-28e0-4602-a01c-a807c1fc4b10
   v: v1606275324
-  date: 2013
+  year: 2013
+  month: 
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
@@ -25,7 +27,9 @@ const data = ymlLoader.load(`
   urlTitle: steep-revine
   id: aa5f0cc0-4b81-4330-b45c-eab07f110713
   v: v1606275369
-  date: 2010
+  year: 2010
+  month: 
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm
@@ -46,7 +50,9 @@ const data = ymlLoader.load(`
   urlTitle: eugene
   id: 4a65c239-4ff5-46a5-8ed6-6806f5021745
   v: v1606275401
-  date: 2010
+  year: 2010
+  month: 
+  day: 
   size: ''
   orientation: landscape
   info: Nikon D800 - 50mm

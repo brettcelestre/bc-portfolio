@@ -149,8 +149,10 @@ class SlideShow extends Component {
 
   render() {
     const { loading } = this;
+    const { styles } = this.props;
     const orientation = window.innerWidth < BREAKPOINT ? 'landscape' : 'portrait';
     const size = window.innerWidth < (BREAKPOINT - 2) ? 'small' : 'large';
+
 
     // const loader;
     // if (size === 'small') {
@@ -164,7 +166,7 @@ class SlideShow extends Component {
     // }
 
     return(
-      <div className="slideshow-container">
+      <div className="slideshow-container" style={styles}>
         <WindowSizeListener
           DEBOUNCE_TIME={500}
           onResize={windowSize => {

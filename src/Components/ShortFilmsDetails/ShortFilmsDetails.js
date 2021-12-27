@@ -260,7 +260,7 @@ class ShortFilmsDetails extends Component {
             <Link to={`/short-films/credits/${this.state.filmData.urlTitle}`}
               onClick={scrollTop()}>
               <div className="short-films-details-credits-button">
-                VIEW FULL CREDITS
+                VIEW CREDITS
               </div>
             </Link>
           </div>

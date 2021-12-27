@@ -7,26 +7,26 @@ import './About.css';
 const bioImages = {
   portrait: {
     large: [
-    require('../../assets/gallery/about/Me-Tall-1.jpg'),
-    require('../../assets/gallery/about/Me-Tall-2.jpg'),
-    require('../../assets/gallery/about/Me-Tall-3.jpg'),
-    require('../../assets/gallery/about/Me-Tall-4.jpg'),
+    // require('../../assets/gallery/about/Me-Tall-1.jpg'),
+    // require('../../assets/gallery/about/Me-Tall-2.jpg'),
+    // require('../../assets/gallery/about/Me-Tall-3.jpg'),
+    // require('../../assets/gallery/about/Me-Tall-4.jpg'),
     require('../../assets/gallery/about/Me-Tall-5.jpg')
     ]
   },
   landscape: {
     large: [
-      require('../../assets/gallery/about/Me-Wide-Large-1.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-2.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-3.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-4.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-1.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-2.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-3.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-4.jpg'),
       require('../../assets/gallery/about/Me-Wide-Large-5.jpg')
     ],
     small: [
-      require('../../assets/gallery/about/Me-Wide-Large-1.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-2.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-3.jpg'),
-      require('../../assets/gallery/about/Me-Wide-Large-4.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-1.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-2.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-3.jpg'),
+      // require('../../assets/gallery/about/Me-Wide-Large-4.jpg'),
       require('../../assets/gallery/about/Me-Wide-Large-5.jpg')
     ]
   }
@@ -43,22 +43,18 @@ class About extends Component {
   }
 
   buildAboutBio() {
-    // TODO: Add full bio
     return (
       <div className="about-section">
         <div className="about-content">
-          {/* I am a mixed media creative who enjoys experimentation. */}
-           {/* and exploring techniques.  */}
-          {/* I am most interested in combining techniques from one medium to another - typically traditional and digital.  */}
-          {/* <br /><br /><br /> */}
-          {/* In 2013, I graduated from San Jose State University with a Bachelor of Fine Arts in Digital Media.
-          <br /><br /><br /> */}
-          {/* Currently a software engineer at <a href="https://www.starcity.com" className="highlight" target="blank">Starcity</a> in San Francisco. */}
-          {/* <br /><br /><br /> */}
+          <br />
+          <br /><br />
+          Made <Link to="/short-films" className="highlight">short films</Link> with my <a href="https://www.matthewcelestre.com" className="highlight" target="blank">brother Matthew</a> for a few years.
+          <br /><br />
           
           <Link to="/resume" replace className="highlight">
-            Resume
+          Resume.
           </Link>
+          {/* <br />
           <br />
           <a href="https://www.instagram.com/brettcelestre/" target="blank"  className="highlight">
             Instagram
@@ -70,22 +66,22 @@ class About extends Component {
           <br />
           <a href="/https://www.linkedin.com/in/brettcelestre/" target="blank" className="highlight">
             LinkedIn
-          </a>
+          </a> */}
           <br />
           <br />
-          <span className="highlight"><a href="mailto:brettcelestre@gmail.com">brettcelestre<span className="about-email-at">@</span>gmail.com</a></span>
+          <span className="highlight">Reach out.</span>
         </div>
       </div>
     )
   }
 
   render() {
-    // const bioGalleryStyles = {
-      // height: "auto",
-      // maxHeight: "700px",
-      // width: "440px",
-      // padding: "40px"
-    // };
+    const bioGalleryStyles = {
+      height: "auto",
+      maxHeight: 700,
+      width: 440,
+      padding: 20
+    };
 
     // const bioImageStyles = {
     //   height: "auto",
@@ -96,7 +92,7 @@ class About extends Component {
     return (
       <div className="about">
         <SlideShow 
-          // styles={bioGalleryStyles}
+          styles={bioGalleryStyles}
           // imageStyles={bioImageStyles}
           images={bioImages}
         />

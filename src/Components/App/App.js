@@ -93,8 +93,8 @@ class App extends Component {
 
         <div className="app-menu">
 
+          {/* Old Design, archive on old design branch */}
           {/* <img src={logo} className="logo" width="100px" height="100px" alt="main-logo"/> */}
-
           {/* <div className="main-title-box">
             <h2 className="main-title">Brett<span className="main-title-spacing"> </span>Celestre</h2>
           </div> */}
@@ -119,11 +119,7 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/applications" replace onClick={this.cleanUp}>
-              <div className="section-title menu-apps">
-                Applications
-              </div>
-            </Link>
+          {/*
 
             <Link to="/creatives" replace onClick={this.cleanUp}>
               <div className="section-title menu-creatives">
@@ -131,19 +127,13 @@ class App extends Component {
               </div>
             </Link>
 
-            <Link to="/resume" replace onClick={this.cleanUp}>
-              <div className="section-title">
-                Resume
-              </div>
-            </Link>
-            
-            {/* <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
+            <Link to={this.createUrlPathForPiece('spatial', null)} replace onClick={this.cleanUp}>
               <div className="section-title menu-spatial">
                 Spatial
               </div>
-            </Link> */}
-
-            {/* <Link to="/applications" replace onClick={this.cleanUp}>
+            </Link>
+ 
+            <Link to="/applications" replace onClick={this.cleanUp}>
               <div className="section-title menu-apps">
                 Applications
               </div>
@@ -155,12 +145,19 @@ class App extends Component {
               </div>
             </Link>
 
+            <Link to="/resume" replace onClick={this.cleanUp}>
+              <div className="section-title">
+                Resume
+              </div>
+            </Link>
+
             <Link to="/about" replace onClick={this.cleanUp}>
               <div className="section-title menu-about">
                 About
               </div>
             </Link>
-            */}
+
+           */}
 
             <div className="social-media-spacer"></div>
             
